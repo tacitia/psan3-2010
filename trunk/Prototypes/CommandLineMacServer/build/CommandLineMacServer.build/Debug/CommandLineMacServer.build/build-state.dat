@@ -1,116 +1,0 @@
-TCommandLineMacServer
-v7
-r0
-t310235102.432591
-cCheck dependencies
-cCompileC build/CommandLineMacServer.build/Debug/CommandLineMacServer.build/Objects-normal/x86_64/main.o /Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/main.c normal x86_64 c com.apple.compilers.gcc.4_2
-cLd /Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/build/Debug/CommandLineMacServer normal x86_64
-
-N/Developer/SDKs/MacOSX10.6.sdk
-c000000004BF4701900000000000000EE
-t1274310681
-s238
-
-N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/CoreServices.framework/Headers/CoreServices.h
-c000000004B90FA5D0000000000000401
-t1267792477
-s1025
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/netinet/in.h
-c000000004B90BBA5000000000000539D
-t1267776421
-s21405
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/stdio.h
-c000000004AC59C820000000000004174
-t1254464642
-s16756
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/sys/socket.h
-c000000004B90BBAA00000000000059BC
-t1267776426
-s22972
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/unistd.h
-c000000004AC59C82000000000000563E
-t1254464642
-s22078
-
-N/Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/build/CommandLineMacServer.build/Debug/CommandLineMacServer.build/Objects-normal/x86_64/CommandLineMacServer.LinkFileList
-c000000004CCD985E00000000000000AC
-t1288542302
-s172
-
-N/Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/build/CommandLineMacServer.build/Debug/CommandLineMacServer.build/Objects-normal/x86_64/main.o
-t1288542295
-s5152
-
-N/Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/build/CommandLineMacServer.build/Debug/CommandLineMacServer.build/Objects-normal/x86_64/server.o
-t1288519782
-s1584
-
-N/Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/build/Debug/CommandLineMacServer
-t1288542302
-s9320
-
-N/Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/main.c
-c000000004CCD98570000000000000166
-t1288542295
-s358
-i<stdio.h>
-i<CoreServices/CoreServices.h>
-i<sys/socket.h>
-i<netinet/in.h>
-i<unistd.h>
-
-N/Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/server.c
-c000000004CCD3FF0000000000000009E
-t1288519664
-s158
-i"server.h"
-
-N/Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/server.h
-c000000004CCD3FF00000000000000089
-t1288519664
-s137
-
-CCheck dependencies
-r0
-lSLF07#2@18"Check dependencies310235102#310235102#0(0"0(0#1#0"8615555584#0"0#
-
-CCompileC build/CommandLineMacServer.build/Debug/CommandLineMacServer.build/Objects-normal/x86_64/main.o /Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/main.c normal x86_64 c com.apple.compilers.gcc.4_2
-s310235102.318523
-e310235102.319629
-r1
-xCompileC
-xbuild/CommandLineMacServer.build/Debug/CommandLineMacServer.build/Objects-normal/x86_64/main.o
-x/Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/main.c
-xnormal
-xx86_64
-xc
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@91"Compile /Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/main.c310235102#310235102#0(832"/Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/main.c: In function 'startServer':/Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/main.c:19: warning: unused variable 'port'/Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/main.c:18: warning: unused variable 'addr'/Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/main.c:17: warning: unused variable 'junk'/Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/main.c:16: warning: unused variable 'fd'/Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/main.c:15: warning: unused variable 'err'/Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/main.c:14: warning: unused variable 'success'6(22@22"Unused variable 'port'310235102#112#120#0(6@83"/Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/main.c310235095#19#0#19#0#19"unused variable '*'0(22@22"Unused variable 'addr'310235102#232#120#0(6@83"/Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/main.c310235095#18#0#18#0#19"unused variable '*'0(22@22"Unused variable 'junk'310235102#352#120#0(6@83"/Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/main.c310235095#17#0#17#0#19"unused variable '*'0(22@20"Unused variable 'fd'310235102#472#118#0(6@83"/Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/main.c310235095#16#0#16#0#19"unused variable '*'0(22@21"Unused variable 'err'310235102#590#119#0(6@83"/Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/main.c310235095#15#0#15#0#19"unused variable '*'0(22@25"Unused variable 'success'310235102#709#123#0(6@83"/Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/main.c310235095#14#0#14#0#19"unused variable '*'0(0#0#83"/Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/main.c8617120224#1922"    cd /Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/build/CommandLineMacServer.build/Debug/CommandLineMacServer.build/CommandLineMacServer-generated-files.hmap -I/Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/build/CommandLineMacServer.build/Debug/CommandLineMacServer.build/CommandLineMacServer-own-target-headers.hmap -I/Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/build/CommandLineMacServer.build/Debug/CommandLineMacServer.build/CommandLineMacServer-all-target-headers.hmap -iquote /Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/build/CommandLineMacServer.build/Debug/CommandLineMacServer.build/CommandLineMacServer-project-headers.hmap -F/Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/build/Debug -I/Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/build/Debug/include -I/Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/build/CommandLineMacServer.build/Debug/CommandLineMacServer.build/DerivedSources/x86_64 -I/Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/build/CommandLineMacServer.build/Debug/CommandLineMacServer.build/DerivedSources -c /Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/main.c -o /Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/build/CommandLineMacServer.build/Debug/CommandLineMacServer.build/Objects-normal/x86_64/main.o0#
-
-CCompileC build/CommandLineMacServer.build/Debug/CommandLineMacServer.build/Objects-normal/x86_64/server.o /Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/server.c normal x86_64 c com.apple.compilers.gcc.4_2
-s310212582.976362
-e310212582.996581
-r1
-xCompileC
-xbuild/CommandLineMacServer.build/Debug/CommandLineMacServer.build/Objects-normal/x86_64/server.o
-x/Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/server.c
-xnormal
-xx86_64
-xc
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@93"Compile /Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/server.c310212582#310212582#0(0"0(0#0#85"/Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/server.c8629052448#1926"    cd /Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/build/CommandLineMacServer.build/Debug/CommandLineMacServer.build/CommandLineMacServer-generated-files.hmap -I/Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/build/CommandLineMacServer.build/Debug/CommandLineMacServer.build/CommandLineMacServer-own-target-headers.hmap -I/Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/build/CommandLineMacServer.build/Debug/CommandLineMacServer.build/CommandLineMacServer-all-target-headers.hmap -iquote /Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/build/CommandLineMacServer.build/Debug/CommandLineMacServer.build/CommandLineMacServer-project-headers.hmap -F/Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/build/Debug -I/Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/build/Debug/include -I/Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/build/CommandLineMacServer.build/Debug/CommandLineMacServer.build/DerivedSources/x86_64 -I/Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/build/CommandLineMacServer.build/Debug/CommandLineMacServer.build/DerivedSources -c /Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/server.c -o /Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/build/CommandLineMacServer.build/Debug/CommandLineMacServer.build/Objects-normal/x86_64/server.o0#
-
-CLd /Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/build/Debug/CommandLineMacServer normal x86_64
-s310235102.319679
-e310235102.432540
-r1
-xLd
-x/Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/build/Debug/CommandLineMacServer
-xnormal
-xx86_64
-lSLF07#2@114"Link /Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/build/Debug/CommandLineMacServer310235102#310235102#0(0"0(0#0#0"8615883264#740"    cd /Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/gcc-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/build/Debug -F/Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/build/Debug -filelist /Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/build/CommandLineMacServer.build/Debug/CommandLineMacServer.build/Objects-normal/x86_64/CommandLineMacServer.LinkFileList -mmacosx-version-min=10.6 -o /Users/Tacitia/Projects/xCodeTutorial/SocketProgramming/CommandLineMacServer/build/Debug/CommandLineMacServer0#
-
