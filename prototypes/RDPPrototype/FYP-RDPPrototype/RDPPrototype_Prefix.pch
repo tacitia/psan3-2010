@@ -1,8 +1,0 @@
-//
-// Prefix header for all source files of the 'RDPPrototype' target in the 'RDPPrototype' project
-//
-
-#ifdef __OBJC__
-    #import <Foundation/Foundation.h>
-    #import <UIKit/UIKit.h>
-#endif
