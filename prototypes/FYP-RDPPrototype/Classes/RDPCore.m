@@ -18,7 +18,13 @@
 	if(status == 255){
 		//connection has already setted up 
 	}else{
-		
+		switch (status) {
+			case 1:
+				
+				break;
+			default:
+				break;
+		}
 	}
 }
 
