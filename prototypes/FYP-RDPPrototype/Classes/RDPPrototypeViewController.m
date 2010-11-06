@@ -10,11 +10,15 @@
 
 @implementation RDPPrototypeViewController
 
+@synthesize hostTextField;
+@synthesize portTextField;
 @synthesize textMessage;
 @synthesize networkCommunicator;
 
 - (IBAction) sendMessage: (id) sender {
-
+	NSString* host = hostTextField.text;
+	NSInteger port = [portTextField.text intValue];
+	[networkCommunicator setHost:host port:port];
 	const uint8_t *str = 
 	(uint8_t *) [textMessage.text cStringUsingEncoding:NSASCIIStringEncoding];	
 	[networkCommunicator sendMessage:str];

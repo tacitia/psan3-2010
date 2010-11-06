@@ -13,12 +13,6 @@
 @implementation NetworkCommunicator
 
 
-NSMutableData* data;
-
-NSInputStream* iStream;
-NSOutputStream* oStream;
-
-
 - (void)connectToServerUsingStream:(NSString*)urlStr
 							portNo:(uint)portNo
 {
@@ -94,10 +88,18 @@ NSOutputStream* oStream;
 }
 
 
+
 - (void) sendMessage: (const uint8_t*)str {
-	[self connectToServerUsingStream:@"localhost" portNo:9999];
+	[self connectToServerUsingStream:self.host portNo:self.port];
 	[self writeToServer:str];
 }
+
+- (void) setHost:(NSString*)host 
+			port:(NSInteger)port {
+	self.host = host;
+	self.port = port;
+}
+
 
 - (void) disconnect {
 	[iStream close];

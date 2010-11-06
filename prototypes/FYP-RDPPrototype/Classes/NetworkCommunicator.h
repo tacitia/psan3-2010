@@ -9,8 +9,18 @@
 
 @interface NetworkCommunicator : NSObject {
 
+	NSString* host;
+	NSInteger port;
+	
+	NSMutableData* data;
+	
+	NSInputStream* iStream;
+	NSOutputStream* oStream;
+	
 }
 
+- (BOOL)setHost:(NSString*)host
+		   port:(NSInteger)port;
 - (void)sendMessage:(const uint8_t*)str;
 
 @end

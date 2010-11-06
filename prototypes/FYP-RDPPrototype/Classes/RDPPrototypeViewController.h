@@ -12,10 +12,14 @@
 @interface RDPPrototypeViewController : UIViewController {
 
 	IBOutlet UITextField *textMessage;
+	IBOutlet UITextField *hostTextField;
+	IBOutlet UITextField *portTextField;
 	NetworkCommunicator *networkCommunicator;
 
 }
 
+@property (nonatomic, retain) UITextField* hostTextField;
+@property (nonatomic, retain) UITextField* portTextField;
 @property (nonatomic, retain) UITextField *textMessage;
 @property (nonatomic, retain) NetworkCommunicator *networkCommunicator;
 
