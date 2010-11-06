@@ -20,5 +20,6 @@
 -(int)ParseMessage:(uint8_t*)message OfLength:(int) length;
 -(int)InitConnecting;
 -(int)CloseSession;
--(int)GenerateTPKTHeader;
+-(int)GenerateTPKTHeader:(uint8_t*) packet OfLength (int) length;
+
 @end

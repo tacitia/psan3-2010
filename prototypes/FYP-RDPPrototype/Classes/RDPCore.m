@@ -37,7 +37,9 @@
 	
 	packet[10] = 0;//class option
 	
+	[GenerateTPKTHeader packet OfLength 7];
 	
+	return 1;
 }
 
 
@@ -48,6 +50,8 @@
 	
 	packet[4] = length/256;
 	packet[4] = length%256;
+	
+	return 1;
 }
 
 
