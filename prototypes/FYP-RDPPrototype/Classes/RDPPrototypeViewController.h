@@ -17,6 +17,7 @@
 }
 
 @property (nonatomic, retain) UITextField *textMessage;
+@property (nonatomic, retain) NetworkCommunicator *networkCommunicator;
 
 -(IBAction) sendMessage: (id) sender;
 
