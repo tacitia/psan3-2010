@@ -49,13 +49,69 @@ NSOutputStream* oStream;
 	}
 }
 
+
 - (void) writeToServer:(const uint8_t*)buffer {
 	[oStream write:buffer maxLength:strlen((char*)buffer)];
 }
 
-- (void) sendMessage: (uint8_t*)str {
+
+- (void)stream:(NSStream*)stream handleEvent:(NSStreamEvent)eventcode {
+	
+	switch(eventcode) {
+		case NSStreamEventHasBytesAvailable:
+		{
+			if (data == nil) {
+				data = [[NSMutableData alloc] init];
+			}
+			uint8_t buffer[1024];
+			unsigned int length = 0;
+			length = [(NSInputStream*)stream read:buffer maxLength:1024];
+			if(length) {
+				[data appendBytes:(const void*)buffer length:length];
+				int bytesRead;
+				bytesRead += length;
+			} else {
+				NSLog(@"No data.");
+			}
+			
+			NSString *str = [[NSString alloc] initWithData:data
+												  encoding:NSUTF8StringEncoding];
+			UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"From server"
+															message:str
+														   delegate:self
+												  cancelButtonTitle:@"OK"
+												  otherButtonTitles:nil];
+			
+			[alert show];
+			[alert release];
+			
+			[str release];
+			[data release];
+			data = nil;
+		}
+			break;	
+	}
+}
+
+
+- (void) sendMessage: (const uint8_t*)str {
 	[self connectToServerUsingStream:@"localhost" portNo:9999];
 	[self writeToServer:str];
 }
+
+- (void) disconnect {
+	[iStream close];
+	[oStream close];
+}
+
+- (void) dealloc {
+	[self disconnect];
+		
+	[iStream release];
+	[oStream release];
+	
+    [super dealloc];
+}
+
 
 @end

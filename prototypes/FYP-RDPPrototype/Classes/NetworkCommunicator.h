@@ -11,6 +11,6 @@
 
 }
 
-- (void)sendMessage:(uint8_t*)str;
+- (void)sendMessage:(const uint8_t*)str;
 
 @end
