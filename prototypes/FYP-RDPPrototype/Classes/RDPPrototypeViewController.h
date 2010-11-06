@@ -14,6 +14,7 @@
 	IBOutlet UITextField *textMessage;
 	IBOutlet UITextField *hostTextField;
 	IBOutlet UITextField *portTextField;
+	IBOutlet UITextView *outputTextView;
 	NetworkCommunicator *networkCommunicator;
 
 }
@@ -21,6 +22,7 @@
 @property (nonatomic, retain) UITextField* hostTextField;
 @property (nonatomic, retain) UITextField* portTextField;
 @property (nonatomic, retain) UITextField *textMessage;
+@property (nonatomic, retain) UITextView *outputTextView;
 @property (nonatomic, retain) NetworkCommunicator *networkCommunicator;
 
 -(IBAction) sendMessage: (id) sender;

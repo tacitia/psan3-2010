@@ -13,6 +13,7 @@
 @synthesize hostTextField;
 @synthesize portTextField;
 @synthesize textMessage;
+@synthesize outputTextView;
 @synthesize networkCommunicator;
 
 - (IBAction) sendMessage: (id) sender {
