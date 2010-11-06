@@ -19,6 +19,9 @@
 	
 }
 
+@property (nonatomic, retain) NSString* host;
+@property (nonatomic) NSInteger port;
+
 - (BOOL)setHost:(NSString*)host
 		   port:(NSInteger)port;
 - (void)sendMessage:(const uint8_t*)str;

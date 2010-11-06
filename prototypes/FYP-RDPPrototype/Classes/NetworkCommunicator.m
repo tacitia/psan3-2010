@@ -13,6 +13,9 @@
 @implementation NetworkCommunicator
 
 
+@synthesize host;
+@synthesize port;
+
 - (void)connectToServerUsingStream:(NSString*)urlStr
 							portNo:(uint)portNo
 {
@@ -94,10 +97,19 @@
 	[self writeToServer:str];
 }
 
-- (void) setHost:(NSString*)host 
-			port:(NSInteger)port {
-	self.host = host;
-	self.port = port;
+- (BOOL) setHost:(NSString*)hostVal 
+			port:(NSInteger)portVal {
+	self.host = hostVal;
+	self.port = portVal;
+	
+	if (host == nil) {
+		return FALSE;
+	}
+	if ( (port < 0) || (port > 65536) ) {
+		return FALSE;
+	}	
+	
+	return TRUE;
 }
 
 
