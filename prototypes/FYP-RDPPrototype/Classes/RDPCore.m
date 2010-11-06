@@ -15,11 +15,20 @@
 @synthesize severPort;
 
 -(int)ParseMessage:(uint8_t*)message OfLength:(int) length{
-	
+	if(status == 255){
+		//connection has already setted up 
+	}else{
+		
+	}
 }
 
 -(int)InitConnecting{
 	
+	communicator = [[NetworkCommunicator alloc] init];
+	[communicator setHost:serverIP port:serverPort];
+	
+	
+	//----X.224 connection request packet----//
 	int packetLength = 11;//in byte
 	uint8_t* packet = malloc(sizeof(uint8_t * packetLength));
 	
@@ -38,6 +47,11 @@
 	packet[10] = 0;//class option
 	
 	[GenerateTPKTHeader packet OfLength 7];
+	
+	[communicator sendMessage:packet];
+	//----X.224 connection request packet finish----//
+	
+	status = 1;//startConnecting
 	
 	return 1;
 }
