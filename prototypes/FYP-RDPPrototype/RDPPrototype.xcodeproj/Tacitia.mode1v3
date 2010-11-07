@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>3EF062151286F99100EA452B</string>
+						<string>3EF062211286F99100EA452B</string>
 						<key>history</key>
 						<array>
 							<string>3EF062051286F99100EA452B</string>
@@ -256,7 +256,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>3EF062161286F99100EA452B</string>
+						<string>3EF062221286F99100EA452B</string>
 						<key>history</key>
 						<array>
 							<string>3EF062061286F99100EA452B</string>
@@ -355,9 +355,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>10</integer>
-									<integer>1</integer>
-									<integer>0</integer>
+									<integer>25</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
@@ -408,7 +406,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3EF062121286F99100EA452B</string>
+										<string>3EF062201286F99100EA452B</string>
 										<key>history</key>
 										<array>
 											<string>3E5583B412857C1E00AB8CDF</string>
@@ -625,7 +623,6 @@
 	<array>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>3E5582D01285706600AB8CDF</string>
-		<string>3EF061F21286F99100EA452B</string>
 		<string>3EF0607B1286F99100EA452B</string>
 		<string>3EF060621286F99100EA452B</string>
 		<string>/Users/Tacitia/Desktop/FYP-RDPPrototype/RDPPrototype.xcodeproj</string>

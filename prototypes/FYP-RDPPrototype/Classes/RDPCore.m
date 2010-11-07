@@ -42,7 +42,7 @@
 						return 0;
 					}
 					//-----check X.224 CC FINISHED-----//
-					
+					//-----Generate
 				}else{
 					return 0;
 				}
