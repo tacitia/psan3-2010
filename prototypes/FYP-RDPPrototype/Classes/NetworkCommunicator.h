@@ -7,6 +7,8 @@
 //
 @class RDPCore;
 
+
+
 @interface NetworkCommunicator : NSObject {
 
 	NSString* host;
@@ -27,7 +29,7 @@
 
 - (BOOL)setHost:(NSString*)host
 		   port:(NSInteger)port;
-- (void)sendMessage:(const uint8_t*)str;
+- (void)sendMessage:(const uint8_t*)str length:(int)length;
 
 - (id)initWithRDPCore:(RDPCore*)rdpCorePtr;
 

@@ -8,11 +8,12 @@
 
 #import "NetworkCommunicator.h"
 #import "NSStreamAdditions.h"
-
+#import "RDPCore.h"
 
 
 @implementation NetworkCommunicator
 
+// These variables are related to the storage of incoming data
 uint8_t* data;
 BOOL dataIsInitialized;
 int dataLength;
@@ -22,6 +23,8 @@ int dataLength;
 @synthesize port;
 @synthesize rdpcore;
 
+
+// Estalish connection
 - (void)connectToServerUsingStream:(NSString*)urlStr
 							portNo:(uint)portNo
 {
@@ -53,53 +56,44 @@ int dataLength;
 }
 
 
-- (void) writeToServer:(const uint8_t*)buffer {
-	[oStream write:buffer maxLength:strlen((char*)buffer)];
+// write buffer to the connected server
+- (void) writeToServer:(const uint8_t*)buffer length:(int)length {
+	printf("Client message: \n");
+	for (int i = 0; i < 11; ++i) {
+		printf("%i\n",buffer[i]);
+	}
+	[oStream write:buffer maxLength:length];
 }
 
 
+// Handles events occurred on streams
 - (void)stream:(NSStream*)stream handleEvent:(NSStreamEvent)eventcode {
 	
 	switch(eventcode) {
-		case NSStreamEventHasBytesAvailable:
+		case NSStreamEventHasBytesAvailable: //There is incoming data
 		{
 			if (!dataIsInitialized) {
 				data = malloc(1024);
 				dataIsInitialized = TRUE;
 			}
-//			if (data == nil) {
-//				data = [[NSMutableData alloc] init];
-//			}
+			
 			uint8_t buffer[1024];
 			unsigned int length = 0;
 			length = [(NSInputStream*)stream read:buffer maxLength:1024];
 			if(length) {
 				memcpy(data+dataLength, buffer, length);
-//				[data appendBytes:(const void*)buffer length:length];
-//				int bytesRead;
 				dataLength += length;
 			} else {
 				NSLog(@"No data.");
 			}
-						
-//			NSString *strData = [[NSString alloc] initWithData:data
-//												  encoding:NSUTF8StringEncoding];
 			
+			printf("\nServer reply: \n");
+			for (int i = 0; i < dataLength; ++i) {
+				printf("%i\n", data[i]);
+			}
+			printf("\n");
 			[rdpcore ParseMessage:data OfLength:dataLength];
-
-			 
-			 
-/*			UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"From server"
-															message:str
-														   delegate:self
-												  cancelButtonTitle:@"OK"
-												  otherButtonTitles:nil]; */
-			
-//			[alert show];
-//			[alert release];
-			
-//			[str release];
-//			[data release];
+			//printf("asdsad");
 			data = nil;
 		}
 			break;	
@@ -108,10 +102,12 @@ int dataLength;
 
 
 
-- (void) sendMessage: (const uint8_t*)str {
+- (void) sendMessage: (const uint8_t*)str length:(int)length {
 	[self connectToServerUsingStream:self.host portNo:self.port];
-	[self writeToServer:str];
+	[self writeToServer:str length:length];
 }
+
+
 
 - (BOOL) setHost:(NSString*)hostVal 
 			port:(NSInteger)portVal {

@@ -11,7 +11,9 @@
 #import "RDPCore.h"
 
 @interface RDPPrototypeViewController : UIViewController {
-
+	
+	@public
+	
 	IBOutlet UITextField *textMessage;
 	IBOutlet UITextField *hostTextField;
 	IBOutlet UITextField *portTextField;
