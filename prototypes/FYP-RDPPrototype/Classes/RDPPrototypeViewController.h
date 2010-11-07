@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "NetworkCommunicator.h"
+#import "RDPCore.h"
 
 @interface RDPPrototypeViewController : UIViewController {
 
@@ -15,7 +16,7 @@
 	IBOutlet UITextField *hostTextField;
 	IBOutlet UITextField *portTextField;
 	IBOutlet UITextView *outputTextView;
-	NetworkCommunicator *networkCommunicator;
+	RDPCore *rdpcore;
 
 }
 
@@ -23,7 +24,7 @@
 @property (nonatomic, retain) UITextField* portTextField;
 @property (nonatomic, retain) UITextField *textMessage;
 @property (nonatomic, retain) UITextView *outputTextView;
-@property (nonatomic, retain) NetworkCommunicator *networkCommunicator;
+@property (nonatomic, retain) RDPCore* rdpcore;
 
 -(IBAction) sendMessage: (id) sender;
 

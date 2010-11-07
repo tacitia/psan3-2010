@@ -12,7 +12,8 @@
 @implementation RDPCore
 
 @synthesize serverIP;
-@synthesize severPort;
+@synthesize serverPort;
+@synthesize viewController;
 
 -(int)ParseMessage:(uint8_t*)message OfLength:(int) length{
 	if(status == 255){
@@ -26,6 +27,7 @@
 				break;
 		}
 	}
+	return 1;
 }
 
 -(int)InitConnecting{
@@ -36,7 +38,7 @@
 	
 	//----X.224 connection request packet----//
 	int packetLength = 11;//in byte
-	uint8_t* packet = malloc(sizeof(uint8_t * packetLength));
+	uint8_t* packet = malloc(sizeof(uint8_t) * packetLength);
 	
 	//x224Crq started from byte 5 - 11
 	
@@ -52,7 +54,7 @@
 	
 	packet[10] = 0;//class option
 	
-	[GenerateTPKTHeader packet OfLength 7];
+	[self GenerateTPKTHeader:packet OfLength:7];
 	
 	[communicator sendMessage:packet];
 	//----X.224 connection request packet finish----//
@@ -63,7 +65,7 @@
 }
 
 
--(int)GenerateTPKTHeader:(uint8_t*) packet OfLength (int) length{
+-(int)GenerateTPKTHeader:(uint8_t*) packet OfLength:(int) length{
 	
 	packet[0] = 0X03;//0000 0011
 	packet[1] = 0;//Reserved
@@ -72,6 +74,15 @@
 	packet[4] = length%256;
 	
 	return 1;
+}
+
+
+
+-(id)initWithViewController:(RDPPrototypeViewController*)viewControllerPtr {
+	[super init];
+	self.viewController = viewControllerPtr;
+	
+	return self;
 }
 
 

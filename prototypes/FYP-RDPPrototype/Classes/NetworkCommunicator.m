@@ -10,11 +10,17 @@
 #import "NSStreamAdditions.h"
 
 
+
 @implementation NetworkCommunicator
+
+uint8_t* data;
+BOOL dataIsInitialized;
+int dataLength;
 
 
 @synthesize host;
 @synthesize port;
+@synthesize rdpcore;
 
 - (void)connectToServerUsingStream:(NSString*)urlStr
 							portNo:(uint)portNo
@@ -57,33 +63,43 @@
 	switch(eventcode) {
 		case NSStreamEventHasBytesAvailable:
 		{
-			if (data == nil) {
-				data = [[NSMutableData alloc] init];
+			if (!dataIsInitialized) {
+				data = malloc(1024);
+				dataIsInitialized = TRUE;
 			}
+//			if (data == nil) {
+//				data = [[NSMutableData alloc] init];
+//			}
 			uint8_t buffer[1024];
 			unsigned int length = 0;
 			length = [(NSInputStream*)stream read:buffer maxLength:1024];
 			if(length) {
-				[data appendBytes:(const void*)buffer length:length];
-				int bytesRead;
-				bytesRead += length;
+				memcpy(data+dataLength, buffer, length);
+//				[data appendBytes:(const void*)buffer length:length];
+//				int bytesRead;
+				dataLength += length;
 			} else {
 				NSLog(@"No data.");
 			}
+						
+//			NSString *strData = [[NSString alloc] initWithData:data
+//												  encoding:NSUTF8StringEncoding];
 			
-			NSString *str = [[NSString alloc] initWithData:data
-												  encoding:NSUTF8StringEncoding];
-			UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"From server"
+			[rdpcore ParseMessage:data OfLength:dataLength];
+
+			 
+			 
+/*			UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"From server"
 															message:str
 														   delegate:self
 												  cancelButtonTitle:@"OK"
-												  otherButtonTitles:nil];
+												  otherButtonTitles:nil]; */
 			
-			[alert show];
-			[alert release];
+//			[alert show];
+//			[alert release];
 			
-			[str release];
-			[data release];
+//			[str release];
+//			[data release];
 			data = nil;
 		}
 			break;	
@@ -112,6 +128,14 @@
 	return TRUE;
 }
 
+
+- (id) initWithRDPCore:(RDPCore*)rdpCorePtr {
+	[super init];
+	dataIsInitialized = FALSE;
+	dataLength = 0;
+	self.rdpcore = rdpCorePtr;
+	return self;
+}
 
 - (void) disconnect {
 	[iStream close];

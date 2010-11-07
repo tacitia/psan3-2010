@@ -14,15 +14,17 @@
 @synthesize portTextField;
 @synthesize textMessage;
 @synthesize outputTextView;
-@synthesize networkCommunicator;
+@synthesize rdpcore;
 
 - (IBAction) sendMessage: (id) sender {
 	NSString* host = hostTextField.text;
 	NSInteger port = [portTextField.text intValue];
-	[networkCommunicator setHost:host port:port];
-	const uint8_t *str = 
-	(uint8_t *) [textMessage.text cStringUsingEncoding:NSASCIIStringEncoding];	
-	[networkCommunicator sendMessage:str];
+	rdpcore.serverIP = host;
+	rdpcore.serverPort = port;
+//	const uint8_t *str = 
+//	(uint8_t *) [textMessage.text cStringUsingEncoding:NSASCIIStringEncoding];	
+//	[networkCommunicator sendMessage:str];
+	[rdpcore InitConnecting];
 	textMessage.text = @"";
 }
 
@@ -47,8 +49,8 @@
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
-    [super viewDidLoad];
-	self.networkCommunicator = [[NetworkCommunicator alloc] init];
+    [super viewDidLoad];		
+	self.rdpcore = [[RDPCore alloc] initWithViewController:self];
 }
 
 
