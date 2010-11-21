@@ -26,6 +26,8 @@
 	
 	RDPPrototypeViewController* viewController;
 	
+	int packetLength;
+	uint8_t* packet;
 }
 
 @property (nonatomic, retain) NSString* serverIP;
@@ -33,11 +35,14 @@
 @property (nonatomic, retain) RDPPrototypeViewController* viewController;
 @property (nonatomic) int status;
 @property (nonatomic, retain) NetworkCommunicator* communicator;
+@property (nonatomic) uint8_t* packet;
+@property (nonatomic) int packetLength;
 
 -(int)ParseMessage:(uint8_t*)message OfLength:(int) length;
 -(int)InitConnecting;
 -(int)CloseSession;
 -(int)GenerateTPKTHeader:(uint8_t*) packet OfLength:(int) length;
+-(int)GenerateMCSConnectInitialPDU;
 -(bool)CheckTPKHeader:(uint8_t*) packet OfLength:(int) length;
 -(id)initWithViewController:(RDPPrototypeViewController*)viewController;
 

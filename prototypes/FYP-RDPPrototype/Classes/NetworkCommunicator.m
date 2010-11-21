@@ -59,9 +59,10 @@ int dataLength;
 // write buffer to the connected server
 - (void) writeToServer:(const uint8_t*)buffer length:(int)length {
 	printf("Client message: \n");
-	for (int i = 0; i < 11; ++i) {
+	for (int i = 0; i < length; ++i) {
 		printf("%i\n",buffer[i]);
 	}
+	printf("the end of message \n");
 	[oStream write:buffer maxLength:length];
 }
 
@@ -72,29 +73,40 @@ int dataLength;
 	switch(eventcode) {
 		case NSStreamEventHasBytesAvailable: //There is incoming data
 		{
-			if (!dataIsInitialized) {
-				data = malloc(1024);
-				dataIsInitialized = TRUE;
-			}
+			printf("has bytes available");
+			//if (!dataIsInitialized) {
+			//	data = malloc(1024);
+			//	dataIsInitialized = TRUE;
+			//}
 			
 			uint8_t buffer[1024];
+			printf("!!!");
 			unsigned int length = 0;
 			length = [(NSInputStream*)stream read:buffer maxLength:1024];
-			if(length) {
-				memcpy(data+dataLength, buffer, length);
-				dataLength += length;
-			} else {
-				NSLog(@"No data.");
-			}
+			printf("???");
+			//if(length) {
+			//	printf("^^^");
+			//	memcpy(data, buffer, length);
+				//dataLength += length;
+			//	printf("***");
+			//} else {
+			//	NSLog(@"No data.");
+			//}
 			
-			printf("\nServer reply: \n");
-			for (int i = 0; i < dataLength; ++i) {
-				printf("%i\n", data[i]);
-			}
+			printf("%u\n", length);
+			if (length > 0) {
+				printf("\nServer reply: \n");
+				for (int i = 0; i < length; ++i) {
+					printf("%i\n", buffer[i]);
+				}
 			printf("\n");
-			[rdpcore ParseMessage:data OfLength:dataLength];
-			//printf("asdsad");
-			data = nil;
+			printf("sending to parse...");
+			[rdpcore ParseMessage:buffer OfLength:length];
+			}
+			printf("asdsad");
+			//data = nil;
+			//dataLength = 0;
+			//dataIsInitialized = FALSE;
 		}
 			break;	
 	}
