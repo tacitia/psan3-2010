@@ -2,7 +2,7 @@
 //  RDPCore.m
 //  RDPPrototype
 //
-//  Created by LIU Haixiang on 06/11/2010.
+//  Createdfile://localhost/Users/Tacitia/Desktop/FYP-RDPPrototype/Classes/RDPCore.m by LIU Haixiang on 06/11/2010.
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
@@ -295,107 +295,113 @@
 	
 	//----User Cluster Data----
 	//header
-	packet[7] = 0x04;
-	packet[7] = 0xc0;
-	packet[7] = 0x0c;
-	packet[7] = 0x00;
+	packet[132] = 0x04;
+	packet[133] = 0xc0;
+	packet[134] = 0x0c;
+	packet[135] = 0x00;
 	
 	//TS_UD_CS_CLUSTER::flags
-	packet[7] = 0x0b;
-	packet[7] = 0x00;
-	packet[7] = 0x00;
-	packet[7] = 0x00;
+	packet[136] = 0x0b;
+	packet[137] = 0x00;
+	packet[138] = 0x00;
+	packet[139] = 0x00;
 	
 	//TS_UD_CS_CLUSTER::RedirectedSessionID
-	packet[7] = 0x00;
-	packet[7] = 0x00;
-	packet[7] = 0x00;
-	packet[7] = 0x00;
+	packet[140] = 0x00;
+	packet[141] = 0x00;
+	packet[142] = 0x00;
+	packet[143] = 0x00;
 	
 	//----User Core Data----
 	//header
-	packet[7] = 0x01;
-	packet[7] = 0xc0;
-	packet[7] = 0x9b;
-	packet[7] = 0x00;
-	packet[7] = 0x01;
-	packet[7] = 0x00;
-	packet[7] = 0x08;
-	packet[7] = 0x00;
-	packet[7] = 0x00;
-	packet[7] = 0x04;
-	packet[7] = 0x00;
-	packet[7] = 0x03;
-	packet[7] = 0x01;
-	packet[7] = 0xca;
-	packet[7] = 0x03;
-	packet[7] = 0xaa;
-	packet[7] = 0x09;
-	packet[7] = 0x04;
-	packet[7] = 0x00;
-	packet[7] = 0x00;
-	packet[7] = 0x01;
-	packet[7] = 0x00;
-	packet[7] = 0x00;
-	packet[7] = 0x00;
-	packet[7] = 0x69;
-	packet[7] = 0x00;
-	packet[7] = 0x70;
-	packet[7] = 0x00;
-	packet[7] = 0x68;
-	packet[7] = 0x00;
-	packet[7] = 0x6f;
-	packet[7] = 0x00;
-	packet[7] = 0x6e;
-	packet[7] = 0x00;
-	packet[7] = 0x65;
-	00 00 00 00 00 00 00 00 00 00 00 00 00
-	00 00 00 00 00 00 00 00 
+	packet[144] = 0x01;
+	packet[145] = 0xc0;
+	packet[146] = 0x9b;
+	packet[147] = 0x00;
+	packet[148] = 0x01;
+	packet[149] = 0x00;
+	packet[150] = 0x08;
+	packet[151] = 0x00;
+	packet[152] = 0x00;
+	packet[153] = 0x04;
 	
-	packet[7] = 0x04;
-	packet[7] = 0x00;
-	packet[7] = 0x00;
-	packet[7] = 0x00;
-	packet[7] = 0x00;
-	packet[7] = 0x00;
-	packet[7] = 0x00;
-	packet[7] = 0x00;
-	packet[7] = 0x0c;
-	packet[7] = 0x00;
-	packet[7] = 0x00;
-	packet[7] = 0x00;
+	packet[154] = 0x00;
+	packet[155] = 0x03;
+	packet[156] = 0x01;
+	packet[157] = 0xca;
+	packet[158] = 0x03;
+	packet[159] = 0xaa;
+	packet[160] = 0x09;
+	packet[161] = 0x04;
+	packet[162] = 0x00;
+	packet[163] = 0x00;
 	
-	00 00 00 00 00 00 00 00 00 00 00 00
-	00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-	00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-	00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-	00 00 00 00 
-	packet[7] = 0x01;
-	packet[7] = 0xca;
-	packet[7] = 0x01;
-	packet[7] = 0x00;
-	packet[7] = 0x00;
-	packet[7] = 0x00;
-	packet[7] = 0x00;
-	packet[7] = 0x00;
-	packet[7] = 0x10;
-	packet[7] = 0x00;
-	packet[7] = 0x08;
-	packet[7] = 0x00;
-	packet[7] = 0x20;
+	packet[164] = 0x01;
+	packet[165] = 0x00;
+	packet[166] = 0x00;
+	packet[167] = 0x00;
+	packet[168] = 0x69;
+	packet[169] = 0x00;
+	packet[170] = 0x70;
+	packet[171] = 0x00;
+	packet[172] = 0x68;
+	packet[173] = 0x00;
 	
-	00 00 00 00 00 00 00 00 00 
+	packet[174] = 0x6f;
+	packet[175] = 0x00;
+	packet[176] = 0x6e;
+	packet[177] = 0x00;
+	packet[178] = 0x65;
 	
-	packet[7] = 0x01;
-	packet[7] = 0x02;
-	packet[7] = 0xc0;
-	packet[7] = 0x0c;
-	packet[7] = 0x00;
-	packet[7] = 0x03;
+	// 21 0x00
+	memset(packet + 179, 0x00, 21);
 	
+	packet[200] = 0x04;
+	packet[201] = 0x00;
+	packet[202] = 0x00;
+	packet[203] = 0x00;
+	packet[204] = 0x00;
+	packet[205] = 0x00;
+	packet[206] = 0x00;
+	packet[207] = 0x00;
+	packet[208] = 0x0c;
+	packet[209] = 0x00;
 	
-	00 00 00 00 00 00 00
-
+	packet[210] = 0x00;
+	packet[211] = 0x00;
+	
+	//64 0x00
+	memset(packet + 212, 0x00, 64);
+	
+	packet[276] = 0x01;
+	packet[277] = 0xca;
+	packet[278] = 0x01;
+	packet[279] = 0x00;
+	packet[280] = 0x00;
+	packet[281] = 0x00;
+	packet[282] = 0x00;
+	packet[283] = 0x00;
+	packet[284] = 0x10;
+	packet[285] = 0x00;
+	
+	packet[286] = 0x08;
+	packet[287] = 0x00;
+	packet[288] = 0x20;
+	
+	//9 0x00
+	memset(packet + 289, 0x00, 9);
+	
+	packet[298] = 0x01;
+	packet[299] = 0x02;
+	packet[300] = 0xc0;
+	packet[301] = 0x0c;
+	packet[302] = 0x00;
+	packet[303] = 0x03;
+	
+	//7 0x00
+	memset(packet + 304, 0x00, 7);
+	
+	return 1;
 }
 
 /*
