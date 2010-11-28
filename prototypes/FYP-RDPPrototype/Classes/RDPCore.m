@@ -46,7 +46,7 @@
 					}
 					//-----check X.224 CC FINISHED-----//
 					//-----Generate ClientMCS Connect Initial PDU with GCC Conference Create Request-----//
-					packetLength = 416;
+					packetLength = 311;
 					packet = malloc(sizeof(uint8_t) * packetLength);
 
 					[self GenerateTPKTHeader:packet OfLength:packetLength];
@@ -89,12 +89,12 @@
 	
 	
 	//----X.224 connection request packet----//
-	packetLength = 11;//in byte
+	packetLength = 13;//in byte
 	packet = malloc(sizeof(uint8_t) * packetLength);
 	
 	//x224Crq started from byte 5 - 11
 	
-	packet[4] = 6;//LI feild, always 8 here
+	packet[4] = 8;//LI feild, always 8 here
 	packet[5] = 0xE0;//CR|CDT 1110 0000 for class 0
 	
 	packet[6] = 0;
@@ -106,7 +106,10 @@
 	
 	packet[10] = 0;//class option
 	
-	[self GenerateTPKTHeader:packet OfLength:11];
+	packet[11] = 0x0d;
+	packet[12] = 0x0a;
+	
+	[self GenerateTPKTHeader:packet OfLength:13];
 
 /*	printf("%i\n",packet[0]);
 	printf("%i\n",packet[1]);
@@ -114,7 +117,7 @@
 	printf("%i\n",packet[3]);
  */
 	
-	[communicator sendMessage:packet length:11];
+	[communicator sendMessage:packet length:13];
 	//----X.224 connection request packet finish----//
 	
 	status = 1;//startConnecting

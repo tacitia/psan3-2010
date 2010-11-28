@@ -8,8 +8,8 @@
 
 #import "NetworkCommunicator.h"
 #import "NSStreamAdditions.h"
-#import "RDPCore.h"
-
+//#import "RDPCore.h"
+#import "VNCCore.h"
 
 @implementation NetworkCommunicator
 
@@ -21,7 +21,8 @@ int dataLength;
 
 @synthesize host;
 @synthesize port;
-@synthesize rdpcore;
+//@synthesize rdpcore;
+@synthesize vnccore;
 
 
 // Estalish connection
@@ -101,7 +102,8 @@ int dataLength;
 				}
 			printf("\n");
 			printf("sending to parse...");
-			[rdpcore ParseMessage:buffer OfLength:length];
+			//[rdpcore ParseMessage:buffer OfLength:length];
+			[vnccore parseMessage:buffer ofLength:length];
 			}
 			printf("asdsad");
 			//data = nil;
@@ -136,7 +138,7 @@ int dataLength;
 	return TRUE;
 }
 
-
+/*
 - (id) initWithRDPCore:(RDPCore*)rdpCorePtr {
 	[super init];
 	dataIsInitialized = FALSE;
@@ -144,6 +146,16 @@ int dataLength;
 	self.rdpcore = rdpCorePtr;
 	return self;
 }
+*/
+
+- (id) initWithVNCCore:(VNCCore*)vncCorePtr {
+	[super init];
+	dataIsInitialized = FALSE;
+	dataLength = 0;
+	self.vnccore = vncCorePtr;
+	return self;
+}
+
 
 - (void) disconnect {
 	[iStream close];

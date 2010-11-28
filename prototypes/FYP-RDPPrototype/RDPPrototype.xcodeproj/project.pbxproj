@@ -18,6 +18,7 @@
 		3E5582B112856DE600AB8CDF /* NetworkCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5582B012856DE600AB8CDF /* NetworkCommunicator.m */; };
 		3E5582C81285700900AB8CDF /* NSStreamAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5582C71285700900AB8CDF /* NSStreamAdditions.m */; };
 		F7F5E04A1285880C0070AE03 /* RDPCore.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F5E0491285880C0070AE03 /* RDPCore.m */; };
+		F7F8C62112A247A300FC4E29 /* VNCCore.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,8 @@
 		8D1107310486CEB800E47090 /* RDPPrototype-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RDPPrototype-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		F7F5E0481285880C0070AE03 /* RDPCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDPCore.h; sourceTree = "<group>"; };
 		F7F5E0491285880C0070AE03 /* RDPCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDPCore.m; sourceTree = "<group>"; };
+		F7F8C61F12A247A300FC4E29 /* VNCCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VNCCore.h; sourceTree = "<group>"; };
+		F7F8C62012A247A300FC4E29 /* VNCCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VNCCore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +72,8 @@
 				3E5582C71285700900AB8CDF /* NSStreamAdditions.m */,
 				F7F5E0481285880C0070AE03 /* RDPCore.h */,
 				F7F5E0491285880C0070AE03 /* RDPCore.m */,
+				F7F8C61F12A247A300FC4E29 /* VNCCore.h */,
+				F7F8C62012A247A300FC4E29 /* VNCCore.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -149,6 +154,7 @@
 			isa = PBXProject;
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "RDPPrototype" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				English,
@@ -188,6 +194,7 @@
 				3E5582B112856DE600AB8CDF /* NetworkCommunicator.m in Sources */,
 				3E5582C81285700900AB8CDF /* NSStreamAdditions.m in Sources */,
 				F7F5E04A1285880C0070AE03 /* RDPCore.m in Sources */,
+				F7F8C62112A247A300FC4E29 /* VNCCore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
