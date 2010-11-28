@@ -21,6 +21,8 @@
 	NetworkCommunicator* communicator;
 	int packetLength;
 	uint8_t* packet;
+	int status;
+	uint8_t* serverVer;
 }
 
 @property (nonatomic, retain) NSString* serverIP;
@@ -29,8 +31,10 @@
 @property (nonatomic, retain) NetworkCommunicator* communicator;
 @property (nonatomic) int packetLength;
 @property (nonatomic) uint8_t* packet;
+@property (nonatomic) int status;
+@property (nonatomic) uint8_t* serverVer;
 
--(int)initConnecting;
+-(int)initConnection;
 -(id)initWithViewController:(RDPPrototypeViewController *)viewControllerPtr;
 -(int)parseMessage:(uint8_t*)message ofLength:(int)length;
 

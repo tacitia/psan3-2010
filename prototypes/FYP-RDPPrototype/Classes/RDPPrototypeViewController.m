@@ -28,7 +28,7 @@
 //	[rdpcore InitConnecting];
 	vnccore.serverIP = host;
 	vnccore.serverPort = port;
-	[vnccore initConnecting];
+	[vnccore initConnection];
 	textMessage.text = @"";
 }
 

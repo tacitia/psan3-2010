@@ -81,15 +81,11 @@ int dataLength;
 			//}
 			
 			uint8_t buffer[1024];
-			printf("!!!");
 			unsigned int length = 0;
 			length = [(NSInputStream*)stream read:buffer maxLength:1024];
-			printf("???");
 			//if(length) {
-			//	printf("^^^");
 			//	memcpy(data, buffer, length);
 				//dataLength += length;
-			//	printf("***");
 			//} else {
 			//	NSLog(@"No data.");
 			//}
@@ -105,7 +101,6 @@ int dataLength;
 			//[rdpcore ParseMessage:buffer OfLength:length];
 			[vnccore parseMessage:buffer ofLength:length];
 			}
-			printf("asdsad");
 			//data = nil;
 			//dataLength = 0;
 			//dataIsInitialized = FALSE;
