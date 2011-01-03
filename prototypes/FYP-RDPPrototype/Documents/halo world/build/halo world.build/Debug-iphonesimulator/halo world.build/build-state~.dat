@@ -1,258 +1,0 @@
-Thalo world
-v7
-r0
-t310276307.542241
-cCheck dependencies
-cProcessInfoPlistFile "/homes/cs_lhxac/Documents/halo world/build/Debug-iphonesimulator/halo world.app/Info.plist" halo_world-Info.plist
-cCompileXIB "/homes/cs_lhxac/Documents/halo world/MainWindow.xib"
-cCompileXIB "/homes/cs_lhxac/Documents/halo world/halo_worldViewController.xib"
-cProcessPCH /var/folders/zz/zzzivhrRnAmviuee++0L7E++ZmI/-Caches-/com.apple.Xcode.38693/SharedPrecompiledHeaders/halo_world_Prefix-daervzbrfjdhxofsbufbvdrujrdw/halo_world_Prefix.pch.gch halo_world_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC "build/halo world.build/Debug-iphonesimulator/halo world.build/Objects-normal/i386/main.o" "/homes/cs_lhxac/Documents/halo world/main.m" normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC "build/halo world.build/Debug-iphonesimulator/halo world.build/Objects-normal/i386/halo_worldAppDelegate.o" "/homes/cs_lhxac/Documents/halo world/Classes/halo_worldAppDelegate.m" normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC "build/halo world.build/Debug-iphonesimulator/halo world.build/Objects-normal/i386/halo_worldViewController.o" "/homes/cs_lhxac/Documents/halo world/Classes/halo_worldViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
-cLd "/homes/cs_lhxac/Documents/halo world/build/Debug-iphonesimulator/halo world.app/halo world" normal i386
-cGenerateDSYMFile "/homes/cs_lhxac/Documents/halo world/build/Debug-iphonesimulator/halo world.app.dSYM" "/homes/cs_lhxac/Documents/halo world/build/Debug-iphonesimulator/halo world.app/halo world"
-cTouch "/homes/cs_lhxac/Documents/halo world/build/Debug-iphonesimulator/halo world.app"
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk
-c000000004C494D260000000000000110
-t1279872294
-s272
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
-c000000004BD1CD90000000000026F020
-t1272040848
-s2551840
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/Foundation.framework/Foundation
-c000000004BD1FFC200000000002A96A0
-t1272053698
-s2791072
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
-c000000004BD1FF9E0000000000001355
-t1272053662
-s4949
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
-c000000004BD20412000000000000098F
-t1272054802
-s2447
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/UIKit.framework/UIKit
-c000000004BD20471000000000222E640
-t1272054897
-s35841600
-
-N/homes/cs_lhxac/Documents/halo world/Classes/halo_worldAppDelegate.h
-c000000004CBBD80B00000000000001F4
-t1287378955
-s500
-i<UIKit/UIKit.h>
-
-N/homes/cs_lhxac/Documents/halo world/Classes/halo_worldAppDelegate.m
-c000000004CBBD80B00000000000007BC
-t1287378955
-s1980
-i"halo_worldAppDelegate.h"
-i"halo_worldViewController.h"
-
-N/homes/cs_lhxac/Documents/halo world/Classes/halo_worldViewController.h
-c000000004CBBD80B00000000000000FA
-t1287378955
-s250
-i<UIKit/UIKit.h>
-
-N/homes/cs_lhxac/Documents/halo world/Classes/halo_worldViewController.m
-c000000004CBBD80B000000000000055F
-t1287378955
-s1375
-i"halo_worldViewController.h"
-
-N/homes/cs_lhxac/Documents/halo world/MainWindow.xib
-c000000004CBBD80B0000000000004D27
-t1287378955
-s19751
-
-N/homes/cs_lhxac/Documents/halo world/build/Debug-iphonesimulator/halo world.app
-t1288583507
-s238
-
-N/homes/cs_lhxac/Documents/halo world/build/Debug-iphonesimulator/halo world.app.dSYM
-t1288583507
-s102
-
-N/homes/cs_lhxac/Documents/halo world/build/Debug-iphonesimulator/halo world.app/Info.plist
-t1288583504
-s810
-
-N/homes/cs_lhxac/Documents/halo world/build/Debug-iphonesimulator/halo world.app/MainWindow.nib
-t1288583506
-s1129
-
-N/homes/cs_lhxac/Documents/halo world/build/Debug-iphonesimulator/halo world.app/PkgInfo
-t1288583504
-s8
-
-N/homes/cs_lhxac/Documents/halo world/build/Debug-iphonesimulator/halo world.app/halo world
-t1288583507
-s17228
-
-N/homes/cs_lhxac/Documents/halo world/build/Debug-iphonesimulator/halo world.app/halo_worldViewController.nib
-t1288583506
-s764
-
-N/homes/cs_lhxac/Documents/halo world/build/halo world.build/Debug-iphonesimulator/halo world.build/Objects-normal/i386/halo world.LinkFileList
-c000000004CCE3950000000000000019F
-t1288583504
-s415
-
-N/homes/cs_lhxac/Documents/halo world/build/halo world.build/Debug-iphonesimulator/halo world.build/Objects-normal/i386/halo_worldAppDelegate.o
-t1288583507
-s45188
-
-N/homes/cs_lhxac/Documents/halo world/build/halo world.build/Debug-iphonesimulator/halo world.build/Objects-normal/i386/halo_worldViewController.o
-t1288583507
-s34368
-
-N/homes/cs_lhxac/Documents/halo world/build/halo world.build/Debug-iphonesimulator/halo world.build/Objects-normal/i386/main.o
-t1288583507
-s6300
-
-N/homes/cs_lhxac/Documents/halo world/halo_worldViewController.xib
-c000000004CBBD80B0000000000003EED
-t1287378955
-s16109
-
-N/homes/cs_lhxac/Documents/halo world/halo_world_Prefix.pch
-c000000004CBBD80B00000000000000BD
-t1287378955
-s189
-i<Foundation/Foundation.h>
-i<UIKit/UIKit.h>
-
-N/homes/cs_lhxac/Documents/halo world/main.m
-c000000004CBBD80B000000000000016F
-t1287378955
-s367
-i<UIKit/UIKit.h>
-
-N/var/folders/zz/zzzivhrRnAmviuee++0L7E++ZmI/-Caches-/com.apple.Xcode.38693/SharedPrecompiledHeaders/halo_world_Prefix-daervzbrfjdhxofsbufbvdrujrdw/halo_world_Prefix.pch.gch
-t1288583506
-s13825936
-
-Nhalo_world-Info.plist
-c000000004CBBD80B00000000000004D6
-t1287378955
-s1238
-
-CCheck dependencies
-r0
-lSLF07#2@18"Check dependencies310276303#310276304#0(0"0(0#1#0"3343187568374212096#0"0#
-
-CCompileC "build/halo world.build/Debug-iphonesimulator/halo world.build/Objects-normal/i386/halo_worldAppDelegate.o" "/homes/cs_lhxac/Documents/halo world/Classes/halo_worldAppDelegate.m" normal i386 objective-c com.apple.compilers.gcc.4_2
-s310276307.009779
-e310276307.115525
-r1
-xCompileC
-xbuild/halo world.build/Debug-iphonesimulator/halo world.build/Objects-normal/i386/halo_worldAppDelegate.o
-x/homes/cs_lhxac/Documents/halo world/Classes/halo_worldAppDelegate.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@76"Compile /homes/cs_lhxac/Documents/halo world/Classes/halo_worldAppDelegate.m310276307#310276307#0(0"0(0#0#68"/homes/cs_lhxac/Documents/halo world/Classes/halo_worldAppDelegate.m8603229088#2059"    cd "/homes/cs_lhxac/Documents/halo world"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -iquote "/homes/cs_lhxac/Documents/halo world/build/halo world.build/Debug-iphonesimulator/halo world.build/halo world-generated-files.hmap" "-I/homes/cs_lhxac/Documents/halo world/build/halo world.build/Debug-iphonesimulator/halo world.build/halo world-own-target-headers.hmap" "-I/homes/cs_lhxac/Documents/halo world/build/halo world.build/Debug-iphonesimulator/halo world.build/halo world-all-target-headers.hmap" -iquote "/homes/cs_lhxac/Documents/halo world/build/halo world.build/Debug-iphonesimulator/halo world.build/halo world-project-headers.hmap" "-F/homes/cs_lhxac/Documents/halo world/build/Debug-iphonesimulator" "-I/homes/cs_lhxac/Documents/halo world/build/Debug-iphonesimulator/include" "-I/homes/cs_lhxac/Documents/halo world/build/halo world.build/Debug-iphonesimulator/halo world.build/DerivedSources/i386" "-I/homes/cs_lhxac/Documents/halo world/build/halo world.build/Debug-iphonesimulator/halo world.build/DerivedSources" -include /var/folders/zz/zzzivhrRnAmviuee++0L7E++ZmI/-Caches-/com.apple.Xcode.38693/SharedPrecompiledHeaders/halo_world_Prefix-daervzbrfjdhxofsbufbvdrujrdw/halo_world_Prefix.pch -c "/homes/cs_lhxac/Documents/halo world/Classes/halo_worldAppDelegate.m" -o "/homes/cs_lhxac/Documents/halo world/build/halo world.build/Debug-iphonesimulator/halo world.build/Objects-normal/i386/halo_worldAppDelegate.o"0#
-
-CCompileC "build/halo world.build/Debug-iphonesimulator/halo world.build/Objects-normal/i386/halo_worldViewController.o" "/homes/cs_lhxac/Documents/halo world/Classes/halo_worldViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
-s310276307.105867
-e310276307.155000
-r1
-xCompileC
-xbuild/halo world.build/Debug-iphonesimulator/halo world.build/Objects-normal/i386/halo_worldViewController.o
-x/homes/cs_lhxac/Documents/halo world/Classes/halo_worldViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@79"Compile /homes/cs_lhxac/Documents/halo world/Classes/halo_worldViewController.m310276307#310276307#0(0"0(0#0#71"/homes/cs_lhxac/Documents/halo world/Classes/halo_worldViewController.m8603109280#2065"    cd "/homes/cs_lhxac/Documents/halo world"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -iquote "/homes/cs_lhxac/Documents/halo world/build/halo world.build/Debug-iphonesimulator/halo world.build/halo world-generated-files.hmap" "-I/homes/cs_lhxac/Documents/halo world/build/halo world.build/Debug-iphonesimulator/halo world.build/halo world-own-target-headers.hmap" "-I/homes/cs_lhxac/Documents/halo world/build/halo world.build/Debug-iphonesimulator/halo world.build/halo world-all-target-headers.hmap" -iquote "/homes/cs_lhxac/Documents/halo world/build/halo world.build/Debug-iphonesimulator/halo world.build/halo world-project-headers.hmap" "-F/homes/cs_lhxac/Documents/halo world/build/Debug-iphonesimulator" "-I/homes/cs_lhxac/Documents/halo world/build/Debug-iphonesimulator/include" "-I/homes/cs_lhxac/Documents/halo world/build/halo world.build/Debug-iphonesimulator/halo world.build/DerivedSources/i386" "-I/homes/cs_lhxac/Documents/halo world/build/halo world.build/Debug-iphonesimulator/halo world.build/DerivedSources" -include /var/folders/zz/zzzivhrRnAmviuee++0L7E++ZmI/-Caches-/com.apple.Xcode.38693/SharedPrecompiledHeaders/halo_world_Prefix-daervzbrfjdhxofsbufbvdrujrdw/halo_world_Prefix.pch -c "/homes/cs_lhxac/Documents/halo world/Classes/halo_worldViewController.m" -o "/homes/cs_lhxac/Documents/halo world/build/halo world.build/Debug-iphonesimulator/halo world.build/Objects-normal/i386/halo_worldViewController.o"0#
-
-CCompileC "build/halo world.build/Debug-iphonesimulator/halo world.build/Objects-normal/i386/main.o" "/homes/cs_lhxac/Documents/halo world/main.m" normal i386 objective-c com.apple.compilers.gcc.4_2
-s310276307.008342
-e310276307.105760
-r1
-xCompileC
-xbuild/halo world.build/Debug-iphonesimulator/halo world.build/Objects-normal/i386/main.o
-x/homes/cs_lhxac/Documents/halo world/main.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@51"Compile /homes/cs_lhxac/Documents/halo world/main.m310276307#310276307#0(0"0(0#0#43"/homes/cs_lhxac/Documents/halo world/main.m8604314688#2017"    cd "/homes/cs_lhxac/Documents/halo world"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -iquote "/homes/cs_lhxac/Documents/halo world/build/halo world.build/Debug-iphonesimulator/halo world.build/halo world-generated-files.hmap" "-I/homes/cs_lhxac/Documents/halo world/build/halo world.build/Debug-iphonesimulator/halo world.build/halo world-own-target-headers.hmap" "-I/homes/cs_lhxac/Documents/halo world/build/halo world.build/Debug-iphonesimulator/halo world.build/halo world-all-target-headers.hmap" -iquote "/homes/cs_lhxac/Documents/halo world/build/halo world.build/Debug-iphonesimulator/halo world.build/halo world-project-headers.hmap" "-F/homes/cs_lhxac/Documents/halo world/build/Debug-iphonesimulator" "-I/homes/cs_lhxac/Documents/halo world/build/Debug-iphonesimulator/include" "-I/homes/cs_lhxac/Documents/halo world/build/halo world.build/Debug-iphonesimulator/halo world.build/DerivedSources/i386" "-I/homes/cs_lhxac/Documents/halo world/build/halo world.build/Debug-iphonesimulator/halo world.build/DerivedSources" -include /var/folders/zz/zzzivhrRnAmviuee++0L7E++ZmI/-Caches-/com.apple.Xcode.38693/SharedPrecompiledHeaders/halo_world_Prefix-daervzbrfjdhxofsbufbvdrujrdw/halo_world_Prefix.pch -c "/homes/cs_lhxac/Documents/halo world/main.m" -o "/homes/cs_lhxac/Documents/halo world/build/halo world.build/Debug-iphonesimulator/halo world.build/Objects-normal/i386/main.o"0#
-
-CCompileXIB "/homes/cs_lhxac/Documents/halo world/MainWindow.xib"
-s310276304.147658
-e310276306.421648
-r1
-xCompileXIB
-x/homes/cs_lhxac/Documents/halo world/MainWindow.xib
-o2010-11-01 11:51:46.158 Interface Builder Cocoa Touch Tool[677:1903] CFPreferences: user home directory at file://localhost/homes/cs_lhxac/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.
-lSLF07#2@25"CompileXIB MainWindow.xib310276304#310276306#0(241"2010-11-01 11:51:46.158 Interface Builder Cocoa Touch Tool[677:1903] CFPreferences: user home directory at file://localhost/homes/cs_lhxac/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.0(0#0#51"/homes/cs_lhxac/Documents/halo world/MainWindow.xib8604556896#573"    cd "/homes/cs_lhxac/Documents/halo world"    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/homes/cs_lhxac/Documents/halo world/build/Debug-iphonesimulator/halo world.app/MainWindow.nib" "/homes/cs_lhxac/Documents/halo world/MainWindow.xib" --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk0#
-
-CCompileXIB "/homes/cs_lhxac/Documents/halo world/halo_worldViewController.xib"
-s310276304.165951
-e310276306.421844
-r1
-xCompileXIB
-x/homes/cs_lhxac/Documents/halo world/halo_worldViewController.xib
-o2010-11-01 11:51:46.158 Interface Builder Cocoa Touch Tool[676:1903] CFPreferences: user home directory at file://localhost/homes/cs_lhxac/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.
-lSLF07#2@39"CompileXIB halo_worldViewController.xib310276304#310276306#0(241"2010-11-01 11:51:46.158 Interface Builder Cocoa Touch Tool[676:1903] CFPreferences: user home directory at file://localhost/homes/cs_lhxac/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.0(0#0#65"/homes/cs_lhxac/Documents/halo world/halo_worldViewController.xib8600891712#601"    cd "/homes/cs_lhxac/Documents/halo world"    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/homes/cs_lhxac/Documents/halo world/build/Debug-iphonesimulator/halo world.app/halo_worldViewController.nib" "/homes/cs_lhxac/Documents/halo world/halo_worldViewController.xib" --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk0#
-
-CGenerateDSYMFile "/homes/cs_lhxac/Documents/halo world/build/Debug-iphonesimulator/halo world.app.dSYM" "/homes/cs_lhxac/Documents/halo world/build/Debug-iphonesimulator/halo world.app/halo world"
-s310276307.488955
-e310276307.521228
-r1
-xGenerateDSYMFile
-x/homes/cs_lhxac/Documents/halo world/build/Debug-iphonesimulator/halo world.app.dSYM
-x/homes/cs_lhxac/Documents/halo world/build/Debug-iphonesimulator/halo world.app/halo world
-lSLF07#2@122"GenerateDSYMFile "build/Debug-iphonesimulator/halo world.app.dSYM" "build/Debug-iphonesimulator/halo world.app/halo world"310276307#310276307#0(0"0(0#0#90"/homes/cs_lhxac/Documents/halo world/build/Debug-iphonesimulator/halo world.app/halo world8602682880#392"    cd "/homes/cs_lhxac/Documents/halo world"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil "/homes/cs_lhxac/Documents/halo world/build/Debug-iphonesimulator/halo world.app/halo world" -o "/homes/cs_lhxac/Documents/halo world/build/Debug-iphonesimulator/halo world.app.dSYM"0#
-
-CLd "/homes/cs_lhxac/Documents/halo world/build/Debug-iphonesimulator/halo world.app/halo world" normal i386
-s310276307.155082
-e310276307.488853
-r1
-xLd
-x/homes/cs_lhxac/Documents/halo world/build/Debug-iphonesimulator/halo world.app/halo world
-xnormal
-xi386
-lSLF07#2@95"Link /homes/cs_lhxac/Documents/halo world/build/Debug-iphonesimulator/halo world.app/halo world310276307#310276307#0(0"0(0#0#0"8600712352#915"    cd "/homes/cs_lhxac/Documents/halo world"    setenv MACOSX_DEPLOYMENT_TARGET 10.5    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk "-L/homes/cs_lhxac/Documents/halo world/build/Debug-iphonesimulator" "-F/homes/cs_lhxac/Documents/halo world/build/Debug-iphonesimulator" -filelist "/homes/cs_lhxac/Documents/halo world/build/halo world.build/Debug-iphonesimulator/halo world.build/Objects-normal/i386/halo world.LinkFileList" -mmacosx-version-min=10.5 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -o "/homes/cs_lhxac/Documents/halo world/build/Debug-iphonesimulator/halo world.app/halo world"0#
-
-CProcessInfoPlistFile "/homes/cs_lhxac/Documents/halo world/build/Debug-iphonesimulator/halo world.app/Info.plist" halo_world-Info.plist
-s310276304.113387
-e310276304.147580
-r1
-xProcessInfoPlistFile
-x/homes/cs_lhxac/Documents/halo world/build/Debug-iphonesimulator/halo world.app/Info.plist
-xhalo_world-Info.plist
-lSLF07#2@29"Process halo_world-Info.plist310276304#310276304#0(0"0(0#0#58"/homes/cs_lhxac/Documents/halo world/halo_world-Info.plist3271712719774167040#488"    cd "/homes/cs_lhxac/Documents/halo world"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility halo_world-Info.plist -genpkginfo "/homes/cs_lhxac/Documents/halo world/build/Debug-iphonesimulator/halo world.app/PkgInfo" -expandbuildsettings -format binary -platform iphonesimulator -o "/homes/cs_lhxac/Documents/halo world/build/Debug-iphonesimulator/halo world.app/Info.plist"0#
-
-CProcessPCH /var/folders/zz/zzzivhrRnAmviuee++0L7E++ZmI/-Caches-/com.apple.Xcode.38693/SharedPrecompiledHeaders/halo_world_Prefix-daervzbrfjdhxofsbufbvdrujrdw/halo_world_Prefix.pch.gch halo_world_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
-s310276306.422080
-e310276307.008075
-r1
-xProcessPCH
-x/var/folders/zz/zzzivhrRnAmviuee++0L7E++ZmI/-Caches-/com.apple.Xcode.38693/SharedPrecompiledHeaders/halo_world_Prefix-daervzbrfjdhxofsbufbvdrujrdw/halo_world_Prefix.pch.gch
-xhalo_world_Prefix.pch
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@32"Precompile halo_world_Prefix.pch310276306#310276307#0(0"0(0#0#58"/homes/cs_lhxac/Documents/halo world/halo_world_Prefix.pch8604442944#1906"    cd "/homes/cs_lhxac/Documents/halo world"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -iquote "/homes/cs_lhxac/Documents/halo world/build/halo world.build/Debug-iphonesimulator/halo world.build/halo world-generated-files.hmap" "-I/homes/cs_lhxac/Documents/halo world/build/halo world.build/Debug-iphonesimulator/halo world.build/halo world-own-target-headers.hmap" "-I/homes/cs_lhxac/Documents/halo world/build/halo world.build/Debug-iphonesimulator/halo world.build/halo world-all-target-headers.hmap" -iquote "/homes/cs_lhxac/Documents/halo world/build/halo world.build/Debug-iphonesimulator/halo world.build/halo world-project-headers.hmap" "-F/homes/cs_lhxac/Documents/halo world/build/Debug-iphonesimulator" "-I/homes/cs_lhxac/Documents/halo world/build/Debug-iphonesimulator/include" "-I/homes/cs_lhxac/Documents/halo world/build/halo world.build/Debug-iphonesimulator/halo world.build/DerivedSources/i386" "-I/homes/cs_lhxac/Documents/halo world/build/halo world.build/Debug-iphonesimulator/halo world.build/DerivedSources" -c "/homes/cs_lhxac/Documents/halo world/halo_world_Prefix.pch" -o /var/folders/zz/zzzivhrRnAmviuee++0L7E++ZmI/-Caches-/com.apple.Xcode.38693/SharedPrecompiledHeaders/halo_world_Prefix-daervzbrfjdhxofsbufbvdrujrdw/halo_world_Prefix.pch.gch0#
-
-CTouch "/homes/cs_lhxac/Documents/halo world/build/Debug-iphonesimulator/halo world.app"
-s310276307.521299
-e310276307.542178
-r1
-xTouch
-x/homes/cs_lhxac/Documents/halo world/build/Debug-iphonesimulator/halo world.app
-lSLF07#2@85"Touch /homes/cs_lhxac/Documents/halo world/build/Debug-iphonesimulator/halo world.app310276307#310276307#0(0"0(0#0#0"8604187008#281"    cd "/homes/cs_lhxac/Documents/halo world"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c "/homes/cs_lhxac/Documents/halo world/build/Debug-iphonesimulator/halo world.app"0#
-
