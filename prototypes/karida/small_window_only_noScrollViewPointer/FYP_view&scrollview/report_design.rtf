@@ -1,0 +1,52 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf350
+{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\froman\fcharset0 TimesNewRomanPSMT;}
+{\colortbl;\red255\green255\blue255;\red65\green112\blue173;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww16640\viewh11980\viewkind0
+\deftab720
+\pard\pardeftab720\ql\qnatural
+
+\f0\fs46 \cf0 \
+\pard\pardeftab720\ql\qnatural
+
+\f1\fs42 \cf0 \
+\pard\pardeftab720\ql\qnatural
+
+\b\fs46 \cf2 2.1 Design
+\f0\b0 \cf0 \
+\pard\pardeftab720\ql\qnatural
+
+\f1 \cf0 The design phase started in late September. It covers the following aspects:
+\f0 \
+\pard\pardeftab720\ql\qnatural
+
+\f1\b \cf2 2.1.1 Transmission Protocol
+\f0\b0 \cf0 \
+\pard\pardeftab720\ql\qnatural
+
+\f1 \cf0 Our first attempt was to follow the RDP protocol as closely as possible in consideration of its promising capability of producing smoother user experience. However, due to the complexity of its implementation and our tight schedule, we decided to switch to the VNC protocol for its simplicity but still nice performance. In this way, we can set up the connection quickly in order to develop further functionalities such as gesture design and multiple user connection.
+\f0 \
+\pard\pardeftab720\ql\qnatural
+
+\f1\b \cf2 2.1.2 Software Architecture
+\f0\b0 \cf0 \
+\pard\pardeftab720\ql\qnatural
+
+\f1 \cf0 We decomposed the software into two relatively independent modules: network connection module and user interaction module. The network connection module is responsible for the connection set up and network communication between iPad and PC, which includes the NetworkCommunicator class and the VNCCore class. The user interaction module is to implement gesture recognition, command translation between touch events and keyboard&mouse input, and remote desktop application configuration. It consists of several view-controllers classes such as the TouchViewController class, the RDPConfigurationController class and the RDPPrototypeController class. 
+\f0 \
+\pard\pardeftab720\ql\qnatural
+
+\f1\b \cf2 2.1.3 GUI
+\f0\b0 \cf0 \
+\pard\pardeftab720\ql\qnatural
+
+\f1 \cf0 Although most of the functionalities should be achieved without explicit user intervention, \'a0a user friendly GUI is still essential to provide a clean and smooth experience during the client configuration process and when the client starts/exits. In our main window, two text fields for IP address and Port number are displayed. Also, we have a Connect button for initiating the connection and a Custom button for customized configurations. After the connect button is clicked, the connected desktop will be displayed on iPad and users are able to exit the application by clicking the logout button.
+\f0 \
+\pard\pardeftab720\ql\qnatural
+
+\f1\b \cf2 2.1.4 Hand Gestures
+\f0\b0 \cf0 \
+\pard\pardeftab720\ql\qnatural
+
+\f1 \cf0 Input commands on an iPad are conveyed through hand gestures, which are very different from the keyboard-and-mouse input scheme. To enable a smooth transition from using a keyboard and mouse to using a screen, we will provide simple, intuitive and powerful gestures detection. \
+\
+}
