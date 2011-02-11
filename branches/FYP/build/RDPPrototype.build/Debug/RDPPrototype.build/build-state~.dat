@@ -1,0 +1,56 @@
+TRDPPrototype
+v7
+r1
+cCheck dependencies
+
+N/Users/karida/Documents/FYP/MainWindow.xib
+c000000004CD53C9A0000000000004D3B
+t1289043098
+s19771
+
+N/Users/karida/Documents/FYP/RDPPrototypeViewController.xib
+c000000004CE9264B00000000000083C1
+t1290348107
+s33729
+
+N/Users/karida/Documents/FYP/build/Debug/RDPPrototype.app
+t2
+s0
+
+N/Users/karida/Documents/FYP/build/Debug/RDPPrototype.app/Contents/Info.plist
+t2
+s0
+
+N/Users/karida/Documents/FYP/build/Debug/RDPPrototype.app/Contents/PkgInfo
+t2
+s0
+
+N/Users/karida/Documents/FYP/build/Debug/RDPPrototype.app/Contents/Resources/MainWindow.nib
+t2
+s0
+
+N/Users/karida/Documents/FYP/build/Debug/RDPPrototype.app/Contents/Resources/RDPPrototypeViewController.nib
+t2
+s0
+
+NRDPPrototype-Info.plist
+c000000004CD53C9A00000000000004D6
+t1289043098
+s1238
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies315723995#315723995#0(99"[BEROR]No architectures to compile for (ARCHS=, VALID_ARCHS=i386 ppc ppc64 ppc7400 ppc970 x86_64).1(4@91"No architectures to compile for (ARCHS=, VALID_ARCHS=i386 ppc ppc64 ppc7400 ppc970 x86_64).315723995#18446744073709551615#0#0(1@0"0(0#1#0"27866456492998768#0"0#
+
+CCompileXIB /Users/karida/Documents/FYP/MainWindow.xib
+r0
+
+CCompileXIB /Users/karida/Documents/FYP/RDPPrototypeViewController.xib
+r0
+
+CProcessInfoPlistFile /Users/karida/Documents/FYP/build/Debug/RDPPrototype.app/Contents/Info.plist RDPPrototype-Info.plist
+r0
+
+CTouch /Users/karida/Documents/FYP/build/Debug/RDPPrototype.app
+r0
+
