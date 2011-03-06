@@ -58,6 +58,9 @@
 	
 	self.status = 1;
 	
+	mouseButtonStatus = malloc(sizeof(uint8_t)*8);
+	memset(mouseButtonStatus, 0, 8);
+	
 	return 1;
 }
 
@@ -1063,14 +1066,40 @@
 }
 
 
+-(void)sendPointerEvent:(MouseButton)button atPosition:(struct Pos)position pressed:(BOOL)pressed {
+	if (packet != nil) {
+		packet != nil;
+		free(packet);
+		packet = nil;
+	}
+	packet = malloc(sizeof(uint8_t)*6);
+	
+	mouseButtonStatus[button] = pressed;
+	
+	packet[0] = 5;
+	packet[1] = mouseButtonStatus[0];
+	for (int i = 1; i < 8; ++i) {
+		packet[1] = packet[1] | mouseButtonStatus[i];
+	}
+	// packet[1] holds the button-mask
+	
+	packet[2] = position.x / 256;
+	packet[3] = position.x % 256;
+	
+	packet[4] = position.y / 256;
+	packet[5] = position.y % 256;
+}
+
 -(void)putTextIntoCutBuffer:(NSString*)text {
 	if (packet != nil) {
 		free(packet);
 		packet = nil;
 	}
-	
+		
 	uint8_t* textChars = [text UTF8String];
 	int textLength = [text length];
+	
+	packet = malloc(sizeof(uint8_t) * (8+textLength));
 	
 	packet[0] = 6;
 	packet[1] = packet[2] = packet[3] = 0;

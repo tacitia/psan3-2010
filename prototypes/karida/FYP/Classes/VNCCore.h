@@ -171,6 +171,19 @@ typedef enum {
 	Char_z,		
 } KeySym;
 
+typedef enum {
+	LeftButton,
+	MiddleButton,
+	RightButton,
+	WheelUp,
+	WheelDown
+} MouseButton;
+
+struct Pos {
+	int x;
+	int y;
+};
+
 @class RDPPrototypeViewController;
 
 @interface VNCCore : NSObject {
@@ -201,6 +214,8 @@ typedef enum {
 	
 	NSString* serverName;
 	struct PixelFormat pixelFormat;
+	
+	uint8_t* mouseButtonStatus;
 }
 
 @property (nonatomic, retain) NSString* serverIP;
