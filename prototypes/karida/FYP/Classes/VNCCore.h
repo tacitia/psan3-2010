@@ -31,6 +31,146 @@ struct RectPixel {
 	int encoding;
 };
 
+typedef enum {
+	Back_Space,
+	Tab,
+	Return,
+	Escape,
+	Insert,
+	Delete,
+	Home,
+	End,
+	Page_Up,
+	Page_Down,
+	Left,
+	Right,
+	Up,
+	Down,
+	Scroll_Lock,
+	SysReq,
+	Shift_L,
+	Shift_R,
+	Ctrl_L,
+	Ctrl_R,
+	Caps_Lock,
+	Meta_L,
+	Meta_R,
+	Alt_L,
+	Alt_R,
+	
+	F1,
+	F2,
+	F3,
+	F4,
+	F5,
+	F6,
+	F7,
+	F8,
+	F9,
+	F10,
+	F11,
+	F12,
+	
+	Space,
+	Exclam, //!
+	Quotedbl, //???
+	Numbersign, //#
+	Dollar, //$
+	Percent, //%
+	Ampersand, //???
+	Apostrophe, //'
+	Parenleft, //(
+	Parenright, //)
+	Asterisk, //*
+	Plus, 
+	Comma,
+	Minus,
+	Period,
+	Slash,
+	Colon,
+	Semicolon,
+	Less,
+	Equal,
+	Greater,
+	Question,
+	At,
+	Bracketleft,
+	Backslash,
+	Bracketright,
+	Asciicircum, //^
+	Underscore,
+	Grave,//' (The one on the right of the keyboard)
+	Braceleft, //(
+	Braceright, //)
+	Bar,
+	Asciitilde, //~
+	
+	Num_0,
+	Num_1,
+	Num_2,
+	Num_3,
+	Num_4,
+	Num_5,
+	Num_6,
+	Num_7,
+	Num_8,
+	Num_9,
+	
+	Char_A,
+	Char_B,
+	Char_C,
+	Char_D,
+	Char_E,
+	Char_F,
+	Char_G,
+	Char_H,
+	Char_I,
+	Char_J,
+	Char_K,
+	Char_L,
+	Char_M,
+	Char_N,
+	Char_O,
+	Char_P,
+	Char_Q,
+	Char_R,
+	Char_S,
+	Char_T,
+	Char_U,
+	Char_V,
+	Char_W,
+	Char_X,
+	Char_Y,
+	Char_Z,
+	
+	Char_a,
+	Char_b,
+	Char_c,
+	Char_d,
+	Char_e,
+	Char_f,
+	Char_g,
+	Char_h,
+	Char_i,
+	Char_j,
+	Char_k,
+	Char_l,
+	Char_m,
+	Char_n,
+	Char_o,
+	Char_p,
+	Char_q,
+	Char_r,
+	Char_s,
+	Char_t,
+	Char_u,
+	Char_v,
+	Char_w,
+	Char_x,
+	Char_y,
+	Char_z,		
+} KeySym;
+
 @class RDPPrototypeViewController;
 
 @interface VNCCore : NSObject {
@@ -91,6 +231,8 @@ struct RectPixel {
 -(id)initWithViewController:(RDPPrototypeViewController *)viewControllerPtr;
 -(int)parseMessage:(uint8_t*)message ofLength:(int)length;
 -(int)updateImage;
+-(void)sendKeyEvent:(KeySym)keySym pressed:(BOOL)pressed;
+
 
 -(int)selectSecurityType:(uint8_t*)secTypes withNumOfOptions:(int)numOfSecTypes;
 

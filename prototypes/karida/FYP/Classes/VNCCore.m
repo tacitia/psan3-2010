@@ -510,6 +510,581 @@
 	return 1;
 }
 
+-(void)sendKeyEvent:(KeySym)keySym pressed:(BOOL)pressed {
+	if (packet != nil) {
+		free(packet);
+		packet = nil;
+	}
+	
+	packet = malloc(sizeof(uint8_t) * 8);
+	
+	packet[0] = 4; //message-type: client to server keyEvent
+	(pressed == TRUE) ? (packet[1] = 1) : (packet[1] = 0); //zero indicates the key is now released
+	packet[2] = packet[3] = packet[4] = packet[5] = 0;
+	
+	switch (keySym) {
+		case Back_Space:
+			packet[6] = 0xff;
+			packet[7] = 0x08;
+			break;
+		case Tab:
+			packet[6] = 0xff;
+			packet[7] = 0x09;
+			break;
+		case Return:
+			packet[6] = 0xff;
+			packet[7] = 0x0d;
+			break;
+		case Escape:
+			packet[6] = 0xff;
+			packet[7] = 0x1b;
+			break;
+		case Insert:
+			packet[6] = 0xff;
+			packet[7] = 0x63;
+			break;
+		case Delete:
+			packet[6] = 0xff;
+			packet[7] = 0xff;
+			break;
+		case Home:
+			packet[6] = 0xff;
+			packet[7] = 0x50;
+			break;
+		case End:
+			packet[6] = 0xff;
+			packet[7] = 0x57;
+			break;
+		case Page_Up:
+			packet[6] = 0xff;
+			packet[7] = 0x55;
+			break;
+		case Page_Down:
+			packet[6] = 0xff;
+			packet[7] = 0x56;
+			break;
+		case Left:
+			packet[6] = 0xff;
+			packet[7] = 0x51;
+			break;
+		case Up:
+			packet[6] = 0xff;
+			packet[7] = 0x52;
+			break;
+		case Right:
+			packet[6] = 0xff;
+			packet[7] = 0x53;
+			break;
+		case Down:
+			packet[6] = 0xff;
+			packet[7] = 0x54;
+			break;
+		case Scroll_Lock:
+			packet[6] = 0xff;
+			packet[7] = 0x14;
+			break;
+		case SysReq:
+			packet[6] = 0xff;
+			packet[7] = 0x15;
+			break;
+		case Shift_L:
+			packet[6] = 0xff;
+			packet[7] = 0xe1;
+			break;
+		case Shift_R:
+			packet[6] = 0xff;
+			packet[7] = 0xe2;
+			break;
+		case Ctrl_L:
+			packet[6] = 0xff;
+			packet[7] = 0xe3;
+			break;
+		case Ctrl_R:
+			packet[6] = 0xff;
+			packet[7] = 0xe4;
+			break;
+		case Caps_Lock:
+		case Meta_L:
+			packet[6] = 0xff;
+			packet[7] = 0xe7;
+			break;
+		case Meta_R:
+			packet[6] = 0xff;
+			packet[7] = 0xe8;
+			break;
+		case Alt_L:
+			packet[6] = 0xff;
+			packet[7] = 0xe9;
+			break;
+		case Alt_R:
+			packet[6] = 0xff;
+			packet[7] = 0xea;
+			break;
+			
+		case F1:
+			packet[6] = 0xff;
+			packet[7] = 0xbe;
+			break;
+		case F2:
+			packet[6] = 0xff;
+			packet[7] = 0xbf;
+			break;
+		case F3:
+			packet[6] = 0xff;
+			packet[7] = 0xc0;
+			break;
+		case F4:
+			packet[6] = 0xff;
+			packet[7] = 0xc1;
+		case F5:
+			packet[6] = 0xff;
+			packet[7] = 0xc2;
+			break;
+		case F6:
+			packet[6] = 0xff;
+			packet[7] = 0xc3;
+			break;
+		case F7:
+			packet[6] = 0xff;
+			packet[7] = 0xc4;
+			break;
+		case F8:
+			packet[6] = 0xff;
+			packet[7] = 0xc5;
+			break;
+		case F9:
+			packet[6] = 0xff;
+			packet[7] = 0xc6;
+			break;
+		case F10:
+			packet[6] = 0xff;
+			packet[7] = 0xc7;
+			break;
+		case F11:
+			packet[6] = 0xff;
+			packet[7] = 0xc8;
+			break;
+		case F12:
+			packet[6] = 0xff;
+			packet[7] = 0xc9;
+			break;
+	
+		case Space:
+			packet[6] = 0x00;
+			packet[7] = 0x20;
+			break;
+		case Exclam:
+			packet[6] = 0x0;
+			packet[7] = 0x21;
+			break;
+		case Quotedbl:
+			packet[6] = 0x0;
+			packet[7] = 0x22;
+			break;
+		case Numbersign:
+			packet[6] = 0x0;
+			packet[7] = 0x23;
+			break;
+		case Dollar:
+			packet[6] = 0x0;
+			packet[7] = 0x24;
+			break;
+		case Percent:
+			packet[6] = 0x0;
+			packet[7] = 0x25;
+			break;
+		case Ampersand:
+			packet[6] = 0x0;
+			packet[7] = 0x26;
+			break;
+		case Apostrophe:
+			packet[6] = 0x0;
+			packet[7] = 0x27;
+			break;
+		case Parenleft:
+			packet[6] = 0x0;
+			packet[7] = 0x28;
+			break;
+		case Parenright:
+			packet[6] = 0x0;
+			packet[7] = 0x29;
+			break;
+		case Asterisk:
+			packet[6] = 0x0;
+			packet[7] = 0x2a;
+			break;
+		case Plus:
+			packet[6] = 0x0;
+			packet[7] = 0x2b;
+			break;
+		case Comma:
+			packet[6] = 0x0;
+			packet[7] = 0x2c;
+			break;
+		case Minus:
+			packet[6] = 0x0;
+			packet[7] = 0x2d;
+			break;
+		case Period:
+			packet[6] = 0x0;
+			packet[7] = 0x2e;
+			break;
+		case Slash:
+			packet[6] = 0x0;
+			packet[7] = 0x2f;
+			break;
+		case Colon:
+			packet[6] = 0x0;
+			packet[7] = 0x3a;
+			break;
+		case Semicolon:
+			packet[6] = 0x0;
+			packet[7] = 0x3b;
+			break;
+		case Less:
+			packet[6] = 0x0;
+			packet[7] = 0x3c;
+			break;
+		case Equal:
+			packet[6] = 0x0;
+			packet[7] = 0x3d;
+			break;
+		case Greater:
+			packet[6] = 0x0;
+			packet[7] = 0x3e;
+			break;
+		case Question:
+			packet[6] = 0x0;
+			packet[7] = 0x3f;
+			break;
+		case At:
+			packet[6] = 0x0;
+			packet[7] = 0x40;
+			break;
+		case Bracketleft:
+			packet[6] = 0x0;
+			packet[7] = 0x5b;
+			break;
+		case Backslash:
+			packet[6] = 0x0;
+			packet[7] = 0x5c;
+			break;
+		case Bracketright:
+			packet[6] = 0x0;
+			packet[7] = 0x5d;
+			break;
+		case Asciicircum:
+			packet[6] = 0x0;
+			packet[7] = 0x5e;
+			break;
+		case Underscore:
+			packet[6] = 0x0;
+			packet[7] = 0x5f;
+			break;
+		case Grave:
+			packet[6] = 0x0;
+			packet[7] = 0x60;
+			break;
+		case Braceleft:
+			packet[6] = 0x0;
+			packet[7] = 0x7b;
+			break;
+		case Braceright:
+			packet[6] = 0x0;
+			packet[7] = 0x7d;
+			break;
+		case Bar:
+			packet[6] = 0x0;
+			packet[7] = 0x7c;
+			break;
+		case Asciitilde:
+			packet[6] = 0x0;
+			packet[7] = 0x7e;
+			break;
+			
+			
+		case Num_0:
+			packet[6] = 0x0;
+			packet[7] = 0x30;
+			break;
+		case Num_1:
+			packet[6] = 0x0;
+			packet[7] = 0x31;
+			break;
+		case Num_2:
+			packet[6] = 0x0;
+			packet[7] = 0x32;
+			break;
+		case Num_3:
+			packet[6] = 0x0;
+			packet[7] = 0x33;
+			break;
+		case Num_4:
+			packet[6] = 0x0;
+			packet[7] = 0x34;
+			break;
+		case Num_5:
+			packet[6] = 0x0;
+			packet[7] = 0x35;
+			break;
+		case Num_6:
+			packet[6] = 0x0;
+			packet[7] = 0x36;
+			break;
+		case Num_7:
+			packet[6] = 0x0;
+			packet[7] = 0x37;
+			break;
+		case Num_8:
+			packet[6] = 0x0;
+			packet[7] = 0x38;
+			break;
+		case Num_9:
+			packet[6] = 0x0;
+			packet[7] = 0x39;
+			break;
+			
+		case Char_A:
+			packet[6] = 0x0;
+			packet[7] = 0x41;
+			break;
+		case Char_B:
+			packet[6] = 0x0;
+			packet[7] = 0x42;
+			break;
+		case Char_C:
+			packet[6] = 0x0;
+			packet[7] = 0x43;
+			break;
+		case Char_D:
+			packet[6] = 0x0;
+			packet[7] = 0x44;
+			break;
+		case Char_E:
+			packet[6] = 0x0;
+			packet[7] = 0x45;
+			break;
+		case Char_F:
+			packet[6] = 0x0;
+			packet[7] = 0x46;
+			break;
+		case Char_G:
+			packet[6] = 0x0;
+			packet[7] = 0x47;
+			break;
+		case Char_H:
+			packet[6] = 0x0;
+			packet[7] = 0x48;
+			break;
+		case Char_I:
+			packet[6] = 0x0;
+			packet[7] = 0x49;
+			break;
+		case Char_J:
+			packet[6] = 0x0;
+			packet[7] = 0x4a;
+			break;
+		case Char_K:
+			packet[6] = 0x0;
+			packet[7] = 0x4b;
+			break;
+		case Char_L:
+			packet[6] = 0x0;
+			packet[7] = 0x4c;
+			break;
+		case Char_M:
+			packet[6] = 0x0;
+			packet[7] = 0x4d;
+			break;
+		case Char_N:
+			packet[6] = 0x0;
+			packet[7] = 0x4e;
+			break;
+		case Char_O:
+			packet[6] = 0x0;
+			packet[7] = 0x4f;
+			break;
+		case Char_P:
+			packet[6] = 0x0;
+			packet[7] = 0x50;
+			break;
+		case Char_Q:
+			packet[6] = 0x0;
+			packet[7] = 0x51;
+			break;
+		case Char_R:
+			packet[6] = 0x0;
+			packet[7] = 0x52;
+			break;
+		case Char_S:
+			packet[6] = 0x0;
+			packet[7] = 0x53;
+			break;
+		case Char_T:
+			packet[6] = 0x0;
+			packet[7] = 0x54;
+			break;
+		case Char_U:
+			packet[6] = 0x0;
+			packet[7] = 0x55;
+			break;
+		case Char_V:
+			packet[6] = 0x0;
+			packet[7] = 0x56;
+			break;
+		case Char_W:
+			packet[6] = 0x0;
+			packet[7] = 0x57;
+			break;
+		case Char_X:
+			packet[6] = 0x0;
+			packet[7] = 0x58;
+			break;
+		case Char_Y:
+			packet[6] = 0x0;
+			packet[7] = 0x59;
+			break;
+		case Char_Z:
+			packet[6] = 0x0;
+			packet[7] = 0x5a;
+			break;
+			
+			
+		case Char_a:
+			packet[6] = 0x0;
+			packet[7] = 0x61;
+			break;
+		case Char_b:
+			packet[6] = 0x0;
+			packet[7] = 0x62;
+			break;
+		case Char_c:
+			packet[6] = 0x0;
+			packet[7] = 0x63;
+			break;
+		case Char_d:
+			packet[6] = 0x0;
+			packet[7] = 0x64;
+			break;
+		case Char_e:
+			packet[6] = 0x0;
+			packet[7] = 0x65;
+			break;
+		case Char_f:
+			packet[6] = 0x0;
+			packet[7] = 0x66;
+			break;
+		case Char_g:
+			packet[6] = 0x0;
+			packet[7] = 0x67;
+			break;
+		case Char_h:
+			packet[6] = 0x0;
+			packet[7] = 0x68;
+			break;
+		case Char_i:
+			packet[6] = 0x0;
+			packet[7] = 0x69;
+			break;
+		case Char_j:
+			packet[6] = 0x0;
+			packet[7] = 0x6a;
+			break;
+		case Char_k:
+			packet[6] = 0x0;
+			packet[7] = 0x6b;
+			break;
+		case Char_l:
+			packet[6] = 0x0;
+			packet[7] = 0x6c;
+			break;
+		case Char_m:
+			packet[6] = 0x0;
+			packet[7] = 0x6d;
+			break;
+		case Char_n:
+			packet[6] = 0x0;
+			packet[7] = 0x6e;
+			break;
+		case Char_o:
+			packet[6] = 0x0;
+			packet[7] = 0x6f;
+			break;
+		case Char_p:
+			packet[6] = 0x0;
+			packet[7] = 0x70;
+			break;
+		case Char_q:
+			packet[6] = 0x0;
+			packet[7] = 0x71;
+			break;
+		case Char_r:
+			packet[6] = 0x0;
+			packet[7] = 0x72;
+			break;
+		case Char_s:
+			packet[6] = 0x0;
+			packet[7] = 0x73;
+			break;
+		case Char_t:
+			packet[6] = 0x0;
+			packet[7] = 0x74;
+			break;
+		case Char_u:
+			packet[6] = 0x0;
+			packet[7] = 0x75;
+			break;
+		case Char_v:
+			packet[6] = 0x0;
+			packet[7] = 0x76;
+			break;
+		case Char_w:
+			packet[6] = 0x0;
+			packet[7] = 0x77;
+			break;
+		case Char_x:
+			packet[6] = 0x0;
+			packet[7] = 0x78;
+			break;
+		case Char_y:
+			packet[6] = 0x0;
+			packet[7] = 0x79;
+			break;
+		case Char_z:
+			packet[6] = 0x0;
+			packet[7] = 0x7a;
+			break;
+			
+		default:
+			break;
+	}
+	
+	[communicator sendMessage:packet length:8];
+}
+
+
+-(void)putTextIntoCutBuffer:(NSString*)text {
+	if (packet != nil) {
+		free(packet);
+		packet = nil;
+	}
+	
+	uint8_t* textChars = [text UTF8String];
+	int textLength = [text length];
+	
+	packet[0] = 6;
+	packet[1] = packet[2] = packet[3] = 0;
+	
+	packet[4] = textLength/(16^3);
+	packet[5] = (textLength-packet[4]*16^3)/(16^2);
+	packet[6] = (textLength-packet[4]*16^3-packet[5]*16^2)/16;
+	packet[7] = (textLength-packet[4]*16^3-packet[5]*16^2-packet[6]*16);
+	
+	for (int i = 0; i < textLength; ++i) {
+		packet[i+7] = textChars[i];
+	}
+}
+
 -(id)initWithViewController:(RDPPrototypeViewController*)viewControllerPtr {
 	[super init];
 	self.viewController = viewControllerPtr;
