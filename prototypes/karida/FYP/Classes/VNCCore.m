@@ -38,7 +38,11 @@
 @synthesize numOfRects;
 @synthesize currentRectID;
 
+
+BOOL isCustomServer = FALSE; 
+
 -(int)initConnection{
+	printf("initConnection called");
 	
 	[self updateImage];
 	
@@ -65,10 +69,13 @@
 }
 
 -(int)parseMessage:(uint8_t *)message ofLength:(int)length {
+	static int expectedPacket = -1;
+	static NSMutableData* imageData = nil;
 	if (packet != nil) {
 		free(packet);
 		packet = nil;
 	}
+
 	//NSMutableData *data=[[NSMutableData alloc] init];
 	//[data appendBytes:message length:length];
 	//NSString* errorMsg = [[NSString alloc] 
@@ -79,7 +86,99 @@
 	//printf("%i\n",message[0]);
 	//}
 	//printf("%i\n",length);
-	switch (status) {
+	if (status == 1 && message[10] == '0') {
+		isCustomServer = TRUE;
+	}
+	
+	if (isCustomServer) {
+		//Call another function
+		//printf("here\n");
+		switch (status) {
+				
+			case 1:	//Server Version Indicator
+				serverVer = malloc(sizeof(uint8_t) * 8);
+				memcpy(serverVer, message+4*8, 8);
+				packet = malloc(sizeof(uint8_t) * 12);
+				
+				NSString *tmp = @"RFB 000.000\n";
+				packet = (uint8_t *)[tmp UTF8String];
+				[tmp release];
+				
+				//memcpy(packet, message, 12);
+				[communicator sendMessage:packet length:12];
+				packet = malloc(sizeof(uint8_t) * 12);
+				NSLog(@"AAAA1");
+				status = 2;
+				break;
+			case 2://security
+				//
+				packet = malloc(sizeof(uint8_t));
+				packet[0] = 1;
+				[communicator sendMessage:packet length:1];
+				status = 3;
+				break;
+			case 3:
+				//share
+				packet = malloc(sizeof(uint8_t));
+				packet[0] = 1;
+				[communicator sendMessage:packet length:1];
+				status = 4;
+				break;
+			case 4:
+				framebufferWidth = message[0] * 256 + message[1];
+				framebufferHeight = message[2] * 256 + message[3];
+				packet = malloc(sizeof(uint8_t));
+				packet[0] = 3;
+				[communicator sendMessage:packet length:1];
+				status = 5;
+				recievingStatus = -1;
+				break;
+			case 5:
+				//printf("receiving %i %i %i\n",framebufferWidth,framebufferHeight,message[0]);
+				
+				switch (recievingStatus) {
+					case -1:
+						if (message[0] == 0) {
+							expectedPacket = message[5] * 256 * 256 * 256 + message[6] * 256 * 256 + message[7] * 256 + message[8];
+							printf("ep %i\n",expectedPacket);
+							if(imageData != nil){
+								[imageData release];
+								imageData = [NSMutableData alloc];
+							}
+							recievingStatus = 1;
+							length -= 9;
+							message += 9;
+							if(length == 0){
+								break;
+							}
+						}
+					case 1:
+						if (expectedPacket > 0) {
+							[imageData appendBytes:message length:length];
+							expectedPacket -= length;
+							//printf("%i",expectedPacket);
+							if(expectedPacket == 0){
+								UIImage* tmp = [[UIImage alloc] initWithData:imageData];
+								printf("%i %i\n",[tmp size].width,[tmp size].height);
+								[viewController.touchViewController updateImage:tmp];
+								[tmp release];
+								recievingStatus = -1;
+								packet = malloc(sizeof(uint8_t));
+								packet[0] = 3;
+								[communicator sendMessage:packet length:1];
+							}
+						}
+						break;
+
+					default:
+						break;
+				}
+				break;
+
+		}
+	}
+	else {
+		switch (status) {
 			
 		case 1:	//Server Version Indicator
 			serverVer = malloc(sizeof(uint8_t) * 8);
@@ -103,16 +202,18 @@
 				return -1;
 			}
 			else {
+				
 				count = 0;
 				status = 3;
 				secTypes = malloc(sizeof(uint8_t) * numOfSecTypes);
+				printf("%i\n",secTypes);
 				for(int i = 0;i < numOfSecTypes;++i){
 					count++;
 				}
 			}
 			NSLog(@"BBBB");
 		}
-			break;
+		break;
 		case 3://Wait For All The Securities
 			count++;
 			if (count = numOfSecTypes) {
@@ -163,7 +264,7 @@
 									  8,
 									  packet + 8, 
 									  8,
-									  &numBytesEncrypted);printf("%i\n",cryptStatus);
+									  &numBytesEncrypted);//printf("%i\n",cryptStatus);
 				//printf("%i\n",numBytesEncrypted);
 				//for (int i = 0; i < 16; ++i) {
 				//	printf("%x ",packet[i]);
@@ -184,13 +285,13 @@
 			}
 			break;
 		case 5://security result
-			printf("aaaaa");
+//			printf("aaaaa");
 			if(message[3] == 0){
 				//ClientInit: shared-flag = 1 ALLOWS OTHERS TO CONNECT
 				packet = malloc(sizeof(uint8_t) * 1);
 				packet[0] = 1;
 				[communicator sendMessage:packet length:1];
-				printf("SUCCEED!!!!\n");
+//				printf("SUCCEED!!!!\n");
 				status = 6;
 				setupStatus = 0;
 			}else {
@@ -210,14 +311,14 @@
 						framebufferWidth = message[0] * 256 + message[1];
 						length -= 2;
 						message += 2;
-						printf("%i\n",framebufferWidth);
+//						printf("%i\n",framebufferWidth);
 						setupStatus = 1;
 						break;
 					case 1:
 						framebufferHeight = message[0] * 256 + message[1];
 						length -= 2;
 						message += 2;
-						printf("%i\n",framebufferHeight);
+//						printf("%i\n",framebufferHeight);
 						setupStatus = 2;
 						break;
 					case 2:
@@ -225,7 +326,7 @@
 						length -= 1;
 						message += 1;
 						setupStatus = 3;
-						printf("%i bits\n",pixelFormat.bitPerPixel);
+//						printf("%i bits\n",pixelFormat.bitPerPixel);
 						break;
 					case 3:
 						pixelFormat.depth = message[0];
@@ -250,21 +351,21 @@
 						length -= 2;
 						message += 2;
 						setupStatus = 7;
-						printf("%i\n",pixelFormat.redMax);
+//						printf("%i\n",pixelFormat.redMax);
 						break;
 					case 7:
 						pixelFormat.greenMax = message[0] * 256 + message[1];
 						length -= 2;
 						message += 2;
 						setupStatus = 8;
-						printf("%i\n",pixelFormat.greenMax);
+//						printf("%i\n",pixelFormat.greenMax);
 						break;
 					case 8:
 						pixelFormat.blueMax = message[0] * 256 + message[1];
 						length -= 2;
 						message += 2;
 						setupStatus = 9;
-						printf("%i\n",pixelFormat.blueMax);
+//						printf("%i\n",pixelFormat.blueMax);
 						break;
 					case 9:
 						pixelFormat.redShift = message[0];
@@ -297,13 +398,14 @@
 						message += 4;
 						break;
 					case 16://server name
-						printf("");
+//						printf("");
+						;
 						NSMutableData *data=[[NSMutableData alloc] init];
 						[data appendBytes:message length:length];
 						serverName = [[NSString alloc] 
 									  initWithData:data
 									  encoding:NSASCIIStringEncoding];
-						printf("%s",[serverName UTF8String]);				
+//						printf("%s",[serverName UTF8String]);				
 						setupStatus = 0;
 						status = 7;
 						length = 0;
@@ -375,7 +477,7 @@
 				}else{
 					if(numOfRects == -1){
 						numOfRects = message[0] * 256 + message[1];
-						printf("%i rects",numOfRects);
+//						printf("%i rects",numOfRects);
 						length -= 2;
 						message += 2;
 						currentRectID = 0;
@@ -426,7 +528,7 @@
 									recievingStatus += 1;
 									
 									if(position % currentRects.width == 0){
-										printf("%i\n",position / currentRects.width);
+//										printf("%i\n",position / currentRects.width);
 									}
 									length -= 4;
 									message += 4;
@@ -449,8 +551,7 @@
 										CGImageRef imageRef = CGBitmapContextCreateImage (ctx);
 										//UIImage* rawImage = [UIImage imageWithCGImage:imageRef];  
 										//testing
-										[viewController.touchViewController setImageView: [[UIImageView alloc] initWithImage:[UIImage imageWithCGImage:imageRef]]];
-										[[viewController.touchViewController imageScrollView] addSubview:[viewController.touchViewController imageView]];
+										[viewController.touchViewController updateImage:[UIImage imageWithCGImage:imageRef]];
 										//testing finish
 										CGContextRelease(ctx);
 										printf("finished o~\n");
@@ -508,6 +609,7 @@
 			break;
 		default:
 			break;
+	}
 	}
 	
 	return 1;
@@ -1088,6 +1190,8 @@
 	
 	packet[4] = position.y / 256;
 	packet[5] = position.y % 256;
+	
+	[communicator sendMessage:packet length:6];
 }
 
 -(void)putTextIntoCutBuffer:(NSString*)text {
@@ -1097,7 +1201,7 @@
 	}
 		
 	uint8_t* textChars = [text UTF8String];
-	int textLength = [text length];
+	int textLength = [text length]; //Is this the correct length for the textChars?
 	
 	packet = malloc(sizeof(uint8_t) * (8+textLength));
 	
@@ -1112,6 +1216,8 @@
 	for (int i = 0; i < textLength; ++i) {
 		packet[i+7] = textChars[i];
 	}
+	
+	[communicator sendMessage:packet length:(8+textLength)];
 }
 
 -(id)initWithViewController:(RDPPrototypeViewController*)viewControllerPtr {
