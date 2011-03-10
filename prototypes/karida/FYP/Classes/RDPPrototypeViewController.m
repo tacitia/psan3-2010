@@ -20,7 +20,7 @@
 @synthesize touchViewController;
 
 - (IBAction) sendMessage: (id) sender {
-	/*
+	
 	NSString* host = hostTextField.text;
 	NSInteger port = [portTextField.text intValue];
 
@@ -28,7 +28,7 @@
 	vnccore.serverPort = port;
 	[vnccore initConnection];
 	textMessage.text = @"";
-	 */
+	
 	/*
 	UIView *newView = [[UIView alloc] initWithFrame:CGRectMake(0,0,500,500)];
 	UILabel *newLabel = [[UILabel alloc] initWithFrame:CGRectMake(20,20, 500,500)];

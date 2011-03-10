@@ -143,9 +143,9 @@
 	
 }
 
-- (void)updateImage:(NSString *)imageNameString {
+- (void)updateImage:(UIImage *)myimage {
 	NSLog(@"update image!");
-	image = [UIImage imageNamed:@"tap.png"];
+	image = myimage;
 	imageView.image = image;
 	[imageView setImage:image];
 	[imageScrollView setNeedsDisplay];

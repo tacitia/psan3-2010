@@ -9,30 +9,20 @@
 @class VNCCore;
 
 
-@interface NetworkCommunicator : NSObject {
-
-	NSString* host;
-	NSInteger port;
-	
-//	NSMutableData* data;
+@interface NetworkCommunicator : NSObject <NSStreamDelegate> {
 	
 	NSInputStream* iStream;
 	NSOutputStream* oStream;
 	
-//  RDPCore* rdpcore;
 	VNCCore* vnccore;
 }
 
-@property (nonatomic, retain) NSString* host;
-@property (nonatomic) NSInteger port;
-//@property (nonatomic, retain) RDPCore* rdpcore;
 @property (nonatomic, retain) VNCCore* vnccore;
 
-- (BOOL)setHost:(NSString*)host
-		   port:(NSInteger)port;
 - (void)sendMessage:(const uint8_t*)str length:(int)length;
 
-//- (id)initWithRDPCore:(RDPCore*)rdpCorePtr;
 - (id)initWithVNCCore:(VNCCore*)vncCorePtr;
+- (void)connectToServerUsingStream:(NSString*)urlStr
+							portNo:(uint)portNo;
 
 @end
