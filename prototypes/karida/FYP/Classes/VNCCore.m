@@ -143,8 +143,9 @@ BOOL isCustomServer = FALSE;
 							printf("ep %i\n",expectedPacket);
 							if(imageData != nil){
 								[imageData release];
-								imageData = [NSMutableData alloc];
 							}
+							imageData = [NSMutableData alloc];
+							[imageData setLength:0];
 							recievingStatus = 1;
 							length -= 9;
 							message += 9;
@@ -158,10 +159,27 @@ BOOL isCustomServer = FALSE;
 							expectedPacket -= length;
 							//printf("%i",expectedPacket);
 							if(expectedPacket == 0){
+								//NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+								//NSString *documentsDirectoryPath = [paths objectAtIndex:0];
+								//NSString *path = [documentsDirectoryPath stringByAppendingPathComponent:@"tmpresult.jpg"];
+								//NSFileManager* fm = [[NSFileManager alloc] init];
+								//[fm createFileAtPath:@"~/Users/Tacitia/tmpresult.jpg" content:nil attributes:nil];
+								
+								//NSLog(imageData);
+								//if([imageData writeToFile:path atomically:NO] == YES){
+								//	NSLog(@"Made it");
+								//}else {
+								//	NSLog(@"Failed");
+								//}
+
+								
+								//NSLog(path);
+								//exit(0);
+								//UIImage* tmp = [UIImage imageNamed:@"tmpresult.jpg"];
 								UIImage* tmp = [[UIImage alloc] initWithData:imageData];
 								printf("%i %i\n",[tmp size].width,[tmp size].height);
 								[viewController.touchViewController updateImage:tmp];
-								[tmp release];
+								[tmp release];	
 								recievingStatus = -1;
 								packet = malloc(sizeof(uint8_t));
 								packet[0] = 3;

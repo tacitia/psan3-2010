@@ -17,6 +17,7 @@
 		28D7ACF80DDB3853001CB0EB /* RDPPrototypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* RDPPrototypeViewController.m */; };
 		3E5582B112856DE600AB8CDF /* NetworkCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5582B012856DE600AB8CDF /* NetworkCommunicator.m */; };
 		3E5582C81285700900AB8CDF /* NSStreamAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5582C71285700900AB8CDF /* NSStreamAdditions.m */; };
+		3EF654BD132909A100F00E5E /* tmpresult.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3EF654BC132909A100F00E5E /* tmpresult.jpg */; };
 		7A1468A11300DD770002F3A2 /* Windows.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A1468A01300DD770002F3A2 /* Windows.png */; };
 		7A8BEC8612E5E44B0064BFBE /* TouchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A8BEC8412E5E44B0064BFBE /* TouchViewController.xib */; };
 		7A922C9512FD106A0082D352 /* rotation.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A922C9412FD106A0082D352 /* rotation.png */; };
@@ -47,6 +48,7 @@
 		3E5582B012856DE600AB8CDF /* NetworkCommunicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkCommunicator.m; sourceTree = "<group>"; };
 		3E5582C61285700900AB8CDF /* NSStreamAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStreamAdditions.h; sourceTree = "<group>"; };
 		3E5582C71285700900AB8CDF /* NSStreamAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStreamAdditions.m; sourceTree = "<group>"; };
+		3EF654BC132909A100F00E5E /* tmpresult.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tmpresult.jpg; sourceTree = "<group>"; };
 		7A1468A01300DD770002F3A2 /* Windows.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Windows.png; sourceTree = "<group>"; };
 		7A8BEC8412E5E44B0064BFBE /* TouchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TouchViewController.xib; sourceTree = "<group>"; };
 		7A922C9412FD106A0082D352 /* rotation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rotation.png; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				7A1468A01300DD770002F3A2 /* Windows.png */,
 				7A922C9812FD10810082D352 /* tap.png */,
 				7A922C9612FD10780082D352 /* swipe.png */,
+				3EF654BC132909A100F00E5E /* tmpresult.jpg */,
 				7A922C9412FD106A0082D352 /* rotation.png */,
 				F73239F412D1AC860031EB24 /* Microsoft_Silverlight.png */,
 				2899E5210DE3E06400AC0155 /* RDPPrototypeViewController.xib */,
@@ -216,6 +219,7 @@
 				7A922C9912FD10810082D352 /* tap.png in Resources */,
 				7A1468A11300DD770002F3A2 /* Windows.png in Resources */,
 				7ADD06E41305B8DC00D153CC /* ConfigurationModal.xib in Resources */,
+				3EF654BD132909A100F00E5E /* tmpresult.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
