@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "VNCCore.h"
+
 @class ConfigurationModal;
 
 @interface TouchViewController : UIViewController <UIScrollViewDelegate> {
@@ -26,6 +28,8 @@
 	UITextField * inputText;
 	UIButton * doneButton;
 	UIView * inputTextView;
+	
+	VNCCore* vnccore;
 }
 
 //@property (nonatomic, retain) UITapGestureRecognizer *tapRecognizer;
@@ -41,6 +45,8 @@
 @property (nonatomic, retain) UIImageView *imageView;
 @property (nonatomic, retain) UIImage *image;
 @property (nonatomic, retain) ConfigurationModal * configurationModalInTouchViewController;
+
+@property (nonatomic, retain) VNCCore* vnccore;
 
 - (void)updateImage:(NSString *)imageNameString;
 - (IBAction)textFieldDone:(id)sender; 

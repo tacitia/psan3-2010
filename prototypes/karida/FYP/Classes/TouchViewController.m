@@ -16,7 +16,7 @@
 @end  
 
 @implementation TouchViewController
-@synthesize image, imageView, configurationModalInTouchViewController, imageScrollView, inputText, doneButton,inputTextView;
+@synthesize image, imageView, configurationModalInTouchViewController, imageScrollView, inputText, doneButton,inputTextView, vnccore;
 
 
  // The designated initializer. Override to perform setup that is required before the view is loaded.
@@ -266,6 +266,10 @@
 	//[imageScrollView setNeedsDisplay];
 	//[self.view setNeedsDisplay];
 
+	CGPoint touchLocation = [gestureRecognizer locationInView:gestureRecognizer.view];
+	printf("x: %f\n", touchLocation.x);
+	printf("y: %f\n", touchLocation.y);
+	[vnccore sendPointerEvent:LeftButton atPosition:touchLocation relativeToView:imageView pressed:YES];
 		
 	/*
 	test for changing display image
@@ -351,6 +355,7 @@
 	
 	return zoomRect;  
 }  
+
 
 - (void)dealloc {
 	//[tapRecognizer release];

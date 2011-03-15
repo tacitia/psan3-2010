@@ -38,6 +38,7 @@
 @synthesize numOfRects;
 @synthesize currentRectID;
 
+@synthesize mouseButtonStatus;
 
 BOOL isCustomServer = FALSE; 
 
@@ -1186,7 +1187,7 @@ BOOL isCustomServer = FALSE;
 }
 
 
--(void)sendPointerEvent:(MouseButton)button atPosition:(struct Pos)position pressed:(BOOL)pressed {
+-(void)sendPointerEvent:(MouseButton)button atPosition:(CGPoint)position relativeToView:(UIView*)view pressed:(BOOL)pressed {
 	if (packet != nil) {
 		packet != nil;
 		free(packet);
@@ -1194,7 +1195,13 @@ BOOL isCustomServer = FALSE;
 	}
 	packet = malloc(sizeof(uint8_t)*6);
 	
+	printf("Button:%i\n", button);
+	
 	mouseButtonStatus[button] = pressed;
+	
+	for (int i = 0; i < button; ++i) {
+		mouseButtonStatus[button] = mouseButtonStatus[button] << button;
+	}
 	
 	packet[0] = 5;
 	packet[1] = mouseButtonStatus[0];
@@ -1202,12 +1209,24 @@ BOOL isCustomServer = FALSE;
 		packet[1] = packet[1] | mouseButtonStatus[i];
 	}
 	// packet[1] holds the button-mask
+	printf("button-mask: %i\n", packet[1]);
+	printf("framewidth: %f\n", view.frame.size.width);
+	printf("frameheight: %f\n", view.frame.size.height);
+	
+	float widthRatio = framebufferWidth / view.frame.size.width;
+	float heightRatio = framebufferHeight / view.frame.size.height;
+	
+	position.x = position.x * widthRatio;
+	position.y = position.y * heightRatio;
 	
 	packet[2] = position.x / 256;
-	packet[3] = position.x % 256;
+	packet[3] = (int)position.x % 256;
 	
 	packet[4] = position.y / 256;
-	packet[5] = position.y % 256;
+	packet[5] = (int)position.y % 256;
+	
+	printf("%i\n", packet[2]);
+	printf("%i\n", packet[3]);
 	
 	[communicator sendMessage:packet length:6];
 }

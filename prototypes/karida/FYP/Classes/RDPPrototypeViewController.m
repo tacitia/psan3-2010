@@ -60,6 +60,7 @@
 	
 	UIImage *tmpimage = [UIImage imageNamed:@"Windows.png"];
 	[touchViewController setImage:tmpimage];
+	touchViewController.vnccore = self.vnccore;
 	[tmpimage release];
 	
 	//NSLog(@"showing %@",touchViewController);

@@ -179,11 +179,6 @@ typedef enum {
 	WheelDown
 } MouseButton;
 
-struct Pos {
-	int x;
-	int y;
-};
-
 @class RDPPrototypeViewController;
 
 @interface VNCCore : NSObject {
@@ -241,6 +236,7 @@ struct Pos {
 @property (nonatomic) int numOfRects;
 @property (nonatomic) struct RectPixel currentRects;
 @property (nonatomic) int currentRectID;
+@property (nonatomic) uint8_t* mouseButtonStatus;
 
 -(int)initConnection;
 -(id)initWithViewController:(RDPPrototypeViewController *)viewControllerPtr;
