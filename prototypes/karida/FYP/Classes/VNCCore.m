@@ -42,8 +42,22 @@
 
 BOOL isCustomServer = FALSE; 
 
+#pragma mark MouseEvent Constants
+
+const int MOUSEEVENTF_ABSOLUTE = 0x8000;
+const int MOUSEEVENTF_MOVE = 0x0001;
+const int MOUSEEVENTF_LEFTDOWN = 0x0002;
+const int MOUSEEVENTF_LEFTUP = 0x0004;
+const int MOUSEEVENTF_RIGHTDOWN = 0x0008;
+const int MOUSEEVENTF_RIGHTUP = 0x0010;
+const int MOUSEEVENTF_WHEEL = 0x0800;
+
+
 -(int)initConnection{
-	printf("initConnection called");
+	printf("initConnection calledn");
+	NSLog(serverIP);
+	NSLog(@"\n");
+	NSLog(@"%i\n", serverPort);
 	
 	[self updateImage];
 	
@@ -65,6 +79,8 @@ BOOL isCustomServer = FALSE;
 	
 	mouseButtonStatus = malloc(sizeof(uint8_t)*8);
 	memset(mouseButtonStatus, 0, 8);
+	
+	printf("end of init connection");
 	
 	return 1;
 }
@@ -141,7 +157,7 @@ BOOL isCustomServer = FALSE;
 					case -1:
 						if (message[0] == 0) {
 							expectedPacket = message[5] * 256 * 256 * 256 + message[6] * 256 * 256 + message[7] * 256 + message[8];
-							printf("ep %i\n",expectedPacket);
+							//printf("ep %i\n",expectedPacket);
 							if(imageData != nil){
 								[imageData release];
 							}
@@ -178,7 +194,7 @@ BOOL isCustomServer = FALSE;
 								//exit(0);
 								//UIImage* tmp = [UIImage imageNamed:@"tmpresult.jpg"];
 								UIImage* tmp = [[UIImage alloc] initWithData:imageData];
-								printf("%i %i\n",[tmp size].width,[tmp size].height);
+								//printf("%i %i\n",[tmp size].width,[tmp size].height);
 								[viewController.touchViewController updateImage:tmp];
 								[tmp release];	
 								recievingStatus = -1;
@@ -646,6 +662,7 @@ BOOL isCustomServer = FALSE;
 	(pressed == TRUE) ? (packet[1] = 1) : (packet[1] = 0); //zero indicates the key is now released
 	packet[2] = packet[3] = packet[4] = packet[5] = 0;
 	
+	/*
 	switch (keySym) {
 		case Back_Space:
 			packet[6] = 0xff;
@@ -1182,12 +1199,78 @@ BOOL isCustomServer = FALSE;
 		default:
 			break;
 	}
+	*/
 	
+	switch (keySym) {
+	}
+	 
 	[communicator sendMessage:packet length:8];
 }
 
 
--(void)sendPointerEvent:(MouseButton)button atPosition:(CGPoint)position relativeToView:(UIView*)view pressed:(BOOL)pressed {
+- (void)sendPointerEvent:(MouseButton)button atPosition:(CGPoint)position relativeToView:(UIView*)view pressed:(BOOL)pressed {
+	printf("send pointer event !!\n");
+	if (packet != nil) {
+		free(packet); 
+		packet = nil;
+	}
+	packet = malloc(sizeof(uint8_t) * 21);
+	 
+	packet[0] = 5; //Indicator of mouse event
+	
+	unsigned int x = ceil(position.x * 65535 / view.frame.size.width);
+	unsigned int y = ceil(position.y * 65535 / view.frame.size.height);
+	
+	printf("calculated x: %i\n", x);
+	printf("calculated y: %i\n", y);
+	printf("frame width: %f", view.frame.size.width);
+	printf("frame height: %f", view.frame.size.height);
+	
+	packet[1] = x / 256 / 256 / 256;
+	packet[2] = (x / 256 / 256) % 256;
+	packet[3] = (x / 256) % 256;
+	packet[4] = x % 256;
+	packet[5] = y / 256 / 256 / 256;
+	packet[6] = (y / 256 / 256) % 256;
+	packet[7] = (y / 256) % 256;
+	packet[8] = y % 256;
+	
+	for (int i = 1; i < 9; ++i) {
+		printf("%i\n", packet[i]);
+	}
+	
+	if (button == LeftButton || button == RightButton) {
+		packet[9] = packet[10] = packet[11] = packet[12] = 0;
+	}
+	else {
+		packet[9] = packet[10] = packet[11] = packet[12] = 0;
+
+	}
+	
+	
+	unsigned int dwFlags = MOUSEEVENTF_ABSOLUTE | MOUSEEVENTF_MOVE;
+	switch (button) {
+		case LeftButton:
+			(pressed == TRUE) ? (dwFlags = dwFlags | MOUSEEVENTF_LEFTDOWN) : (dwFlags = dwFlags | MOUSEEVENTF_LEFTUP);
+			break;
+		case RightButton:
+			(pressed == TRUE) ? (dwFlags = dwFlags | MOUSEEVENTF_RIGHTDOWN) : (dwFlags = dwFlags | MOUSEEVENTF_RIGHTUP);
+			break;
+		default:
+			break;
+	}
+	
+	packet[13] = dwFlags / 256 / 256 / 256;
+	packet[14] = (dwFlags / 256 / 256) % 256;
+	packet[15] = (dwFlags / 256) % 256;
+	packet[16] = dwFlags % 256;
+	
+	packet[17] = packet[18] = packet[19] = packet[20] = 0;
+	NSLog(@"MouseEnvent");
+	[communicator sendMessage:packet length:21];
+}
+
+/*- (void)sendPointerEvent:(MouseButton)button atPosition:(CGPoint)position relativeToView:(UIView*)view pressed:(BOOL)pressed {
 	if (packet != nil) {
 		packet != nil;
 		free(packet);
@@ -1230,6 +1313,7 @@ BOOL isCustomServer = FALSE;
 	
 	[communicator sendMessage:packet length:6];
 }
+*/
 
 -(void)putTextIntoCutBuffer:(NSString*)text {
 	if (packet != nil) {

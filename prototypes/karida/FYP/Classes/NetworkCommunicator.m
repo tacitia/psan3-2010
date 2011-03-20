@@ -47,6 +47,7 @@ int dataLength;
 			
 			[oStream open];
 			[iStream open];
+			printf("connected \n");
 		}
 	}
 }
@@ -59,6 +60,7 @@ int dataLength;
 	//	printf("%i\n",buffer[i]);
 	//}
 	//printf("the end of message \n");
+	printf("outgoing packet length: %i\n", length);
 	[oStream write:buffer maxLength:length];
 }
 

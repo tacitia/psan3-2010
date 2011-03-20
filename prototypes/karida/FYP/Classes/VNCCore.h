@@ -243,8 +243,7 @@ typedef enum {
 -(int)parseMessage:(uint8_t*)message ofLength:(int)length;
 -(int)updateImage;
 -(void)sendKeyEvent:(KeySym)keySym pressed:(BOOL)pressed;
-
-
--(int)selectSecurityType:(uint8_t*)secTypes withNumOfOptions:(int)numOfSecTypes;
+-(void)sendPointerEvent:(MouseButton)button atPosition:(CGPoint)pos relativeToView:(UIView*)view pressed:(BOOL)pressed;
+-(int)selectSecurityType:(uint8_t*)secTypes withNumOfOptions:(int)numOfSecTypes; 
 
 @end

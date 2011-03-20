@@ -267,10 +267,25 @@
 	//[self.view setNeedsDisplay];
 
 	CGPoint touchLocation = [gestureRecognizer locationInView:gestureRecognizer.view];
+	CGPoint adjustedTouchLocation = CGPointMake(touchLocation.x * imageView.frame.size.width / imageScrollView.frame.size.width,
+												touchLocation.y * imageView.frame.size.height / imageScrollView.frame.size.height);
+	
 	printf("x: %f\n", touchLocation.x);
 	printf("y: %f\n", touchLocation.y);
-	[vnccore sendPointerEvent:LeftButton atPosition:touchLocation relativeToView:imageView pressed:YES];
-		
+	
+	printf("adjusted x: %f\n", adjustedTouchLocation.x);
+	printf("adjusted y: %f\n", adjustedTouchLocation.y);
+	
+	printf("imageView width: %f\n", imageView.frame.size.width);
+	printf("imageView height: %f\n", imageView.frame.size.height);
+	printf("image width: %f\n", image.size.width);
+	printf("image height: %f\n", image.size.height);
+	printf("scrollView width: %f\n", imageScrollView.frame.size.width);
+	printf("scrollView height: %f\n", imageScrollView.frame.size.height);
+	
+	
+	[vnccore sendPointerEvent:LeftButton atPosition:adjustedTouchLocation relativeToView:imageView pressed:YES];
+	[vnccore sendPointerEvent:LeftButton atPosition:adjustedTouchLocation relativeToView:imageView pressed:NO];	
 	/*
 	test for changing display image
 	 */
@@ -289,7 +304,7 @@
 }
 
 - (void)handleDoubleTap:(UIGestureRecognizer *)gestureRecognizer {  
-	// zoom in  
+	// single finger double tap is to zoom in  
 	float newScale = [imageScrollView zoomScale] * ZOOM_STEP;  
 	CGRect zoomRect = [self zoomRectForScale:newScale withCenter:[gestureRecognizer locationInView:gestureRecognizer.view]];  
 	[imageScrollView zoomToRect:zoomRect animated:YES];  
@@ -298,6 +313,7 @@
 - (void)handleTwoFingerTap:(UIGestureRecognizer *)gestureRecognizer {  
 	// two-finger tap zooms out  
 	//NSLog(@"DOUBLE TAP!");
+	
 	float newScale = [imageScrollView zoomScale] / ZOOM_STEP;  
 	CGRect zoomRect = [self zoomRectForScale:newScale withCenter:[gestureRecognizer locationInView:gestureRecognizer.view]];  
 	[imageScrollView zoomToRect:zoomRect animated:YES];  
