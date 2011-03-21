@@ -60,7 +60,7 @@ int dataLength;
 	//	printf("%i\n",buffer[i]);
 	//}
 	//printf("the end of message \n");
-	printf("outgoing packet length: %i\n", length);
+//	printf("outgoing packet length: %i\n", length);
 	[oStream write:buffer maxLength:length];
 }
 

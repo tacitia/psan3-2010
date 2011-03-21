@@ -287,7 +287,7 @@
 	
 	
 	[vnccore sendPointerEvent:LeftButton atPosition:touchLocation relativeToView:imageView pressed:YES];
-	[vnccore sendPointerEvent:LeftButton atPosition:touchLocation relativeToView:imageView pressed:NO];	
+//	[vnccore sendPointerEvent:LeftButton atPosition:touchLocation relativeToView:imageView pressed:NO];	
 	/*
 	test for changing display image
 	 */

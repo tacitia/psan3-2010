@@ -1214,16 +1214,20 @@ const int MOUSEEVENTF_WHEEL = 0x0800;
 		free(packet); 
 		packet = nil;
 	}
-	packet = malloc(sizeof(uint8_t) * 21);
+	packet = malloc(sizeof(uint8_t) * 42);
 	 
 	packet[0] = 5; //Indicator of mouse event
+	packet[1] = 2;
 	
-	int imageWidth = 1024;
-	int imageHeight = 1024 / framebufferWidth * framebufferHeight;
+	printf("AAwidth: %f", view.frame.size.width);
+	printf("AAheight: %f", view.frame.size.height);
 	
-	int upper = (768 - imageHeight) / 2;
-	int xRelativeToImage = position.x;
-	int yRelativeToImage = position.y - upper;
+	float imageWidth = 1024.0;
+	float imageHeight = 1024.0 / framebufferWidth * framebufferHeight;
+	
+	float upper = (768.0 - imageHeight) / 2;
+	float xRelativeToImage = position.x;
+	float yRelativeToImage = position.y - upper;
 	
 	
 	unsigned int x = ceil(xRelativeToImage * 65535 / imageWidth);
@@ -1233,7 +1237,8 @@ const int MOUSEEVENTF_WHEEL = 0x0800;
 	printf("calculated y: %i\n", y);
 	printf("frame width: %f", view.frame.size.width);
 	printf("frame height: %f", view.frame.size.height);
-	
+
+	/*
 	packet[1] = x / 256 / 256 / 256;
 	packet[2] = (x / 256 / 256) % 256;
 	packet[3] = (x / 256) % 256;
@@ -1242,21 +1247,32 @@ const int MOUSEEVENTF_WHEEL = 0x0800;
 	packet[6] = (y / 256 / 256) % 256;
 	packet[7] = (y / 256) % 256;
 	packet[8] = y % 256;
+	*/
+	
+	packet[2] = x / 256 / 256 / 256;
+	packet[3] = (x / 256 / 256) % 256;
+	packet[4] = (x / 256) % 256;
+	packet[5] = x % 256;
+	packet[6] = y / 256 / 256 / 256;
+	packet[7] = (y / 256 / 256) % 256;
+	packet[8] = (y / 256) % 256;
+	packet[9] = y % 256;
 	
 	for (int i = 1; i < 9; ++i) {
 		printf("%i\n", packet[i]);
 	}
 	
-	if (button == LeftButton || button == RightButton) {
+/*	if (button == LeftButton || button == RightButton) {
 		packet[9] = packet[10] = packet[11] = packet[12] = 0;
 	}
 	else {
 		packet[9] = packet[10] = packet[11] = packet[12] = 0;
 
 	}
+*/
+	packet[10] = packet[11] = packet[12] = packet[13];
 	
-	
-	unsigned int dwFlags = MOUSEEVENTF_ABSOLUTE;
+/*	unsigned int dwFlags = MOUSEEVENTF_ABSOLUTE | MOUSEEVENTF_MOVE;
 	switch (button) {
 		case LeftButton:
 			(pressed == TRUE) ? (dwFlags = dwFlags | MOUSEEVENTF_LEFTDOWN) : (dwFlags = dwFlags | MOUSEEVENTF_LEFTUP);
@@ -1267,15 +1283,50 @@ const int MOUSEEVENTF_WHEEL = 0x0800;
 		default:
 			break;
 	}
-	
-	packet[13] = dwFlags / 256 / 256 / 256;
+*/
+	unsigned int dwFlags = MOUSEEVENTF_ABSOLUTE | MOUSEEVENTF_MOVE | MOUSEEVENTF_LEFTDOWN;
+ 
+/*	packet[13] = dwFlags / 256 / 256 / 256;
 	packet[14] = (dwFlags / 256 / 256) % 256;
 	packet[15] = (dwFlags / 256) % 256;
 	packet[16] = dwFlags % 256;
+*/	
+
+	packet[14] = dwFlags / 256 / 256 / 256;
+	packet[15] = (dwFlags / 256 / 256) % 256;
+	packet[16] = (dwFlags / 256) % 256;
+	packet[17] = dwFlags % 256;
 	
-	packet[17] = packet[18] = packet[19] = packet[20] = 0;
-	NSLog(@"MouseEnvent");
-	[communicator sendMessage:packet length:21];
+//	packet[17] = packet[18] = packet[19] = packet[20] = 0;
+	
+	packet[18] = packet[19] = packet[20] = packet[21] = 0;
+	
+//	NSLog(@"MouseEnvent");
+//	[communicator sendMessage:packet length:21];
+	
+	
+	packet[22] = x / 256 / 256 / 256;
+	packet[23] = (x / 256 / 256) % 256;
+	packet[24] = (x / 256) % 256;
+	packet[25] = x % 256;
+	packet[26] = y / 256 / 256 / 256;
+	packet[27] = (y / 256 / 256) % 256;
+	packet[28] = (y / 256) % 256;
+	packet[29] = y % 256;
+	
+	packet[30] = packet[31] = packet[32] = packet[33] = 0;
+
+	dwFlags = MOUSEEVENTF_ABSOLUTE | MOUSEEVENTF_MOVE | MOUSEEVENTF_LEFTUP;
+	
+	packet[34] = dwFlags / 256 / 256 / 256;
+	packet[35] = (dwFlags / 256 / 256) % 256;
+	packet[36] = (dwFlags / 256) % 256;
+	packet[37] = dwFlags % 256;
+	
+	packet[38] = packet[39] = packet[40] = packet[41] = 0;
+	
+	[communicator sendMessage:packet length:42];
+
 }
 
 /*- (void)sendPointerEvent:(MouseButton)button atPosition:(CGPoint)position relativeToView:(UIView*)view pressed:(BOOL)pressed {
