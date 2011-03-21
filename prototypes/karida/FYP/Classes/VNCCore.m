@@ -1218,8 +1218,16 @@ const int MOUSEEVENTF_WHEEL = 0x0800;
 	 
 	packet[0] = 5; //Indicator of mouse event
 	
-	unsigned int x = ceil(position.x * 65535 / view.frame.size.width);
-	unsigned int y = ceil(position.y * 65535 / view.frame.size.height);
+	int imageWidth = 1024;
+	int imageHeight = 1024 / framebufferWidth * framebufferHeight;
+	
+	int upper = (768 - imageHeight) / 2;
+	int xRelativeToImage = position.x;
+	int yRelativeToImage = position.y - upper;
+	
+	
+	unsigned int x = ceil(xRelativeToImage * 65535 / imageWidth);
+	unsigned int y = ceil(yRelativeToImage * 65535 / imageHeight);
 	
 	printf("calculated x: %i\n", x);
 	printf("calculated y: %i\n", y);
@@ -1248,7 +1256,7 @@ const int MOUSEEVENTF_WHEEL = 0x0800;
 	}
 	
 	
-	unsigned int dwFlags = MOUSEEVENTF_ABSOLUTE | MOUSEEVENTF_MOVE;
+	unsigned int dwFlags = MOUSEEVENTF_ABSOLUTE;
 	switch (button) {
 		case LeftButton:
 			(pressed == TRUE) ? (dwFlags = dwFlags | MOUSEEVENTF_LEFTDOWN) : (dwFlags = dwFlags | MOUSEEVENTF_LEFTUP);

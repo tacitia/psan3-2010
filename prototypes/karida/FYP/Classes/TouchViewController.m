@@ -144,7 +144,7 @@
 }
 
 - (void)updateImage:(UIImage *)myimage {
-	NSLog(@"update image!");
+//	NSLog(@"update image!");
 	image = myimage;
 	imageView.image = image;
 	[imageView setImage:image];
@@ -266,15 +266,17 @@
 	//[imageScrollView setNeedsDisplay];
 	//[self.view setNeedsDisplay];
 
-	CGPoint touchLocation = [gestureRecognizer locationInView:gestureRecognizer.view];
-	CGPoint adjustedTouchLocation = CGPointMake(touchLocation.x * imageView.frame.size.width / imageScrollView.frame.size.width,
-												touchLocation.y * imageView.frame.size.height / imageScrollView.frame.size.height);
+//	CGPoint touchLocation = [gestureRecognizer locationInView:gestureRecognizer.view];
+//	CGPoint adjustedTouchLocation = CGPointMake(touchLocation.x * imageView.frame.size.width / imageScrollView.frame.size.width,
+//												touchLocation.y * imageView.frame.size.height / imageScrollView.frame.size.height);
+	
+	CGPoint touchLocation = [gestureRecognizer locationInView:imageView];
 	
 	printf("x: %f\n", touchLocation.x);
 	printf("y: %f\n", touchLocation.y);
 	
-	printf("adjusted x: %f\n", adjustedTouchLocation.x);
-	printf("adjusted y: %f\n", adjustedTouchLocation.y);
+//	printf("adjusted x: %f\n", adjustedTouchLocation.x);
+//	printf("adjusted y: %f\n", adjustedTouchLocation.y);
 	
 	printf("imageView width: %f\n", imageView.frame.size.width);
 	printf("imageView height: %f\n", imageView.frame.size.height);
@@ -284,8 +286,8 @@
 	printf("scrollView height: %f\n", imageScrollView.frame.size.height);
 	
 	
-	[vnccore sendPointerEvent:LeftButton atPosition:adjustedTouchLocation relativeToView:imageView pressed:YES];
-	[vnccore sendPointerEvent:LeftButton atPosition:adjustedTouchLocation relativeToView:imageView pressed:NO];	
+	[vnccore sendPointerEvent:LeftButton atPosition:touchLocation relativeToView:imageView pressed:YES];
+	[vnccore sendPointerEvent:LeftButton atPosition:touchLocation relativeToView:imageView pressed:NO];	
 	/*
 	test for changing display image
 	 */
