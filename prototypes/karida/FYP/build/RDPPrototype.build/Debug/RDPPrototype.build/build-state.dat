@@ -3,20 +3,35 @@ v7
 r1
 cCheck dependencies
 
+N/Users/karida/Documents/FYP/ConfigurationModal.xib
+c000000004D6DB12400000000000054A3
+t1299034404
+s21667
+
 N/Users/karida/Documents/FYP/MainWindow.xib
-c000000004D21975F0000000000004D3B
-t1294047071
+c000000004D6DB1240000000000004D3B
+t1299034404
 s19771
 
 N/Users/karida/Documents/FYP/Microsoft_Silverlight.png
-c000000004D21975F00000000000120EE
-t1294047071
+c000000004D6DB12400000000000120EE
+t1299034404
 s73966
 
 N/Users/karida/Documents/FYP/RDPPrototypeViewController.xib
-c000000004D21975F00000000000084A4
-t1294047071
-s33956
+c000000004D78A2270000000000007777
+t1299751463
+s30583
+
+N/Users/karida/Documents/FYP/TouchViewController.xib
+c000000004D6DB1240000000000007B7B
+t1299034404
+s31611
+
+N/Users/karida/Documents/FYP/Windows.png
+c000000004D6DB124000000000005E74D
+t1299034404
+s386893
 
 N/Users/karida/Documents/FYP/build/Debug/RDPPrototype.app
 t2
@@ -27,6 +42,10 @@ t2
 s0
 
 N/Users/karida/Documents/FYP/build/Debug/RDPPrototype.app/Contents/PkgInfo
+t2
+s0
+
+N/Users/karida/Documents/FYP/build/Debug/RDPPrototype.app/Contents/Resources/ConfigurationModal.nib
 t2
 s0
 
@@ -42,14 +61,61 @@ N/Users/karida/Documents/FYP/build/Debug/RDPPrototype.app/Contents/Resources/RDP
 t2
 s0
 
+N/Users/karida/Documents/FYP/build/Debug/RDPPrototype.app/Contents/Resources/TouchViewController.nib
+t2
+s0
+
+N/Users/karida/Documents/FYP/build/Debug/RDPPrototype.app/Contents/Resources/Windows.png
+t2
+s0
+
+N/Users/karida/Documents/FYP/build/Debug/RDPPrototype.app/Contents/Resources/rotation.png
+t2
+s0
+
+N/Users/karida/Documents/FYP/build/Debug/RDPPrototype.app/Contents/Resources/swipe.png
+t2
+s0
+
+N/Users/karida/Documents/FYP/build/Debug/RDPPrototype.app/Contents/Resources/tap.png
+t2
+s0
+
+N/Users/karida/Documents/FYP/build/Debug/RDPPrototype.app/Contents/Resources/tmpresult.jpg
+t2
+s0
+
+N/Users/karida/Documents/FYP/rotation.png
+c000000004D6DB1240000000000004A66
+t1299034404
+s19046
+
+N/Users/karida/Documents/FYP/swipe.png
+c000000004D6DB12400000000000045F9
+t1299034404
+s17913
+
+N/Users/karida/Documents/FYP/tap.png
+c000000004D6DB12400000000000027AF
+t1299034404
+s10159
+
+N/Users/karida/Documents/FYP/tmpresult.jpg
+c000000004D7F003500000000000292D3
+t1300168757
+s168659
+
 NRDPPrototype-Info.plist
-c000000004D21975F00000000000004D6
-t1294047071
-s1238
+c000000004D6DB1240000000000000532
+t1299034404
+s1330
 
 CCheck dependencies
 r0
 lSLF07#2@18"Check dependencies315740069#315740069#0(99"[BEROR]No architectures to compile for (ARCHS=, VALID_ARCHS=i386 ppc ppc64 ppc7400 ppc970 x86_64).1(4@91"No architectures to compile for (ARCHS=, VALID_ARCHS=i386 ppc ppc64 ppc7400 ppc970 x86_64).315740069#18446744073709551615#0#0(1@0"0(0#1#0"27866456492998768#0"0#
+
+CCompileXIB /Users/karida/Documents/FYP/ConfigurationModal.xib
+r0
 
 CCompileXIB /Users/karida/Documents/FYP/MainWindow.xib
 r0
@@ -57,7 +123,25 @@ r0
 CCompileXIB /Users/karida/Documents/FYP/RDPPrototypeViewController.xib
 r0
 
+CCompileXIB /Users/karida/Documents/FYP/TouchViewController.xib
+r0
+
 CCpResource build/Debug/RDPPrototype.app/Contents/Resources/Microsoft_Silverlight.png Microsoft_Silverlight.png
+r0
+
+CCpResource build/Debug/RDPPrototype.app/Contents/Resources/Windows.png Windows.png
+r0
+
+CCpResource build/Debug/RDPPrototype.app/Contents/Resources/rotation.png rotation.png
+r0
+
+CCpResource build/Debug/RDPPrototype.app/Contents/Resources/swipe.png swipe.png
+r0
+
+CCpResource build/Debug/RDPPrototype.app/Contents/Resources/tap.png tap.png
+r0
+
+CCpResource build/Debug/RDPPrototype.app/Contents/Resources/tmpresult.jpg tmpresult.jpg
 r0
 
 CProcessInfoPlistFile /Users/karida/Documents/FYP/build/Debug/RDPPrototype.app/Contents/Info.plist RDPPrototype-Info.plist

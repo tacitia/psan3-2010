@@ -29,7 +29,16 @@
 	UIButton * doneButton;
 	UIView * inputTextView;
 	
+	//for lock/unlock the screen
+	UIBarButtonItem * lockUnlockScreenBtn;
+	Boolean screenLocked;
+	
 	VNCCore* vnccore;
+	
+	//Boolean to indicate whether the keyboard is out
+	Boolean keyboardIsOut;
+	
+	
 }
 
 //@property (nonatomic, retain) UITapGestureRecognizer *tapRecognizer;
@@ -42,17 +51,22 @@
 @property (nonatomic, retain) IBOutlet UIButton * doneButton;
 @property (nonatomic, retain) IBOutlet UIView * inputTextView;
 
+@property (nonatomic, retain) IBOutlet UIBarButtonItem * lockUnlockScreenBtn;
+
 @property (nonatomic, retain) UIImageView *imageView;
 @property (nonatomic, retain) UIImage *image;
 @property (nonatomic, retain) ConfigurationModal * configurationModalInTouchViewController;
 
 @property (nonatomic, retain) VNCCore* vnccore;
 
-- (void)updateImage:(NSString *)imageNameString;
+- (void)updateImage:(UIImage *)myimage;
 - (IBAction)textFieldDone:(id)sender; 
 
 - (IBAction)editText:(id)sender; 
 - (IBAction)doneButtonPressed:(id)sender;
+
+- (IBAction)lockUnlockScreenFunc: (id) sender;
+
 
 /*
  @interface MultiTouchViewController : UIImageView {

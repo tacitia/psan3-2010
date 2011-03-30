@@ -16,7 +16,7 @@
 @end  
 
 @implementation TouchViewController
-@synthesize image, imageView, configurationModalInTouchViewController, imageScrollView, inputText, doneButton,inputTextView, vnccore;
+@synthesize image, imageView, configurationModalInTouchViewController, imageScrollView, inputText, doneButton,inputTextView, vnccore, lockUnlockScreenBtn;
 
 
  // The designated initializer. Override to perform setup that is required before the view is loaded.
@@ -58,6 +58,9 @@
 	
 	[imageScrollView setContentSize:CGSizeMake(imageView.frame.size.width, imageView.frame.size.height)];
 	[imageScrollView addSubview:imageView];	
+	
+	//imageScrollView.scrollEnabled = FALSE; 
+	
 	//[imageScrollView sizeToFit];
 	
 	//[imageScrollView settag:1];
@@ -96,30 +99,46 @@
 	[imageView addGestureRecognizer:longPress];
 	[longPress release];
 	
-	/*
+	
 	//Swipes
 	UISwipeGestureRecognizer *recognizer;
 	
 	recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
     [recognizer setDirection:(UISwipeGestureRecognizerDirectionRight)];
+	recognizer.numberOfTouchesRequired = 1;
+	recognizer.delaysTouchesBegan = TRUE;
     [imageView addGestureRecognizer:recognizer];
     [recognizer release];
 	
     recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
     [recognizer setDirection:(UISwipeGestureRecognizerDirectionUp)];
+	recognizer.numberOfTouchesRequired = 1;
+	recognizer.delaysTouchesBegan = TRUE;
     [imageView addGestureRecognizer:recognizer];
     [recognizer release];
 	
     recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
     [recognizer setDirection:(UISwipeGestureRecognizerDirectionDown)];
+	recognizer.numberOfTouchesRequired = 1;
+	recognizer.delaysTouchesBegan = TRUE;
     [imageView addGestureRecognizer:recognizer];
     [recognizer release];
 	
     recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
     [recognizer setDirection:(UISwipeGestureRecognizerDirectionLeft)];
+	recognizer.numberOfTouchesRequired = 1;
+	recognizer.delaysTouchesBegan = TRUE;
     [imageView addGestureRecognizer:recognizer];
     [recognizer release];
-	*/
+	
+	//Pan
+	UIPanGestureRecognizer *panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
+	[panRecognizer setMinimumNumberOfTouches:1];
+	[panRecognizer setMaximumNumberOfTouches:1];
+	//[panRecognizer setDelegate:self];
+	[imageView addGestureRecognizer:panRecognizer];
+    [panRecognizer release];
+	
 	
 	/*
 	// calculate minimum scale to perfectly fit image width, and begin at that scale  
@@ -140,6 +159,16 @@
 	[imageScrollView setMaximumZoomScale:5.0];
 	[imageScrollView setMinimumZoomScale:minimumScale];
 	[imageScrollView setZoomScale:minimumScale];
+	
+	
+	//Default the keyboard should not present
+	keyboardIsOut = FALSE;
+	
+	//Default screen should not be locked
+	screenLocked = FALSE;
+	
+	//Notification sent when the keyboard resigns
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillDisappear:) name:UIKeyboardWillHideNotification object:nil];
 	
 }
 
@@ -185,9 +214,10 @@
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {	
 	//move the view up by 100 pixels. works but should be put into the notification fo inputtext textfield.
-	
+	keyboardIsOut = TRUE;
 	NSLog(@"called textfield begin editing");
 	self.inputTextView.frame = CGRectMake(self.inputTextView.frame.origin.x, self.inputTextView.frame.origin.y - 348, self.inputTextView.frame.size.width, self.inputTextView.frame.size.height);
+	[self.inputTextView becomeFirstResponder];
 	
 }
 
@@ -207,13 +237,58 @@
 	
 	self.inputTextView.frame = CGRectMake(self.inputTextView.frame.origin.x, self.inputTextView.frame.origin.y + 348, self.inputTextView.frame.size.width, self.inputTextView.frame.size.height);
 
+	keyboardIsOut = FALSE;
 	
 	//[sender resignFirstResponder];
 	[self.inputText resignFirstResponder];
+
+	NSLog(@"%@", self.inputText.text);
+	
+}
+
+-(void)keyboardWillDisappear:(NSNotification *) notification {
+	NSLog(@"keyboard disappear");
+	
+	if (keyboardIsOut == TRUE) {
+		inputText.hidden = YES;
+		doneButton.hidden = YES;
+		inputTextView.hidden = YES;
+		
+		self.inputTextView.frame = CGRectMake(self.inputTextView.frame.origin.x, self.inputTextView.frame.origin.y + 348, self.inputTextView.frame.size.width, self.inputTextView.frame.size.height);
+		keyboardIsOut = FALSE;
+
+	}
 	
 }
 
 
+//Functions for locking/unlocking the scree
+
+- (IBAction)lockUnlockScreenFunc: (id) sender{
+	
+	if (screenLocked == FALSE) {
+		NSLog(@"Lock the Screen");
+		[lockUnlockScreenBtn setTitle:@"Unlock Screen"]; 
+		screenLocked = TRUE;
+		
+		//disable scroll view scrolling
+		imageScrollView.scrollEnabled = FALSE;
+		
+		//remove gesture
+		//[imageView removeGestureRecognizer:doubleTap];
+		//[imageView addGestureRecognizer:doubleTap];  
+		
+	}
+	else {
+		NSLog(@"Unlock the Screen");
+		[lockUnlockScreenBtn setTitle:@"Lock Screen"];
+		screenLocked = FALSE;
+		
+		//enable scroll view scrolling 
+		//treat the screen as image
+		imageScrollView.scrollEnabled = YES;
+	}
+}
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Overriden to allow any orientation.
@@ -309,6 +384,7 @@
 	// single finger double tap is to zoom in  
 	float newScale = [imageScrollView zoomScale] * ZOOM_STEP;  
 	CGRect zoomRect = [self zoomRectForScale:newScale withCenter:[gestureRecognizer locationInView:gestureRecognizer.view]];  
+	
 	[imageScrollView zoomToRect:zoomRect animated:YES];  
 }  
 
@@ -320,38 +396,66 @@
 	CGRect zoomRect = [self zoomRectForScale:newScale withCenter:[gestureRecognizer locationInView:gestureRecognizer.view]];  
 	[imageScrollView zoomToRect:zoomRect animated:YES];  
 }  
-/*
+
 -(void)handleSwipeFrom:(UISwipeGestureRecognizer *)gestureRecognizer {
-    CGPoint location = [gestureRecognizer locationInView:self.view];
+    //CGPoint location = [gestureRecognizer locationInView:self.view];
 	
 	
     if (gestureRecognizer.direction == UISwipeGestureRecognizerDirectionLeft) {
-        location.x -= 220.0;
+		NSLog(@"left swipe");
+        //location.x -= 220.0;
     }
     else {
-        location.x += 220.0;
+		NSLog(@"Right Swipe");
+        //location.x += 220.0;
     }
 	
     if (gestureRecognizer.direction == UISwipeGestureRecognizerDirectionUp) {
-        location.y -= 220.0;
+		NSLog(@"Up Swipe");
+       // location.y -= 220.0;
     }
     else {
-        location.y += 220.0;
+		NSLog(@"Down Swipe");
+       // location.y += 220.0;
     }
 	
-	[UIView beginAnimations:nil context:NULL];
-	[UIView setAnimationDuration:0.55];
-	imageView.alpha = 0.0;
-	imageView.center = location;
-	[UIView commitAnimations];
+	//[UIView beginAnimations:nil context:NULL];
+	//[UIView setAnimationDuration:0.55];
+	//imageView.alpha = 0.0;
+	//imageView.center = location;
+	//[UIView commitAnimations];
 	
 }
- */
+
+-(void)handlePan:(UIPanGestureRecognizer *)gestureRecognizer {
+	//NSLog(@"Single Finger Pan!");
+	
+	if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {
+		
+        CGPoint startLocation = [gestureRecognizer locationInView:self.imageView];
+		NSLog(@"start is : ( %f , %f )", startLocation.x, startLocation.y);
+		
+    }
+    else if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {
+		
+        CGPoint stopLocation = [gestureRecognizer locationInView:self.imageView];
+        NSLog(@"end is : ( %f , %f )", stopLocation.x, stopLocation.y);
+        
+    }
+	
+}
 
 -(void)handleLongPress:(UILongPressGestureRecognizer *)gestureRecognizer {
-	NSLog(@"Long Press!");
-	configurationModalInTouchViewController = [[ConfigurationModal alloc] initWithNibName:@"ConfigurationModal" bundle:Nil];
-	[self presentModalViewController:configurationModalInTouchViewController animated:YES];
+
+	if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {
+		//Function invoked again but do nothing
+	}
+	else{
+		NSLog(@"Long Press!");
+		configurationModalInTouchViewController = [[ConfigurationModal alloc] initWithNibName:@"ConfigurationModal" bundle:Nil];
+		[self.view addSubview:configurationModalInTouchViewController.view];
+		//[self presentModalViewController:configurationModalInTouchViewController animated:YES];
+	}
 }
 
 
@@ -373,6 +477,16 @@
 	
 	return zoomRect;  
 }  
+
+- (void)scrollViewDidZoom:(UIScrollView *)scrollView {
+	if (scrollView.zoomScale!=1.0) {
+		// Zooming, disable scrolling
+		//scrollView.scrollEnabled = TRUE;
+	} else {
+		// Not zoomed, let the scroll view scroll
+		//scrollView.scrollEnabled = FALSE;
+	}
+}
 
 
 - (void)dealloc {

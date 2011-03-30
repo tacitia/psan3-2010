@@ -31,11 +31,13 @@
 
 -(IBAction) cancellConfiguration: (id) sender{
 	NSLog(@"Cancell Config");
-	[self dismissModalViewControllerAnimated:YES];
+	[self.view removeFromSuperview];
+	//[self dismissModalViewControllerAnimated:YES];
 }
 -(IBAction) saveConfiguration: (id) sender{
 	NSLog(@"Save Config");
-	[self dismissModalViewControllerAnimated:YES];
+	//[self dismissModalViewControllerAnimated:YES];
+	[self.view removeFromSuperview];
 	
 }
 
