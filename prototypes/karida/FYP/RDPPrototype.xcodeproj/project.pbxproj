@@ -23,6 +23,7 @@
 		7A922C9512FD106A0082D352 /* rotation.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A922C9412FD106A0082D352 /* rotation.png */; };
 		7A922C9712FD10780082D352 /* swipe.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A922C9612FD10780082D352 /* swipe.png */; };
 		7A922C9912FD10810082D352 /* tap.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A922C9812FD10810082D352 /* tap.png */; };
+		7AAB737113452869003A2A60 /* configurationicon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7AAB737013452869003A2A60 /* configurationicon.jpg */; };
 		7ADD06A51305AD7400D153CC /* ConfigurationModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ADD06A31305AD7400D153CC /* ConfigurationModal.m */; };
 		7ADD06DD1305B89D00D153CC /* TouchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ADD06DC1305B89D00D153CC /* TouchViewController.m */; };
 		7ADD06E41305B8DC00D153CC /* ConfigurationModal.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ADD06E31305B8DC00D153CC /* ConfigurationModal.xib */; };
@@ -54,6 +55,7 @@
 		7A922C9412FD106A0082D352 /* rotation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rotation.png; sourceTree = "<group>"; };
 		7A922C9612FD10780082D352 /* swipe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swipe.png; sourceTree = "<group>"; };
 		7A922C9812FD10810082D352 /* tap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tap.png; sourceTree = "<group>"; };
+		7AAB737013452869003A2A60 /* configurationicon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = configurationicon.jpg; sourceTree = "<group>"; };
 		7ADD06A21305AD7400D153CC /* ConfigurationModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationModal.h; sourceTree = "<group>"; };
 		7ADD06A31305AD7400D153CC /* ConfigurationModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationModal.m; sourceTree = "<group>"; };
 		7ADD06DB1305B89D00D153CC /* TouchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchViewController.h; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7AAB737013452869003A2A60 /* configurationicon.jpg */,
 				7ADD06E31305B8DC00D153CC /* ConfigurationModal.xib */,
 				7A1468A01300DD770002F3A2 /* Windows.png */,
 				7A922C9812FD10810082D352 /* tap.png */,
@@ -220,6 +223,7 @@
 				7A1468A11300DD770002F3A2 /* Windows.png in Resources */,
 				7ADD06E41305B8DC00D153CC /* ConfigurationModal.xib in Resources */,
 				3EF654BD132909A100F00E5E /* tmpresult.jpg in Resources */,
+				7AAB737113452869003A2A60 /* configurationicon.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1386,8 +1386,8 @@ const int VK_DOWN = 0x28;
 	[communicator sendMessage:packet length:42];
 }
 
-
 /*
+
 - (void)sendPointerEvent:(MouseButton)button atPosition:(CGPoint)position relativeToView:(UIView*)view pressed:(BOOL)pressed {
 	printf("send pointer event !!\n");
 	if (packet != nil) {
@@ -1463,6 +1463,7 @@ const int VK_DOWN = 0x28;
 }
 */
 
+
 /*- (void)sendPointerEvent:(MouseButton)button atPosition:(CGPoint)position relativeToView:(UIView*)view pressed:(BOOL)pressed {
 	if (packet != nil) {
 		packet != nil;
@@ -1505,8 +1506,8 @@ const int VK_DOWN = 0x28;
 	printf("%i\n", packet[3]);
 	
 	[communicator sendMessage:packet length:6];
-}
-*/
+}*/
+
 
 -(void)putTextIntoCutBuffer:(NSString*)text {
 	if (packet != nil) {
