@@ -370,22 +370,8 @@ panRecognizer;
 	
 	CGPoint touchLocation = [gestureRecognizer locationInView:imageView];
 	
-	printf("x: %f\n", touchLocation.x);
-	printf("y: %f\n", touchLocation.y);
-	
-//	printf("adjusted x: %f\n", adjustedTouchLocation.x);
-//	printf("adjusted y: %f\n", adjustedTouchLocation.y);
-	
-	printf("imageView width: %f\n", imageView.frame.size.width);
-	printf("imageView height: %f\n", imageView.frame.size.height);
-	printf("image width: %f\n", image.size.width);
-	printf("image height: %f\n", image.size.height);
-	printf("scrollView width: %f\n", imageScrollView.frame.size.width);
-	printf("scrollView height: %f\n", imageScrollView.frame.size.height);
-	
+
 	[vnccore sendLeftClickEventAtPosition:touchLocation];
-//	[vnccore sendPointerEvent:LeftButton atPosition:touchLocation relativeToView:imageView pressed:YES];
-//	[vnccore sendPointerEvent:LeftButton atPosition:touchLocation relativeToView:imageView pressed:NO];	
 	/*
 	test for changing display image
 	 */
