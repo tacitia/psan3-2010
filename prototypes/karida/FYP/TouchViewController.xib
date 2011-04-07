@@ -12,7 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="65"/>
+			<integer value="10"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -274,7 +274,7 @@
 								<reference key="IBUICustomView" ref="893001284"/>
 								<reference key="IBUIToolbar" ref="739520386"/>
 							</object>
-							<object class="IBUIBarButtonItem" id="87702989">
+							<object class="IBUIBarButtonItem" id="783162964">
 								<string key="IBUITitle">Done</string>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<float key="IBUIWidth">100</float>
@@ -289,7 +289,7 @@
 								<reference key="IBUIToolbar" ref="739520386"/>
 							</object>
 							<object class="IBUIBarButtonItem" id="566551522">
-								<string key="IBUITitle">Config Gestures</string>
+								<string key="IBUITitle">More..</string>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<float key="IBUIWidth">110</float>
 								<int key="IBUIStyle">1</int>
@@ -381,7 +381,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">doneButtonPressed:</string>
-						<reference key="source" ref="87702989"/>
+						<reference key="source" ref="783162964"/>
 						<reference key="destination" ref="841351856"/>
 					</object>
 					<int key="connectionID">66</int>
@@ -490,7 +490,7 @@
 							<reference ref="566551522"/>
 							<reference ref="743412561"/>
 							<reference ref="390426868"/>
-							<reference ref="87702989"/>
+							<reference ref="783162964"/>
 						</object>
 						<reference key="parent" ref="460060159"/>
 					</object>
@@ -520,7 +520,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">65</int>
-						<reference key="object" ref="87702989"/>
+						<reference key="object" ref="783162964"/>
 						<reference key="parent" ref="739520386"/>
 					</object>
 				</object>
@@ -565,7 +565,7 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>TouchViewController</string>
 					<string>UIResponder</string>
-					<string>{{78, -249}, {1019, 756}}</string>
+					<string>{{107, 0}, {1019, 756}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">

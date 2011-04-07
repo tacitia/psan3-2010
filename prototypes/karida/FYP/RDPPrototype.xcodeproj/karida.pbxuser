@@ -207,6 +207,9 @@
 			7A19CDEF134DE7C4004EF8DF /* PBXTextBookmark */ = 7A19CDEF134DE7C4004EF8DF /* PBXTextBookmark */;
 			7A19CDF0134DE7C4004EF8DF /* PBXTextBookmark */ = 7A19CDF0134DE7C4004EF8DF /* PBXTextBookmark */;
 			7A19CDF1134DE7EA004EF8DF /* PBXTextBookmark */ = 7A19CDF1134DE7EA004EF8DF /* PBXTextBookmark */;
+			7A19CDF6134DEA6F004EF8DF /* PBXTextBookmark */ = 7A19CDF6134DEA6F004EF8DF /* PBXTextBookmark */;
+			7A19CDF7134DEA6F004EF8DF /* PBXTextBookmark */ = 7A19CDF7134DEA6F004EF8DF /* PBXTextBookmark */;
+			7A19CDF8134DEA6F004EF8DF /* PBXTextBookmark */ = 7A19CDF8134DEA6F004EF8DF /* PBXTextBookmark */;
 			7A5CF9EC133780B500CD27CC = 7A5CF9EC133780B500CD27CC /* PBXTextBookmark */;
 			7A5CF9EF133780B500CD27CC = 7A5CF9EF133780B500CD27CC /* PlistBookmark */;
 			7A64C38613379ACA006579FB = 7A64C38613379ACA006579FB /* PBXTextBookmark */;
@@ -353,7 +356,7 @@
 		fRef = 7ADD06DC1305B89D00D153CC /* TouchViewController.m */;
 		name = "TouchViewController.m: 540";
 		rLen = 0;
-		rLoc = 11521;
+		rLoc = 11515;
 		rType = 0;
 		vrLen = 897;
 		vrLoc = 16184;
@@ -363,7 +366,7 @@
 		fRef = 7ADD06DB1305B89D00D153CC /* TouchViewController.h */;
 		name = "TouchViewController.h: 91";
 		rLen = 39;
-		rLoc = 2336;
+		rLoc = 2256;
 		rType = 0;
 		vrLen = 1136;
 		vrLoc = 1758;
@@ -373,7 +376,7 @@
 		fRef = 7ADD06DB1305B89D00D153CC /* TouchViewController.h */;
 		name = "TouchViewController.h: 38";
 		rLen = 0;
-		rLoc = 796;
+		rLoc = 606;
 		rType = 0;
 		vrLen = 1111;
 		vrLoc = 719;
@@ -384,7 +387,7 @@
 		fRef = 7ADD06DC1305B89D00D153CC /* TouchViewController.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 459;
+		rLoc = 460;
 		rType = 1;
 	};
 	7A19CDB1134DD688004EF8DF /* PBXTextBookmark */ = {
@@ -392,7 +395,7 @@
 		fRef = 7ADD06DC1305B89D00D153CC /* TouchViewController.m */;
 		name = "TouchViewController.m: 438";
 		rLen = 0;
-		rLoc = 13652;
+		rLoc = 13646;
 		rType = 0;
 		vrLen = 602;
 		vrLoc = 12517;
@@ -402,7 +405,7 @@
 		fRef = 7ADD06DB1305B89D00D153CC /* TouchViewController.h */;
 		name = "TouchViewController.h: 68";
 		rLen = 24;
-		rLoc = 2111;
+		rLoc = 1891;
 		rType = 0;
 		vrLen = 1049;
 		vrLoc = 1282;
@@ -412,7 +415,7 @@
 		fRef = 7ADD06DC1305B89D00D153CC /* TouchViewController.m */;
 		name = "TouchViewController.m: 20";
 		rLen = 0;
-		rLoc = 543;
+		rLoc = 568;
 		rType = 0;
 		vrLen = 901;
 		vrLoc = 173;
@@ -422,7 +425,7 @@
 		fRef = 7ADD06DC1305B89D00D153CC /* TouchViewController.m */;
 		name = "TouchViewController.m: 20";
 		rLen = 0;
-		rLoc = 543;
+		rLoc = 568;
 		rType = 0;
 		vrLen = 927;
 		vrLoc = 173;
@@ -432,7 +435,7 @@
 		fRef = 7ADD06DB1305B89D00D153CC /* TouchViewController.h */;
 		name = "TouchViewController.h: 47";
 		rLen = 0;
-		rLoc = 1307;
+		rLoc = 1321;
 		rType = 0;
 		vrLen = 970;
 		vrLoc = 321;
@@ -442,7 +445,7 @@
 		fRef = 7ADD06DC1305B89D00D153CC /* TouchViewController.m */;
 		name = "TouchViewController.m: 129";
 		rLen = 0;
-		rLoc = 4327;
+		rLoc = 4321;
 		rType = 0;
 		vrLen = 876;
 		vrLoc = 0;
@@ -452,7 +455,7 @@
 		fRef = 7ADD06DC1305B89D00D153CC /* TouchViewController.m */;
 		name = "TouchViewController.m: 395";
 		rLen = 0;
-		rLoc = 12153;
+		rLoc = 12147;
 		rType = 0;
 		vrLen = 1491;
 		vrLoc = 11525;
@@ -462,7 +465,7 @@
 		fRef = 7ADD06DC1305B89D00D153CC /* TouchViewController.m */;
 		name = "TouchViewController.m: 393";
 		rLen = 0;
-		rLoc = 12153;
+		rLoc = 12147;
 		rType = 0;
 		vrLen = 1489;
 		vrLoc = 11268;
@@ -472,7 +475,7 @@
 		fRef = 7ADD06DC1305B89D00D153CC /* TouchViewController.m */;
 		name = "TouchViewController.m: 394";
 		rLen = 0;
-		rLoc = 12153;
+		rLoc = 12147;
 		rType = 0;
 		vrLen = 1307;
 		vrLoc = 11146;
@@ -482,7 +485,7 @@
 		fRef = 7ADD06DB1305B89D00D153CC /* TouchViewController.h */;
 		name = "TouchViewController.h: 47";
 		rLen = 0;
-		rLoc = 1307;
+		rLoc = 1321;
 		rType = 0;
 		vrLen = 1311;
 		vrLoc = 215;
@@ -492,7 +495,7 @@
 		fRef = 7ADD06DB1305B89D00D153CC /* TouchViewController.h */;
 		name = "TouchViewController.h: 47";
 		rLen = 0;
-		rLoc = 1307;
+		rLoc = 1321;
 		rType = 0;
 		vrLen = 1366;
 		vrLoc = 413;
@@ -502,7 +505,7 @@
 		fRef = 7ADD06DB1305B89D00D153CC /* TouchViewController.h */;
 		name = "TouchViewController.h: 50";
 		rLen = 0;
-		rLoc = 1307;
+		rLoc = 1321;
 		rType = 0;
 		vrLen = 1331;
 		vrLoc = 468;
@@ -512,7 +515,7 @@
 		fRef = 7ADD06DC1305B89D00D153CC /* TouchViewController.m */;
 		name = "TouchViewController.m: 106";
 		rLen = 0;
-		rLoc = 3485;
+		rLoc = 3479;
 		rType = 0;
 		vrLen = 1182;
 		vrLoc = 3257;
@@ -522,7 +525,7 @@
 		fRef = 7ADD06DC1305B89D00D153CC /* TouchViewController.m */;
 		name = "TouchViewController.m: 396";
 		rLen = 0;
-		rLoc = 12153;
+		rLoc = 12147;
 		rType = 0;
 		vrLen = 1314;
 		vrLoc = 11278;
@@ -532,7 +535,7 @@
 		fRef = 7ADD06DC1305B89D00D153CC /* TouchViewController.m */;
 		name = "TouchViewController.m: 402";
 		rLen = 0;
-		rLoc = 12153;
+		rLoc = 12147;
 		rType = 0;
 		vrLen = 1514;
 		vrLoc = 11281;
@@ -542,7 +545,7 @@
 		fRef = 7ADD06DC1305B89D00D153CC /* TouchViewController.m */;
 		name = "TouchViewController.m: 395";
 		rLen = 0;
-		rLoc = 11817;
+		rLoc = 11811;
 		rType = 0;
 		vrLen = 1352;
 		vrLoc = 11323;
@@ -552,7 +555,7 @@
 		fRef = 7ADD06DB1305B89D00D153CC /* TouchViewController.h */;
 		name = "TouchViewController.h: 50";
 		rLen = 0;
-		rLoc = 1307;
+		rLoc = 1321;
 		rType = 0;
 		vrLen = 1333;
 		vrLoc = 468;
@@ -562,7 +565,7 @@
 		fRef = 7ADD06DC1305B89D00D153CC /* TouchViewController.m */;
 		name = "TouchViewController.m: 395";
 		rLen = 0;
-		rLoc = 11817;
+		rLoc = 11811;
 		rType = 0;
 		vrLen = 1352;
 		vrLoc = 11323;
@@ -572,7 +575,7 @@
 		fRef = 7ADD06DC1305B89D00D153CC /* TouchViewController.m */;
 		name = "TouchViewController.m: 106";
 		rLen = 0;
-		rLoc = 3485;
+		rLoc = 3479;
 		rType = 0;
 		vrLen = 1322;
 		vrLoc = 3115;
@@ -592,7 +595,7 @@
 		fRef = 7ADD06DC1305B89D00D153CC /* TouchViewController.m */;
 		name = "TouchViewController.m: 398";
 		rLen = 0;
-		rLoc = 12127;
+		rLoc = 12121;
 		rType = 0;
 		vrLen = 1371;
 		vrLoc = 11225;
@@ -602,7 +605,7 @@
 		fRef = 7ADD06DC1305B89D00D153CC /* TouchViewController.m */;
 		name = "TouchViewController.m: 404";
 		rLen = 0;
-		rLoc = 12158;
+		rLoc = 12152;
 		rType = 0;
 		vrLen = 1279;
 		vrLoc = 11447;
@@ -622,7 +625,7 @@
 		fRef = 7ADD06DC1305B89D00D153CC /* TouchViewController.m */;
 		name = "TouchViewController.m: 404";
 		rLen = 0;
-		rLoc = 12158;
+		rLoc = 12152;
 		rType = 0;
 		vrLen = 1279;
 		vrLoc = 11447;
@@ -632,7 +635,7 @@
 		fRef = 7ADD06DC1305B89D00D153CC /* TouchViewController.m */;
 		name = "TouchViewController.m: 413";
 		rLen = 0;
-		rLoc = 12350;
+		rLoc = 12344;
 		rType = 0;
 		vrLen = 1262;
 		vrLoc = 11818;
@@ -642,10 +645,40 @@
 		fRef = 7ADD06DC1305B89D00D153CC /* TouchViewController.m */;
 		name = "TouchViewController.m: 397";
 		rLen = 0;
-		rLoc = 12110;
+		rLoc = 12104;
 		rType = 0;
 		vrLen = 1226;
 		vrLoc = 0;
+	};
+	7A19CDF6134DEA6F004EF8DF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7ADD06DC1305B89D00D153CC /* TouchViewController.m */;
+		name = "TouchViewController.m: 68";
+		rLen = 0;
+		rLoc = 1895;
+		rType = 0;
+		vrLen = 1166;
+		vrLoc = 770;
+	};
+	7A19CDF7134DEA6F004EF8DF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7ADD06DB1305B89D00D153CC /* TouchViewController.h */;
+		name = "TouchViewController.h: 30";
+		rLen = 0;
+		rLoc = 555;
+		rType = 0;
+		vrLen = 1264;
+		vrLoc = 489;
+	};
+	7A19CDF8134DEA6F004EF8DF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7ADD06DB1305B89D00D153CC /* TouchViewController.h */;
+		name = "TouchViewController.h: 55";
+		rLen = 0;
+		rLoc = 1321;
+		rType = 0;
+		vrLen = 1280;
+		vrLoc = 610;
 	};
 	7A4D40821337720600A3802C /* TouchViewController.m */ = {
 		isa = PBXFileReference;
@@ -829,24 +862,24 @@
 	};
 	7ADD06A31305AD7400D153CC /* ConfigurationModal.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1146, 884}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1146, 871}}";
 			sepNavSelRange = "{888, 0}";
-			sepNavVisRange = "{7, 909}";
+			sepNavVisRange = "{0, 1076}";
 		};
 	};
 	7ADD06DB1305B89D00D153CC /* TouchViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {907, 1157}}";
-			sepNavSelRange = "{317, 19}";
-			sepNavVisRange = "{0, 1216}";
+			sepNavIntBoundsRect = "{{0, 0}, {907, 1118}}";
+			sepNavSelRange = "{341, 0}";
+			sepNavVisRange = "{420, 1347}";
 			sepNavWindowFrame = "{{19, 0}, {750, 778}}";
 		};
 	};
 	7ADD06DC1305B89D00D153CC /* TouchViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1377, 5889}}";
-			sepNavSelRange = "{12110, 0}";
-			sepNavVisRange = "{0, 1226}";
+			sepNavIntBoundsRect = "{{0, 0}, {908, 5772}}";
+			sepNavSelRange = "{1895, 0}";
+			sepNavVisRange = "{1006, 1590}";
 			sepNavWindowFrame = "{{19, 0}, {750, 778}}";
 		};
 	};

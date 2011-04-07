@@ -14,10 +14,6 @@
 
 @interface TouchViewController : UIViewController <UIScrollViewDelegate, UIAlertViewDelegate> {
 	
-	//UITapGestureRecognizer *tapRecognizer;
-	//UISwipeGestureRecognizer *swipeLeftRecognizer;
-	//UILongPressGestureRecognizer * longPressRecognizer;
-	//IBOutlet UIScrollView *imageScrollView;
 	
 	UIImage * image;
 	UIImageView *imageView;
@@ -36,21 +32,25 @@
 	//Boolean to indicate whether the keyboard is out
 	Boolean keyboardIsOut;
 	
-	//Gesture references
+	/*
+	 Optional Gesture references
+	 */
+	//Double finger tap at once == mouse right click
+	UITapGestureRecognizer *twoFingerTap;
+	
+	//Long Press to open the alert window for closing
+	UILongPressGestureRecognizer * longPress;
+	
 	UIPanGestureRecognizer *panRecognizer;	//enabled when the screen is locked
 	
-	NSInteger countThreeFingerPan;  //Count the number of three finger pan recognized, and send keyboard input alt+shift+tab
 	UIPanGestureRecognizer *threeFingerPanRecognizer;  //used for minimize, maximize, switch window
+	NSInteger countThreeFingerPan;  //Count the number of three finger pan recognized, and send keyboard input alt+shift+tab
 	
 	//Start and End positions for pan gestures
 	CGPoint startLocation;
 	CGPoint endLocation;
 	
 }
-
-//@property (nonatomic, retain) UITapGestureRecognizer *tapRecognizer;
-//@property (nonatomic, retain) UISwipeGestureRecognizer *swipeLeftRecognizer;
-//@property (nonatomic, retain) UILongPressGestureRecognizer *longPressRecognizer;
 
 @property (nonatomic, retain) IBOutlet UIScrollView *imageScrollView;
 
@@ -66,6 +66,8 @@
 
 @property (nonatomic, retain) UIPanGestureRecognizer *panRecognizer;
 @property (nonatomic, retain) UIPanGestureRecognizer *threeFingerPanRecognizer;
+@property (nonatomic, retain) UITapGestureRecognizer *twoFingerTap;
+@property (nonatomic, retain) UILongPressGestureRecognizer * longPress;
 
 - (void)updateImage:(UIImage *)myimage;
 

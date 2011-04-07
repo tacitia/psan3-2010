@@ -17,7 +17,7 @@
 
 @implementation TouchViewController
 @synthesize image, imageView, configurationModalInTouchViewController, imageScrollView, inputText, vnccore,
-panRecognizer, threeFingerPanRecognizer, shortCutView;
+panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView;
 
 
  // The designated initializer. Override to perform setup that is required before the view is loaded.
@@ -55,26 +55,27 @@ panRecognizer, threeFingerPanRecognizer, shortCutView;
 	   add gesture recognizers to the image view 
 	*/
 	
-	//one finger single tap to left-click
+	//One finger single tap to left-click
+	//This gesture is not optional 
 	UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
+	[imageView addGestureRecognizer:singleTap]; 
+	[singleTap release]; 
+	
+	
+	/*
+	  Following gestures are optional
+	 */
 	
 	//two finger single tap to right-click
-	UITapGestureRecognizer *twoFingerTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTwoFingerTap:)];  
-	
+	twoFingerTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTwoFingerTap:)];  
 	[twoFingerTap setNumberOfTouchesRequired:2];  
-	
-	[imageView addGestureRecognizer:singleTap];  
 	[imageView addGestureRecognizer:twoFingerTap];  
-	
-	[singleTap release];  
-	[twoFingerTap release];  
 	
 	//long press
 	//display a window for exiting the app.
-	UILongPressGestureRecognizer * longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];  
+	longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];  
 	[longPress setMinimumPressDuration:1];
 	[imageView addGestureRecognizer:longPress];
-	[longPress release];
 
 	//Pan
 	panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];

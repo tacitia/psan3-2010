@@ -271,13 +271,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>3</integer>
+									<integer>2</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {286, 664}}</string>
+							<string>{{0, 5}, {286, 664}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -314,7 +314,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>TouchViewController.m</string>
+								<string>TouchViewController.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -322,11 +322,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>TouchViewController.m</string>
+										<string>TouchViewController.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>7A19CDF1134DE7EA004EF8DF</string>
+										<string>7A19CDF8134DEA6F004EF8DF</string>
 										<key>history</key>
 										<array>
 											<string>7A077A8D12E0B87D0032599E</string>
@@ -350,8 +350,8 @@
 											<string>7A19CD45134D85FF004EF8DF</string>
 											<string>7A19CD46134D85FF004EF8DF</string>
 											<string>7A19CD6B134DA54D004EF8DF</string>
-											<string>7A19CDEE134DE7C4004EF8DF</string>
-											<string>7A19CDEF134DE7C4004EF8DF</string>
+											<string>7A19CDF6134DEA6F004EF8DF</string>
+											<string>7A19CDF7134DEA6F004EF8DF</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -551,8 +551,8 @@
 	<array>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>7A8B716012D19160001A644D</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>/FYP/RDPPrototype.xcodeproj</string>
+		<string>1C78EAAD065D492600B07095</string>
 	</array>
 	<key>WindowString</key>
 	<string>-5 55 1276 723 0 0 1280 778 </string>
