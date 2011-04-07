@@ -12,7 +12,7 @@
 
 @class ConfigurationModal;
 
-@interface TouchViewController : UIViewController <UIScrollViewDelegate> {
+@interface TouchViewController : UIViewController <UIScrollViewDelegate, UIAlertViewDelegate> {
 	
 	//UITapGestureRecognizer *tapRecognizer;
 	//UISwipeGestureRecognizer *swipeLeftRecognizer;
@@ -24,14 +24,12 @@
 	UIScrollView * imageScrollView;
 	ConfigurationModal * configurationModalInTouchViewController;
 	
-	//for keyboard input, normally hidden
+	//for keyboard input
 	UITextField * inputText;
-	UIButton * doneButton;
-	UIView * inputTextView;
 	
-	//for lock/unlock the screen
-	UIBarButtonItem * lockUnlockScreenBtn;
-	Boolean screenLocked;
+	//for Shortcuts Keyboard
+	UIView * shortCutView;
+	Boolean shortCutOut;
 	
 	VNCCore* vnccore;
 	
@@ -57,10 +55,8 @@
 @property (nonatomic, retain) IBOutlet UIScrollView *imageScrollView;
 
 @property (nonatomic, retain) IBOutlet UITextField * inputText;
-@property (nonatomic, retain) IBOutlet UIButton * doneButton;
-@property (nonatomic, retain) IBOutlet UIView * inputTextView;
 
-@property (nonatomic, retain) IBOutlet UIBarButtonItem * lockUnlockScreenBtn;
+@property (nonatomic, retain) IBOutlet UIView * shortCutView;
 
 @property (nonatomic, retain) UIImageView *imageView;
 @property (nonatomic, retain) UIImage *image;
@@ -69,16 +65,19 @@
 @property (nonatomic, retain) VNCCore* vnccore;
 
 @property (nonatomic, retain) UIPanGestureRecognizer *panRecognizer;
-//@property (nonatomic, retain) NSInteger countThreeFingerPan;
 @property (nonatomic, retain) UIPanGestureRecognizer *threeFingerPanRecognizer;
 
 - (void)updateImage:(UIImage *)myimage;
+
 - (IBAction)textFieldDone:(id)sender; 
 
 - (IBAction)editText:(id)sender; 
+
 - (IBAction)doneButtonPressed:(id)sender;
 
-- (IBAction)lockUnlockScreenFunc: (id) sender;
+- (IBAction)showShortCut:(id) sender;
+
+- (IBAction)configGestures:(id) sender;
 
 
 /*

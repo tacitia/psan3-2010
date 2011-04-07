@@ -1,7 +1,7 @@
 TRDPPrototype
 v7
 r0
-t323327906.967654
+t323430712.275459
 cCheck dependencies
 cCpResource build/Debug-iphoneos/RDPPrototype.app/ResourceRules.plist /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/ResourceRules.plist
 cProcessInfoPlistFile /FYP/build/Debug-iphoneos/RDPPrototype.app/Info.plist RDPPrototype-Info.plist
@@ -742,15 +742,16 @@ s1330
 
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies323327906#323327906#0(0"0(0#1#0"8613213248#0"0#
+lSLF07#2@18"Check dependencies323430710#323430710#0(0"0(0#1#0"27866456492998768#0"0#
 
 CCodeSign /FYP/build/Debug-iphoneos/RDPPrototype.app
-s323327854.832126
-e323327856.314361
+s323430710.695367
+e323430712.275295
 r1
 xCodeSign
 x/FYP/build/Debug-iphoneos/RDPPrototype.app
-lSLF07#2@46"CodeSign build/Debug-iphoneos/RDPPrototype.app323327854#323327856#0(0"0(0#0#42"/FYP/build/Debug-iphoneos/RDPPrototype.app8598662240#533"    cd /FYP    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv _CODESIGN_ALLOCATE_ /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/codesign_allocate    /usr/bin/codesign -f -s "iPhone Developer: YU JIANG (AKE8B89K2V)" --resource-rules=/FYP/build/Debug-iphoneos/RDPPrototype.app/ResourceRules.plist --entitlements /FYP/build/RDPPrototype.build/Debug-iphoneos/RDPPrototype.build/RDPPrototype.xcent /FYP/build/Debug-iphoneos/RDPPrototype.app0#
+o/FYP/build/Debug-iphoneos/RDPPrototype.app: replacing existing signature
+lSLF07#2@46"CodeSign build/Debug-iphoneos/RDPPrototype.app323430710#323430712#0(73"/FYP/build/Debug-iphoneos/RDPPrototype.app: replacing existing signature0(0#0#42"/FYP/build/Debug-iphoneos/RDPPrototype.app23081149961273456#533"    cd /FYP    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv _CODESIGN_ALLOCATE_ /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/codesign_allocate    /usr/bin/codesign -f -s "iPhone Developer: YU JIANG (AKE8B89K2V)" --resource-rules=/FYP/build/Debug-iphoneos/RDPPrototype.app/ResourceRules.plist --entitlements /FYP/build/RDPPrototype.build/Debug-iphoneos/RDPPrototype.build/RDPPrototype.xcent /FYP/build/Debug-iphoneos/RDPPrototype.app0#
 
 CCompileC build/RDPPrototype.build/Debug-iphoneos/RDPPrototype.build/Objects-normal/armv7/ConfigurationModal.o /FYP/Classes/ConfigurationModal.m normal armv7 objective-c com.apple.compilers.gcc.4_2
 s322403182.708968

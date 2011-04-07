@@ -16,8 +16,8 @@
 @end  
 
 @implementation TouchViewController
-@synthesize image, imageView, configurationModalInTouchViewController, imageScrollView, inputText, doneButton,inputTextView, vnccore, lockUnlockScreenBtn,
-panRecognizer;
+@synthesize image, imageView, configurationModalInTouchViewController, imageScrollView, inputText, vnccore,
+panRecognizer, threeFingerPanRecognizer, shortCutView;
 
 
  // The designated initializer. Override to perform setup that is required before the view is loaded.
@@ -43,47 +43,23 @@ panRecognizer;
 	//imageView.clipsToBounds = YES;
 	imageView.contentMode = UIViewContentModeScaleAspectFit;
 	
-	//imageView.autoresizingMask = ( UIViewAutoresizingFlexibleWidth ); 
-
-	//imageScrollView = [[UIScrollView alloc] init];
-	
-	//imageScrollView = [[UIScrollView alloc] initWithFrame:[imageView frame]];
-	
 	[imageScrollView setBouncesZoom:YES];
 	[imageScrollView setDelegate:self];
-	//[imageScrollView setClipsToBounds:YES];
-	
-	//[(UIScrollView *)self.view setBouncesZoom:YES];
-	//[(UIScrollView *)self.view setDelegate:self];
-	//[(UIScrollView *)self.view setClipsToBounds:YES];
-	
+		
 	[imageScrollView setContentSize:CGSizeMake(imageView.frame.size.width, imageView.frame.size.height)];
 	[imageScrollView addSubview:imageView];	
 	
 	imageScrollView.scrollEnabled = FALSE; 
 	
-	//[imageScrollView sizeToFit];
-	
-	//[imageScrollView settag:1];
-	//[self presentModalViewController:imageScrollView animated:YES];
-
-	//[self.view setFrame:CGRectMake(0, 0, imageView.frame.size.width, imageView.frame.size.height)];
-	//[self.view setContentStretch:CGRectMake(0, 0, imageView.frame.size.width/2, imageView.frame.size.height/2)];
-	//[self.view sizeToFit];
-	
-	//[self.view addSubview:imageScrollView];
-		
 	/*
 	   add gesture recognizers to the image view 
 	*/
 	
-	//taps
+	//one finger single tap to left-click
 	UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
 	
-	//two finger single tap to zoom-out
+	//two finger single tap to right-click
 	UITapGestureRecognizer *twoFingerTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTwoFingerTap:)];  
-	
-	//
 	
 	[twoFingerTap setNumberOfTouchesRequired:2];  
 	
@@ -99,51 +75,6 @@ panRecognizer;
 	[longPress setMinimumPressDuration:1];
 	[imageView addGestureRecognizer:longPress];
 	[longPress release];
-	
-	
-	//Swipes
-	UISwipeGestureRecognizer *recognizer;
-	
-	recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
-    [recognizer setDirection:(UISwipeGestureRecognizerDirectionRight)];
-	recognizer.numberOfTouchesRequired = 3;
-	recognizer.delaysTouchesBegan = TRUE;
-    [imageView addGestureRecognizer:recognizer];
-    [recognizer release];
-	
-    recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
-    [recognizer setDirection:(UISwipeGestureRecognizerDirectionUp)];
-	recognizer.numberOfTouchesRequired = 3;
-	recognizer.delaysTouchesBegan = TRUE;
-    [imageView addGestureRecognizer:recognizer];
-    [recognizer release];
-	
-    recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
-    [recognizer setDirection:(UISwipeGestureRecognizerDirectionDown)];
-	recognizer.numberOfTouchesRequired = 3;
-	recognizer.delaysTouchesBegan = TRUE;
-    [imageView addGestureRecognizer:recognizer];
-    [recognizer release];
-	
-    recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
-    [recognizer setDirection:(UISwipeGestureRecognizerDirectionLeft)];
-	recognizer.numberOfTouchesRequired = 3;
-	recognizer.delaysTouchesBegan = TRUE;
-    [imageView addGestureRecognizer:recognizer];
-    [recognizer release];
-	
-	/*
-	   Gestures specific to locked screen
-	 */
-	
-	//One finger Double Tap to open an directory
-	/*
-	oneFingerDoubleTap= [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTap:)];
-	[oneFingerDoubleTap setNumberOfTapsRequired:2]; 
-	//Do not invoke single tap to recognize double tap
-	[singleTap requireGestureRecognizerToFail : oneFingerDoubleTap];
-	 */
-	
 
 	//Pan
 	panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
@@ -158,22 +89,8 @@ panRecognizer;
 	
 	//[panRecognizer requireGestureRecognizerToFail:threeFingerPanRecognizer];
 			
-	/*
-	// calculate minimum scale to perfectly fit image width, and begin at that scale  
-	float minimumScale = [self.view frame].size.width  / [self.view frame].size.width;  
-	//imageScrollView.maximumZoomScale = 1.0;  
-	[(UIScrollView *)self.view setMaximumZoomScale:5.0];
-	[(UIScrollView *)self.view setMinimumZoomScale:minimumScale];
-	[(UIScrollView *)self.view setZoomScale:minimumScale];
-
-	//imageScrollView.minimumZoomScale = minimumScale;  
-	//imageScrollView.zoomScale = minimumScale;  
-	 
-	 */
-	
 	// calculate minimum scale to perfectly fit image width, and begin at that scale  
 	float minimumScale = [imageScrollView frame].size.width  / [imageScrollView frame].size.width;  
-	//imageScrollView.maximumZoomScale = 1.0;  
 	[imageScrollView setMaximumZoomScale:5.0];
 	[imageScrollView setMinimumZoomScale:minimumScale];
 	[imageScrollView setZoomScale:minimumScale];
@@ -182,8 +99,8 @@ panRecognizer;
 	//Default the keyboard should not present
 	keyboardIsOut = FALSE;
 	
-	//Default screen should not be locked
-	screenLocked = FALSE;
+	//Default shortCutOut = false
+	shortCutOut = FALSE;
 	
 	//Notification sent when the keyboard resigns
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillDisappear:) name:UIKeyboardWillHideNotification object:nil];
@@ -199,41 +116,12 @@ panRecognizer;
 	[self.view setNeedsDisplay];
 }
 
-// When user wants to insert text
-- (IBAction)editText:(id)sender{
-	NSLog(@"edit the text!!");
-	
-	
-	inputText.hidden = FALSE;
-	doneButton.hidden = FALSE;
-	//inputTextView.hidden = FALSE;
-	
-	//[self.view bringSubviewToFront:inputTextView];
-	
-	
-	//UITextView * tv = [[UITextView alloc] initWithFrame:(CGRectMake(0, self.view.frame.size.height - 100, self.view.frame.size.width, self.view.frame.size.height))];
-	//tv.text = @"Start Editing...";
-	//[tv becomeFirstResponder];
-	//tv.editable = YES;
-	//[tv setScrollEnabled:YES];
-	
-	//[imageScrollView removeFromSuperview];
-	//[self.imageScrollView addSubview:tv];
-	//[self.view exchangeSubviewAtIndex:1 withSubviewAtIndex:2];
-	//[self.view sendSubviewToBack:imageScrollView];
-	//[self.view addSubview:tv];
-
-}
-
 - (void)textFieldDidBeginEditing:(UITextField *)textField {	
-	//move the view up by 100 pixels. works but should be put into the notification fo inputtext textfield.
 	keyboardIsOut = TRUE;
 	NSLog(@"called textfield begin editing");
-	self.inputTextView.frame = CGRectMake(self.inputTextView.frame.origin.x, self.inputTextView.frame.origin.y - 348, self.inputTextView.frame.size.width, self.inputTextView.frame.size.height);
-	[self.inputTextView becomeFirstResponder];
-	
+	//self.inputTextView.frame = CGRectMake(self.inputTextView.frame.origin.x, self.inputTextView.frame.origin.y - 348, self.inputTextView.frame.size.width, self.inputTextView.frame.size.height);
+	[self.inputText becomeFirstResponder];
 }
-
 
 - (IBAction)doneButtonPressed:(id)sender{
 	
@@ -244,34 +132,28 @@ panRecognizer;
 	//Implementation
 	
 	
-	//inputText.hidden = YES;
-	//doneButton.hidden = YES;
-	//inputTextView.hidden = YES;
-	
 	//self.inputTextView.frame = CGRectMake(self.inputTextView.frame.origin.x, self.inputTextView.frame.origin.y + 348, self.inputTextView.frame.size.width, self.inputTextView.frame.size.height);
 
 	keyboardIsOut = FALSE;
 	
 	//[sender resignFirstResponder];
-	//[self.inputText resignFirstResponder];
+	[self.inputText resignFirstResponder];
 
 	NSLog(@"%@", self.inputText.text);
+	
+	[self.inputText setText:@""];
 	
 }
 
 -(void)keyboardWillDisappear:(NSNotification *) notification {
 	NSLog(@"keyboard disappear");
-	/*
+	
 	if (keyboardIsOut == TRUE) {
-		inputText.hidden = YES;
-		doneButton.hidden = YES;
-		inputTextView.hidden = YES;
 		
-		self.inputTextView.frame = CGRectMake(self.inputTextView.frame.origin.x, self.inputTextView.frame.origin.y + 348, self.inputTextView.frame.size.width, self.inputTextView.frame.size.height);
 		keyboardIsOut = FALSE;
 
 	}
-	 */
+	 
 	
 }
 
@@ -384,12 +266,8 @@ panRecognizer;
 	/*test end*/
 }  
 
-- (IBAction)textFieldDone:(id)sender {
-	NSLog(@"text done!");
-	[sender resignFirstResponder];
-}
-
 - (void)handleDoubleTap:(UIGestureRecognizer *)gestureRecognizer {
+	//No gesture recognizer for this
 	/*
 	NSLog(@"Single Finger Double Tap!");
 	// single finger double tap is to zoom in  
@@ -398,7 +276,6 @@ panRecognizer;
 	
 	[imageScrollView zoomToRect:zoomRect animated:YES];  
 	 */
-	
 }  
 
 - (void)handleTwoFingerTap:(UIGestureRecognizer *)gestureRecognizer {  
@@ -410,36 +287,6 @@ panRecognizer;
 	[imageScrollView zoomToRect:zoomRect animated:YES];  
 	 */
 }  
-
--(void)handleSwipeFrom:(UISwipeGestureRecognizer *)gestureRecognizer {
-    //CGPoint location = [gestureRecognizer locationInView:self.view];
-	
-	
-    if (gestureRecognizer.direction == UISwipeGestureRecognizerDirectionLeft) {
-		NSLog(@"left swipe");
-        //location.x -= 220.0;
-    }
-    else {
-		NSLog(@"Right Swipe");
-        //location.x += 220.0;
-    }
-	
-    if (gestureRecognizer.direction == UISwipeGestureRecognizerDirectionUp) {
-		NSLog(@"Up Swipe");
-       // location.y -= 220.0;
-    }
-    else {
-		NSLog(@"Down Swipe");
-       // location.y += 220.0;
-    }
-	
-	//[UIView beginAnimations:nil context:NULL];
-	//[UIView setAnimationDuration:0.55];
-	//imageView.alpha = 0.0;
-	//imageView.center = location;
-	//[UIView commitAnimations];
-	
-}
 
 -(void)handlePan:(UIPanGestureRecognizer *)gestureRecognizer {
 	//NSLog(@"Single Finger Pan!");
@@ -509,24 +356,62 @@ panRecognizer;
 			countThreeFingerPan = 0;
 		}
 	}
+}
 
+- (IBAction)showShortCut:(id) sender{
+		
+	if (shortCutOut == FALSE) {
+		[self.view addSubview:self.shortCutView];
+		shortCutOut = TRUE;
+	}
+	else {
+		[self.shortCutView removeFromSuperview];
+		shortCutOut = FALSE;
+	}
+}
+
+- (IBAction)configGestures:(id) sender{
 	
+	if (configurationModalInTouchViewController == NULL) {
+		configurationModalInTouchViewController = [[ConfigurationModal alloc] initWithNibName:@"ConfigurationModal" bundle:Nil];
+	}
 	
+	[self.view addSubview:configurationModalInTouchViewController.view];
 }
 
 -(void)handleLongPress:(UILongPressGestureRecognizer *)gestureRecognizer {
 
-	if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {
+	if (gestureRecognizer.state == UIGestureRecognizerStateEnded ) {
 		//Function invoked again but do nothing
 	}
 	else{
-		NSLog(@"Long Press!");
-		configurationModalInTouchViewController = [[ConfigurationModal alloc] initWithNibName:@"ConfigurationModal" bundle:Nil];
-		[self.view addSubview:configurationModalInTouchViewController.view];
-		//[self presentModalViewController:configurationModalInTouchViewController animated:YES];
+		
+		if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {
+			NSLog(@"Long Press!");
+			
+			UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Caution!"
+															 message:@"Do you want to close the current window?"
+															delegate:self 
+												   cancelButtonTitle:@"Cancel" 
+												   otherButtonTitles:nil];
+			[alert addButtonWithTitle:@"Close"];
+			[alert show];
+			[alert release];
+		}
 	}
 }
 
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+	
+	if (buttonIndex == 0)
+	{
+		NSLog(@"Cancel Button");
+	}
+	else
+	{
+		NSLog(@"Close Current Window!");
+	}
+}
 
 #pragma mark Utility methods  
 
