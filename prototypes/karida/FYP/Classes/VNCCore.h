@@ -242,8 +242,11 @@ typedef enum {
 -(id)initWithViewController:(RDPPrototypeViewController *)viewControllerPtr;
 -(int)parseMessage:(uint8_t*)message ofLength:(int)length;
 -(int)updateImage;
--(void)sendKeyEvent:(KeySym)keySym pressed:(BOOL)pressed;
--(void)sendPointerEvent:(MouseButton)button atPosition:(CGPoint)pos relativeToView:(UIView*)view pressed:(BOOL)pressed;
--(int)selectSecurityType:(uint8_t*)secTypes withNumOfOptions:(int)numOfSecTypes; 
+
+- (void)sendString:(NSString*)string;
+
+- (void)sendLeftClickEventAtPosition:(CGPoint)position;
+- (void)sendRightClickEventAtPosition:(CGPoint)position;
+- (void)sendMouseDragEventFromPosition:(CGPoint)startPosition toPosition:(CGPoint)endPosition;
 
 @end

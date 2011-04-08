@@ -140,8 +140,8 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView;
 	//[sender resignFirstResponder];
 	[self.inputText resignFirstResponder];
 
-	NSLog(@"%@", self.inputText.text);
-	
+	NSLog(@"%@", self.inputText.text); //This line has strange behavior - it sometimes output null sring
+	[vnccore sendString:self.inputText.text]; 
 	[self.inputText setText:@""];
 	
 }
@@ -308,7 +308,7 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView;
         NSLog(@"end is : ( %f , %f )", endLocation.x, endLocation.y);
         
     }
-	
+	[vnccore sendMouseDragEventFromPosition:startLocation toPosition:endLocation];
 }
 
 -(void)handleThreeFingerPan:(UIPanGestureRecognizer *)gestureRecognizer {
