@@ -9,6 +9,15 @@
 #import "VNCCore.h"
 #include <CommonCrypto/CommonCryptor.h>
 
+@interface VNCCore()
+
+- (uint8_t *)generateSingleKeyEvent:(long)key pressed:(BOOL)pressed;
+- (CGPoint)transformClientPositionToServerPosition:(CGPoint)clientPosition;
+- (int)selectSecurityType:(uint8_t*)secTypes withNumOfOptions:(int)numOfSecTypes; 
+
+@end
+
+
 @implementation VNCCore
 
 
@@ -52,30 +61,33 @@ const int MOUSEEVENTF_RIGHTDOWN = 0x0008;
 const int MOUSEEVENTF_RIGHTUP = 0x0010;
 const int MOUSEEVENTF_WHEEL = 0x0800;
 
+#pragma mark KeyEvent Constants
+
+const int KEYEVENTF_KEYUP = 0x0002;
+
 #pragma mark Virtual Key Codes
 
 const int VK_CANCEL = 0x03; //Control-breaking process
 const int VK_BACK = 0x08;
 const int VK_TAB = 0x09;
-const int VK_CLEAR = 0x08;
-const int VK_RETURN = 0x08;
+const int VK_RETURN = 0x0D; //Enter
 const int VK_SHIFT = 0x10;
 const int VK_CONTROL = 0x11;
 const int VK_MENU = 0x12; //ALT key
-const int VK_PAUSE = 0x13;
 const int VK_CAPITAL = 0x14;
 const int VK_ESCAPE = 0x1B;
 const int VK_SPACE = 0x20;
-const int VK_PRIOR = 0x21;
-const int VK_NEXT = 0x22;
+const int VK_PRIOR = 0x21; //Page up
+const int VK_NEXT = 0x22; //Page down
 const int VK_END = 0x23;
 const int VK_HOME = 0x24;
 const int VK_LEFT = 0x25;
 const int VK_UP = 0x26;
 const int VK_RIGHT = 0x27;
 const int VK_DOWN = 0x28;
-
-
+const int VK_SNAPSHOT = 0x2C;
+const int VK_INSERT = 0x2D;
+const int VK_DELETE = 0x2E;
 
 #pragma mark Connection Flow
 
@@ -88,6 +100,7 @@ const int VK_DOWN = 0x28;
 	[self updateImage];
 	
 	communicator = [[NetworkCommunicator alloc] initWithVNCCore:self];
+	[communicator setDelegate:self.viewController];
 	[communicator connectToServerUsingStream:serverIP portNo:serverPort];
 	if (packet != nil) {
 		free(packet);
@@ -177,65 +190,52 @@ const int VK_DOWN = 0x28;
 				recievingStatus = -1;
 				break;
 			case 5:
-				//printf("receiving %i %i %i\n",framebufferWidth,framebufferHeight,message[0]);
+				/*
+				dispatch_queue_t imageDataReceiverQueue = dispatch_queue_create("Image Data Receiver", NULL);
+				dispatch_async(imageDataReceiverQueue, ^{
+				});
+				*/
 				
-				switch (recievingStatus) {
-					case -1:
-						if (message[0] == 0) {
-							expectedPacket = message[5] * 256 * 256 * 256 + message[6] * 256 * 256 + message[7] * 256 + message[8];
-							//printf("ep %i\n",expectedPacket);
-							if(imageData != nil){
-								[imageData release];
-							}
-							imageData = [NSMutableData alloc];
-							[imageData setLength:0];
-							recievingStatus = 1;
-							length -= 9;
-							message += 9;
-							if(length == 0){
-								break;
-							}
-						}
-					case 1:
-						if (expectedPacket > 0) {
-							[imageData appendBytes:message length:length];
-							expectedPacket -= length;
-							//printf("%i",expectedPacket);
-							if(expectedPacket == 0){
-								//NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-								//NSString *documentsDirectoryPath = [paths objectAtIndex:0];
-								//NSString *path = [documentsDirectoryPath stringByAppendingPathComponent:@"tmpresult.jpg"];
-								//NSFileManager* fm = [[NSFileManager alloc] init];
-								//[fm createFileAtPath:@"~/Users/Tacitia/tmpresult.jpg" content:nil attributes:nil];
-								
-								//NSLog(imageData);
-								//if([imageData writeToFile:path atomically:NO] == YES){
-								//	NSLog(@"Made it");
-								//}else {
-								//	NSLog(@"Failed");
-								//}
-
-								
-								//NSLog(path);
-								//exit(0);
-								//UIImage* tmp = [UIImage imageNamed:@"tmpresult.jpg"];
-								UIImage* tmp = [[UIImage alloc] initWithData:imageData];
-								//printf("%i %i\n",[tmp size].width,[tmp size].height);
-								[viewController.touchViewController updateImage:tmp];
-								[tmp release];	
-								recievingStatus = -1;
-								packet = malloc(sizeof(uint8_t));
-								packet[0] = 3;
-								[communicator sendMessage:packet length:1];
-							}
-						}
+				//printf("packet length: %i \n", length);
+				//printf("receiving %i %i %i\n",framebufferWidth,framebufferHeight,message[0]);
+				if (message[0] == 'U' && message[1] == 'P' && message[2] == 'D') {
+					//printf("%i %i\n",message[8] * 256 + message[9],message[10] * 256 + message[11]);
+					expectedPacket = message[12] * 256 * 256 * 256 + message[13] * 256 * 256 + message[14] * 256 + message[15];
+				//	printf("ep %i\n",expectedPacket);
+					if(imageData != nil){
+						[imageData release];
+					}
+					imageData = [NSMutableData alloc];
+					[imageData setLength:0];
+					recievingStatus = 1;
+					length -= 16;
+					message += 16;
+					if(length == 0){
 						break;
-
-					default:
-						break;
+					}
 				}
+				else if (recievingStatus = 1) {
+					//printf("expected\n");
+					if (expectedPacket > 0) {
+						[imageData appendBytes:message length:length];
+						expectedPacket -= length;
+						//printf("%i\n",expectedPacket);
+						if(expectedPacket == 0){
+							UIImage* tmp = [[UIImage alloc] initWithData:imageData];
+							printf("%i %i\n",[tmp size].width,[tmp size].height);
+							[viewController.touchViewController updateImage:tmp];
+							[tmp release];	
+							recievingStatus = -1;
+							
+							//packet = malloc(sizeof(uint8_t));
+							//packet[0] = 3;
+								//[communicator sendMessage:packet length:1];
+						}
+					}
+				}
+				break;			
+			default:
 				break;
-
 		}
 	}
 	else {
@@ -679,14 +679,99 @@ const int VK_DOWN = 0x28;
 
 //TODO
 - (void)sendString:(NSString*)string {
-	if (packet != nil) {
-		free(packet);
-		packet = nil;
+	NSLog(@"sendString called");
+	for (int i = 0; i < [string length]; ++i) {
+		if (packet != nil) {
+			free(packet);
+			packet = nil;
+		}
+		
+		unichar currentChar = [string characterAtIndex:i];
+		
+		if (97 <= currentChar <= 122) {
+			packetLength = 2 + 12 * 2;
+			packet = malloc(sizeof(uint8_t) * packetLength);
+			packet[0] = 4;
+			packet[1] = 2;
+			
+			uint8_t *charPressed = [self generateSingleKeyEvent:(currentChar-32) pressed:YES];
+			uint8_t *charReleased = [self generateSingleKeyEvent:(currentChar-32) pressed:NO];
+			
+			for (int i = 0; i < 12; ++i) {
+				packet[i+2] = charPressed[i];
+				packet[i+14] = charReleased[i];
+			}
+		}
+		else if (65 <= currentChar <= 90) {
+			packetLength = 2 + 12 * 4;
+			packet = malloc(sizeof(uint8_t) * packetLength);
+			packet[0] = 4;
+			packet[1] = 4;
+			
+			uint8_t *shiftPressed = [self generateSingleKeyEvent:VK_SHIFT pressed:YES];
+			uint8_t *charPressed = [self generateSingleKeyEvent:currentChar pressed:YES];
+			uint8_t *charReleased = [self generateSingleKeyEvent:currentChar pressed:NO];
+			uint8_t *shiftReleased = [self generateSingleKeyEvent:VK_SHIFT pressed:NO];
+			
+			for (int i = 0; i < 12; ++i) {
+				packet[i+2] = shiftPressed[i];
+				packet[i+14] = charPressed[i];
+				packet[i+26] = charReleased[i];
+				packet[i+38] = shiftReleased[i];
+			}
+		}
+		else if (48 <= currentChar <= 57) {
+			packetLength = 2 + 12 * 2;
+			packet = malloc(sizeof(uint8_t) * packetLength);
+			packet[0] = 4;
+			packet[1] = 2;
+			
+			uint8_t *charPressed = [self generateSingleKeyEvent:currentChar pressed:YES];;
+			uint8_t *charReleased = [self generateSingleKeyEvent:currentChar pressed:NO];
+			
+			for (int i = 0; i < 12; ++i) {
+				packet[i+2] = charPressed[i];
+				packet[i+14] = charReleased[i];
+			}
+		}
+		else {
+			packetLength = 2 + 12 * 4;
+			packet = malloc(sizeof(uint8_t) * packetLength);
+			packet[0] = 4;
+			packet[1] = 4;
+			
+			//TODO
+			
+		}
+		NSLog(@"keyboard event sent");
+		for (int i = 0; i < packetLength; ++i) {
+			printf("%i, ", packet[i]);
+		}
+		printf("\n");
+		[communicator sendMessage:packet length:packetLength];
 	}
-	
-
 }
 
+- (uint8_t *)generateSingleKeyEvent:(long)key pressed:(BOOL)pressed {
+	uint8_t *event = malloc(sizeof(uint8_t) * 12);
+	
+	event[0] = (key / 256) % 256;
+	event[1] = key % 256;
+	event[2] = event[3] = 0;
+	
+	unsigned int dwFlags = pressed ? 0 : KEYEVENTF_KEYUP;
+	event[4] = dwFlags / 256 / 256 / 256;
+	event[5] = (dwFlags / 256 / 256) % 256;
+	event[6] = (dwFlags / 256) % 256;
+	event[7] = dwFlags % 256;
+	
+	event[8] = event[9] = event[10] = event[11] = 0;
+	
+	return event;
+}
+
+
+/*
 -(void)sendKeyEvent:(KeySym)keySym pressed:(BOOL)pressed {
 	if (packet != nil) {
 		free(packet);
@@ -699,7 +784,7 @@ const int VK_DOWN = 0x28;
 	(pressed == TRUE) ? (packet[1] = 1) : (packet[1] = 0); //zero indicates the key is now released
 	packet[2] = packet[3] = packet[4] = packet[5] = 0;
 	
-	/*
+	
 	switch (keySym) {
 		case Back_Space:
 			packet[6] = 0xff;
@@ -1236,13 +1321,14 @@ const int VK_DOWN = 0x28;
 		default:
 			break;
 	}
-	*/
+	
 	
 	switch (keySym) {
 	}
 	 
 	[communicator sendMessage:packet length:8];
 }
+*/
 
 #pragma mark Mouse Events
 
@@ -1256,15 +1342,10 @@ const int VK_DOWN = 0x28;
 	packet[0] = 5;
 	packet[1] = 2;
 	
-	float imageWidth = 1024.0;
-	float imageHeight = 1024.0 / framebufferWidth * framebufferHeight;
+	CGPoint serverPosition = [self transformClientPositionToServerPosition:position];
 	
-	float upper = (768.0 - imageHeight) / 2;
-	float xRelativeToImage = position.x;
-	float yRelativeToImage = position.y - upper;
-	
-	unsigned int x = ceil(xRelativeToImage * 65535 / imageWidth);
-	unsigned int y = ceil(yRelativeToImage * 65535 / imageHeight);	
+	unsigned int x = ceil(serverPosition.x);
+	unsigned int y = ceil(serverPosition.y);	
 	
 	for (int i = 0; i < 2; ++i) {
 		packet[2+i*20] = x / 256 / 256 / 256;
@@ -1302,15 +1383,10 @@ const int VK_DOWN = 0x28;
 	packet[0] = 5;
 	packet[1] = 2;
 	
-	float imageWidth = 1024.0;
-	float imageHeight = 1024.0 / framebufferWidth * framebufferHeight;
-	
-	float upper = (768.0 - imageHeight) / 2;
-	float xRelativeToImage = position.x;
-	float yRelativeToImage = position.y - upper;
-	
-	unsigned int x = ceil(xRelativeToImage * 65535 / imageWidth);
-	unsigned int y = ceil(yRelativeToImage * 65535 / imageHeight);	
+	CGPoint serverPosition = [self transformClientPositionToServerPosition:position];
+
+	unsigned int x = ceil(serverPosition.x);
+	unsigned int y = ceil(serverPosition.y);	
 	
 	for (int i = 0; i < 2; ++i) {
 		packet[2+i*20] = x / 256 / 256 / 256;
@@ -1348,18 +1424,13 @@ const int VK_DOWN = 0x28;
 	packet[0] = 5;
 	packet[1] = 2;
 	
-	float imageWidth = 1024.0;
-	float imageHeight = 1024.0 / framebufferWidth * framebufferHeight;
-	
-	float upper = (768.0 - imageHeight) / 2;
-	
 	for (int i = 0; i < 2; ++i) {
 		
-		float xRelativeToImage = (i == 0) ? startPosition.x : endPosition.x;
-		float yRelativeToImage = (i == 0) ? (startPosition.y - upper) : (endPosition.y - upper);
+		CGPoint serverPosition = (i == 0) ? [self transformClientPositionToServerPosition:startPosition]
+										  : [self transformClientPositionToServerPosition:endPosition];
 		
-		unsigned int x = ceil(xRelativeToImage * 65535 / imageWidth);
-		unsigned int y = ceil(yRelativeToImage * 65535 / imageHeight);	
+		unsigned int x = ceil(serverPosition.x);
+		unsigned int y = ceil(serverPosition.y);	
 		
 		packet[2+i*20] = x / 256 / 256 / 256;
 		packet[3+i*20] = (x / 256 / 256) % 256;
@@ -1386,7 +1457,20 @@ const int VK_DOWN = 0x28;
 	[communicator sendMessage:packet length:42];
 }
 
+- (void)sendMouseWheelScrollEventFromPosition:(CGPoint)startPosition toPosition:(CGPoint)endPosition {
+	if (packet != nil) {
+		free(packet);
+		packet = nil;
+	}
+	packet = malloc(sizeof(uint8_t) * 42);
+	
+	packet[0] = 5;
+	
+	
+}
+
 /*
+>>>>>>> .r113
 
 - (void)sendPointerEvent:(MouseButton)button atPosition:(CGPoint)position relativeToView:(UIView*)view pressed:(BOOL)pressed {
 	printf("send pointer event !!\n");
@@ -1535,6 +1619,8 @@ const int VK_DOWN = 0x28;
 	[communicator sendMessage:packet length:(8+textLength)];
 }
 
+
+
 -(id)initWithViewController:(RDPPrototypeViewController*)viewControllerPtr {
 	[super init];
 	self.viewController = viewControllerPtr;
@@ -1550,6 +1636,8 @@ const int VK_DOWN = 0x28;
 	return self;
 }
 
+#pragma mark Auxilary Functions
+
 -(int)selectSecurityType:(uint8_t*)secTypes withNumOfOptions:(int)numOfSecTypes {
 	return 2;
 }
@@ -1560,6 +1648,20 @@ const int VK_DOWN = 0x28;
 	//[viewController.displayImage setImage:display];
 	//printf("hah");
 	return 1;
+}
+
+- (CGPoint)transformClientPositionToServerPosition:(CGPoint)clientPosition {
+	
+	float imageWidth = 1024.0;
+	float imageHeight = 1024.0 / framebufferWidth * framebufferHeight;
+	
+	float upper = (768.0 - imageHeight) / 2;
+	float xRelativeToImage = clientPosition.x;
+	float yRelativeToImage = clientPosition.y - upper;
+	
+	CGPoint serverPosition = CGPointMake(xRelativeToImage * 65535 / imageWidth, yRelativeToImage * 65535 / imageHeight);
+	
+	return serverPosition;
 }
 
 @end
