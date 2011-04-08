@@ -17,7 +17,7 @@ uint8_t* data;
 BOOL dataIsInitialized;
 int dataLength;
 
-@synthesize vnccore;
+@synthesize vnccore, delegate;
 
 
 // Estalish connection
@@ -54,6 +54,7 @@ int dataLength;
 
 
 // write buffer to the connected server
+
 - (void) writeToServer:(const uint8_t*)buffer length:(int)length {
 	//printf("Client message: \n");
 	//for (int i = 0; i < length; ++i) {
@@ -103,13 +104,28 @@ int dataLength;
 			//dataIsInitialized = FALSE;
 		}
 			break;	
+		case NSStreamEventErrorOccurred: 
+		{
+			NSLog(@"NSStreamError");
+			[self.delegate networkErrorOccurred];
+			[iStream close];
+			[oStream close];
+			[iStream release];
+			[oStream release];
+		}
+			break;
+		case NSStreamEventOpenCompleted: {
+			NSLog(@"NSStreamOpenCompleted");
+			[self.delegate connectionDidFinishSuccessfully];
+		}
 	}
 }
 
 
 
 - (void) sendMessage: (const uint8_t*)str length:(int)length {
-	[self writeToServer:str length:length];
+//	[self writeToServer:str length:length];
+	[oStream write:str maxLength:length];
 }
 
 
@@ -129,6 +145,13 @@ int dataLength;
 
 - (void) dealloc {
 	[self disconnect];
+	
+	if ([iStream streamStatus] != NSStreamStatusClosed) { 
+		[iStream close];
+	}
+	if ([oStream streamStatus] != NSStreamStatusClosed) {
+		[oStream close];
+	}
 	
 	[iStream release];
 	[oStream release];

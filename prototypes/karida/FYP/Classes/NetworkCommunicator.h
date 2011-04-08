@@ -7,17 +7,25 @@
 //
 //@class RDPCore;
 @class VNCCore;
+@class NetworkCommunicator;
+
+
+@protocol NetworkCommunicatorDelegate <NSObject>
+- (void)connectionDidFinishSuccessfully;
+- (void)networkErrorOccurred;
+@end
 
 
 @interface NetworkCommunicator : NSObject <NSStreamDelegate> {
-	
 	NSInputStream* iStream;
 	NSOutputStream* oStream;
 	
 	VNCCore* vnccore;
+	id <NetworkCommunicatorDelegate> delegate;
 }
 
 @property (nonatomic, retain) VNCCore* vnccore;
+@property (assign) id <NetworkCommunicatorDelegate> delegate;
 
 - (void)sendMessage:(const uint8_t*)str length:(int)length;
 
