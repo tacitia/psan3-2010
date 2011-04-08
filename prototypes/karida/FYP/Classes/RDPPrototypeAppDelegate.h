@@ -10,7 +10,7 @@
 
 @class RDPPrototypeViewController;
 
-@interface RDPPrototypeAppDelegate : NSObject <UIApplicationDelegate> {
+@interface RDPPrototypeAppDelegate : NSObject <UIApplicationDelegate>  {
     UIWindow *window;
     RDPPrototypeViewController *viewController;
 }

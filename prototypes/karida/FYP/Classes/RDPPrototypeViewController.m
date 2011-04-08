@@ -13,8 +13,8 @@
 
 @synthesize hostTextField;
 @synthesize portTextField;
-@synthesize textMessage;
-@synthesize outputTextView;
+//@synthesize textMessage;
+//@synthesize outputTextView;
 //@synthesize displayImage;
 @synthesize vnccore;
 @synthesize touchViewController;
@@ -27,7 +27,7 @@
 	vnccore.serverIP = host;
 	vnccore.serverPort = port;
 	[vnccore initConnection];
-	textMessage.text = @"";
+//	textMessage.text = @"";
 	
 	/*
 	UIView *newView = [[UIView alloc] initWithFrame:CGRectMake(0,0,500,500)];
@@ -51,7 +51,14 @@
         isShowingDesktop = NO;
     }   
 	 */
-	
+		
+}
+
+
+#pragma mark -
+#pragma mark NetworkCommunicatorDelegate Methods
+
+- (void)connectionDidFinishSuccessfully {
 	if(touchViewController == nil){
 		touchViewController = [[TouchViewController alloc] initWithNibName:@"TouchViewController" bundle:Nil];
 		//touchViewController.modalPresentationStyle = UIModalPresentationFullScreen;
@@ -67,10 +74,24 @@
 	
 	[self.view addSubview:touchViewController.view];
 	//［self.view presentModalViewController
-	
 }
 
 
+- (void)networkErrorOccurred {
+	UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:nil
+													 message:@"Connection failed"
+													delegate:self
+										   cancelButtonTitle:@"OK"
+										   otherButtonTitles:nil] autorelease];
+	[alert show];
+	[alert release];
+	
+//	[self.view subviews];
+}
+
+
+#pragma mark -
+#pragma mark View Life Cycle
 
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -109,8 +130,8 @@
 
 
 - (void)dealloc {
-    [super dealloc];
-	
 	[touchViewController release];
+
+    [super dealloc];	
 }
 @end

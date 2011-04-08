@@ -16,11 +16,9 @@
 //#import "TouchViewController.h"
 @class TouchViewController;
 
-@interface RDPPrototypeViewController : UIViewController {
-	
-	@public
-	
-	IBOutlet UITextField *textMessage;
+@interface RDPPrototypeViewController : UIViewController <NetworkCommunicatorDelegate> {
+		
+//	IBOutlet UITextField *textMessage;
 	IBOutlet UITextField *hostTextField;
 	IBOutlet UITextField *portTextField;
 //	IBOutlet MultiTouchViewController *displayImage; 
@@ -33,14 +31,17 @@
 
 @property (nonatomic, retain) UITextField* hostTextField;
 @property (nonatomic, retain) UITextField* portTextField;
-@property (nonatomic, retain) UITextField *textMessage;
-@property (nonatomic, retain) UITextView *outputTextView;
+//@property (nonatomic, retain) UITextField *textMessage;
+//@property (nonatomic, retain) UITextView *outputTextView;
 //@property (nonatomic, retain) MultiTouchViewController *displayImage; 
 @property (nonatomic, retain) VNCCore* vnccore;
 @property (nonatomic, retain) TouchViewController *touchViewController;
 
-
 -(IBAction) sendMessage: (id) sender;
+
+- (void)connectionDidFinishSuccessfully;
+- (void)networkErrorOccurred;
+
 
 @end
 
