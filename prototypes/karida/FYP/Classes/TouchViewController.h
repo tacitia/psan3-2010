@@ -41,7 +41,7 @@
 	//Long Press to open the alert window for closing
 	UILongPressGestureRecognizer * longPress;
 	
-	UIPanGestureRecognizer *panRecognizer;	//enabled when the screen is locked
+	UIPanGestureRecognizer *panRecognizer;	
 	
 	UIPanGestureRecognizer *threeFingerPanRecognizer;  //used for minimize, maximize, switch window
 	NSInteger countThreeFingerPan;  //Count the number of three finger pan recognized, and send keyboard input alt+shift+tab

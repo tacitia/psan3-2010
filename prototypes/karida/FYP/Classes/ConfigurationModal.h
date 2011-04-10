@@ -11,7 +11,27 @@
 
 @interface ConfigurationModal : UIViewController {
 
+	/*
+	  Boolean indicating whether the gesture is activated.
+	  Default should all be activated
+	 */
+	//Double finger tap at once == mouse right click
+	Boolean twoFingerTapActivated;
+	
+	//Long Press to open the alert window for closing
+	Boolean longPressActivated;
+	
+	Boolean panRecognizerActivated;	
+	
+	Boolean threeFingerPanRecognizerActivated; 
+	
+	IBOutlet UITableView *ConfigTable;
+	
+	NSMutableArray *ConfigArray;
+	
 }
+
+@property (nonatomic, retain) IBOutlet UITableView *ConfigTable;
 
 -(IBAction) cancellConfiguration: (id) sender;
 -(IBAction) saveConfiguration: (id) sender;

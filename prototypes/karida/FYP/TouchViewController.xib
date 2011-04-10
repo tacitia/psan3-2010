@@ -12,7 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="10"/>
+			<integer value="38"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -332,14 +332,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">delegate</string>
-						<reference key="source" ref="893001284"/>
-						<reference key="destination" ref="841351856"/>
-					</object>
-					<int key="connectionID">23</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">imageScrollView</string>
 						<reference key="source" ref="841351856"/>
 						<reference key="destination" ref="154410518"/>
@@ -489,8 +481,8 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="566551522"/>
 							<reference ref="743412561"/>
-							<reference ref="390426868"/>
 							<reference ref="783162964"/>
+							<reference ref="390426868"/>
 						</object>
 						<reference key="parent" ref="460060159"/>
 					</object>
@@ -565,7 +557,7 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>TouchViewController</string>
 					<string>UIResponder</string>
-					<string>{{107, 0}, {1019, 756}}</string>
+					<string>{{387, 0}, {1019, 756}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">

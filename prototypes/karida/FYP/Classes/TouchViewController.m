@@ -141,8 +141,9 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView;
 	[self.inputText resignFirstResponder];
 
 	NSLog(@"%@", self.inputText.text); //This line has strange behavior - it sometimes output null sring
-	[vnccore sendString:self.inputText.text]; 
 	[self.inputText setText:@""];
+	[vnccore sendString:self.inputText.text]; 
+	
 	
 }
 

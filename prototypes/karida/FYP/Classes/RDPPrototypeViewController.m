@@ -26,7 +26,10 @@
 
 	vnccore.serverIP = host;
 	vnccore.serverPort = port;
-	[vnccore initConnection];
+//	[vnccore initConnection];
+	
+	//used for gesture testing only
+	[self connectionDidFinishSuccessfully];
 //	textMessage.text = @"";
 	
 	/*
