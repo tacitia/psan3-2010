@@ -130,8 +130,6 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView;
 	  send msg to server
 	  content is inputText.text
 	 */
-	//Implementation
-	
 	
 	//self.inputTextView.frame = CGRectMake(self.inputTextView.frame.origin.x, self.inputTextView.frame.origin.y + 348, self.inputTextView.frame.size.width, self.inputTextView.frame.size.height);
 
@@ -139,12 +137,11 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView;
 	
 	//[sender resignFirstResponder];
 	[self.inputText resignFirstResponder];
-
+	NSLog(@"done button dragged!!!");
 	NSLog(@"%@", self.inputText.text); //This line has strange behavior - it sometimes output null sring
 	[self.inputText setText:@""];
+	
 	[vnccore sendString:self.inputText.text]; 
-	
-	
 }
 
 -(void)keyboardWillDisappear:(NSNotification *) notification {

@@ -19,13 +19,22 @@
 		3E5582C81285700900AB8CDF /* NSStreamAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5582C71285700900AB8CDF /* NSStreamAdditions.m */; };
 		3EF654BD132909A100F00E5E /* tmpresult.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3EF654BC132909A100F00E5E /* tmpresult.jpg */; };
 		7A1468A11300DD770002F3A2 /* Windows.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A1468A01300DD770002F3A2 /* Windows.png */; };
+		7A6C95FF13533F4400862838 /* help back groundt.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A6C95FE13533F4400862838 /* help back groundt.png */; };
 		7A829B351352805E00C88F6B /* HelpPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A829B331352805E00C88F6B /* HelpPage.m */; };
 		7A829B361352805E00C88F6B /* HelpPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A829B341352805E00C88F6B /* HelpPage.xib */; };
 		7A8BEC8612E5E44B0064BFBE /* TouchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A8BEC8412E5E44B0064BFBE /* TouchViewController.xib */; };
 		7A922C9512FD106A0082D352 /* rotation.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A922C9412FD106A0082D352 /* rotation.png */; };
 		7A922C9712FD10780082D352 /* swipe.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A922C9612FD10780082D352 /* swipe.png */; };
-		7A922C9912FD10810082D352 /* tap.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A922C9812FD10810082D352 /* tap.png */; };
 		7AAB737113452869003A2A60 /* configurationicon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7AAB737013452869003A2A60 /* configurationicon.jpg */; };
+		7AB9F86E13531F9500B71D74 /* core.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB9F86D13531F9500B71D74 /* core.png */; };
+		7AB9F8701353207000B71D74 /* tap.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB9F86F1353207000B71D74 /* tap.png */; };
+		7AB9F8721353278000B71D74 /* two finger pinch.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB9F8711353277F00B71D74 /* two finger pinch.png */; };
+		7AB9F8741353282900B71D74 /* scroll.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB9F8731353282900B71D74 /* scroll.png */; };
+		7AB9F8761353297B00B71D74 /* optional.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB9F8751353297B00B71D74 /* optional.png */; };
+		7AB9F87813532A0800B71D74 /* Three Finger Swap Horizongtal.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB9F87713532A0800B71D74 /* Three Finger Swap Horizongtal.png */; };
+		7AB9F87A13532A1700B71D74 /* three finger swip horizongtal.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB9F87913532A1700B71D74 /* three finger swip horizongtal.png */; };
+		7AB9F87C13532A2400B71D74 /* three finger swip.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB9F87B13532A2400B71D74 /* three finger swip.png */; };
+		7AB9F87E13532BD500B71D74 /* Long Press.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB9F87D13532BD500B71D74 /* Long Press.png */; };
 		7ADD06A51305AD7400D153CC /* ConfigurationModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ADD06A31305AD7400D153CC /* ConfigurationModal.m */; };
 		7ADD06DD1305B89D00D153CC /* TouchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ADD06DC1305B89D00D153CC /* TouchViewController.m */; };
 		7ADD06E41305B8DC00D153CC /* ConfigurationModal.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ADD06E31305B8DC00D153CC /* ConfigurationModal.xib */; };
@@ -53,14 +62,23 @@
 		3E5582C71285700900AB8CDF /* NSStreamAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStreamAdditions.m; sourceTree = "<group>"; };
 		3EF654BC132909A100F00E5E /* tmpresult.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tmpresult.jpg; sourceTree = "<group>"; };
 		7A1468A01300DD770002F3A2 /* Windows.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Windows.png; sourceTree = "<group>"; };
+		7A6C95FE13533F4400862838 /* help back groundt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "help back groundt.png"; sourceTree = "<group>"; };
 		7A829B321352805E00C88F6B /* HelpPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpPage.h; sourceTree = "<group>"; };
 		7A829B331352805E00C88F6B /* HelpPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpPage.m; sourceTree = "<group>"; };
 		7A829B341352805E00C88F6B /* HelpPage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = HelpPage.xib; path = Classes/HelpPage.xib; sourceTree = "<group>"; };
 		7A8BEC8412E5E44B0064BFBE /* TouchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TouchViewController.xib; sourceTree = "<group>"; };
 		7A922C9412FD106A0082D352 /* rotation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rotation.png; sourceTree = "<group>"; };
 		7A922C9612FD10780082D352 /* swipe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swipe.png; sourceTree = "<group>"; };
-		7A922C9812FD10810082D352 /* tap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tap.png; sourceTree = "<group>"; };
 		7AAB737013452869003A2A60 /* configurationicon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = configurationicon.jpg; sourceTree = "<group>"; };
+		7AB9F86D13531F9500B71D74 /* core.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = core.png; sourceTree = "<group>"; };
+		7AB9F86F1353207000B71D74 /* tap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tap.png; sourceTree = "<group>"; };
+		7AB9F8711353277F00B71D74 /* two finger pinch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "two finger pinch.png"; sourceTree = "<group>"; };
+		7AB9F8731353282900B71D74 /* scroll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scroll.png; sourceTree = "<group>"; };
+		7AB9F8751353297B00B71D74 /* optional.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = optional.png; sourceTree = "<group>"; };
+		7AB9F87713532A0800B71D74 /* Three Finger Swap Horizongtal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Three Finger Swap Horizongtal.png"; sourceTree = "<group>"; };
+		7AB9F87913532A1700B71D74 /* three finger swip horizongtal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "three finger swip horizongtal.png"; sourceTree = "<group>"; };
+		7AB9F87B13532A2400B71D74 /* three finger swip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "three finger swip.png"; sourceTree = "<group>"; };
+		7AB9F87D13532BD500B71D74 /* Long Press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Long Press.png"; sourceTree = "<group>"; };
 		7ADD06A21305AD7400D153CC /* ConfigurationModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationModal.h; sourceTree = "<group>"; };
 		7ADD06A31305AD7400D153CC /* ConfigurationModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationModal.m; sourceTree = "<group>"; };
 		7ADD06DB1305B89D00D153CC /* TouchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchViewController.h; sourceTree = "<group>"; };
@@ -145,11 +163,20 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7A6C95FE13533F4400862838 /* help back groundt.png */,
+				7AB9F87D13532BD500B71D74 /* Long Press.png */,
+				7AB9F87B13532A2400B71D74 /* three finger swip.png */,
+				7AB9F87913532A1700B71D74 /* three finger swip horizongtal.png */,
+				7AB9F87713532A0800B71D74 /* Three Finger Swap Horizongtal.png */,
+				7AB9F8751353297B00B71D74 /* optional.png */,
+				7AB9F8731353282900B71D74 /* scroll.png */,
+				7AB9F8711353277F00B71D74 /* two finger pinch.png */,
+				7AB9F86F1353207000B71D74 /* tap.png */,
+				7AB9F86D13531F9500B71D74 /* core.png */,
 				7A829B341352805E00C88F6B /* HelpPage.xib */,
 				7AAB737013452869003A2A60 /* configurationicon.jpg */,
 				7ADD06E31305B8DC00D153CC /* ConfigurationModal.xib */,
 				7A1468A01300DD770002F3A2 /* Windows.png */,
-				7A922C9812FD10810082D352 /* tap.png */,
 				7A922C9612FD10780082D352 /* swipe.png */,
 				3EF654BC132909A100F00E5E /* tmpresult.jpg */,
 				7A922C9412FD106A0082D352 /* rotation.png */,
@@ -227,12 +254,21 @@
 				7A8BEC8612E5E44B0064BFBE /* TouchViewController.xib in Resources */,
 				7A922C9512FD106A0082D352 /* rotation.png in Resources */,
 				7A922C9712FD10780082D352 /* swipe.png in Resources */,
-				7A922C9912FD10810082D352 /* tap.png in Resources */,
 				7A1468A11300DD770002F3A2 /* Windows.png in Resources */,
 				7ADD06E41305B8DC00D153CC /* ConfigurationModal.xib in Resources */,
 				3EF654BD132909A100F00E5E /* tmpresult.jpg in Resources */,
 				7AAB737113452869003A2A60 /* configurationicon.jpg in Resources */,
 				7A829B361352805E00C88F6B /* HelpPage.xib in Resources */,
+				7AB9F86E13531F9500B71D74 /* core.png in Resources */,
+				7AB9F8701353207000B71D74 /* tap.png in Resources */,
+				7AB9F8721353278000B71D74 /* two finger pinch.png in Resources */,
+				7AB9F8741353282900B71D74 /* scroll.png in Resources */,
+				7AB9F8761353297B00B71D74 /* optional.png in Resources */,
+				7AB9F87813532A0800B71D74 /* Three Finger Swap Horizongtal.png in Resources */,
+				7AB9F87A13532A1700B71D74 /* three finger swip horizongtal.png in Resources */,
+				7AB9F87C13532A2400B71D74 /* three finger swip.png in Resources */,
+				7AB9F87E13532BD500B71D74 /* Long Press.png in Resources */,
+				7A6C95FF13533F4400862838 /* help back groundt.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
