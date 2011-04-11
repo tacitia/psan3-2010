@@ -7,10 +7,11 @@
 //
 
 #import "ConfigurationModal.h"
+#import "HelpPage.h"
 
 
 @implementation ConfigurationModal
-@synthesize ConfigTable;
+@synthesize ConfigTable,helpView;
 
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 /*
@@ -43,7 +44,7 @@
 	NSDictionary *generalInfoDict = [NSDictionary dictionaryWithObject:generalInfoList forKey:@"General"];
 	
 	NSArray *gestureList = [NSArray arrayWithObjects:@"Double-Finger Tap as Mouse Right Click", @"Three-Finger Pan Up to Maximize Current Window",
-							@"Three-Finger Pan Down to Minimize Current Window",@"Three-Finger Pan Left to Switch Window", nil];
+							@"Three-Finger Pan Down to Minimize Current Window",@"Three-Finger Pan Left to Switch Window",@"Long Press to Manipulate Current Window", nil];
 	NSDictionary *gestureDic = [NSDictionary dictionaryWithObject:gestureList forKey:@"Gestures"];
 	
 	[ConfigArray addObject:generalInfoDict];
@@ -99,7 +100,7 @@
 		return 2;
 	}
 	else {
-		return 4;
+		return 5;
 	}
 }
 
@@ -159,19 +160,29 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	/*
-	 NSDictionary *dictionary = [listOfItems objectAtIndex:indexPath.section];
-	 NSArray *array = [dictionary objectForKey:@"Countries"];
-	 NSString *selectedCountry = [array objectAtIndex:indexPath.row];
-	 
-	 //Initialize the detail view controller and display it.
-	 DetailViewController *dvController = [[DetailViewController alloc] initWithNibName:@"DetailView" bundle:[NSBundle mainBundle]];
-	 dvController.selectedCountry = selectedCountry;
-	 [self.navigationController pushViewController:dvController animated:YES];
-	 [dvController release];
-	 dvController = nil;	 
-	 
-	 */
+	
+	//Dismiss the selected effect
+	[tableView deselectRowAtIndexPath:indexPath animated:YES];
+	
+	if ([indexPath section] == 0) {
+		if ([indexPath row] == 1) {
+			//HelpPage
+			NSLog(@"Help Page!");
+			helpView = [[HelpPage alloc] initWithNibName:@"HelpPage" bundle:[NSBundle mainBundle]];
+			//[self.view addSubview:helpView.view];
+			
+			[UIView beginAnimations:nil context:nil];
+			[UIView setAnimationDuration:0.5];
+			[UIView setAnimationTransition:UIViewAnimationTransitionCurlUp
+								   forView:self.view cache:YES];
+			
+			[self.view addSubview:helpView.view];
+			
+			[UIView commitAnimations];
+			
+		}
+	}
+
 }
 
 

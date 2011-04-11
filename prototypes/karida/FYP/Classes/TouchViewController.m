@@ -378,7 +378,17 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView;
 		configurationModalInTouchViewController = [[ConfigurationModal alloc] initWithNibName:@"ConfigurationModal" bundle:Nil];
 	}
 	
+	
+	[UIView beginAnimations:nil context:nil];
+	[UIView setAnimationDuration:0.5];
+	[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight
+						   forView:self.view cache:YES];
+	
 	[self.view addSubview:configurationModalInTouchViewController.view];
+	
+	[UIView commitAnimations];
+	
+	//[self.view addSubview:configurationModalInTouchViewController.view];
 }
 
 -(void)handleLongPress:(UILongPressGestureRecognizer *)gestureRecognizer {

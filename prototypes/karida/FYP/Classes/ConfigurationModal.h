@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HelpPage.h"
 
 
 @interface ConfigurationModal : UIViewController {
@@ -29,9 +30,12 @@
 	
 	NSMutableArray *ConfigArray;
 	
+	HelpPage *helpView;
+	
 }
 
 @property (nonatomic, retain) IBOutlet UITableView *ConfigTable;
+@property (nonatomic, retain) HelpPage *helpView;
 
 -(IBAction) cancellConfiguration: (id) sender;
 -(IBAction) saveConfiguration: (id) sender;
