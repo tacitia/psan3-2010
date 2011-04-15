@@ -11,27 +11,41 @@
 
 
 @interface ConfigurationModal : UIViewController {
-
-	/*
-	  Boolean indicating whether the gesture is activated.
-	  Default should all be activated
-	 */
-	//Double finger tap at once == mouse right click
-	Boolean twoFingerTapActivated;
-	
-	//Long Press to open the alert window for closing
-	Boolean longPressActivated;
-	
-	Boolean panRecognizerActivated;	
-	
-	Boolean threeFingerPanRecognizerActivated; 
 	
 	IBOutlet UITableView *ConfigTable;
 	
 	NSMutableArray *ConfigArray;
 	
 	HelpPage *helpView;
+
+	/*
+	  Boolean indicating whether the gesture is activated.
+	  Default should all be activated
+	 */
+	@public
+	//Double finger tap at once == mouse right click
+	Boolean twoFingerTapActivated;
 	
+	//Long Press to open the alert window for closing
+	Boolean longPressActivated;
+	
+	//Not used currently
+	Boolean panRecognizerActivated;	
+	
+	Boolean threeFingerPanLeftRecognizerActivated; 
+	
+	Boolean threeFingerPanUpRecognizerActivated;
+	
+	Boolean threeFingerPanDownRecognizerActivated;
+	
+	//Temporary Boolean Variables to store temporary user selections
+	Boolean TemptwoFingerTapActivated;
+	Boolean TemplongPressActivated;
+	Boolean TempthreeFingerPanLeftRecognizerActivated; 
+	Boolean TempthreeFingerPanUpRecognizerActivated;
+	Boolean TempthreeFingerPanDownRecognizerActivated;
+	
+		
 }
 
 @property (nonatomic, retain) IBOutlet UITableView *ConfigTable;

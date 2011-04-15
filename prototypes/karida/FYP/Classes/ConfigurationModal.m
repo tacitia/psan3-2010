@@ -14,28 +14,39 @@
 @synthesize ConfigTable,helpView;
 
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-/*
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization.
+		twoFingerTapActivated = TRUE;
+	
+		longPressActivated = TRUE;
+	
+		panRecognizerActivated = TRUE;
+	
+		threeFingerPanLeftRecognizerActivated = TRUE; 
+		
+		threeFingerPanUpRecognizerActivated = TRUE;
+		
+		threeFingerPanDownRecognizerActivated = TRUE;
+		
+		//Temporary Boolean Variables to store temporary user selections
+		TemptwoFingerTapActivated = TRUE;
+		TemplongPressActivated = TRUE;
+		TempthreeFingerPanLeftRecognizerActivated = TRUE; 
+		TempthreeFingerPanUpRecognizerActivated = TRUE;
+		TempthreeFingerPanDownRecognizerActivated = TRUE;
+		
     }
     return self;
 }
-*/
+
 
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-	
-	twoFingerTapActivated = TRUE;
-	
-	longPressActivated = TRUE;
-	
-	panRecognizerActivated = TRUE;
-	
-	threeFingerPanRecognizerActivated = TRUE;
 	
 	//Initialize the array.
 	ConfigArray = [[NSMutableArray alloc] init];
@@ -56,11 +67,22 @@
 
 -(IBAction) cancellConfiguration: (id) sender{
 	NSLog(@"Cancell Config");
+	//real boolean variables are not changed
 	[self.view removeFromSuperview];
 	//[self dismissModalViewControllerAnimated:YES];
 }
 -(IBAction) saveConfiguration: (id) sender{
 	NSLog(@"Save Config");
+
+	//Temporary Boolean Variables set to the real one
+	twoFingerTapActivated = TemptwoFingerTapActivated;
+	
+	longPressActivated = TemplongPressActivated;
+	
+	threeFingerPanLeftRecognizerActivated = TempthreeFingerPanLeftRecognizerActivated; 
+	threeFingerPanUpRecognizerActivated = TempthreeFingerPanUpRecognizerActivated;
+	threeFingerPanDownRecognizerActivated = TempthreeFingerPanDownRecognizerActivated;
+	
 	//[self dismissModalViewControllerAnimated:YES];
 	[self.view removeFromSuperview];
 	
@@ -127,36 +149,90 @@
 		NSDictionary *dictionary = [ConfigArray objectAtIndex:indexPath.section];
 		NSArray *array = [dictionary objectForKey:@"General"];
 		NSString *cellValue = [array objectAtIndex:indexPath.row];
-		cell.text = cellValue;
+		cell.textLabel.text = cellValue;
 		
 		return cell;
 	}
 	else {
 		//Gesture Sets with switches
 		static NSString *CellIdentifier = @"GestureCell";
+		int row = [indexPath row];
 	
 		UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 		if (cell == nil) {
 			cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
 			UISwitch *switchView = [[UISwitch alloc] initWithFrame:CGRectZero];
 			cell.accessoryView = switchView;
-			[switchView setOn:NO animated:NO];
+			[switchView setOn:YES animated:NO];
+			[switchView setTag:row];
 			[switchView addTarget:self action:@selector(switchChanged:) forControlEvents:UIControlEventValueChanged];
+			//[self performSelector:@selector(switchChanged:) withObject:row];
 			[switchView release];
 		}
 		
 		NSDictionary *dictionary = [ConfigArray objectAtIndex:indexPath.section];
 		NSArray *array = [dictionary objectForKey:@"Gestures"];
 		NSString *cellValue = [array objectAtIndex:indexPath.row];
-		cell.text = cellValue;
+		cell.textLabel.text = cellValue;
 		
 		return cell;
 	}
 }
 
 - (void) switchChanged:(id)sender {
-    UISwitch* switchControl = sender;
-    NSLog( @"The switch is %@", switchControl.on ? @"ON" : @"OFF" );
+	UISwitch* switchControl = sender;
+	//NSLog( @"The switch is %@", switchControl.on ? @"ON" : @"OFF" );
+	
+	switch (switchControl.tag) {
+		case 0:
+			TemptwoFingerTapActivated = !TemptwoFingerTapActivated;
+			if (TemptwoFingerTapActivated == FALSE) {
+				NSLog(@"Two Finger Tap Disabled!");
+			}
+			else {
+				NSLog(@"Two Finger Tap Enabled!");
+			}
+			break;
+		case 1:
+			TempthreeFingerPanUpRecognizerActivated = !TempthreeFingerPanUpRecognizerActivated;
+			if (TempthreeFingerPanUpRecognizerActivated == FALSE) {
+				NSLog(@"Three-Finger Pan Up Disabled!");
+			}
+			else {
+				NSLog(@"Three-Finger Pan Up Enabled!");
+			}
+			break;
+		case 2:
+			TempthreeFingerPanDownRecognizerActivated = !TempthreeFingerPanDownRecognizerActivated;
+			if (TempthreeFingerPanDownRecognizerActivated == FALSE) {
+				NSLog(@"Three-Finger Pan Down Disabled!");
+			}
+			else {
+				NSLog(@"Three-Finger Pan Down Enabled!");
+			}
+			break;
+		case 3:
+			TempthreeFingerPanLeftRecognizerActivated = !TempthreeFingerPanLeftRecognizerActivated;
+			if (TempthreeFingerPanLeftRecognizerActivated == FALSE) {
+				NSLog(@"Three-Finger Pan Left Disabled!");
+			}
+			else {
+				NSLog(@"Three-Finger Pan Left Enabled!");
+			}
+			break;			
+		case 4:
+			TemplongPressActivated = !TemplongPressActivated;
+			if (TemplongPressActivated == FALSE) {
+				NSLog(@"Long Press Disabled!");
+			}
+			else {
+				NSLog(@"Long Press Enabled!");
+			}
+			break;
+			
+		default:
+			break;
+	}
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -1,7 +1,7 @@
 TRDPPrototype
 v7
 r0
-t324218105.040060
+t324553277.017330
 cCheck dependencies
 cProcessInfoPlistFile /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator/RDPPrototype.app/Info.plist RDPPrototype-Info.plist
 cCompileXIB /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/MainWindow.xib
@@ -24,6 +24,7 @@ cCpResource "build/Debug-iphonesimulator/RDPPrototype.app/Three Finger Swap Hori
 cCpResource "build/Debug-iphonesimulator/RDPPrototype.app/three finger swip horizongtal.png" "three finger swip horizongtal.png"
 cCpResource "build/Debug-iphonesimulator/RDPPrototype.app/three finger swip.png" "three finger swip.png"
 cCpResource "build/Debug-iphonesimulator/RDPPrototype.app/Long Press.png" "Long Press.png"
+cCpResource "build/Debug-iphonesimulator/RDPPrototype.app/help back groundt.png" "help back groundt.png"
 cProcessPCH /var/folders/qa/qadnqY9JHEiDaY75O-wF-U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RDPPrototype_Prefix-fkpfvcaxvblolbghkanzbckdxsyg/RDPPrototype_Prefix.pch.gch RDPPrototype_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/main.o /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/RDPPrototypeAppDelegate.o /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/Classes/RDPPrototypeAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
@@ -748,16 +749,16 @@ t1300168757
 s168659
 
 N/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/Classes/ConfigurationModal.h
-c000000004DA25F15000000000000037D
-t1302486805
-s893
+c000000004DA800F70000000000000529
+t1302855927
+s1321
 i<UIKit/UIKit.h>
 i"HelpPage.h"
 
 N/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/Classes/ConfigurationModal.m
-c000000004DA2651400000000000015C3
-t1302488340
-s5571
+c000000004DA812B50000000000001EDB
+t1302860469
+s7899
 i"ConfigurationModal.h"
 i"HelpPage.h"
 
@@ -854,9 +855,9 @@ i<UIKit/UIKit.h>
 i"VNCCore.h"
 
 N/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/Classes/TouchViewController.m
-c000000004DA283130000000000003744
-t1302496019
-s14148
+c000000004DA7F9830000000000003D18
+t1302854019
+s15640
 i"TouchViewController.h"
 i"ConfigurationModal.h"
 
@@ -913,8 +914,8 @@ t1302520563
 s13529
 
 N/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/TouchViewController.xib
-c000000004DA07EDD000000000000ADD0
-t1302363869
+c000000004DA7D857000000000000ADD0
+t1302845527
 s44496
 
 N/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/Windows.png
@@ -923,11 +924,11 @@ t1299034404
 s386893
 
 N/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator/RDPPrototype.app
-t1302525305
-s884
+t1302860477
+s918
 
 N/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator/RDPPrototype.app.dSYM
-t1302505088
+t1302860476
 s136
 
 N/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator/RDPPrototype.app/ConfigurationModal.nib
@@ -959,8 +960,8 @@ t1300707532
 s8
 
 N/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator/RDPPrototype.app/RDPPrototype
-t1302505088
-s120664
+t1302860476
+s121964
 
 N/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator/RDPPrototype.app/RDPPrototypeViewController.nib
 t1302227862
@@ -971,8 +972,8 @@ t1302525230
 s13529
 
 N/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator/RDPPrototype.app/TouchViewController.nib
-t1302363873
-s3595
+t1302845533
+s3596
 
 N/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator/RDPPrototype.app/Windows.png
 t1299034404
@@ -985,6 +986,10 @@ s55519
 N/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator/RDPPrototype.app/core.png
 t1302525230
 s13301
+
+N/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator/RDPPrototype.app/help back groundt.png
+t1302845169
+s80256
 
 N/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator/RDPPrototype.app/optional.png
 t1302525230
@@ -1023,8 +1028,8 @@ t1302525230
 s25730
 
 N/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/ConfigurationModal.o
-t1302488345
-s56592
+t1302860476
+s61288
 
 N/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/HelpPage.o
 t1302486773
@@ -1056,8 +1061,8 @@ t1302505088
 s59584
 
 N/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/TouchViewController.o
-t1302502218
-s92288
+t1302860476
+s95264
 
 N/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/VNCCore.o
 t1302486142
@@ -1076,6 +1081,11 @@ N/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/core.png
 c000000004DA2E7E200000000000033F5
 t1302521826
 s13301
+
+N/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/help back groundt.png
+c000000004DA306740000000000013980
+t1302529652
+s80256
 
 N/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/main.m
 c000000004D6DB124000000000000015B
@@ -1421,7 +1431,7 @@ s1330
 
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies324218104#324218104#0(0"0(0#1#0"8606493728#0"0#
+lSLF07#2@18"Check dependencies324553274#324553274#0(0"0(0#1#0"8629195040#0"0#
 
 CCompileC build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/ConfigurationModal.o /FYP/Classes/ConfigurationModal.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s324174927.861390
@@ -1453,8 +1463,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@64"Compile /Users/karida/Documents/FYP/Classes/ConfigurationModal.m322400334#322400335#0(0"0(0#0#56"/Users/karida/Documents/FYP/Classes/ConfigurationModal.m8609429120#1929"    cd /Users/karida/Documents/FYP    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -iquote /Users/karida/Documents/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-generated-files.hmap -I/Users/karida/Documents/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-own-target-headers.hmap -I/Users/karida/Documents/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-all-target-headers.hmap -iquote /Users/karida/Documents/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-project-headers.hmap -F/Users/karida/Documents/FYP/build/Debug-iphonesimulator -I/Users/karida/Documents/FYP/build/Debug-iphonesimulator/include -I/Users/karida/Documents/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/DerivedSources/i386 -I/Users/karida/Documents/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/DerivedSources -include /var/folders/qa/qadnqY9JHEiDaY75O-wF-U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RDPPrototype_Prefix-anqjncbpxdqgufbgnbibgwhkhzhn/RDPPrototype_Prefix.pch -c /Users/karida/Documents/FYP/Classes/ConfigurationModal.m -o /Users/karida/Documents/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/ConfigurationModal.o0#
 
 CCompileC build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/ConfigurationModal.o /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/Classes/ConfigurationModal.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s324181145.902564
-e324181145.995429
+s324553274.355159
+e324553276.134830
 r1
 xCompileC
 xbuild/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/ConfigurationModal.o
@@ -1463,10 +1473,7 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-o/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/Classes/ConfigurationModal.m: In function '-[ConfigurationModal tableView:cellForRowAtIndexPath:]':
-o/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/Classes/ConfigurationModal.m:130: warning: 'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:213)
-o/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/Classes/ConfigurationModal.m:151: warning: 'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:213)
-lSLF07#2@89"Compile /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/Classes/ConfigurationModal.m324181145#324181145#0(735"/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/Classes/ConfigurationModal.m: In function '-[ConfigurationModal tableView:cellForRowAtIndexPath:]':/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/Classes/ConfigurationModal.m:130: warning: 'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:213)/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/Classes/ConfigurationModal.m:151: warning: 'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:213)2(22@194"'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:213)324181145#153#291#0(6@81"/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/Classes/ConfigurationModal.m324181140#130#0#130#0#33"'*' is deprecated (declared at *)0(22@194"'setText:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:213)324181145#444#291#0(6@81"/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/Classes/ConfigurationModal.m324181140#151#0#151#0#33"'*' is deprecated (declared at *)0(0#0#81"/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/Classes/ConfigurationModal.m8623962208#2204"    cd /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-generated-files.hmap -I/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-own-target-headers.hmap -I/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-all-target-headers.hmap -iquote /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-project-headers.hmap -F/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator -I/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator/include -I/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/DerivedSources/i386 -I/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/DerivedSources -include /var/folders/qa/qadnqY9JHEiDaY75O-wF-U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RDPPrototype_Prefix-fkpfvcaxvblolbghkanzbckdxsyg/RDPPrototype_Prefix.pch -c /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/Classes/ConfigurationModal.m -o /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/ConfigurationModal.o0#
+lSLF07#2@89"Compile /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/Classes/ConfigurationModal.m324553274#324553276#0(0"0(0#0#81"/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/Classes/ConfigurationModal.m8616441280#2204"    cd /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-generated-files.hmap -I/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-own-target-headers.hmap -I/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-all-target-headers.hmap -iquote /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-project-headers.hmap -F/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator -I/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator/include -I/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/DerivedSources/i386 -I/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/DerivedSources -include /var/folders/qa/qadnqY9JHEiDaY75O-wF-U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RDPPrototype_Prefix-fkpfvcaxvblolbghkanzbckdxsyg/RDPPrototype_Prefix.pch -c /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/Classes/ConfigurationModal.m -o /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/ConfigurationModal.o0#
 
 CCompileC build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/HelpPage.o /FYP/Classes/HelpPage.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s324174556.626964
@@ -1916,8 +1923,8 @@ CCompileC build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Obje
 r0
 
 CCompileC build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/TouchViewController.o /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/Classes/TouchViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s324195018.698809
-e324195019.038862
+s324553274.378049
+e324553276.186820
 r1
 xCompileC
 xbuild/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/TouchViewController.o
@@ -1926,10 +1933,10 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-o/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/Classes/TouchViewController.m:469: warning: incomplete implementation of class 'TouchViewController'
-o/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/Classes/TouchViewController.m:469: warning: method definition for '-editText:' not found
-o/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/Classes/TouchViewController.m:469: warning: method definition for '-textFieldDone:' not found
-lSLF07#2@90"Compile /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/Classes/TouchViewController.m324195018#324195019#0(443"/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/Classes/TouchViewController.m:469: warning: incomplete implementation of class 'TouchViewController'/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/Classes/TouchViewController.m:469: warning: method definition for '-editText:' not found/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/Classes/TouchViewController.m:469: warning: method definition for '-textFieldDone:' not found3(22@56"Incomplete implementation of class 'TouchViewController'324195018#0#154#0(6@82"/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/Classes/TouchViewController.m324188819#469#0#469#0#38"incomplete implementation of class '*'0(22@44"Method definition for '-editText:' not found324195018#154#142#0(6@82"/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/Classes/TouchViewController.m324188819#469#0#469#0#35"method definition for '*' not found0(22@49"Method definition for '-textFieldDone:' not found324195018#296#147#0(6@82"/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/Classes/TouchViewController.m324188819#469#0#469#0#35"method definition for '*' not found0(0#0#82"/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/Classes/TouchViewController.m8614009344#2206"    cd /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-generated-files.hmap -I/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-own-target-headers.hmap -I/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-all-target-headers.hmap -iquote /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-project-headers.hmap -F/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator -I/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator/include -I/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/DerivedSources/i386 -I/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/DerivedSources -include /var/folders/qa/qadnqY9JHEiDaY75O-wF-U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RDPPrototype_Prefix-fkpfvcaxvblolbghkanzbckdxsyg/RDPPrototype_Prefix.pch -c /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/Classes/TouchViewController.m -o /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/TouchViewController.o0#
+o/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/Classes/TouchViewController.m:521: warning: incomplete implementation of class 'TouchViewController'
+o/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/Classes/TouchViewController.m:521: warning: method definition for '-editText:' not found
+o/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/Classes/TouchViewController.m:521: warning: method definition for '-textFieldDone:' not found
+lSLF07#2@90"Compile /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/Classes/TouchViewController.m324553274#324553276#0(443"/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/Classes/TouchViewController.m:521: warning: incomplete implementation of class 'TouchViewController'/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/Classes/TouchViewController.m:521: warning: method definition for '-editText:' not found/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/Classes/TouchViewController.m:521: warning: method definition for '-textFieldDone:' not found3(22@56"Incomplete implementation of class 'TouchViewController'324553276#0#154#0(6@82"/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/Classes/TouchViewController.m324546819#521#0#521#0#38"incomplete implementation of class '*'0(22@44"Method definition for '-editText:' not found324553276#154#142#0(6@82"/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/Classes/TouchViewController.m324546819#521#0#521#0#35"method definition for '*' not found0(22@49"Method definition for '-textFieldDone:' not found324553276#296#147#0(6@82"/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/Classes/TouchViewController.m324546819#521#0#521#0#35"method definition for '*' not found0(0#0#82"/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/Classes/TouchViewController.m8615932960#2206"    cd /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-generated-files.hmap -I/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-own-target-headers.hmap -I/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-all-target-headers.hmap -iquote /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-project-headers.hmap -F/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator -I/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator/include -I/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/DerivedSources/i386 -I/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/DerivedSources -include /var/folders/qa/qadnqY9JHEiDaY75O-wF-U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RDPPrototype_Prefix-fkpfvcaxvblolbghkanzbckdxsyg/RDPPrototype_Prefix.pch -c /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/Classes/TouchViewController.m -o /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/TouchViewController.o0#
 
 CCompileC build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/TouchViewController.o /Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/../TouchViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s318927667.727413
@@ -2234,7 +2241,12 @@ CCompileXIB /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/RDPPrototypeVie
 r0
 
 CCompileXIB /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/TouchViewController.xib
-r0
+s324538332.480094
+e324538333.740215
+r1
+xCompileXIB
+x/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/TouchViewController.xib
+lSLF07#2@34"CompileXIB TouchViewController.xib324538332#324538333#0(0"0(0#0#76"/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/TouchViewController.xib28429440806879332#635"    cd /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator/RDPPrototype.app/TouchViewController.nib /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/TouchViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk0#
 
 CCompileXIB /Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/MainWindow.xib
 r0
@@ -2267,6 +2279,15 @@ xCpResource
 xbuild/Debug-iphonesimulator/RDPPrototype.app/Three Finger Swap Horizongtal.png
 xThree Finger Swap Horizongtal.png
 lSLF07#2@38"Copy Three Finger Swap Horizongtal.png324218030#324218030#0(0"0(0#0#86"/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/Three Finger Swap Horizongtal.png8606532800#540"    cd /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/Three Finger Swap Horizongtal.png" /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator/RDPPrototype.app0#
+
+CCpResource "build/Debug-iphonesimulator/RDPPrototype.app/help back groundt.png" "help back groundt.png"
+s324537969.812773
+e324537969.891956
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/RDPPrototype.app/help back groundt.png
+xhelp back groundt.png
+lSLF07#2@26"Copy help back groundt.png324537969#324537969#0(0"0(0#0#74"/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/help back groundt.png12948282727727224#528"    cd /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/help back groundt.png" /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator/RDPPrototype.app0#
 
 CCpResource "build/Debug-iphonesimulator/RDPPrototype.app/three finger swip horizongtal.png" "three finger swip horizongtal.png"
 s324218030.777055
@@ -2407,13 +2428,13 @@ x/Users/karida/Documents/FYP/build/Debug-iphonesimulator/RDPPrototype.app/RDPPro
 lSLF07#2@124"GenerateDSYMFile build/Debug-iphonesimulator/RDPPrototype.app.dSYM build/Debug-iphonesimulator/RDPPrototype.app/RDPPrototype322400335#322400335#0(0"0(0#0#85"/Users/karida/Documents/FYP/build/Debug-iphonesimulator/RDPPrototype.app/RDPPrototype8613699584#365"    cd /Users/karida/Documents/FYP    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/karida/Documents/FYP/build/Debug-iphonesimulator/RDPPrototype.app/RDPPrototype -o /Users/karida/Documents/FYP/build/Debug-iphonesimulator/RDPPrototype.app.dSYM0#
 
 CGenerateDSYMFile /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator/RDPPrototype.app.dSYM /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator/RDPPrototype.app/RDPPrototype
-s324197888.846009
-e324197888.965564
+s324553276.742971
+e324553276.987638
 r1
 xGenerateDSYMFile
 x/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator/RDPPrototype.app.dSYM
 x/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator/RDPPrototype.app/RDPPrototype
-lSLF07#2@124"GenerateDSYMFile build/Debug-iphonesimulator/RDPPrototype.app.dSYM build/Debug-iphonesimulator/RDPPrototype.app/RDPPrototype324197888#324197888#0(0"0(0#0#110"/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator/RDPPrototype.app/RDPPrototype8618631872#440"    cd /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator/RDPPrototype.app/RDPPrototype -o /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator/RDPPrototype.app.dSYM0#
+lSLF07#2@124"GenerateDSYMFile build/Debug-iphonesimulator/RDPPrototype.app.dSYM build/Debug-iphonesimulator/RDPPrototype.app/RDPPrototype324553276#324553276#0(0"0(0#0#110"/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator/RDPPrototype.app/RDPPrototype8628867136#440"    cd /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator/RDPPrototype.app/RDPPrototype -o /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator/RDPPrototype.app.dSYM0#
 
 CGenerateDSYMFile /Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/build/Debug-iphonesimulator/RDPPrototype.app.dSYM /Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/build/Debug-iphonesimulator/RDPPrototype.app/RDPPrototype
 s318927667.943429
@@ -2445,14 +2466,14 @@ xi386
 lSLF07#2@90"Link /Users/karida/Documents/FYP/build/Debug-iphonesimulator/RDPPrototype.app/RDPPrototype322400335#322400335#0(0"0(0#0#0"8605373024#870"    cd /Users/karida/Documents/FYP    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -L/Users/karida/Documents/FYP/build/Debug-iphonesimulator -F/Users/karida/Documents/FYP/build/Debug-iphonesimulator -filelist /Users/karida/Documents/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/RDPPrototype.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/karida/Documents/FYP/build/Debug-iphonesimulator/RDPPrototype.app/RDPPrototype0#
 
 CLd /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator/RDPPrototype.app/RDPPrototype normal i386
-s324197888.690264
-e324197888.845894
+s324553276.186946
+e324553276.742863
 r1
 xLd
 x/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator/RDPPrototype.app/RDPPrototype
 xnormal
 xi386
-lSLF07#2@115"Link /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator/RDPPrototype.app/RDPPrototype324197888#324197888#0(0"0(0#0#0"8624383104#995"    cd /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -L/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator -F/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator -filelist /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/RDPPrototype.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator/RDPPrototype.app/RDPPrototype0#
+lSLF07#2@115"Link /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator/RDPPrototype.app/RDPPrototype324553276#324553276#0(0"0(0#0#0"8631134400#995"    cd /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -L/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator -F/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator -filelist /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/RDPPrototype.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator/RDPPrototype.app/RDPPrototype0#
 
 CLd /Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/build/Debug-iphonesimulator/RDPPrototype.app/RDPPrototype normal i386
 s318927667.891145
@@ -2583,12 +2604,12 @@ x/Users/karida/Documents/FYP/build/Debug-iphonesimulator/RDPPrototype.app
 lSLF07#2@78"Touch /Users/karida/Documents/FYP/build/Debug-iphonesimulator/RDPPrototype.app322400335#322400335#0(0"0(0#0#0"8612079680#261"    cd /Users/karida/Documents/FYP    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/karida/Documents/FYP/build/Debug-iphonesimulator/RDPPrototype.app0#
 
 CTouch /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator/RDPPrototype.app
-s324218105.037394
-e324218105.040013
+s324553276.987743
+e324553277.017266
 r1
 xTouch
 x/Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator/RDPPrototype.app
-lSLF07#2@103"Touch /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator/RDPPrototype.app324218105#324218105#0(0"0(0#0#0"8604063328#311"    cd /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator/RDPPrototype.app0#
+lSLF07#2@103"Touch /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator/RDPPrototype.app324553276#324553277#0(0"0(0#0#0"8624100768#311"    cd /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/karida/Documents/FYP_BACK_up/Config_Ready/FYP/build/Debug-iphonesimulator/RDPPrototype.app0#
 
 CTouch /Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/build/Debug-iphonesimulator/RDPPrototype.app
 s318927877.709712
