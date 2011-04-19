@@ -88,8 +88,14 @@ const int VK_DOWN = 0x28;
 const int VK_SNAPSHOT = 0x2C;
 const int VK_INSERT = 0x2D;
 const int VK_DELETE = 0x2E;
+const int VK_F1 = 70;
 
+#pragma mark Other Constants
+const int singleKeyEventRepLength = 12;
+const int keyEventPacketHeaderLength = 2;
+UIImage* previousImage = nil;
 #pragma mark Connection Flow
+
 
 -(int)initConnection{
 	printf("initConnection calledn");
@@ -127,11 +133,21 @@ const int VK_DELETE = 0x2E;
 -(int)parseMessage:(uint8_t *)message ofLength:(int)length {
 	static int expectedPacket = -1;
 	static NSMutableData* imageData = nil;
+	static NSMutableData* p_data = nil;
+	static int updateImageX = -1;
+	static int updateImageY = -1;
+	static int updateImageW = -1;
+	static int updateImageH = -1;
+	
 	if (packet != nil) {
 		free(packet);
 		packet = nil;
 	}
-
+	
+	if (p_data == nil) {
+		p_data = [[NSMutableData alloc] initWithLength:0];
+	}
+	
 	//NSMutableData *data=[[NSMutableData alloc] init];
 	//[data appendBytes:message length:length];
 	//NSString* errorMsg = [[NSString alloc] 
@@ -149,93 +165,155 @@ const int VK_DELETE = 0x2E;
 	if (isCustomServer) {
 		//Call another function
 		//printf("here\n");
-		switch (status) {
+		while (length != 0) {
+	
+			switch (status) {
+					
+				case 1:	//Server Version Indicator
+					serverVer = malloc(sizeof(uint8_t) * 8);
+					memcpy(serverVer, message+4*8, 8);
+					packet = malloc(sizeof(uint8_t) * 12);
 				
-			case 1:	//Server Version Indicator
-				serverVer = malloc(sizeof(uint8_t) * 8);
-				memcpy(serverVer, message+4*8, 8);
-				packet = malloc(sizeof(uint8_t) * 12);
-				
-				NSString *tmp = @"RFB 000.000\n";
-				packet = (uint8_t *)[tmp UTF8String];
-				[tmp release];
-				
-				//memcpy(packet, message, 12);
-				[communicator sendMessage:packet length:12];
-				packet = malloc(sizeof(uint8_t) * 12);
-				NSLog(@"AAAA1");
-				status = 2;
-				break;
-			case 2://security
-				//
-				packet = malloc(sizeof(uint8_t));
-				packet[0] = 1;
-				[communicator sendMessage:packet length:1];
-				status = 3;
-				break;
-			case 3:
-				//share
-				packet = malloc(sizeof(uint8_t));
-				packet[0] = 1;
-				[communicator sendMessage:packet length:1];
-				status = 4;
-				break;
-			case 4:
-				framebufferWidth = message[0] * 256 + message[1];
-				framebufferHeight = message[2] * 256 + message[3];
-				packet = malloc(sizeof(uint8_t));
-				packet[0] = 3;
-				[communicator sendMessage:packet length:1];
-				status = 5;
-				recievingStatus = -1;
-				break;
-			case 5:
-				/*
-				dispatch_queue_t imageDataReceiverQueue = dispatch_queue_create("Image Data Receiver", NULL);
-				dispatch_async(imageDataReceiverQueue, ^{
-				});
-				*/
-				
-				//printf("packet length: %i \n", length);
-				//printf("receiving %i %i %i\n",framebufferWidth,framebufferHeight,message[0]);
-				if (message[0] == 'U' && message[1] == 'P' && message[2] == 'D') {
-					//printf("%i %i\n",message[8] * 256 + message[9],message[10] * 256 + message[11]);
-					expectedPacket = message[12] * 256 * 256 * 256 + message[13] * 256 * 256 + message[14] * 256 + message[15];
-				//	printf("ep %i\n",expectedPacket);
-					if(imageData != nil){
-						[imageData release];
+					NSString *tmp = @"RFB 000.000\n";
+					packet = (uint8_t *)[tmp UTF8String];
+					[tmp release];
+					
+					//memcpy(packet, message, 12);
+					[communicator sendMessage:packet length:12];
+					packet = malloc(sizeof(uint8_t) * 12);
+					NSLog(@"AAAA1");
+					status = 2;
+					length = 0;
+					break;
+				case 2://security
+					//
+					packet = malloc(sizeof(uint8_t));
+					packet[0] = 1;
+					[communicator sendMessage:packet length:1];
+					status = 3;
+					length = 0;
+					break;
+				case 3:
+					//share
+					packet = malloc(sizeof(uint8_t));
+					packet[0] = 1;
+					[communicator sendMessage:packet length:1];
+					status = 4;
+					length = 0;
+					break;
+				case 4:
+					framebufferWidth = message[0] * 256 + message[1];
+					framebufferHeight = message[2] * 256 + message[3];
+					packet = malloc(sizeof(uint8_t));
+					packet[0] = 3;
+					[communicator sendMessage:packet length:1];
+					status = 5;
+					recievingStatus = -1;
+					length = 0;
+					break;
+				case 5:
+					if([p_data length] != 0){
+						[p_data appendBytes:message length:length];
+						//[message release];
+						NSUInteger len = [p_data length];
+						memcpy(message, [p_data bytes], len);;
+						length = [p_data length];
+						[p_data setLength:0];
+						
 					}
-					imageData = [NSMutableData alloc];
-					[imageData setLength:0];
-					recievingStatus = 1;
-					length -= 16;
-					message += 16;
-					if(length == 0){
+					/*
+					 dispatch_queue_t imageDataReceiverQueue = dispatch_queue_create("Image Data Receiver", NULL);
+					 dispatch_async(imageDataReceiverQueue, ^{
+					 });
+					 */
+				
+					printf("packet length: %i \n", length);
+					//printf("receiving %i %i %i\n",framebufferWidth,framebufferHeight,message[0]);
+					if (length >=16 && message[0] == 'U' && message[1] == 'P' && message[2] == 'D') {
+						//printf("%i %i\n",message[8] * 256 + message[9],message[10] * 256 + message[11]);
+						updateImageX = message[4] * 256 + message[5];
+						updateImageY = message[6] * 256 + message[7];
+						updateImageW = message[8] * 256 + message[9];
+						updateImageH = message[10] * 256 + message[11];
+						expectedPacket = message[12] * 256 * 256 * 256 + message[13] * 256 * 256 + message[14] * 256 + message[15];
+						//	printf("ep %i\n",expectedPacket);
+						if(imageData != nil){
+							[imageData release];
+						}
+						imageData = [[NSMutableData alloc]initWithLength:0];
+						recievingStatus = 1;
+						length -= 16;
+						message += 16;
+						if(length == 0){
+							break;
+						}
+					}else if (length < 16) {
+						[p_data appendBytes:message length:length];
+						length = 0;
 						break;
 					}
-				}
-				else if (recievingStatus = 1) {
-					//printf("expected\n");
-					if (expectedPacket > 0) {
-						[imageData appendBytes:message length:length];
-						expectedPacket -= length;
-						//printf("%i\n",expectedPacket);
-						if(expectedPacket == 0){
-							UIImage* tmp = [[UIImage alloc] initWithData:imageData];
-							printf("%i %i\n",[tmp size].width,[tmp size].height);
-							[viewController.touchViewController updateImage:tmp];
-							[tmp release];	
-							recievingStatus = -1;
+					if (recievingStatus = 1) {
+						//printf("expected\n");
+						if (expectedPacket >= length) {
+							[imageData appendBytes:message length:length];
+							expectedPacket -= length;
+							length = 0;
+							//printf("%i\n",expectedPacket);
+							if(expectedPacket == 0){
+								UIImage* tmp = [[UIImage alloc] initWithData:imageData];
+								printf("size %f %f\n",[tmp size].width,[tmp size].height);
+								if (previousImage == nil) {
+									//previousImage = [[UIImage alloc] initWithCGImage: [tmp CGImage]];
+									[viewController.touchViewController updateImage:tmp];
+								}else {
+									//UIGraphicsBeginImageContextWithOptions(CGSizeMake(framebufferWidth,framebufferHeight), YES, 0);
+									//[previousImage drawAtPoint:CGPointMake(0,0)];
+									//[tmp drawAtPoint:CGPointMake(updateImageX,updateImageY)];
+									[previousImage release];
+									//previousImage = UIGraphicsGetImageFromCurrentImageContext();
+									//UIGraphicsEndImageContext();
+									//[viewController.touchViewController updateImage:previousImage];
+									[viewController.touchViewController updateImage:tmp];
+								}
+								[tmp release];	
+								recievingStatus = -1;
 							
-							//packet = malloc(sizeof(uint8_t));
-							//packet[0] = 3;
+								//packet = malloc(sizeof(uint8_t));
+								//packet[0] = 3;
 								//[communicator sendMessage:packet length:1];
+							}
+						}else {
+							NSLog(@"aaaaaa");
+							[imageData appendBytes:message length:expectedPacket];
+							length -= expectedPacket;
+							message += expectedPacket;
+							UIImage* tmp = [[UIImage alloc] initWithData:imageData];
+							printf("%f %f\n",[tmp size].width,[tmp size].height);
+							if (previousImage == nil) {
+								//previousImage = [[UIImage alloc] initWithCGImage: [tmp CGImage]];
+								[viewController.touchViewController updateImage:tmp];
+							}else {
+								//UIGraphicsBeginImageContextWithOptions(CGSizeMake(framebufferWidth,framebufferHeight), YES, 0);
+								//[previousImage drawAtPoint:CGPointMake(0,0)];
+								//[tmp drawAtPoint:CGPointMake(updateImageX,updateImageY)];
+								[previousImage release];
+								//previousImage = UIGraphicsGetImageFromCurrentImageContext();
+								//UIGraphicsEndImageContext();
+								//[viewController.touchViewController updateImage:previousImage];
+								[viewController.touchViewController updateImage:tmp];
+							}
+							[tmp release];
+							[p_data appendBytes:message length:length];
+							length = 0;
+							recievingStatus = -1;
+							NSLog(@"aaaaaa f");
 						}
+
 					}
-				}
-				break;			
-			default:
-				break;
+					break;			
+				default:
+					break;
+			}	
 		}
 	}
 	else {
@@ -676,34 +754,243 @@ const int VK_DELETE = 0x2E;
 	return 1;
 }
 
+/*
+- (void)sendKeys:(int*)keys numberOfKeys:(int)numOfKeys isSerial:(BOOL)isSerial {
+	if (packet != nil) {
+		free(packet);
+		packet = nil;
+	}
+	
+	packetLength = keyEventPacketHeaderLength + singleKeyEventRepLength * numOfKeys * 2;
+	packet = malloc(sizeof(uint8_t) * packetLength);
+	
+	packet[0] = 4;
+	packet[1] = numOfKeys * 2;
+	
+	if (isSerial) {
+		
+	}
+	else {
+		for (int i = 0; i < numOfKeys; ++i) {
+			uint8_t *keyPressed = [self generateSingleKeyEvent:keys[i] pressed:YES];
+			for (int j = 0; j < singleKeyEventRepLength; ++j) {
+				packet[keyEventPacketHeaderLength + i * singleKeyEventRepLength + j] = keyPressed[j];
+			}
+		}
+		for (int i = numOfKeys; i > 0; --i) {
+			uint8_t *keyPressed = [self generateSingleKeyEvent:keys[i] pressed:NO];
+			for (int j = 0; j < singleKeyEventRepLength; ++j) {
+				packet[keyEventPacketHeaderLength + numOKeys * singleKeyEventRepLength + (numOfKeys-i) * singleKeyEventRepLength +j] = keyPressed[j];
+			}
+		}
+		[communicator sendMessage:packet length:packetLength];		
+	}
+}
+*/
+ 
+#pragma mark -
+#pragma mark Keyboard Events
+
+- (void) sendCtrlPlusChar:(char)character {
+	if (packet != nil) {
+		free(packet);
+		packet = nil;
+	}	
+	
+	packetLength = keyEventPacketHeaderLength + singleKeyEventRepLength * 4;
+	packet = malloc(sizeof(uint8_t) * packetLength);
+	
+	packet[0] = 4;
+	packet[1] = 4;
+	
+	uint8_t *ctrlPressed = [self generateSingleKeyEvent:VK_CONTROL pressed:YES];
+	uint8_t *charPressed = [self generateSingleKeyEvent:(character-32) pressed:YES];
+	uint8_t *charReleased = [self generateSingleKeyEvent:(character-32) pressed:NO];
+	uint8_t *ctrlReleased = [self generateSingleKeyEvent:VK_CONTROL pressed:NO];
+	
+	for (int i = 0; i < singleKeyEventRepLength; ++i) {
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*0] = ctrlPressed[i];
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*1] = charPressed[i];
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*2] = charReleased[i];
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*3] = ctrlReleased[i];
+	}
+	
+	[communicator sendMessage:packet length:packetLength];
+}
+
+- (void) sendTab {
+	if (packet != nil) {
+		free(packet);
+		packet = nil;
+	}	
+	
+	packetLength = keyEventPacketHeaderLength + singleKeyEventRepLength * 2;
+	packet = malloc(sizeof(uint8_t) * packetLength);
+	
+	packet[0] = 4;
+	packet[1] = 2;
+	
+	uint8_t *tabPressed = [self generateSingleKeyEvent:VK_TAB pressed:YES];
+	uint8_t *tabReleased = [self generateSingleKeyEvent:VK_TAB pressed:NO];
+	
+	for (int i = 0; i < singleKeyEventRepLength; ++i) {
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*0] = tabPressed[i];
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*1] = tabReleased[i];
+	}
+	
+	[communicator sendMessage:packet length:packetLength];
+}
+
+- (void) sendAltPlusTab {
+	if (packet != nil) {
+		free(packet);
+		packet = nil;
+	}	
+	
+	packetLength = keyEventPacketHeaderLength + singleKeyEventRepLength * 4;
+	packet = malloc(sizeof(uint8_t) * packetLength);
+	
+	packet[0] = 4;
+	packet[1] = 4;
+	
+	uint8_t *altPressed = [self generateSingleKeyEvent:VK_MENU pressed:YES];
+	uint8_t *tabPressed = [self generateSingleKeyEvent:VK_TAB pressed:YES];
+	uint8_t *tabReleased = [self generateSingleKeyEvent:VK_TAB pressed:NO];
+	uint8_t *altReleased = [self generateSingleKeyEvent:VK_MENU pressed:NO];
+	
+	for (int i = 0; i < singleKeyEventRepLength; ++i) {
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*0] = altPressed[i];
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*1] = tabPressed[i];
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*2] = tabReleased[i];
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*3] = altReleased[i];
+	}
+	
+	[communicator sendMessage:packet length:packetLength];
+}
+
+- (void) sendAltPlusF4 {
+	if (packet != nil) {
+		free(packet);
+		packet = nil;
+	}	
+	
+	packetLength = keyEventPacketHeaderLength + singleKeyEventRepLength * 4;
+	packet = malloc(sizeof(uint8_t) * packetLength);
+	
+	packet[0] = 4;
+	packet[1] = 4;
+	
+	uint8_t *altPressed = [self generateSingleKeyEvent:VK_MENU pressed:YES];
+	uint8_t *f4Pressed = [self generateSingleKeyEvent:(VK_F1+3) pressed:YES];
+	uint8_t *f4Released = [self generateSingleKeyEvent:(VK_F1+3) pressed:NO];
+	uint8_t *altReleased = [self generateSingleKeyEvent:VK_MENU pressed:NO];
+	
+	for (int i = 0; i < singleKeyEventRepLength; ++i) {
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*0] = altPressed[i];
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*1] = f4Pressed[i];
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*2] = f4Released[i];
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*3] = altReleased[i];
+	}
+	
+	[communicator sendMessage:packet length:packetLength];
+}
+
+- (void) sendCtrlPlusF4 {
+	if (packet != nil) {
+		free(packet);
+		packet = nil;
+	}	
+	
+	packetLength = keyEventPacketHeaderLength + singleKeyEventRepLength * 4;
+	packet = malloc(sizeof(uint8_t) * packetLength);
+	
+	packet[0] = 4;
+	packet[1] = 4;
+	
+	uint8_t *ctrlPressed = [self generateSingleKeyEvent:VK_CONTROL pressed:YES];
+	uint8_t *f4Pressed = [self generateSingleKeyEvent:(VK_F1+3) pressed:YES];
+	uint8_t *f4Released = [self generateSingleKeyEvent:(VK_F1+3) pressed:NO];
+	uint8_t *ctrlReleased = [self generateSingleKeyEvent:VK_CONTROL pressed:NO];
+	
+	for (int i = 0; i < singleKeyEventRepLength; ++i) {
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*0] = ctrlPressed[i];
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*1] = f4Pressed[i];
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*2] = f4Released[i];
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*3] = ctrlReleased[i];
+	}
+	
+	[communicator sendMessage:packet length:packetLength];
+}
+
+- (void) sendCtrlPlusSpace {
+	if (packet != nil) {
+		free(packet);
+		packet = nil;
+	}	
+	
+	packetLength = keyEventPacketHeaderLength + singleKeyEventRepLength * 4;
+	packet = malloc(sizeof(uint8_t) * packetLength);
+	
+	packet[0] = 4;
+	packet[1] = 4;
+	
+	uint8_t *ctrlPressed = [self generateSingleKeyEvent:VK_CONTROL pressed:YES];
+	uint8_t *spacePressed = [self generateSingleKeyEvent:VK_SPACE pressed:YES];
+	uint8_t *spaceReleased = [self generateSingleKeyEvent:VK_SPACE pressed:NO];
+	uint8_t *ctrlReleased = [self generateSingleKeyEvent:VK_CONTROL pressed:NO];
+	
+	for (int i = 0; i < singleKeyEventRepLength; ++i) {
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*0] = ctrlPressed[i];
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*1] = spacePressed[i];
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*2] = spaceReleased[i];
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*3] = ctrlReleased[i];
+	}
+	
+	[communicator sendMessage:packet length:packetLength];
+}
 
 //TODO
 - (void)sendString:(NSString*)string {
 	NSLog(@"sendString called");
+	
+	if (packet != nil) {
+		free(packet);
+		packet = nil;
+	}	
+	
+	packetLength = 0;
+	
 	for (int i = 0; i < [string length]; ++i) {
-		if (packet != nil) {
-			free(packet);
-			packet = nil;
+		unichar currentChar = [string characterAtIndex:i];
+		if (48 <= currentChar <= 57 || 97 <= currentChar <= 122) {
+			packetLength += 2;
 		}
+		else {
+			packetLength += 4;
+		}
+	}
+	
+	packet = malloc(sizeof(uint8_t) * packetLength);
+	
+	for (int i = 0; i < [string length]; ++i) {
 		
 		unichar currentChar = [string characterAtIndex:i];
 		
 		if (97 <= currentChar <= 122) {
-			packetLength = 2 + 12 * 2;
+			packetLength = keyEventPacketHeaderLength + singleKeyEventRepLength * 2;
 			packet = malloc(sizeof(uint8_t) * packetLength);
 			packet[0] = 4;
-			packet[1] = 2;
-			
+						
 			uint8_t *charPressed = [self generateSingleKeyEvent:(currentChar-32) pressed:YES];
 			uint8_t *charReleased = [self generateSingleKeyEvent:(currentChar-32) pressed:NO];
 			
-			for (int i = 0; i < 12; ++i) {
+			for (int i = 0; i < singleKeyEventRepLength; ++i) {
 				packet[i+2] = charPressed[i];
 				packet[i+14] = charReleased[i];
 			}
 		}
 		else if (65 <= currentChar <= 90) {
-			packetLength = 2 + 12 * 4;
+			packetLength = keyEventPacketHeaderLength + singleKeyEventRepLength * 4;
 			packet = malloc(sizeof(uint8_t) * packetLength);
 			packet[0] = 4;
 			packet[1] = 4;
@@ -721,7 +1008,7 @@ const int VK_DELETE = 0x2E;
 			}
 		}
 		else if (48 <= currentChar <= 57) {
-			packetLength = 2 + 12 * 2;
+			packetLength =keyEventPacketHeaderLength + singleKeyEventRepLength * 2;
 			packet = malloc(sizeof(uint8_t) * packetLength);
 			packet[0] = 4;
 			packet[1] = 2;
@@ -735,7 +1022,7 @@ const int VK_DELETE = 0x2E;
 			}
 		}
 		else {
-			packetLength = 2 + 12 * 4;
+			packetLength = keyEventPacketHeaderLength + singleKeyEventRepLength * 4;
 			packet = malloc(sizeof(uint8_t) * packetLength);
 			packet[0] = 4;
 			packet[1] = 4;
@@ -753,7 +1040,7 @@ const int VK_DELETE = 0x2E;
 }
 
 - (uint8_t *)generateSingleKeyEvent:(long)key pressed:(BOOL)pressed {
-	uint8_t *event = malloc(sizeof(uint8_t) * 12);
+	uint8_t *event = malloc(sizeof(uint8_t) * singleKeyEventRepLength);
 	
 	event[0] = (key / 256) % 256;
 	event[1] = key % 256;
@@ -1469,8 +1756,9 @@ const int VK_DELETE = 0x2E;
 	
 }
 
+
+
 /*
->>>>>>> .r113
 
 - (void)sendPointerEvent:(MouseButton)button atPosition:(CGPoint)position relativeToView:(UIView*)view pressed:(BOOL)pressed {
 	printf("send pointer event !!\n");
@@ -1618,7 +1906,6 @@ const int VK_DELETE = 0x2E;
 	
 	[communicator sendMessage:packet length:(8+textLength)];
 }
-
 
 
 -(id)initWithViewController:(RDPPrototypeViewController*)viewControllerPtr {

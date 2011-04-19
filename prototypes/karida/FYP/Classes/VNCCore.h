@@ -249,4 +249,11 @@ typedef enum {
 - (void)sendRightClickEventAtPosition:(CGPoint)position;
 - (void)sendMouseDragEventFromPosition:(CGPoint)startPosition toPosition:(CGPoint)endPosition;
 
+- (void) sendCtrlPlusChar:(char)character;
+- (void) sendTab;
+- (void) sendAltPlusTab;
+- (void) sendAltPlusF4;
+- (void) sendCtrlPlusF4;
+- (void) sendCtrlPlusSpace;
+
 @end

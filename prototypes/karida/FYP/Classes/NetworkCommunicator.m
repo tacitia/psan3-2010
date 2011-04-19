@@ -77,10 +77,11 @@ int dataLength;
 			//	data = malloc(1024);
 			//	dataIsInitialized = TRUE;
 			//}
+//			printf("has bytes available");
 			
-			uint8_t buffer[1024];
+			uint8_t buffer[3000];
 			unsigned int length = 0;
-			length = [(NSInputStream*)stream read:buffer maxLength:1024];
+			length = [(NSInputStream*)stream read:buffer maxLength:1500];
 			//if(length) {
 			//	memcpy(data, buffer, length);
 			//dataLength += length;
@@ -128,7 +129,7 @@ int dataLength;
 	[oStream write:str maxLength:length];
 }
 
-
+ 
 - (id) initWithVNCCore:(VNCCore*)vncCorePtr {
 	[super init];
 	dataIsInitialized = FALSE;
