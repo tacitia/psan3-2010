@@ -230,7 +230,7 @@ UIImage* previousImage = nil;
 					 });
 					 */
 				
-					printf("packet length: %i \n", length);
+//					printf("packet length: %i \n", length);
 					//printf("receiving %i %i %i\n",framebufferWidth,framebufferHeight,message[0]);
 					if (length >=16 && message[0] == 'U' && message[1] == 'P' && message[2] == 'D') {
 						//printf("%i %i\n",message[8] * 256 + message[9],message[10] * 256 + message[11]);
@@ -264,7 +264,7 @@ UIImage* previousImage = nil;
 							//printf("%i\n",expectedPacket);
 							if(expectedPacket == 0){
 								UIImage* tmp = [[UIImage alloc] initWithData:imageData];
-								printf("size %f %f\n",[tmp size].width,[tmp size].height);
+//								printf("size %f %f\n",[tmp size].width,[tmp size].height);
 								if (previousImage == nil) {
 									//previousImage = [[UIImage alloc] initWithCGImage: [tmp CGImage]];
 									[viewController.touchViewController updateImage:tmp];
@@ -286,12 +286,12 @@ UIImage* previousImage = nil;
 								//[communicator sendMessage:packet length:1];
 							}
 						}else {
-							NSLog(@"aaaaaa");
+//							NSLog(@"aaaaaa");
 							[imageData appendBytes:message length:expectedPacket];
 							length -= expectedPacket;
 							message += expectedPacket;
 							UIImage* tmp = [[UIImage alloc] initWithData:imageData];
-							printf("%f %f\n",[tmp size].width,[tmp size].height);
+//							printf("%f %f\n",[tmp size].width,[tmp size].height);
 							if (previousImage == nil) {
 								//previousImage = [[UIImage alloc] initWithCGImage: [tmp CGImage]];
 								[viewController.touchViewController updateImage:tmp];
@@ -309,7 +309,7 @@ UIImage* previousImage = nil;
 							[p_data appendBytes:message length:length];
 							length = 0;
 							recievingStatus = -1;
-							NSLog(@"aaaaaa f");
+							//NSLog(@"aaaaaa f");
 						}
 
 					}
@@ -1143,6 +1143,54 @@ UIImage* previousImage = nil;
 	}
 }
 
+- (void)sendPressAltPlusShift {
+	if (packet != nil) {
+		free(packet);
+		packet = nil;
+	}	
+	
+	packetLength = keyEventPacketHeaderLength + singleKeyEventRepLength * 2;
+	packet = malloc(sizeof(uint8_t) * packetLength);
+	
+	packet[0] = 4;
+	packet[1] = 2;
+	
+	uint8_t *altPressed = [self generateSingleKeyEvent:VK_MENU pressed:YES];
+	uint8_t *shiftPressed = [self generateSingleKeyEvent:VK_SHIFT pressed:YES];
+	
+	for (int i = 0; i < singleKeyEventRepLength; ++i) {
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*0] = altPressed[i];
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*1] = shiftPressed[i];
+	}
+	
+	[communicator sendMessage:packet length:packetLength];
+}
+
+
+- (void)sendReleaseAltPlusShift {
+	if (packet != nil) {
+		free(packet);
+		packet = nil;
+	}	
+	
+	packetLength = keyEventPacketHeaderLength + singleKeyEventRepLength * 2;
+	packet = malloc(sizeof(uint8_t) * packetLength);
+	
+	packet[0] = 4;
+	packet[1] = 2;
+	
+	uint8_t *altReleased = [self generateSingleKeyEvent:VK_MENU pressed:NO];
+	uint8_t *shiftReleased = [self generateSingleKeyEvent:VK_SHIFT pressed:NO];
+	
+	for (int i = 0; i < singleKeyEventRepLength; ++i) {
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*0] = altReleased[i];
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*1] = shiftReleased[i];
+	}
+	
+	[communicator sendMessage:packet length:packetLength];
+}
+
+
 - (uint8_t *)generateSingleKeyEvent:(long)key pressed:(BOOL)pressed {
 	uint8_t *event = malloc(sizeof(uint8_t) * singleKeyEventRepLength);
 	
@@ -1805,6 +1853,50 @@ UIImage* previousImage = nil;
 	[communicator sendMessage:packet length:42];	
 }
 
+
+- (void)sendDoubleLeftClickEventAtPosition:(CGPoint)position {
+	if (packet != nil) {
+		free(packet);
+		packet = nil;
+	}
+	packet = malloc(sizeof(uint8_t) * 42);
+	
+	packet[0] = 5;
+	packet[1] = 2;
+	
+	CGPoint serverPosition = [self transformClientPositionToServerPosition:position];
+	
+	unsigned int x = ceil(serverPosition.x);
+	unsigned int y = ceil(serverPosition.y);	
+	
+	for (int i = 0; i < 2; ++i) {
+		packet[2+i*20] = x / 256 / 256 / 256;
+		packet[3+i*20] = (x / 256 / 256) % 256;
+		packet[4+i*20] = (x / 256) % 256;
+		packet[5+i*20] = x % 256;
+		packet[6+i*20] = y / 256 / 256 / 256;
+		packet[7+i*20] = (y / 256 / 256) % 256;
+		packet[8+i*20] = (y / 256) % 256;
+		packet[9+i*20] = y % 256;
+		
+		packet[10+i*20] = packet[11+i*20] = packet[12+i*20] = packet[13+i*20] = 0;
+		
+		unsigned int dwFlags = (i == 0) ? (MOUSEEVENTF_ABSOLUTE | MOUSEEVENTF_MOVE | MOUSEEVENTF_LEFTDOWN)
+		: (MOUSEEVENTF_ABSOLUTE | MOUSEEVENTF_MOVE | MOUSEEVENTF_LEFTUP);
+		
+		packet[14+i*20] = dwFlags / 256 / 256 / 256;
+		packet[15+i*20] = (dwFlags / 256 / 256) % 256;
+		packet[16+i*20] = (dwFlags / 256) % 256;
+		packet[17+i*20] = dwFlags % 256;
+		
+		packet[18+i*20] = packet[19+i*20] = packet[20+i*20] = packet[21+i*20] = 0;
+	}
+	
+	[communicator sendMessage:packet length:42];	
+}
+
+
+
 - (void)sendMouseDragEventFromPosition:(CGPoint)startPosition toPosition:(CGPoint)endPosition {
 	if (packet != nil) {
 		free(packet);
@@ -1990,10 +2082,15 @@ UIImage* previousImage = nil;
 		free(packet);
 		packet = nil;
 	}
-		
+	
+	NSLog(@"text:");
+	NSLog(text);
 	int textLength = [text length]; //Is this the correct length for the textChars?
 	
-	packet = malloc(sizeof(uint8_t) * (8+textLength));
+	printf("textLength: %i \n", textLength);
+	
+	packetLength = 8+textLength+1;
+	packet = malloc(sizeof(uint8_t) * packetLength);
 					
 	packet[0] = 6;
 	packet[1] = packet[2] = packet[3] = 0;
@@ -2004,10 +2101,14 @@ UIImage* previousImage = nil;
 	packet[7] = textLength % 256;
 	
 	for (int i = 0; i < textLength; ++i) {
-		packet[i+7] = [text UTF8String][i];
+		packet[i+8] = [text UTF8String][i];
 	}
 	
-	[communicator sendMessage:packet length:(8+textLength)];
+	packet[packetLength-1] = '\0';
+	
+	printf("packet length: %i\n", packetLength);
+	
+	[communicator sendMessage:packet length:packetLength];
 }
 
 

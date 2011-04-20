@@ -253,15 +253,17 @@ typedef enum {
 #pragma mark -
 #pragma mark Send keyboard Events
 - (void)sendString:(NSString*)string;
-- (void) sendCtrlPlusChar:(char)character;
-- (void) sendTab;
-- (void) sendAltPlusTab;
-- (void) sendAltPlusF4;
-- (void) sendCtrlPlusF4;
-- (void) sendCtrlPlusSpace;
-- (void) sendSingleKeyEventWithKey:(int)key pressed:(BOOL)pressed;
-- (void) minimizeCurrentActiveWindow;
-- (void) maximizeCurrentActiveWindow;
+- (void)sendCtrlPlusChar:(char)character;
+- (void)sendTab;
+- (void)sendAltPlusTab;
+- (void)sendAltPlusF4;
+- (void)sendCtrlPlusF4;
+- (void)sendCtrlPlusSpace;
+- (void)sendPressAltPlusShift;
+- (void)sendReleaseAltPlusShift;
+- (void)sendSingleKeyEventWithKey:(int)key pressed:(BOOL)pressed;
+- (void)minimizeCurrentActiveWindow;
+- (void)maximizeCurrentActiveWindow;
 
 - (void)putTextIntoCutBuffer:(NSString*)text;
 
