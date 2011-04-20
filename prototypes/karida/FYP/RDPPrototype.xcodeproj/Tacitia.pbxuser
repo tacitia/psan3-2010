@@ -540,6 +540,16 @@
 			3E4952D8135F3EF100F7FD1C /* PBXTextBookmark */ = 3E4952D8135F3EF100F7FD1C /* PBXTextBookmark */;
 			3E4952D9135F3EF100F7FD1C /* PBXTextBookmark */ = 3E4952D9135F3EF100F7FD1C /* PBXTextBookmark */;
 			3E4952DA135F3EF100F7FD1C /* PBXTextBookmark */ = 3E4952DA135F3EF100F7FD1C /* PBXTextBookmark */;
+			3E4952DD135F3F0700F7FD1C /* PBXTextBookmark */ = 3E4952DD135F3F0700F7FD1C /* PBXTextBookmark */;
+			3E4952DE135F3F0700F7FD1C /* PBXBookmark */ = 3E4952DE135F3F0700F7FD1C /* PBXBookmark */;
+			3E4952DF135F3F0700F7FD1C /* PBXBookmark */ = 3E4952DF135F3F0700F7FD1C /* PBXBookmark */;
+			3E4952E0135F3F0700F7FD1C /* PBXTextBookmark */ = 3E4952E0135F3F0700F7FD1C /* PBXTextBookmark */;
+			3E4952E1135F3F0700F7FD1C /* PBXTextBookmark */ = 3E4952E1135F3F0700F7FD1C /* PBXTextBookmark */;
+			3E4952E2135F3F3A00F7FD1C /* PBXTextBookmark */ = 3E4952E2135F3F3A00F7FD1C /* PBXTextBookmark */;
+			3E4952E3135F3F3A00F7FD1C /* PBXTextBookmark */ = 3E4952E3135F3F3A00F7FD1C /* PBXTextBookmark */;
+			3E4952E4135F3F3A00F7FD1C /* PBXTextBookmark */ = 3E4952E4135F3F3A00F7FD1C /* PBXTextBookmark */;
+			3E4952E5135F3F3A00F7FD1C /* PBXTextBookmark */ = 3E4952E5135F3F3A00F7FD1C /* PBXTextBookmark */;
+			3E4952E6135F3F3A00F7FD1C /* PBXTextBookmark */ = 3E4952E6135F3F3A00F7FD1C /* PBXTextBookmark */;
 			3E5F3FE6132F3DA6008017DF = 3E5F3FE6132F3DA6008017DF /* PBXBookmark */;
 			3E6BF44D13489D2F0004FD3B = 3E6BF44D13489D2F0004FD3B /* PBXTextBookmark */;
 			3E6BF4751348A0CC0004FD3B = 3E6BF4751348A0CC0004FD3B /* PBXBookmark */;
@@ -3957,6 +3967,94 @@
 		vrLen = 1304;
 		vrLoc = 1073;
 	};
+	3E4952DD135F3F0700F7FD1C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
+		name = "VNCCore.m: 1204";
+		rLen = 0;
+		rLoc = 37783;
+		rType = 0;
+		vrLen = 514;
+		vrLoc = 37675;
+	};
+	3E4952DE135F3F0700F7FD1C /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 7AAB737013452869003A2A60 /* configurationicon.jpg */;
+	};
+	3E4952DF135F3F0700F7FD1C /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 7AB9F87913532A1700B71D74 /* three finger swip horizongtal.png */;
+	};
+	3E4952E0135F3F0700F7FD1C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3E5582AF12856DE600AB8CDF /* NetworkCommunicator.h */;
+		name = "NetworkCommunicator.h: 31";
+		rLen = 0;
+		rLoc = 700;
+		rType = 0;
+		vrLen = 656;
+		vrLoc = 171;
+	};
+	3E4952E1135F3F0700F7FD1C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
+		name = "VNCCore.m: 49";
+		rLen = 0;
+		rLoc = 1039;
+		rType = 0;
+		vrLen = 1304;
+		vrLoc = 1073;
+	};
+	3E4952E2135F3F3A00F7FD1C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3E5582AF12856DE600AB8CDF /* NetworkCommunicator.h */;
+		name = "NetworkCommunicator.h: 31";
+		rLen = 0;
+		rLoc = 700;
+		rType = 0;
+		vrLen = 656;
+		vrLoc = 171;
+	};
+	3E4952E3135F3F3A00F7FD1C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F7F5E0491285880C0070AE03 /* RDPCore.m */;
+		name = "RDPCore.m: 418";
+		rLen = 0;
+		rLoc = 8311;
+		rType = 0;
+		vrLen = 476;
+		vrLoc = 15812;
+	};
+	3E4952E4135F3F3A00F7FD1C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F7F8C61F12A247A300FC4E29 /* VNCCore.h */;
+		name = "VNCCore.h: 243";
+		rLen = 0;
+		rLoc = 3722;
+		rType = 0;
+		vrLen = 964;
+		vrLoc = 3185;
+	};
+	3E4952E5135F3F3A00F7FD1C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EED5B2A135DD92E00310B18 /* Tacitia.pbxuser */;
+		name = "Tacitia.pbxuser: 3071";
+		rLen = 0;
+		rLoc = 98753;
+		rType = 0;
+		vrLen = 683;
+		vrLoc = 0;
+	};
+	3E4952E6135F3F3A00F7FD1C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
+		name = "VNCCore.m: 49";
+		rLen = 0;
+		rLoc = 1039;
+		rType = 0;
+		vrLen = 1304;
+		vrLoc = 1073;
+	};
 	3E5582801285695300AB8CDF /* RDPPrototype */ = {
 		isa = PBXExecutable;
 		activeArgIndices = (
@@ -4007,7 +4105,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {803, 468}}";
 			sepNavSelRange = "{700, 0}";
-			sepNavVisRange = "{155, 643}";
+			sepNavVisRange = "{171, 656}";
 			sepNavWindowFrame = "{{382, 124}, {970, 754}}";
 		};
 	};
@@ -4087,7 +4185,7 @@
 		path = "/Users/Tacitia/Projects/FYP-V2.0/RDPPrototype.xcodeproj/Tacitia.pbxuser";
 		sourceTree = "<absolute>";
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {803, 42835}}";
+			sepNavIntBoundsRect = "{{0, 0}, {803, 57967}}";
 			sepNavSelRange = "{98753, 0}";
 			sepNavVisRange = "{0, 683}";
 		};
@@ -4381,9 +4479,9 @@
 	F7F8C61F12A247A300FC4E29 /* VNCCore.h */ = {
 		uiCtxt = {
 			sepNavFolds = "{\n    c =     (\n                {\n            r = \"{527, 1293}\";\n            s = 0;\n        }\n    );\n    r = \"{0, 4635}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {803, 1846}}";
+			sepNavIntBoundsRect = "{{0, 0}, {803, 1690}}";
 			sepNavSelRange = "{2430, 0}";
-			sepNavVisRange = "{1851, 1006}";
+			sepNavVisRange = "{1893, 964}";
 			sepNavWindowFrame = "{{561, 84}, {750, 761}}";
 		};
 	};
