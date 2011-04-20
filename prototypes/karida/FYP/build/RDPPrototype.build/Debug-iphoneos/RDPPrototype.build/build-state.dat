@@ -145,12 +145,17 @@ i<UIKit/UIKit.h>
 i"HelpPage.h"
 
 N/FYP/Classes/ConfigurationModal.m
-c000000004DAEE2500000000000002090
-t1303306832
-s8336
+c000000004DAEE3D700000000000020D9
+t1303307223
+s8409
 i"ConfigurationModal.h"
 i"HelpPage.h"
 i"TouchViewController.h"
+
+N/FYP/Classes/GlobalConstants.m
+c000000004DAEE4A600000000000000AE
+t1303307430
+s174
 
 N/FYP/Classes/HelpPage.h
 c000000004DA25DF30000000000000152
@@ -181,14 +186,14 @@ s1042
 i"NSStreamAdditions.h"
 
 N/FYP/Classes/NetworkCommunicator.h
-c000000004D9E6B60000000000000032C
-t1302227808
-s812
+c000000004DAEE3E0000000000000033F
+t1303307232
+s831
 
 N/FYP/Classes/NetworkCommunicator.m
-c000000004DAEE1660000000000000DEA
-t1303306598
-s3562
+c000000004DAEE3E00000000000000DD8
+t1303307232
+s3544
 i"NetworkCommunicator.h"
 i"NSStreamAdditions.h"
 i"VNCCore.h"
@@ -230,9 +235,9 @@ i"RDPCore.h"
 i"VNCCore.h"
 
 N/FYP/Classes/RDPPrototypeViewController.m
-c000000004DAEDDC40000000000000D8D
-t1303305668
-s3469
+c000000004DAEE3E00000000000000E1F
+t1303307232
+s3615
 i"RDPPrototypeViewController.h"
 i"TouchViewController.h"
 
@@ -245,24 +250,24 @@ i<UIKit/UIKit.h>
 i"VNCCore.h"
 
 N/FYP/Classes/TouchViewController.m
-c000000004DAEE2000000000000004BFF
-t1303306752
-s19455
+c000000004DAEEC890000000000004D2B
+t1303309449
+s19755
 i"TouchViewController.h"
 i"ConfigurationModal.h"
 
 N/FYP/Classes/VNCCore.h
-c000000004DAECBE1000000000000115E
-t1303301089
-s4446
+c000000004DAEE3E000000000000011A6
+t1303307232
+s4518
 i<Foundation/Foundation.h>
 i"NetworkCommunicator.h"
 i"RDPPrototypeViewController.h"
 
 N/FYP/Classes/VNCCore.m
-c000000004DAECBE1000000000000D65C
-t1303301089
-s54876
+c000000004DAEE3E0000000000000D6D5
+t1303307232
+s54997
 i"VNCCore.h"
 i<CommonCrypto/CommonCryptor.h>
 
@@ -287,9 +292,9 @@ t1299034404
 s73966
 
 N/FYP/RDPPrototypeViewController.xib
-c000000004DAE52F8000000000000768E
-t1303270136
-s30350
+c000000004DAEE3E00000000000007691
+t1303307232
+s30353
 
 N/FYP/RDPPrototype_Prefix.pch
 c000000004D6DB12400000000000000C1
@@ -433,6 +438,10 @@ N/FYP/build/RDPPrototype.build/Debug-iphoneos/RDPPrototype.build/Objects-normal/
 t1303305382
 s68604
 
+N/FYP/build/RDPPrototype.build/Debug-iphoneos/RDPPrototype.build/Objects-normal/armv6/GlobalConstants.o
+t2
+s0
+
 N/FYP/build/RDPPrototype.build/Debug-iphoneos/RDPPrototype.build/Objects-normal/armv6/HelpPage.o
 t1303291634
 s40108
@@ -481,6 +490,10 @@ s6380
 N/FYP/build/RDPPrototype.build/Debug-iphoneos/RDPPrototype.build/Objects-normal/armv7/ConfigurationModal.o
 t1303305385
 s67872
+
+N/FYP/build/RDPPrototype.build/Debug-iphoneos/RDPPrototype.build/Objects-normal/armv7/GlobalConstants.o
+t2
+s0
 
 N/FYP/build/RDPPrototype.build/Debug-iphoneos/RDPPrototype.build/Objects-normal/armv7/HelpPage.o
 t1303291636
@@ -959,6 +972,9 @@ xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@41"Compile /FYP/Classes/ConfigurationModal.m324998182#324998182#0(0"0(0#0#33"/FYP/Classes/ConfigurationModal.m8607873184#1486"    cd /FYP    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /FYP/build/RDPPrototype.build/Debug-iphoneos/RDPPrototype.build/RDPPrototype-generated-files.hmap -I/FYP/build/RDPPrototype.build/Debug-iphoneos/RDPPrototype.build/RDPPrototype-own-target-headers.hmap -I/FYP/build/RDPPrototype.build/Debug-iphoneos/RDPPrototype.build/RDPPrototype-all-target-headers.hmap -iquote /FYP/build/RDPPrototype.build/Debug-iphoneos/RDPPrototype.build/RDPPrototype-project-headers.hmap -F/FYP/build/Debug-iphoneos -I/FYP/build/Debug-iphoneos/include -I/FYP/build/RDPPrototype.build/Debug-iphoneos/RDPPrototype.build/DerivedSources/armv6 -I/FYP/build/RDPPrototype.build/Debug-iphoneos/RDPPrototype.build/DerivedSources -include /var/folders/qa/qadnqY9JHEiDaY75O-wF-U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RDPPrototype_Prefix-dimggccsyksijkcyrmrhxmkcpktx/RDPPrototype_Prefix.pch -c /FYP/Classes/ConfigurationModal.m -o /FYP/build/RDPPrototype.build/Debug-iphoneos/RDPPrototype.build/Objects-normal/armv6/ConfigurationModal.o0#
 
+CCompileC build/RDPPrototype.build/Debug-iphoneos/RDPPrototype.build/Objects-normal/armv6/GlobalConstants.o /FYP/Classes/GlobalConstants.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
 CCompileC build/RDPPrototype.build/Debug-iphoneos/RDPPrototype.build/Objects-normal/armv6/HelpPage.o /FYP/Classes/HelpPage.m normal armv6 objective-c com.apple.compilers.gcc.4_2
 s324984434.668750
 e324984434.762393
@@ -1132,6 +1148,9 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@41"Compile /FYP/Classes/ConfigurationModal.m324998185#324998185#0(0"0(0#0#33"/FYP/Classes/ConfigurationModal.m8606937792#1486"    cd /FYP    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /FYP/build/RDPPrototype.build/Debug-iphoneos/RDPPrototype.build/RDPPrototype-generated-files.hmap -I/FYP/build/RDPPrototype.build/Debug-iphoneos/RDPPrototype.build/RDPPrototype-own-target-headers.hmap -I/FYP/build/RDPPrototype.build/Debug-iphoneos/RDPPrototype.build/RDPPrototype-all-target-headers.hmap -iquote /FYP/build/RDPPrototype.build/Debug-iphoneos/RDPPrototype.build/RDPPrototype-project-headers.hmap -F/FYP/build/Debug-iphoneos -I/FYP/build/Debug-iphoneos/include -I/FYP/build/RDPPrototype.build/Debug-iphoneos/RDPPrototype.build/DerivedSources/armv7 -I/FYP/build/RDPPrototype.build/Debug-iphoneos/RDPPrototype.build/DerivedSources -include /var/folders/qa/qadnqY9JHEiDaY75O-wF-U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RDPPrototype_Prefix-ciejakeruxrazhfjuaaraonrptur/RDPPrototype_Prefix.pch -c /FYP/Classes/ConfigurationModal.m -o /FYP/build/RDPPrototype.build/Debug-iphoneos/RDPPrototype.build/Objects-normal/armv7/ConfigurationModal.o0#
 
 CCompileC build/RDPPrototype.build/Debug-iphoneos/RDPPrototype.build/Objects-normal/armv7/ConfigurationModal.o /Users/karida/Documents/FYP/Classes/ConfigurationModal.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/RDPPrototype.build/Debug-iphoneos/RDPPrototype.build/Objects-normal/armv7/GlobalConstants.o /FYP/Classes/GlobalConstants.m normal armv7 objective-c com.apple.compilers.gcc.4_2
 r0
 
 CCompileC build/RDPPrototype.build/Debug-iphoneos/RDPPrototype.build/Objects-normal/armv7/HelpPage.o /FYP/Classes/HelpPage.m normal armv7 objective-c com.apple.compilers.gcc.4_2

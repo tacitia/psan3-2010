@@ -59,7 +59,17 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView;
 	//This gesture is not optional 
 	UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
 	[imageView addGestureRecognizer:singleTap]; 
-	[singleTap release]; 
+	 
+	
+	//One finger double tap 
+	UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTap:)];
+	[imageView addGestureRecognizer:doubleTap]; 
+	[doubleTap setNumberOfTapsRequired:2];   
+	
+	[singleTap requireGestureRecognizerToFail:doubleTap];
+	
+	[singleTap release];
+	[doubleTap release]; 
 	
 	//Single Pan
 	panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
@@ -276,10 +286,9 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView;
 }  
 
 - (void)handleDoubleTap:(UIGestureRecognizer *)gestureRecognizer {
-	//No gesture recognizer for this
-	//It is single-finger double tap
+	NSLog(@"Double Tap!");
+	
 	/*
-	NSLog(@"Single Finger Double Tap!");
 	// single finger double tap is to zoom in  
 	float newScale = [imageScrollView zoomScale] * ZOOM_STEP;  
 	CGRect zoomRect = [self zoomRectForScale:newScale withCenter:[gestureRecognizer locationInView:gestureRecognizer.view]];  
