@@ -263,4 +263,6 @@ typedef enum {
 - (void) minimizeCurrentActiveWindow;
 - (void) maximizeCurrentActiveWindow;
 
+- (void)putTextIntoCutBuffer:(NSString*)text;
+
 @end
