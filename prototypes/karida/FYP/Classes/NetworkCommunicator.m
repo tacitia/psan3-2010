@@ -109,8 +109,7 @@ int dataLength;
 		{
 			NSLog(@"NSStreamError");
 			[self.delegate networkErrorOccurred];
-			[iStream close];
-			[oStream close];
+			[self disconnect];
 			[iStream release];
 			[oStream release];
 		}

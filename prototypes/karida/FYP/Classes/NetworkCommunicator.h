@@ -28,7 +28,7 @@
 @property (assign) id <NetworkCommunicatorDelegate> delegate;
 
 - (void)sendMessage:(const uint8_t*)str length:(int)length;
-
+- (void)disconnect;
 - (id)initWithVNCCore:(VNCCore*)vncCorePtr;
 - (void)connectToServerUsingStream:(NSString*)urlStr
 							portNo:(uint)portNo;

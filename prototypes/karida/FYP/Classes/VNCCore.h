@@ -179,6 +179,7 @@ typedef enum {
 	WheelDown
 } MouseButton;
 
+
 @class RDPPrototypeViewController;
 
 @interface VNCCore : NSObject {
@@ -243,12 +244,14 @@ typedef enum {
 -(int)parseMessage:(uint8_t*)message ofLength:(int)length;
 -(int)updateImage;
 
-
+#pragma mark -
+#pragma mark Send Mouse Events
 - (void)sendLeftClickEventAtPosition:(CGPoint)position;
 - (void)sendRightClickEventAtPosition:(CGPoint)position;
 - (void)sendMouseDragEventFromPosition:(CGPoint)startPosition toPosition:(CGPoint)endPosition;
 
-//Send keyboard events
+#pragma mark -
+#pragma mark Send keyboard Events
 - (void)sendString:(NSString*)string;
 - (void) sendCtrlPlusChar:(char)character;
 - (void) sendTab;

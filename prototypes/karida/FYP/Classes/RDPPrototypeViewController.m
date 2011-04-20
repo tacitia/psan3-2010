@@ -88,6 +88,10 @@
 										   otherButtonTitles:nil] autorelease];
 	[alert show];
 	[alert release];
+	if ([[self.view subviews] count] > 0) {
+		UIView *rootSubview = [[self.view subviews] objectAtIndex:0];
+		[rootSubview removeFromSuperview];
+	}	
 	
 //	[self.view subviews];
 }
