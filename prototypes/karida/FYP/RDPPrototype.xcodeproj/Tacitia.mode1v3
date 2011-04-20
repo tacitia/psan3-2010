@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>3E4952DA135F3EF100F7FD1C</string>
+						<string>3E4952EF135F3FA300F7FD1C</string>
 						<key>history</key>
 						<array>
 							<string>3E4952C7135F3C1B00F7FD1C</string>
@@ -314,11 +314,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>55</integer>
+									<integer>10</integer>
+									<integer>1</integer>
+									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 363}, {324, 640}}</string>
+							<string>{{0, 0}, {324, 640}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -348,12 +350,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>VNCCore.m</string>
+								<string>NSStreamAdditions.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -361,16 +365,15 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>VNCCore.m</string>
+										<string>NSStreamAdditions.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3E4952D9135F3EF100F7FD1C</string>
+										<string>3E4952EE135F3FA300F7FD1C</string>
 										<key>history</key>
 										<array>
 											<string>3E5F3FE6132F3DA6008017DF</string>
 											<string>3E6BF44D13489D2F0004FD3B</string>
-											<string>3E6BF4751348A0CC0004FD3B</string>
 											<string>3EF23443134F11C600838CCC</string>
 											<string>3EF2345E134F11C600838CCC</string>
 											<string>3EF2347E134F11C600838CCC</string>
@@ -390,19 +393,21 @@
 											<string>3E4951B9135F1ECC00F7FD1C</string>
 											<string>3E4951CA135F201000F7FD1C</string>
 											<string>3E4951CB135F201000F7FD1C</string>
-											<string>3E49522A135F26C900F7FD1C</string>
 											<string>3E495239135F297E00F7FD1C</string>
 											<string>3E49525E135F2F5000F7FD1C</string>
 											<string>3E495264135F2F5000F7FD1C</string>
-											<string>3E495295135F34D800F7FD1C</string>
-											<string>3E495296135F34D800F7FD1C</string>
 											<string>3E495297135F34D800F7FD1C</string>
-											<string>3E495298135F34D800F7FD1C</string>
 											<string>3E495299135F34D800F7FD1C</string>
 											<string>3E49529A135F34D800F7FD1C</string>
 											<string>3E4952D1135F3EE000F7FD1C</string>
-											<string>3E4952D7135F3EF100F7FD1C</string>
-											<string>3E4952D8135F3EF100F7FD1C</string>
+											<string>3E4952DD135F3F0700F7FD1C</string>
+											<string>3E4952DE135F3F0700F7FD1C</string>
+											<string>3E4952DF135F3F0700F7FD1C</string>
+											<string>3E4952E2135F3F3A00F7FD1C</string>
+											<string>3E4952E3135F3F3A00F7FD1C</string>
+											<string>3E4952E4135F3F3A00F7FD1C</string>
+											<string>3E4952EC135F3FA300F7FD1C</string>
+											<string>3E4952ED135F3FA300F7FD1C</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -424,8 +429,6 @@
 							<string>405pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -602,14 +605,14 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>3E4952CE135F3E8A00F7FD1C</string>
+		<string>3E4952F0135F3FA300F7FD1C</string>
 		<string>3E4951B4135F1DDD00F7FD1C</string>
 		<string>3E4951B2135F1DD500F7FD1C</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>3E5582D01285706600AB8CDF</string>
 		<string>3E4952CB135F3E8A00F7FD1C</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/Tacitia/Projects/FYP-V2.0/RDPPrototype.xcodeproj</string>
+		<string>1C78EAAD065D492600B07095</string>
 	</array>
 	<key>WindowString</key>
 	<string>213 179 1210 699 0 0 1440 878 </string>

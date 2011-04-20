@@ -108,9 +108,11 @@ UIImage* previousImage = nil;
 	
 	[self updateImage];
 	
+	/*
 	if (communicator != nil) {
 		[communicator release];
 	}
+	 */
 	communicator = [[NetworkCommunicator alloc] initWithVNCCore:self];
 	[communicator setDelegate:self.viewController];
 	[communicator connectToServerUsingStream:serverIP portNo:serverPort];
