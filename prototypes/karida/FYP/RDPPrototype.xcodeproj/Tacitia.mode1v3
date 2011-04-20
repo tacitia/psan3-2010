@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>3E4952EF135F3FA300F7FD1C</string>
+						<string>3E495310135F482400F7FD1C</string>
 						<key>history</key>
 						<array>
 							<string>3E4952C7135F3C1B00F7FD1C</string>
@@ -235,7 +235,7 @@
 				<key>PBXModuleWindowStatusBarHidden2</key>
 				<false/>
 				<key>RubberWindowFrame</key>
-				<string>42 180 1267 698 0 0 1440 878 </string>
+				<string>8 180 1267 698 0 0 1440 878 </string>
 			</dict>
 		</dict>
 	</array>
@@ -314,7 +314,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>10</integer>
+									<integer>15</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -357,7 +357,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>NSStreamAdditions.h</string>
+								<string>VNCCore.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -365,11 +365,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>NSStreamAdditions.h</string>
+										<string>VNCCore.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3E4952EE135F3FA300F7FD1C</string>
+										<string>3E49530F135F482400F7FD1C</string>
 										<key>history</key>
 										<array>
 											<string>3E5F3FE6132F3DA6008017DF</string>
@@ -383,31 +383,31 @@
 											<string>3EF23485134F11C600838CCC</string>
 											<string>3EED5ACC135DD5A000310B18</string>
 											<string>3EED5B1D135DD8DB00310B18</string>
-											<string>3E495081135EA63600F7FD1C</string>
 											<string>3E4950BA135EF7FE00F7FD1C</string>
 											<string>3E4950D2135F03D900F7FD1C</string>
 											<string>3E495130135F152D00F7FD1C</string>
 											<string>3E49515A135F19DA00F7FD1C</string>
-											<string>3E495170135F1B9300F7FD1C</string>
 											<string>3E4951A5135F1DD500F7FD1C</string>
-											<string>3E4951B9135F1ECC00F7FD1C</string>
 											<string>3E4951CA135F201000F7FD1C</string>
-											<string>3E4951CB135F201000F7FD1C</string>
-											<string>3E495239135F297E00F7FD1C</string>
 											<string>3E49525E135F2F5000F7FD1C</string>
 											<string>3E495264135F2F5000F7FD1C</string>
 											<string>3E495297135F34D800F7FD1C</string>
-											<string>3E495299135F34D800F7FD1C</string>
-											<string>3E49529A135F34D800F7FD1C</string>
 											<string>3E4952D1135F3EE000F7FD1C</string>
-											<string>3E4952DD135F3F0700F7FD1C</string>
 											<string>3E4952DE135F3F0700F7FD1C</string>
 											<string>3E4952DF135F3F0700F7FD1C</string>
-											<string>3E4952E2135F3F3A00F7FD1C</string>
 											<string>3E4952E3135F3F3A00F7FD1C</string>
-											<string>3E4952E4135F3F3A00F7FD1C</string>
 											<string>3E4952EC135F3FA300F7FD1C</string>
-											<string>3E4952ED135F3FA300F7FD1C</string>
+											<string>3E4952F5135F411300F7FD1C</string>
+											<string>3E4952FD135F438A00F7FD1C</string>
+											<string>3E4952FF135F438A00F7FD1C</string>
+											<string>3E495300135F438A00F7FD1C</string>
+											<string>3E495301135F438A00F7FD1C</string>
+											<string>3E495302135F438A00F7FD1C</string>
+											<string>3E495308135F46AA00F7FD1C</string>
+											<string>3E495309135F46AA00F7FD1C</string>
+											<string>3E49530A135F46AA00F7FD1C</string>
+											<string>3E49530B135F46AA00F7FD1C</string>
+											<string>3E49530C135F46AA00F7FD1C</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -605,14 +605,14 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>3E4952F0135F3FA300F7FD1C</string>
+		<string>3E4952FB135F411300F7FD1C</string>
 		<string>3E4951B4135F1DDD00F7FD1C</string>
 		<string>3E4951B2135F1DD500F7FD1C</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>3E5582D01285706600AB8CDF</string>
-		<string>3E4952CB135F3E8A00F7FD1C</string>
-		<string>/Users/Tacitia/Projects/FYP-V2.0/RDPPrototype.xcodeproj</string>
 		<string>1C78EAAD065D492600B07095</string>
+		<string>/Users/Tacitia/Projects/FYP-V2.0/RDPPrototype.xcodeproj</string>
+		<string>3E4952CB135F3E8A00F7FD1C</string>
 	</array>
 	<key>WindowString</key>
 	<string>213 179 1210 699 0 0 1440 878 </string>

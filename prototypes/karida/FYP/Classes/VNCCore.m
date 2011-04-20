@@ -90,6 +90,7 @@ const int VK_DOWN = 0x28;
 const int VK_SNAPSHOT = 0x2C;
 const int VK_INSERT = 0x2D;
 const int VK_DELETE = 0x2E;
+const int VK_LWIN = 0x5B;
 const int VK_F1 = 0x70;
 
  
@@ -1189,6 +1190,54 @@ UIImage* previousImage = nil;
 	
 	for (int i = 0; i < singleKeyEventRepLength; ++i) {
 		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*0] = altReleased[i];
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*1] = shiftReleased[i];
+	}
+	
+	[communicator sendMessage:packet length:packetLength];
+}
+
+
+- (void)sendPressWinPlusShift {
+	if (packet != nil) {
+		free(packet);
+		packet = nil;
+	}	
+	
+	packetLength = keyEventPacketHeaderLength + singleKeyEventRepLength * 2;
+	packet = malloc(sizeof(uint8_t) * packetLength);
+	
+	packet[0] = 4;
+	packet[1] = 2;
+	
+	uint8_t *winPressed = [self generateSingleKeyEvent:VK_LWIN pressed:YES];
+	uint8_t *shiftPressed = [self generateSingleKeyEvent:VK_SHIFT pressed:YES];
+	
+	for (int i = 0; i < singleKeyEventRepLength; ++i) {
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*0] = winPressed[i];
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*1] = shiftPressed[i];
+	}
+	
+	[communicator sendMessage:packet length:packetLength];
+}
+
+
+- (void)sendReleaseWinPlusShift {
+	if (packet != nil) {
+		free(packet);
+		packet = nil;
+	}	
+	
+	packetLength = keyEventPacketHeaderLength + singleKeyEventRepLength * 2;
+	packet = malloc(sizeof(uint8_t) * packetLength);
+	
+	packet[0] = 4;
+	packet[1] = 2;
+	
+	uint8_t *winReleased = [self generateSingleKeyEvent:VK_LWIN pressed:NO];
+	uint8_t *shiftReleased = [self generateSingleKeyEvent:VK_SHIFT pressed:NO];
+	
+	for (int i = 0; i < singleKeyEventRepLength; ++i) {
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*0] = winReleased[i];
 		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*1] = shiftReleased[i];
 	}
 	

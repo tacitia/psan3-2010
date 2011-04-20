@@ -556,6 +556,32 @@
 			3E4952ED135F3FA300F7FD1C /* PBXTextBookmark */ = 3E4952ED135F3FA300F7FD1C /* PBXTextBookmark */;
 			3E4952EE135F3FA300F7FD1C /* PBXTextBookmark */ = 3E4952EE135F3FA300F7FD1C /* PBXTextBookmark */;
 			3E4952EF135F3FA300F7FD1C /* PBXTextBookmark */ = 3E4952EF135F3FA300F7FD1C /* PBXTextBookmark */;
+			3E4952F5135F411300F7FD1C /* PBXTextBookmark */ = 3E4952F5135F411300F7FD1C /* PBXTextBookmark */;
+			3E4952F6135F411300F7FD1C /* PBXTextBookmark */ = 3E4952F6135F411300F7FD1C /* PBXTextBookmark */;
+			3E4952F7135F411300F7FD1C /* PBXTextBookmark */ = 3E4952F7135F411300F7FD1C /* PBXTextBookmark */;
+			3E4952F8135F411300F7FD1C /* PBXTextBookmark */ = 3E4952F8135F411300F7FD1C /* PBXTextBookmark */;
+			3E4952F9135F411300F7FD1C /* PBXTextBookmark */ = 3E4952F9135F411300F7FD1C /* PBXTextBookmark */;
+			3E4952FA135F411300F7FD1C /* PBXTextBookmark */ = 3E4952FA135F411300F7FD1C /* PBXTextBookmark */;
+			3E4952FD135F438A00F7FD1C /* PBXTextBookmark */ = 3E4952FD135F438A00F7FD1C /* PBXTextBookmark */;
+			3E4952FE135F438A00F7FD1C /* PBXTextBookmark */ = 3E4952FE135F438A00F7FD1C /* PBXTextBookmark */;
+			3E4952FF135F438A00F7FD1C /* PBXTextBookmark */ = 3E4952FF135F438A00F7FD1C /* PBXTextBookmark */;
+			3E495300135F438A00F7FD1C /* PBXTextBookmark */ = 3E495300135F438A00F7FD1C /* PBXTextBookmark */;
+			3E495301135F438A00F7FD1C /* PBXTextBookmark */ = 3E495301135F438A00F7FD1C /* PBXTextBookmark */;
+			3E495302135F438A00F7FD1C /* PBXTextBookmark */ = 3E495302135F438A00F7FD1C /* PBXTextBookmark */;
+			3E495303135F438A00F7FD1C /* PBXTextBookmark */ = 3E495303135F438A00F7FD1C /* PBXTextBookmark */;
+			3E495304135F438A00F7FD1C /* PBXTextBookmark */ = 3E495304135F438A00F7FD1C /* PBXTextBookmark */;
+			3E495305135F438A00F7FD1C /* PBXTextBookmark */ = 3E495305135F438A00F7FD1C /* PBXTextBookmark */;
+			3E495306135F438C00F7FD1C /* PBXTextBookmark */ = 3E495306135F438C00F7FD1C /* PBXTextBookmark */;
+			3E495307135F438C00F7FD1C /* PBXTextBookmark */ = 3E495307135F438C00F7FD1C /* PBXTextBookmark */;
+			3E495308135F46AA00F7FD1C /* PBXTextBookmark */ = 3E495308135F46AA00F7FD1C /* PBXTextBookmark */;
+			3E495309135F46AA00F7FD1C /* PBXTextBookmark */ = 3E495309135F46AA00F7FD1C /* PBXTextBookmark */;
+			3E49530A135F46AA00F7FD1C /* PBXTextBookmark */ = 3E49530A135F46AA00F7FD1C /* PBXTextBookmark */;
+			3E49530B135F46AA00F7FD1C /* PBXTextBookmark */ = 3E49530B135F46AA00F7FD1C /* PBXTextBookmark */;
+			3E49530C135F46AA00F7FD1C /* PBXTextBookmark */ = 3E49530C135F46AA00F7FD1C /* PBXTextBookmark */;
+			3E49530D135F46AA00F7FD1C /* PBXTextBookmark */ = 3E49530D135F46AA00F7FD1C /* PBXTextBookmark */;
+			3E49530E135F46AA00F7FD1C /* PBXTextBookmark */ = 3E49530E135F46AA00F7FD1C /* PBXTextBookmark */;
+			3E49530F135F482400F7FD1C /* PBXTextBookmark */ = 3E49530F135F482400F7FD1C /* PBXTextBookmark */;
+			3E495310135F482400F7FD1C /* PBXTextBookmark */ = 3E495310135F482400F7FD1C /* PBXTextBookmark */;
 			3E5F3FE6132F3DA6008017DF = 3E5F3FE6132F3DA6008017DF /* PBXBookmark */;
 			3E6BF44D13489D2F0004FD3B = 3E6BF44D13489D2F0004FD3B /* PBXTextBookmark */;
 			3E6BF4751348A0CC0004FD3B = 3E6BF4751348A0CC0004FD3B /* PBXBookmark */;
@@ -639,7 +665,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 638";
 		rLen = 0;
-		rLoc = 47240;
+		rLoc = 48648;
 		rType = 0;
 		vrLen = 800;
 		vrLoc = 16438;
@@ -669,7 +695,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 983";
 		rLen = 0;
-		rLoc = 30784;
+		rLoc = 30810;
 		rType = 0;
 		vrLen = 892;
 		vrLoc = 29854;
@@ -679,7 +705,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 983";
 		rLen = 0;
-		rLoc = 30784;
+		rLoc = 30810;
 		rType = 0;
 		vrLen = 892;
 		vrLoc = 29854;
@@ -689,7 +715,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 983";
 		rLen = 0;
-		rLoc = 30784;
+		rLoc = 30810;
 		rType = 0;
 		vrLen = 892;
 		vrLoc = 29854;
@@ -699,7 +725,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1016";
 		rLen = 0;
-		rLoc = 32130;
+		rLoc = 32156;
 		rType = 0;
 		vrLen = 883;
 		vrLoc = 30817;
@@ -709,7 +735,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1042";
 		rLen = 0;
-		rLoc = 33371;
+		rLoc = 33397;
 		rType = 0;
 		vrLen = 1099;
 		vrLoc = 31684;
@@ -719,7 +745,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 997";
 		rLen = 0;
-		rLoc = 31194;
+		rLoc = 31220;
 		rType = 0;
 		vrLen = 806;
 		vrLoc = 31286;
@@ -729,7 +755,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 997";
 		rLen = 0;
-		rLoc = 31194;
+		rLoc = 31220;
 		rType = 0;
 		vrLen = 806;
 		vrLoc = 31286;
@@ -739,7 +765,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1985";
 		rLen = 0;
-		rLoc = 56067;
+		rLoc = 57475;
 		rType = 0;
 		vrLen = 601;
 		vrLoc = 52513;
@@ -749,7 +775,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1985";
 		rLen = 0;
-		rLoc = 56067;
+		rLoc = 57475;
 		rType = 0;
 		vrLen = 601;
 		vrLoc = 52513;
@@ -759,7 +785,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 995";
 		rLen = 0;
-		rLoc = 30699;
+		rLoc = 30725;
 		rType = 0;
 		vrLen = 1188;
 		vrLoc = 29021;
@@ -769,7 +795,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 998";
 		rLen = 0;
-		rLoc = 30692;
+		rLoc = 30718;
 		rType = 0;
 		vrLen = 584;
 		vrLoc = 30028;
@@ -789,7 +815,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1038";
 		rLen = 37;
-		rLoc = 32131;
+		rLoc = 32157;
 		rType = 0;
 		vrLen = 1668;
 		vrLoc = 31894;
@@ -829,7 +855,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1038";
 		rLen = 37;
-		rLoc = 32131;
+		rLoc = 32157;
 		rType = 0;
 		vrLen = 1615;
 		vrLoc = 31894;
@@ -839,7 +865,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1827";
 		rLen = 0;
-		rLoc = 51235;
+		rLoc = 52643;
 		rType = 0;
 		vrLen = 1539;
 		vrLoc = 33684;
@@ -849,7 +875,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1092";
 		rLen = 0;
-		rLoc = 33920;
+		rLoc = 33946;
 		rType = 0;
 		vrLen = 1040;
 		vrLoc = 33304;
@@ -859,7 +885,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1092";
 		rLen = 0;
-		rLoc = 33920;
+		rLoc = 33946;
 		rType = 0;
 		vrLen = 1040;
 		vrLoc = 33304;
@@ -869,7 +895,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1092";
 		rLen = 0;
-		rLoc = 33920;
+		rLoc = 33946;
 		rType = 0;
 		vrLen = 1040;
 		vrLoc = 33304;
@@ -879,7 +905,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1102";
 		rLen = 0;
-		rLoc = 34490;
+		rLoc = 34516;
 		rType = 0;
 		vrLen = 1629;
 		vrLoc = 33646;
@@ -889,7 +915,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1102";
 		rLen = 0;
-		rLoc = 34490;
+		rLoc = 34516;
 		rType = 0;
 		vrLen = 1629;
 		vrLoc = 33646;
@@ -899,7 +925,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1102";
 		rLen = 0;
-		rLoc = 34490;
+		rLoc = 34516;
 		rType = 0;
 		vrLen = 1629;
 		vrLoc = 33646;
@@ -909,7 +935,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1102";
 		rLen = 0;
-		rLoc = 34490;
+		rLoc = 34516;
 		rType = 0;
 		vrLen = 1629;
 		vrLoc = 33646;
@@ -919,7 +945,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1102";
 		rLen = 0;
-		rLoc = 34490;
+		rLoc = 34516;
 		rType = 0;
 		vrLen = 1629;
 		vrLoc = 33646;
@@ -929,7 +955,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1102";
 		rLen = 0;
-		rLoc = 34490;
+		rLoc = 34516;
 		rType = 0;
 		vrLen = 1629;
 		vrLoc = 33646;
@@ -939,7 +965,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1114";
 		rLen = 0;
-		rLoc = 35154;
+		rLoc = 35180;
 		rType = 0;
 		vrLen = 1818;
 		vrLoc = 33681;
@@ -949,7 +975,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1130";
 		rLen = 0;
-		rLoc = 35955;
+		rLoc = 35981;
 		rType = 0;
 		vrLen = 1769;
 		vrLoc = 34254;
@@ -959,7 +985,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1130";
 		rLen = 0;
-		rLoc = 35955;
+		rLoc = 35981;
 		rType = 0;
 		vrLen = 702;
 		vrLoc = 37307;
@@ -1009,7 +1035,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1130";
 		rLen = 0;
-		rLoc = 35955;
+		rLoc = 35981;
 		rType = 0;
 		vrLen = 461;
 		vrLoc = 37307;
@@ -1019,7 +1045,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1130";
 		rLen = 0;
-		rLoc = 35955;
+		rLoc = 35981;
 		rType = 0;
 		vrLen = 461;
 		vrLoc = 37307;
@@ -1029,7 +1055,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1130";
 		rLen = 0;
-		rLoc = 35955;
+		rLoc = 35981;
 		rType = 0;
 		vrLen = 461;
 		vrLoc = 37307;
@@ -1039,7 +1065,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1205";
 		rLen = 0;
-		rLoc = 38909;
+		rLoc = 40317;
 		rType = 0;
 		vrLen = 876;
 		vrLoc = 35501;
@@ -1049,7 +1075,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1205";
 		rLen = 0;
-		rLoc = 38909;
+		rLoc = 40317;
 		rType = 0;
 		vrLen = 876;
 		vrLoc = 35501;
@@ -1059,7 +1085,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1205";
 		rLen = 0;
-		rLoc = 38909;
+		rLoc = 40317;
 		rType = 0;
 		vrLen = 876;
 		vrLoc = 35501;
@@ -1069,7 +1095,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1205";
 		rLen = 0;
-		rLoc = 38909;
+		rLoc = 40317;
 		rType = 0;
 		vrLen = 876;
 		vrLoc = 35501;
@@ -1079,7 +1105,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1205";
 		rLen = 0;
-		rLoc = 38909;
+		rLoc = 40317;
 		rType = 0;
 		vrLen = 876;
 		vrLoc = 35501;
@@ -1089,7 +1115,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1205";
 		rLen = 0;
-		rLoc = 38909;
+		rLoc = 40317;
 		rType = 0;
 		vrLen = 876;
 		vrLoc = 35501;
@@ -1099,7 +1125,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1205";
 		rLen = 0;
-		rLoc = 38909;
+		rLoc = 40317;
 		rType = 0;
 		vrLen = 876;
 		vrLoc = 35501;
@@ -1139,7 +1165,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 92";
 		rLen = 0;
-		rLoc = 2204;
+		rLoc = 2230;
 		rType = 0;
 		vrLen = 683;
 		vrLoc = 1780;
@@ -1220,7 +1246,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {803, 468}}";
 			sepNavSelRange = "{169, 0}";
-			sepNavVisRange = "{83, 792}";
+			sepNavVisRange = "{83, 759}";
 			sepNavWindowFrame = "{{15, 106}, {1267, 767}}";
 		};
 	};
@@ -1311,7 +1337,7 @@
 		rLen = 0;
 		rLoc = 989;
 		rType = 0;
-		vrLen = 971;
+		vrLen = 883;
 		vrLoc = 130;
 	};
 	3E4950E7135F074000F7FD1C /* PBXTextBookmark */ = {
@@ -1347,7 +1373,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 93";
 		rLen = 0;
-		rLoc = 2204;
+		rLoc = 2230;
 		rType = 0;
 		vrLen = 782;
 		vrLoc = 1689;
@@ -1377,7 +1403,7 @@
 		rLen = 0;
 		rLoc = 202;
 		rType = 0;
-		vrLen = 1102;
+		vrLen = 1013;
 		vrLoc = 0;
 	};
 	3E4950F1135F07CB00F7FD1C /* PBXTextBookmark */ = {
@@ -1397,7 +1423,7 @@
 		rLen = 0;
 		rLoc = 169;
 		rType = 0;
-		vrLen = 987;
+		vrLen = 971;
 		vrLoc = 42;
 	};
 	3E4950F5135F07DE00F7FD1C /* PBXTextBookmark */ = {
@@ -1980,7 +2006,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 92";
 		rLen = 0;
-		rLoc = 2200;
+		rLoc = 2226;
 		rType = 0;
 		vrLen = 690;
 		vrLoc = 1519;
@@ -1990,7 +2016,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 92";
 		rLen = 0;
-		rLoc = 2200;
+		rLoc = 2226;
 		rType = 0;
 		vrLen = 690;
 		vrLoc = 1519;
@@ -2000,7 +2026,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 92";
 		rLen = 0;
-		rLoc = 2200;
+		rLoc = 2226;
 		rType = 0;
 		vrLen = 690;
 		vrLoc = 1519;
@@ -2010,7 +2036,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 92";
 		rLen = 0;
-		rLoc = 2200;
+		rLoc = 2226;
 		rType = 0;
 		vrLen = 690;
 		vrLoc = 1519;
@@ -2030,7 +2056,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1005";
 		rLen = 0;
-		rLoc = 30755;
+		rLoc = 30781;
 		rType = 0;
 		vrLen = 1430;
 		vrLoc = 29840;
@@ -2040,7 +2066,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1005";
 		rLen = 0;
-		rLoc = 30755;
+		rLoc = 30781;
 		rType = 0;
 		vrLen = 1430;
 		vrLoc = 29840;
@@ -2050,7 +2076,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1005";
 		rLen = 0;
-		rLoc = 30755;
+		rLoc = 30781;
 		rType = 0;
 		vrLen = 1430;
 		vrLoc = 29840;
@@ -2060,7 +2086,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1005";
 		rLen = 0;
-		rLoc = 30755;
+		rLoc = 30781;
 		rType = 0;
 		vrLen = 1430;
 		vrLoc = 29840;
@@ -2070,7 +2096,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1005";
 		rLen = 0;
-		rLoc = 30755;
+		rLoc = 30781;
 		rType = 0;
 		vrLen = 1430;
 		vrLoc = 29840;
@@ -2080,7 +2106,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 984";
 		rLen = 0;
-		rLoc = 30229;
+		rLoc = 30255;
 		rType = 0;
 		vrLen = 669;
 		vrLoc = 54328;
@@ -2210,7 +2236,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1027";
 		rLen = 0;
-		rLoc = 31542;
+		rLoc = 31568;
 		rType = 0;
 		vrLen = 1239;
 		vrLoc = 30786;
@@ -2220,7 +2246,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1027";
 		rLen = 0;
-		rLoc = 31542;
+		rLoc = 31568;
 		rType = 0;
 		vrLen = 1239;
 		vrLoc = 30786;
@@ -2360,7 +2386,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 294";
 		rLen = 0;
-		rLoc = 8346;
+		rLoc = 8372;
 		rType = 0;
 		vrLen = 1195;
 		vrLoc = 7850;
@@ -2370,7 +2396,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1079";
 		rLen = 0;
-		rLoc = 33580;
+		rLoc = 33606;
 		rType = 0;
 		vrLen = 1913;
 		vrLoc = 31807;
@@ -2380,7 +2406,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1130";
 		rLen = 0;
-		rLoc = 35908;
+		rLoc = 35934;
 		rType = 0;
 		vrLen = 737;
 		vrLoc = 35579;
@@ -2390,7 +2416,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1988";
 		rLen = 43;
-		rLoc = 55965;
+		rLoc = 57373;
 		rType = 0;
 		vrLen = 611;
 		vrLoc = 53205;
@@ -2494,7 +2520,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 414";
 		rLen = 0;
-		rLoc = 11718;
+		rLoc = 11744;
 		rType = 0;
 		vrLen = 692;
 		vrLoc = 11221;
@@ -2504,7 +2530,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 414";
 		rLen = 0;
-		rLoc = 11718;
+		rLoc = 11744;
 		rType = 0;
 		vrLen = 692;
 		vrLoc = 11221;
@@ -2514,7 +2540,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 414";
 		rLen = 0;
-		rLoc = 11718;
+		rLoc = 11744;
 		rType = 0;
 		vrLen = 692;
 		vrLoc = 11221;
@@ -2524,7 +2550,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 412";
 		rLen = 0;
-		rLoc = 11690;
+		rLoc = 11716;
 		rType = 0;
 		vrLen = 692;
 		vrLoc = 11221;
@@ -2534,7 +2560,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 2048";
 		rLen = 0;
-		rLoc = 56458;
+		rLoc = 57866;
 		rType = 0;
 		vrLen = 651;
 		vrLoc = 54464;
@@ -2544,7 +2570,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 2038";
 		rLen = 0;
-		rLoc = 56084;
+		rLoc = 57492;
 		rType = 0;
 		vrLen = 577;
 		vrLoc = 54511;
@@ -2554,7 +2580,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 2038";
 		rLen = 0;
-		rLoc = 56084;
+		rLoc = 57492;
 		rType = 0;
 		vrLen = 577;
 		vrLoc = 54511;
@@ -2564,7 +2590,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 2040";
 		rLen = 0;
-		rLoc = 56132;
+		rLoc = 57540;
 		rType = 0;
 		vrLen = 577;
 		vrLoc = 54511;
@@ -2614,7 +2640,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 2040";
 		rLen = 0;
-		rLoc = 56132;
+		rLoc = 57540;
 		rType = 0;
 		vrLen = 577;
 		vrLoc = 54511;
@@ -2624,7 +2650,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 289";
 		rLen = 0;
-		rLoc = 8126;
+		rLoc = 8152;
 		rType = 0;
 		vrLen = 1125;
 		vrLoc = 7777;
@@ -2634,7 +2660,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 289";
 		rLen = 0;
-		rLoc = 8126;
+		rLoc = 8152;
 		rType = 0;
 		vrLen = 1125;
 		vrLoc = 7777;
@@ -2644,7 +2670,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 289";
 		rLen = 0;
-		rLoc = 8126;
+		rLoc = 8152;
 		rType = 0;
 		vrLen = 1125;
 		vrLoc = 7777;
@@ -2654,7 +2680,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 2055";
 		rLen = 0;
-		rLoc = 56587;
+		rLoc = 57995;
 		rType = 0;
 		vrLen = 708;
 		vrLoc = 54604;
@@ -2664,7 +2690,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 2051";
 		rLen = 0;
-		rLoc = 56462;
+		rLoc = 57870;
 		rType = 0;
 		vrLen = 699;
 		vrLoc = 54604;
@@ -2674,7 +2700,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 2051";
 		rLen = 0;
-		rLoc = 56450;
+		rLoc = 57858;
 		rType = 0;
 		vrLen = 673;
 		vrLoc = 54687;
@@ -2684,7 +2710,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 2051";
 		rLen = 0;
-		rLoc = 56450;
+		rLoc = 57858;
 		rType = 0;
 		vrLen = 673;
 		vrLoc = 54687;
@@ -2694,7 +2720,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 317";
 		rLen = 0;
-		rLoc = 9306;
+		rLoc = 9332;
 		rType = 0;
 		vrLen = 688;
 		vrLoc = 8691;
@@ -2704,7 +2730,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 309";
 		rLen = 0;
-		rLoc = 9166;
+		rLoc = 9192;
 		rType = 0;
 		vrLen = 667;
 		vrLoc = 8792;
@@ -2714,7 +2740,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 309";
 		rLen = 0;
-		rLoc = 9166;
+		rLoc = 9192;
 		rType = 0;
 		vrLen = 667;
 		vrLoc = 8792;
@@ -2724,7 +2750,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 310";
 		rLen = 0;
-		rLoc = 9204;
+		rLoc = 9230;
 		rType = 0;
 		vrLen = 598;
 		vrLoc = 8902;
@@ -2734,7 +2760,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 310";
 		rLen = 0;
-		rLoc = 9204;
+		rLoc = 9230;
 		rType = 0;
 		vrLen = 598;
 		vrLoc = 8902;
@@ -2744,7 +2770,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 310";
 		rLen = 0;
-		rLoc = 9204;
+		rLoc = 9230;
 		rType = 0;
 		vrLen = 598;
 		vrLoc = 8902;
@@ -2754,7 +2780,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1171";
 		rLen = 0;
-		rLoc = 36907;
+		rLoc = 36933;
 		rType = 0;
 		vrLen = 694;
 		vrLoc = 36782;
@@ -2764,7 +2790,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1177";
 		rLen = 0;
-		rLoc = 37069;
+		rLoc = 37095;
 		rType = 0;
 		vrLen = 762;
 		vrLoc = 36785;
@@ -2774,7 +2800,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1177";
 		rLen = 0;
-		rLoc = 37069;
+		rLoc = 37095;
 		rType = 0;
 		vrLen = 762;
 		vrLoc = 36785;
@@ -2784,7 +2810,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 2107";
 		rLen = 0;
-		rLoc = 56640;
+		rLoc = 58048;
 		rType = 0;
 		vrLen = 661;
 		vrLoc = 56113;
@@ -2794,7 +2820,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 2107";
 		rLen = 0;
-		rLoc = 56633;
+		rLoc = 58041;
 		rType = 0;
 		vrLen = 659;
 		vrLoc = 56145;
@@ -2804,7 +2830,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1182";
 		rLen = 0;
-		rLoc = 37126;
+		rLoc = 37152;
 		rType = 0;
 		vrLen = 798;
 		vrLoc = 36820;
@@ -2814,7 +2840,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1175";
 		rLen = 0;
-		rLoc = 36945;
+		rLoc = 36971;
 		rType = 0;
 		vrLen = 696;
 		vrLoc = 36782;
@@ -2824,7 +2850,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1170";
 		rLen = 31;
-		rLoc = 36852;
+		rLoc = 36878;
 		rType = 0;
 		vrLen = 696;
 		vrLoc = 36782;
@@ -2934,7 +2960,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1170";
 		rLen = 31;
-		rLoc = 36852;
+		rLoc = 36878;
 		rType = 0;
 		vrLen = 695;
 		vrLoc = 36782;
@@ -2944,7 +2970,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1170";
 		rLen = 31;
-		rLoc = 36852;
+		rLoc = 36878;
 		rType = 0;
 		vrLen = 695;
 		vrLoc = 36782;
@@ -2954,7 +2980,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1170";
 		rLen = 31;
-		rLoc = 36852;
+		rLoc = 36878;
 		rType = 0;
 		vrLen = 695;
 		vrLoc = 36782;
@@ -3094,7 +3120,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1938";
 		rLen = 0;
-		rLoc = 52416;
+		rLoc = 53824;
 		rType = 0;
 		vrLen = 920;
 		vrLoc = 51652;
@@ -3104,7 +3130,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1929";
 		rLen = 0;
-		rLoc = 51982;
+		rLoc = 53390;
 		rType = 0;
 		vrLen = 881;
 		vrLoc = 51734;
@@ -3114,7 +3140,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1929";
 		rLen = 0;
-		rLoc = 51982;
+		rLoc = 53390;
 		rType = 0;
 		vrLen = 881;
 		vrLoc = 51734;
@@ -3124,7 +3150,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1929";
 		rLen = 0;
-		rLoc = 51982;
+		rLoc = 53390;
 		rType = 0;
 		vrLen = 881;
 		vrLoc = 51734;
@@ -3134,7 +3160,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1929";
 		rLen = 0;
-		rLoc = 51982;
+		rLoc = 53390;
 		rType = 0;
 		vrLen = 881;
 		vrLoc = 51734;
@@ -3144,7 +3170,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1929";
 		rLen = 0;
-		rLoc = 51982;
+		rLoc = 53390;
 		rType = 0;
 		vrLen = 881;
 		vrLoc = 51734;
@@ -3154,7 +3180,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1929";
 		rLen = 0;
-		rLoc = 51982;
+		rLoc = 53390;
 		rType = 0;
 		vrLen = 881;
 		vrLoc = 51734;
@@ -3164,7 +3190,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1929";
 		rLen = 0;
-		rLoc = 51982;
+		rLoc = 53390;
 		rType = 0;
 		vrLen = 881;
 		vrLoc = 51734;
@@ -3174,7 +3200,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1929";
 		rLen = 0;
-		rLoc = 51982;
+		rLoc = 53390;
 		rType = 0;
 		vrLen = 881;
 		vrLoc = 51734;
@@ -3184,7 +3210,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1938";
 		rLen = 0;
-		rLoc = 52416;
+		rLoc = 53824;
 		rType = 0;
 		vrLen = 883;
 		vrLoc = 51734;
@@ -3194,7 +3220,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1938";
 		rLen = 0;
-		rLoc = 52416;
+		rLoc = 53824;
 		rType = 0;
 		vrLen = 883;
 		vrLoc = 51734;
@@ -3204,7 +3230,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1938";
 		rLen = 0;
-		rLoc = 52416;
+		rLoc = 53824;
 		rType = 0;
 		vrLen = 883;
 		vrLoc = 51734;
@@ -3214,7 +3240,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1938";
 		rLen = 0;
-		rLoc = 52416;
+		rLoc = 53824;
 		rType = 0;
 		vrLen = 883;
 		vrLoc = 51734;
@@ -3224,7 +3250,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1938";
 		rLen = 0;
-		rLoc = 52416;
+		rLoc = 53824;
 		rType = 0;
 		vrLen = 883;
 		vrLoc = 51734;
@@ -3234,7 +3260,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1931";
 		rLen = 0;
-		rLoc = 52126;
+		rLoc = 53534;
 		rType = 0;
 		vrLen = 883;
 		vrLoc = 51734;
@@ -3244,7 +3270,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1931";
 		rLen = 0;
-		rLoc = 52126;
+		rLoc = 53534;
 		rType = 0;
 		vrLen = 883;
 		vrLoc = 51734;
@@ -3254,7 +3280,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1931";
 		rLen = 0;
-		rLoc = 52126;
+		rLoc = 53534;
 		rType = 0;
 		vrLen = 837;
 		vrLoc = 51798;
@@ -3264,7 +3290,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1931";
 		rLen = 0;
-		rLoc = 52126;
+		rLoc = 53534;
 		rType = 0;
 		vrLen = 837;
 		vrLoc = 51798;
@@ -3274,7 +3300,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1931";
 		rLen = 0;
-		rLoc = 52126;
+		rLoc = 53534;
 		rType = 0;
 		vrLen = 837;
 		vrLoc = 51798;
@@ -3284,7 +3310,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1931";
 		rLen = 0;
-		rLoc = 52126;
+		rLoc = 53534;
 		rType = 0;
 		vrLen = 837;
 		vrLoc = 51798;
@@ -3294,7 +3320,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1931";
 		rLen = 0;
-		rLoc = 52126;
+		rLoc = 53534;
 		rType = 0;
 		vrLen = 837;
 		vrLoc = 51798;
@@ -3304,7 +3330,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1934";
 		rLen = 0;
-		rLoc = 52257;
+		rLoc = 53665;
 		rType = 0;
 		vrLen = 836;
 		vrLoc = 51801;
@@ -3314,7 +3340,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1934";
 		rLen = 0;
-		rLoc = 52257;
+		rLoc = 53665;
 		rType = 0;
 		vrLen = 836;
 		vrLoc = 51801;
@@ -3324,7 +3350,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1934";
 		rLen = 0;
-		rLoc = 52257;
+		rLoc = 53665;
 		rType = 0;
 		vrLen = 836;
 		vrLoc = 51801;
@@ -3374,7 +3400,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 108";
 		rLen = 0;
-		rLoc = 2499;
+		rLoc = 2525;
 		rType = 0;
 		vrLen = 607;
 		vrLoc = 2591;
@@ -3694,7 +3720,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 112";
 		rLen = 0;
-		rLoc = 2588;
+		rLoc = 2614;
 		rType = 0;
 		vrLen = 626;
 		vrLoc = 2180;
@@ -3704,7 +3730,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 110";
 		rLen = 0;
-		rLoc = 2588;
+		rLoc = 2614;
 		rType = 0;
 		vrLen = 635;
 		vrLoc = 2205;
@@ -3714,7 +3740,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 112";
 		rLen = 0;
-		rLoc = 2580;
+		rLoc = 2606;
 		rType = 0;
 		vrLen = 620;
 		vrLoc = 2205;
@@ -3724,7 +3750,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 112";
 		rLen = 0;
-		rLoc = 2580;
+		rLoc = 2606;
 		rType = 0;
 		vrLen = 620;
 		vrLoc = 2205;
@@ -3734,7 +3760,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 112";
 		rLen = 0;
-		rLoc = 2580;
+		rLoc = 2606;
 		rType = 0;
 		vrLen = 620;
 		vrLoc = 2205;
@@ -3744,7 +3770,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 99";
 		rLen = 0;
-		rLoc = 2333;
+		rLoc = 2359;
 		rType = 0;
 		vrLen = 639;
 		vrLoc = 2236;
@@ -3754,7 +3780,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 99";
 		rLen = 0;
-		rLoc = 2333;
+		rLoc = 2359;
 		rType = 0;
 		vrLen = 639;
 		vrLoc = 2236;
@@ -3764,7 +3790,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 99";
 		rLen = 0;
-		rLoc = 2333;
+		rLoc = 2359;
 		rType = 0;
 		vrLen = 639;
 		vrLoc = 2236;
@@ -3774,7 +3800,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 99";
 		rLen = 0;
-		rLoc = 2333;
+		rLoc = 2359;
 		rType = 0;
 		vrLen = 639;
 		vrLoc = 2236;
@@ -3784,7 +3810,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 108";
 		rLen = 0;
-		rLoc = 2499;
+		rLoc = 2525;
 		rType = 0;
 		vrLen = 639;
 		vrLoc = 2236;
@@ -3794,7 +3820,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 102";
 		rLen = 0;
-		rLoc = 2378;
+		rLoc = 2404;
 		rType = 0;
 		vrLen = 583;
 		vrLoc = 2318;
@@ -3804,7 +3830,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 108";
 		rLen = 0;
-		rLoc = 2499;
+		rLoc = 2525;
 		rType = 0;
 		vrLen = 606;
 		vrLoc = 2377;
@@ -3814,7 +3840,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 110";
 		rLen = 0;
-		rLoc = 2526;
+		rLoc = 2552;
 		rType = 0;
 		vrLen = 626;
 		vrLoc = 2378;
@@ -3824,7 +3850,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1769";
 		rLen = 1;
-		rLoc = 47186;
+		rLoc = 48594;
 		rType = 0;
 		vrLen = 355;
 		vrLoc = 47093;
@@ -3834,7 +3860,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1192";
 		rLen = 0;
-		rLoc = 37484;
+		rLoc = 37510;
 		rType = 0;
 		vrLen = 839;
 		vrLoc = 37171;
@@ -3844,7 +3870,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1192";
 		rLen = 0;
-		rLoc = 37484;
+		rLoc = 37510;
 		rType = 0;
 		vrLen = 839;
 		vrLoc = 37171;
@@ -3854,7 +3880,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1192";
 		rLen = 0;
-		rLoc = 37484;
+		rLoc = 37510;
 		rType = 0;
 		vrLen = 839;
 		vrLoc = 37171;
@@ -3864,7 +3890,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1192";
 		rLen = 0;
-		rLoc = 37484;
+		rLoc = 37510;
 		rType = 0;
 		vrLen = 839;
 		vrLoc = 37171;
@@ -3878,7 +3904,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1202";
 		rLen = 0;
-		rLoc = 37765;
+		rLoc = 39173;
 		rType = 0;
 		vrLen = 516;
 		vrLoc = 37675;
@@ -3908,7 +3934,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1202";
 		rLen = 0;
-		rLoc = 37765;
+		rLoc = 39173;
 		rType = 0;
 		vrLen = 514;
 		vrLoc = 37675;
@@ -3948,7 +3974,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1202";
 		rLen = 0;
-		rLoc = 37765;
+		rLoc = 39173;
 		rType = 0;
 		vrLen = 514;
 		vrLoc = 37675;
@@ -3958,7 +3984,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1202";
 		rLen = 0;
-		rLoc = 37765;
+		rLoc = 39173;
 		rType = 0;
 		vrLen = 514;
 		vrLoc = 37675;
@@ -3978,7 +4004,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1204";
 		rLen = 0;
-		rLoc = 37792;
+		rLoc = 39200;
 		rType = 0;
 		vrLen = 514;
 		vrLoc = 37675;
@@ -4121,6 +4147,266 @@
 		vrLen = 1304;
 		vrLoc = 1073;
 	};
+	3E4952F5135F411300F7FD1C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3E5582C61285700900AB8CDF /* NSStreamAdditions.h */;
+		name = "NSStreamAdditions.h: 13";
+		rLen = 0;
+		rLoc = 222;
+		rType = 0;
+		vrLen = 353;
+		vrLoc = 0;
+	};
+	3E4952F6135F411300F7FD1C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3E5582C71285700900AB8CDF /* NSStreamAdditions.m */;
+		name = "NSStreamAdditions.m: 20";
+		rLen = 0;
+		rLoc = 445;
+		rType = 0;
+		vrLen = 660;
+		vrLoc = 382;
+	};
+	3E4952F7135F411300F7FD1C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F7F8C61F12A247A300FC4E29 /* VNCCore.h */;
+		name = "VNCCore.h: 243";
+		rLen = 0;
+		rLoc = 3722;
+		rType = 0;
+		vrLen = 964;
+		vrLoc = 3185;
+	};
+	3E4952F8135F411300F7FD1C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
+		name = "VNCCore.m: 15";
+		rLen = 0;
+		rLoc = 310;
+		rType = 0;
+		vrLen = 541;
+		vrLoc = 0;
+	};
+	3E4952F9135F411300F7FD1C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
+		name = "VNCCore.m: 2156";
+		rLen = 0;
+		rLoc = 59094;
+		rType = 0;
+		vrLen = 605;
+		vrLoc = 57341;
+	};
+	3E4952FA135F411300F7FD1C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
+		name = "VNCCore.m: 49";
+		rLen = 0;
+		rLoc = 1039;
+		rType = 0;
+		vrLen = 1304;
+		vrLoc = 1073;
+	};
+	3E4952FD135F438A00F7FD1C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7ADD06A21305AD7400D153CC /* ConfigurationModal.h */;
+		name = "ConfigurationModal.h: 19";
+		rLen = 0;
+		rLoc = 326;
+		rType = 0;
+		vrLen = 437;
+		vrLoc = 0;
+	};
+	3E4952FE135F438A00F7FD1C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F7F8C61F12A247A300FC4E29 /* VNCCore.h */;
+		name = "VNCCore.h: 243";
+		rLen = 0;
+		rLoc = 3722;
+		rType = 0;
+		vrLen = 756;
+		vrLoc = 3879;
+	};
+	3E4952FF135F438A00F7FD1C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3E4950D7135F04D300F7FD1C /* GlobalConstants.h */;
+		name = "GlobalConstants.h: 11";
+		rLen = 0;
+		rLoc = 169;
+		rType = 0;
+		vrLen = 759;
+		vrLoc = 83;
+	};
+	3E495300135F438A00F7FD1C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* RDPPrototypeAppDelegate.m */;
+		name = "RDPPrototypeAppDelegate.m: 26";
+		rLen = 0;
+		rLoc = 616;
+		rType = 0;
+		vrLen = 485;
+		vrLoc = 1569;
+	};
+	3E495301135F438A00F7FD1C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3E5582AF12856DE600AB8CDF /* NetworkCommunicator.h */;
+		name = "NetworkCommunicator.h: 31";
+		rLen = 0;
+		rLoc = 700;
+		rType = 0;
+		vrLen = 655;
+		vrLoc = 171;
+	};
+	3E495302135F438A00F7FD1C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3E5582C71285700900AB8CDF /* NSStreamAdditions.m */;
+		name = "NSStreamAdditions.m: 20";
+		rLen = 0;
+		rLoc = 445;
+		rType = 0;
+		vrLen = 660;
+		vrLoc = 382;
+	};
+	3E495303135F438A00F7FD1C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
+		name = "VNCCore.m: 2156";
+		rLen = 0;
+		rLoc = 59094;
+		rType = 0;
+		vrLen = 583;
+		vrLoc = 13326;
+	};
+	3E495304135F438A00F7FD1C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
+		name = "VNCCore.m: 868";
+		rLen = 0;
+		rLoc = 25479;
+		rType = 0;
+		vrLen = 990;
+		vrLoc = 24910;
+	};
+	3E495305135F438A00F7FD1C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
+		name = "VNCCore.m: 49";
+		rLen = 0;
+		rLoc = 1039;
+		rType = 0;
+		vrLen = 1304;
+		vrLoc = 1073;
+	};
+	3E495306135F438C00F7FD1C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
+		name = "VNCCore.m: 868";
+		rLen = 0;
+		rLoc = 25479;
+		rType = 0;
+		vrLen = 990;
+		vrLoc = 24910;
+	};
+	3E495307135F438C00F7FD1C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
+		name = "VNCCore.m: 49";
+		rLen = 0;
+		rLoc = 1039;
+		rType = 0;
+		vrLen = 1304;
+		vrLoc = 1073;
+	};
+	3E495308135F46AA00F7FD1C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F7F5E0481285880C0070AE03 /* RDPCore.h */;
+		name = "RDPCore.h: 17";
+		rLen = 0;
+		rLoc = 339;
+		rType = 0;
+		vrLen = 449;
+		vrLoc = 143;
+	};
+	3E495309135F46AA00F7FD1C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7ADD06DB1305B89D00D153CC /* TouchViewController.h */;
+		name = "TouchViewController.h: 6";
+		rLen = 0;
+		rLoc = 118;
+		rType = 0;
+		vrLen = 535;
+		vrLoc = 0;
+	};
+	3E49530A135F46AA00F7FD1C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7ADD06DC1305B89D00D153CC /* TouchViewController.m */;
+		name = "TouchViewController.m: 10";
+		rLen = 0;
+		rLoc = 203;
+		rType = 0;
+		vrLen = 570;
+		vrLoc = 17253;
+	};
+	3E49530B135F46AA00F7FD1C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F7F8C61F12A247A300FC4E29 /* VNCCore.h */;
+		name = "VNCCore.h: 243";
+		rLen = 0;
+		rLoc = 3722;
+		rType = 0;
+		vrLen = 757;
+		vrLoc = 3878;
+	};
+	3E49530C135F46AA00F7FD1C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
+		name = "VNCCore.m: 826";
+		rLen = 0;
+		rLoc = 24238;
+		rType = 0;
+		vrLen = 1010;
+		vrLoc = 23468;
+	};
+	3E49530D135F46AA00F7FD1C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
+		name = "VNCCore.m: 1204";
+		rLen = 0;
+		rLoc = 37662;
+		rType = 0;
+		vrLen = 691;
+		vrLoc = 37483;
+	};
+	3E49530E135F46AA00F7FD1C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
+		name = "VNCCore.m: 49";
+		rLen = 0;
+		rLoc = 1039;
+		rType = 0;
+		vrLen = 1304;
+		vrLoc = 1073;
+	};
+	3E49530F135F482400F7FD1C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
+		name = "VNCCore.m: 1205";
+		rLen = 0;
+		rLoc = 37662;
+		rType = 0;
+		vrLen = 691;
+		vrLoc = 37509;
+	};
+	3E495310135F482400F7FD1C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
+		name = "VNCCore.m: 93";
+		rLen = 0;
+		rLoc = 2205;
+		rType = 0;
+		vrLen = 1301;
+		vrLoc = 1073;
+	};
 	3E5582801285695300AB8CDF /* RDPPrototype */ = {
 		isa = PBXExecutable;
 		activeArgIndices = (
@@ -4171,7 +4457,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {803, 468}}";
 			sepNavSelRange = "{700, 0}";
-			sepNavVisRange = "{171, 656}";
+			sepNavVisRange = "{171, 655}";
 			sepNavWindowFrame = "{{382, 124}, {970, 754}}";
 		};
 	};
@@ -4341,7 +4627,7 @@
 		fRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */;
 		name = "VNCCore.m: 1000";
 		rLen = 0;
-		rLoc = 31474;
+		rLoc = 31500;
 		rType = 0;
 		vrLen = 1175;
 		vrLoc = 30327;
@@ -4493,9 +4779,9 @@
 	};
 	7ADD06A21305AD7400D153CC /* ConfigurationModal.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {803, 1170}}";
+			sepNavIntBoundsRect = "{{0, 0}, {803, 1196}}";
 			sepNavSelRange = "{326, 0}";
-			sepNavVisRange = "{0, 465}";
+			sepNavVisRange = "{0, 437}";
 		};
 	};
 	7ADD06A31305AD7400D153CC /* ConfigurationModal.m */ = {
@@ -4507,17 +4793,17 @@
 	};
 	7ADD06DB1305B89D00D153CC /* TouchViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {880, 1196}}";
-			sepNavSelRange = "{713, 0}";
-			sepNavVisRange = "{1733, 595}";
+			sepNavIntBoundsRect = "{{0, 0}, {880, 1313}}";
+			sepNavSelRange = "{118, 0}";
+			sepNavVisRange = "{0, 535}";
 			sepNavWindowFrame = "{{15, 124}, {750, 754}}";
 		};
 	};
 	7ADD06DC1305B89D00D153CC /* TouchViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1377, 9126}}";
-			sepNavSelRange = "{5423, 0}";
-			sepNavVisRange = "{19053, 552}";
+			sepNavIntBoundsRect = "{{0, 0}, {1377, 9009}}";
+			sepNavSelRange = "{203, 0}";
+			sepNavVisRange = "{17253, 570}";
 			sepNavWindowFrame = "{{577, 117}, {750, 761}}";
 		};
 	};
@@ -4545,18 +4831,18 @@
 	F7F8C61F12A247A300FC4E29 /* VNCCore.h */ = {
 		uiCtxt = {
 			sepNavFolds = "{\n    c =     (\n                {\n            r = \"{527, 1293}\";\n            s = 0;\n        }\n    );\n    r = \"{0, 4635}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {803, 1690}}";
+			sepNavIntBoundsRect = "{{0, 0}, {803, 1716}}";
 			sepNavSelRange = "{2430, 0}";
-			sepNavVisRange = "{1893, 964}";
+			sepNavVisRange = "{2586, 757}";
 			sepNavWindowFrame = "{{561, 84}, {750, 761}}";
 		};
 	};
 	F7F8C62012A247A300FC4E29 /* VNCCore.m */ = {
 		uiCtxt = {
-			sepNavFolds = "{\n    c =     (\n                {\n            r = \"{30289, 456}\";\n            s = 0;\n        },\n                {\n            r = \"{32160, 1276}\";\n            s = 0;\n        },\n                {\n            r = \"{33485, 2666}\";\n            s = 0;\n        }\n    );\n    r = \"{0, 57937}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {1356, 24271}}";
-			sepNavSelRange = "{16921, 0}";
-			sepNavVisRange = "{24837, 908}";
+			sepNavFolds = "{\n    c =     (\n                {\n            r = \"{30324, 456}\";\n            s = 0;\n        },\n                {\n            r = \"{32195, 1276}\";\n            s = 0;\n        },\n                {\n            r = \"{33520, 2666}\";\n            s = 0;\n        }\n    );\n    r = \"{0, 59354}\";\n    s = 0;\n}";
+			sepNavIntBoundsRect = "{{0, 0}, {1208, 26715}}";
+			sepNavSelRange = "{2205, 0}";
+			sepNavVisRange = "{1073, 1301}";
 			sepNavWindowFrame = "{{42, 124}, {1267, 754}}";
 		};
 	};
