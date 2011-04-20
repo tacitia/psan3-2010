@@ -101,6 +101,10 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView;
 	
 	//Default shortCutOut = false
 	shortCutOut = FALSE;
+	self.shortCutView.hidden = TRUE;
+	
+	//Default screen is not locked
+	screenLocked = FALSE;
 	
 	//Notification sent when the keyboard resigns
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillDisappear:) name:UIKeyboardWillHideNotification object:nil];
@@ -143,7 +147,7 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView;
 	NSLog(@"%@", self.inputText.text); //This line has strange behavior - it sometimes output null sring
 	[self.inputText setText:@""];
 	
-	[vnccore sendString:self.inputText.text]; 
+	[vnccore putTextIntoCutBuffer:self.inputText.text]; 
 }
 
 -(void)keyboardWillDisappear:(NSNotification *) notification {
@@ -237,7 +241,7 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView;
 
 	NSLog(@"SINGLE TAP!");
 	
-	
+	/*
 	inputText = [[UITextField alloc] initWithFrame:CGRectMake(25, 25, 400, 50)];
 	[inputText becomeFirstResponder];
 	//inputText.delegate = self.inputText;
@@ -247,7 +251,7 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView;
 	[imageView addSubview:inputText];
 	//[imageScrollView setNeedsDisplay];
 	//[self.view setNeedsDisplay];
-	 
+	 */
 
 //	CGPoint touchLocation = [gestureRecognizer locationInView:gestureRecognizer.view];
 //	CGPoint adjustedTouchLocation = CGPointMake(touchLocation.x * imageView.frame.size.width / imageScrollView.frame.size.width,
@@ -287,13 +291,27 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView;
 - (void)handleTwoFingerTap:(UIGestureRecognizer *)gestureRecognizer {  
 	// two-finger tap zooms out  
 	if (configurationModalInTouchViewController != NULL) {
+		
+		int temp = (configurationModalInTouchViewController->activated) >> 0;
+		if (temp % 2 == 1) {
+			//it is activated
+			NSLog(@"Right Click!");
+			
+			[vnccore sendRightClickEventAtPosition:[gestureRecognizer locationInView:self.imageView]];
+		}
+		else {
+			//it is deactivated
+			NSLog(@"Right Click Turned Off!");
+		}
+		
+		/*
 		Boolean s = configurationModalInTouchViewController->twoFingerTapActivated;
 		if (s == TRUE) {
 			NSLog(@"Right Click!");
 		}
 		else {
 			NSLog(@"Right Click Turned Off!");
-		}
+		 */
 	}
 	
 	/*
@@ -348,6 +366,19 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView;
 			//It is left pan
 			
 			if (configurationModalInTouchViewController != NULL) {
+				
+				int temp = (configurationModalInTouchViewController->activated) >> 3;
+				if (temp % 2 == 1) {
+					//it is activated
+					NSLog(@"Left Pan!");
+				
+				}
+				else {
+					//it is deactivated
+					NSLog(@"Left Pan Turned Off!");
+				}
+				
+				/*
 				Boolean s = configurationModalInTouchViewController->threeFingerPanLeftRecognizerActivated;
 				if (s == TRUE) {
 					NSLog(@"Left Pan!");
@@ -355,6 +386,7 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView;
 				else {
 					NSLog(@"Left Pan Turned Off!");
 				}
+				 */
 			}
 		}
 		else {
@@ -362,6 +394,19 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView;
 				//it is an up pan
 				//Maximize the current window
 				if (configurationModalInTouchViewController != NULL) {
+					
+					int temp = (configurationModalInTouchViewController->activated) >> 1;
+					if (temp % 2 == 1) {
+						//it is activated
+						NSLog(@"Up Pan!");
+						[vnccore maximizeCurrentActiveWindow];
+					}
+					else {
+						//it is deactivated
+						NSLog(@"Up Pan Turned Off!");
+					}
+					
+					/*
 					Boolean s = configurationModalInTouchViewController->threeFingerPanUpRecognizerActivated;
 					if (s == TRUE) {
 						NSLog(@"Up pan!");
@@ -369,12 +414,25 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView;
 					else {
 						NSLog(@"Up pan Turned Off!");
 					}
+					 */
 				}
 			}
 			else {
 				//it is a down pan
 				//Minimize the current window
 				if (configurationModalInTouchViewController != NULL) {
+					
+					int temp = (configurationModalInTouchViewController->activated) >> 2;
+					if (temp % 2 == 1) {
+						//it is activated
+						NSLog(@"Down Pan!");
+						[vnccore minimizeCurrentActiveWindow];
+					}
+					else {
+						//it is deactivated
+						NSLog(@"Down Pan Turned Off!");
+					}
+					/*
 					Boolean s = configurationModalInTouchViewController->threeFingerPanDownRecognizerActivated;
 					if (s == TRUE) {
 						NSLog(@"Down pan!");
@@ -382,6 +440,7 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView;
 					else {
 						NSLog(@"Down pan Turned Off!");
 					}
+					 */
 				}
 			}
 		}
@@ -399,14 +458,82 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView;
 		}
 	}
 }
+-(void)handleLongPress:(UILongPressGestureRecognizer *)gestureRecognizer {
 
+	if (gestureRecognizer.state == UIGestureRecognizerStateEnded ) {
+		//Function invoked again but do nothing
+	}
+	else{
+		
+		if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {
+			
+			if (configurationModalInTouchViewController != NULL) {
+				
+				int temp = (configurationModalInTouchViewController->activated) >> 4;
+				if (temp % 2 == 1) {
+					//it is activated
+					NSLog(@"Long Press!");
+					UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Caution!"
+																	 message:@"Do you want to close the current window?"
+																	delegate:self 
+														   cancelButtonTitle:@"Cancel" 
+														   otherButtonTitles:nil];
+					[alert addButtonWithTitle:@"Close"];
+					[alert show];
+					[alert release];
+				}
+				else {
+					//it is deactivated
+					NSLog(@"Long Press Turned Off!");
+				}
+				
+				/*
+				Boolean s = configurationModalInTouchViewController->longPressActivated;
+				if (s == TRUE) {
+					NSLog(@"Long Press!");
+					UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Caution!"
+															 message:@"Do you want to close the current window?"
+															delegate:self 
+												   cancelButtonTitle:@"Cancel" 
+												   otherButtonTitles:nil];
+					[alert addButtonWithTitle:@"Close"];
+					[alert show];
+					[alert release];
+					
+				}
+				else {
+					NSLog(@"Long press Turned Off!");
+				}
+				 */
+			}
+		}
+	}
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+	
+	if (buttonIndex == 0)
+	{
+		NSLog(@"Cancel Button");
+	}
+	else
+	{
+		NSLog(@"Close Current Window!");
+	}
+}
+
+/*
+ IB Actions
+*/
 - (IBAction)showShortCut:(id) sender{
 		
 	if (shortCutOut == FALSE) {
+		self.shortCutView.hidden = FALSE;
 		[self.view addSubview:self.shortCutView];
 		shortCutOut = TRUE;
 	}
 	else {
+		self.shortCutView.hidden = TRUE;
 		[self.shortCutView removeFromSuperview];
 		shortCutOut = FALSE;
 	}
@@ -431,48 +558,76 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView;
 	//[self.view addSubview:configurationModalInTouchViewController.view];
 }
 
--(void)handleLongPress:(UILongPressGestureRecognizer *)gestureRecognizer {
-
-	if (gestureRecognizer.state == UIGestureRecognizerStateEnded ) {
-		//Function invoked again but do nothing
-	}
-	else{
+- (IBAction)lockScreen:(id)sender{
+	if (screenLocked == TRUE) {
+		//unlock the screen
+		NSLog(@"Unlock the screen!");
+		[(UIBarButtonItem *)sender setTitle:@"LockScreen"];
 		
-		if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {
-			
-			if (configurationModalInTouchViewController != NULL) {
-				Boolean s = configurationModalInTouchViewController->longPressActivated;
-				if (s == TRUE) {
-					NSLog(@"Long Press!");
-					UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Caution!"
-															 message:@"Do you want to close the current window?"
-															delegate:self 
-												   cancelButtonTitle:@"Cancel" 
-												   otherButtonTitles:nil];
-					[alert addButtonWithTitle:@"Close"];
-					[alert show];
-					[alert release];
-					
-				}
-				else {
-					NSLog(@"Long press Turned Off!");
-				}
-			}
-		}
+		// calculate minimum scale to perfectly fit image width, and begin at that scale  
+		float minimumScale = [imageScrollView frame].size.width  / [imageScrollView frame].size.width;  
+		[imageScrollView setMaximumZoomScale:5.0];
+		[imageScrollView setMinimumZoomScale:minimumScale];
+		//[imageScrollView setZoomScale:minimumScale];
+		
+		screenLocked = FALSE;
+	}
+	else {
+		//lock the screen
+		NSLog(@"Lock the screen!");
+		[(UIBarButtonItem *)sender setTitle:@"Unlock"];
+		
+		//Set min. and max. to the same will disable pinch
+		[imageScrollView setMaximumZoomScale:1.0];
+		[imageScrollView setMinimumZoomScale:1.0];
+		
+		screenLocked = TRUE;
 	}
 }
 
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-	
-	if (buttonIndex == 0)
-	{
-		NSLog(@"Cancel Button");
-	}
-	else
-	{
-		NSLog(@"Close Current Window!");
-	}
+/*
+ Here are the functions in VNCCore
+ - (void) sendCtrlPlusChar:(char)character;
+ - (void) sendTab;
+ - (void) sendAltPlusTab;
+ - (void) sendAltPlusF4;
+ - (void) sendCtrlPlusF4;
+ - (void) sendCtrlPlusSpace; 
+ */
+
+- (IBAction) sendCtrlC:(id)sender{
+	NSLog(@"sendCtrlC");
+	[vnccore sendCtrlPlusChar:'c'];
 }
+- (IBAction) sendCtrlV:(id)sender{
+	NSLog(@"sendCtrlV");
+	[vnccore sendCtrlPlusChar:'v'];
+}
+- (IBAction) sendCtrlS:(id)sender{
+	NSLog(@"sendCtrlS");
+	[vnccore sendCtrlPlusChar:'s'];
+}
+- (IBAction) sendCtrlF4:(id)sender{
+	NSLog(@"sendCtrlF4");
+	[vnccore sendCtrlPlusF4];
+}
+- (IBAction) sendCtrlSpace:(id)sender{
+	NSLog(@"sendCtrlSpace");
+	[vnccore sendCtrlPlusSpace];
+}
+- (IBAction) sendTab:(id)sender{
+	NSLog(@"sendTab");
+	[vnccore sendTab];
+}
+- (IBAction) sendAltTab:(id)sender{
+	NSLog(@"sendAltTab");
+	[vnccore sendAltPlusTab];
+}
+- (IBAction) sendAltF4:(id)sender{
+	NSLog(@"sendAltF4");
+	[vnccore sendAltPlusF4];
+}
+
 
 #pragma mark Utility methods  
 
@@ -501,6 +656,10 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView;
 		// Not zoomed, let the scroll view scroll
 		//scrollView.scrollEnabled = FALSE;
 	}
+}
+
+- (void)endConnection{
+	[self.view removeFromSuperview];
 }
 
 - (void)dealloc {

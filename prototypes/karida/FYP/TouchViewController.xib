@@ -242,7 +242,7 @@
 							<object class="IBUITextField" id="893001284">
 								<reference key="NSNextResponder" ref="739520386"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{12, 7}, {637, 31}}</string>
+								<string key="NSFrame">{{12, 7}, {623, 31}}</string>
 								<reference key="NSSuperview" ref="739520386"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -277,21 +277,28 @@
 							<object class="IBUIBarButtonItem" id="783162964">
 								<string key="IBUITitle">Done</string>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-								<float key="IBUIWidth">100</float>
+								<float key="IBUIWidth">80</float>
+								<int key="IBUIStyle">1</int>
+								<reference key="IBUIToolbar" ref="739520386"/>
+							</object>
+							<object class="IBUIBarButtonItem" id="1007815181">
+								<string key="IBUITitle">LockScreen</string>
+								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+								<float key="IBUIWidth">80</float>
 								<int key="IBUIStyle">1</int>
 								<reference key="IBUIToolbar" ref="739520386"/>
 							</object>
 							<object class="IBUIBarButtonItem" id="743412561">
 								<string key="IBUITitle">ShortCuts</string>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-								<float key="IBUIWidth">100</float>
+								<float key="IBUIWidth">80</float>
 								<int key="IBUIStyle">1</int>
 								<reference key="IBUIToolbar" ref="739520386"/>
 							</object>
 							<object class="IBUIBarButtonItem" id="566551522">
 								<string key="IBUITitle">More..</string>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-								<float key="IBUIWidth">110</float>
+								<float key="IBUIWidth">80</float>
 								<int key="IBUIStyle">1</int>
 								<reference key="IBUIToolbar" ref="739520386"/>
 							</object>
@@ -377,6 +384,86 @@
 						<reference key="destination" ref="841351856"/>
 					</object>
 					<int key="connectionID">66</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">lockScreen:</string>
+						<reference key="source" ref="1007815181"/>
+						<reference key="destination" ref="841351856"/>
+					</object>
+					<int key="connectionID">71</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">sendCtrlC:</string>
+						<reference key="source" ref="779180804"/>
+						<reference key="destination" ref="841351856"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">74</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">sendCtrlV:</string>
+						<reference key="source" ref="977085671"/>
+						<reference key="destination" ref="841351856"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">75</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">sendCtrlS:</string>
+						<reference key="source" ref="137238043"/>
+						<reference key="destination" ref="841351856"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">76</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">sendCtrlF4:</string>
+						<reference key="source" ref="431628992"/>
+						<reference key="destination" ref="841351856"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">77</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">sendCtrlSpace:</string>
+						<reference key="source" ref="181320511"/>
+						<reference key="destination" ref="841351856"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">78</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">sendTab:</string>
+						<reference key="source" ref="500200967"/>
+						<reference key="destination" ref="841351856"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">79</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">sendAltTab:</string>
+						<reference key="source" ref="756623494"/>
+						<reference key="destination" ref="841351856"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">80</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">sendAltF4:</string>
+						<reference key="source" ref="379834792"/>
+						<reference key="destination" ref="841351856"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">81</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -483,6 +570,7 @@
 							<reference ref="743412561"/>
 							<reference ref="783162964"/>
 							<reference ref="390426868"/>
+							<reference ref="1007815181"/>
 						</object>
 						<reference key="parent" ref="460060159"/>
 					</object>
@@ -513,6 +601,11 @@
 					<object class="IBObjectRecord">
 						<int key="objectID">65</int>
 						<reference key="object" ref="783162964"/>
+						<reference key="parent" ref="739520386"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">70</int>
+						<reference key="object" ref="1007815181"/>
 						<reference key="parent" ref="739520386"/>
 					</object>
 				</object>
@@ -552,12 +645,13 @@
 					<string>57.IBPluginDependency</string>
 					<string>57.IBViewBoundsToFrameTransform</string>
 					<string>65.IBPluginDependency</string>
+					<string>70.IBPluginDependency</string>
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>TouchViewController</string>
 					<string>UIResponder</string>
-					<string>{{261, 0}, {1019, 756}}</string>
+					<string>{{171, 0}, {1019, 756}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
@@ -608,6 +702,7 @@
 						<bytes key="NSTransformStruct">P4AAAL+AAABC5gAAw1cAAA</bytes>
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="unlocalizedProperties">
@@ -626,7 +721,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">66</int>
+			<int key="maxID">81</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -641,11 +736,29 @@
 							<string>configGestures:</string>
 							<string>doneButtonPressed:</string>
 							<string>editText:</string>
+							<string>lockScreen:</string>
+							<string>sendAltF4:</string>
+							<string>sendAltTab:</string>
+							<string>sendCtrlC:</string>
+							<string>sendCtrlF4:</string>
+							<string>sendCtrlS:</string>
+							<string>sendCtrlSpace:</string>
+							<string>sendCtrlV:</string>
+							<string>sendTab:</string>
 							<string>showShortCut:</string>
 							<string>textFieldDone:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -660,6 +773,15 @@
 							<string>configGestures:</string>
 							<string>doneButtonPressed:</string>
 							<string>editText:</string>
+							<string>lockScreen:</string>
+							<string>sendAltF4:</string>
+							<string>sendAltTab:</string>
+							<string>sendCtrlC:</string>
+							<string>sendCtrlF4:</string>
+							<string>sendCtrlS:</string>
+							<string>sendCtrlSpace:</string>
+							<string>sendCtrlV:</string>
+							<string>sendTab:</string>
 							<string>showShortCut:</string>
 							<string>textFieldDone:</string>
 						</object>
@@ -675,6 +797,42 @@
 							</object>
 							<object class="IBActionInfo">
 								<string key="name">editText:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">lockScreen:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">sendAltF4:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">sendAltTab:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">sendCtrlC:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">sendCtrlF4:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">sendCtrlS:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">sendCtrlSpace:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">sendCtrlV:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">sendTab:</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">

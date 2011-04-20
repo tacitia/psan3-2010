@@ -8,35 +8,64 @@
 
 #import "ConfigurationModal.h"
 #import "HelpPage.h"
-
+#import "TouchViewController.h"
 
 @implementation ConfigurationModal
-@synthesize ConfigTable,helpView;
+@synthesize ConfigTable,helpView, switchInCell1, switchInCell2, switchInCell3, switchInCell4, switchInCell5, switchArray,activatedArray, tempActivatedArray;
 
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization.
-		twoFingerTapActivated = TRUE;
-	
-		longPressActivated = TRUE;
-	
-		panRecognizerActivated = TRUE;
-	
-		threeFingerPanLeftRecognizerActivated = TRUE; 
+				
+		//Initialize the switches and booleans variables
+		switchInCell1 = [[UISwitch alloc] initWithFrame:CGRectZero];
+		[switchInCell1 setOn:YES animated:NO];
+		[switchInCell1 addTarget:self action:@selector(switchChanged:) forControlEvents:UIControlEventValueChanged];
 		
-		threeFingerPanUpRecognizerActivated = TRUE;
+		switchInCell2 = [[UISwitch alloc] initWithFrame:CGRectZero];
+		[switchInCell2 setOn:YES animated:NO];
+		[switchInCell2 addTarget:self action:@selector(switchChanged:) forControlEvents:UIControlEventValueChanged];
 		
-		threeFingerPanDownRecognizerActivated = TRUE;
+		switchInCell3 = [[UISwitch alloc] initWithFrame:CGRectZero];
+		[switchInCell3 setOn:YES animated:NO];
+		[switchInCell3 addTarget:self action:@selector(switchChanged:) forControlEvents:UIControlEventValueChanged];
 		
-		//Temporary Boolean Variables to store temporary user selections
-		TemptwoFingerTapActivated = TRUE;
-		TemplongPressActivated = TRUE;
-		TempthreeFingerPanLeftRecognizerActivated = TRUE; 
-		TempthreeFingerPanUpRecognizerActivated = TRUE;
-		TempthreeFingerPanDownRecognizerActivated = TRUE;
+		switchInCell4 = [[UISwitch alloc] initWithFrame:CGRectZero];
+		[switchInCell4 setOn:YES animated:NO];
+		[switchInCell4 addTarget:self action:@selector(switchChanged:) forControlEvents:UIControlEventValueChanged];
+		
+		switchInCell5 = [[UISwitch alloc] initWithFrame:CGRectZero];
+		[switchInCell5 setOn:YES animated:NO];
+		[switchInCell5 addTarget:self action:@selector(switchChanged:) forControlEvents:UIControlEventValueChanged];
+		
+		switchArray = [[NSArray alloc] initWithObjects:switchInCell1,switchInCell2,switchInCell3,switchInCell4,switchInCell5,nil];
+		
+		//Initialize activated. each bit from 2^0 - 2^4 are used for indicating whether the switch is on or not.
+		activated = 0;
+		for (int i=0; i<5; i++) {
+			activated += (1 << i); 
+		}
+		 
+		tempActivated = activated;
+		NSLog(@"activated = %d", activated);
+		
+		//Initialize the array.
+		ConfigArray = [[NSMutableArray alloc] init];
+	
+		NSArray *generalInfoList = [NSArray arrayWithObjects:@"Connection Information", @"Help", nil];
+		NSDictionary *generalInfoDict = [NSDictionary dictionaryWithObject:generalInfoList forKey:@"General"];
+	
+		NSArray *gestureList = [NSArray arrayWithObjects:@"Double-Finger Tap as Mouse Right Click", @"Three-Finger Pan Up to Maximize Current Window",
+							@"Three-Finger Pan Down to Minimize Current Window",@"Three-Finger Pan Left to Switch Window",@"Long Press to Manipulate Current Window", nil];
+		NSDictionary *gestureDic = [NSDictionary dictionaryWithObject:gestureList forKey:@"Gestures"];
+	
+		[ConfigArray addObject:generalInfoDict];
+		[ConfigArray addObject:gestureDic];
+		[ConfigArray addObject:@"Log Out"];
+		
+		self.navigationItem.title = @"Configuration";
 		
     }
     return self;
@@ -47,43 +76,35 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-	
-	//Initialize the array.
-	ConfigArray = [[NSMutableArray alloc] init];
-	
-	NSArray *generalInfoList = [NSArray arrayWithObjects:@"Connection Information", @"Help", nil];
-	NSDictionary *generalInfoDict = [NSDictionary dictionaryWithObject:generalInfoList forKey:@"General"];
-	
-	NSArray *gestureList = [NSArray arrayWithObjects:@"Double-Finger Tap as Mouse Right Click", @"Three-Finger Pan Up to Maximize Current Window",
-							@"Three-Finger Pan Down to Minimize Current Window",@"Three-Finger Pan Left to Switch Window",@"Long Press to Manipulate Current Window", nil];
-	NSDictionary *gestureDic = [NSDictionary dictionaryWithObject:gestureList forKey:@"Gestures"];
-	
-	[ConfigArray addObject:generalInfoDict];
-	[ConfigArray addObject:gestureDic];
-	
-	self.navigationItem.title = @"Configuration";
 }
 
 
 -(IBAction) cancellConfiguration: (id) sender{
 	NSLog(@"Cancell Config");
-	//real boolean variables are not changed
+		
+	tempActivated = activated;
+	
+	for(int i=0;i<5;i++) {
+		
+		int temp = activated >> i;
+		if (temp % 2 == 1) {
+			//the ith is activated
+			[[switchArray objectAtIndex:i] setOn:YES];
+		}
+		else {
+			//it is deactivated
+			[[switchArray objectAtIndex:i] setOn:NO];
+		}
+	}
+
 	[self.view removeFromSuperview];
-	//[self dismissModalViewControllerAnimated:YES];
+	
 }
 -(IBAction) saveConfiguration: (id) sender{
 	NSLog(@"Save Config");
-
-	//Temporary Boolean Variables set to the real one
-	twoFingerTapActivated = TemptwoFingerTapActivated;
 	
-	longPressActivated = TemplongPressActivated;
+	activated = tempActivated;
 	
-	threeFingerPanLeftRecognizerActivated = TempthreeFingerPanLeftRecognizerActivated; 
-	threeFingerPanUpRecognizerActivated = TempthreeFingerPanUpRecognizerActivated;
-	threeFingerPanDownRecognizerActivated = TempthreeFingerPanDownRecognizerActivated;
-	
-	//[self dismissModalViewControllerAnimated:YES];
 	[self.view removeFromSuperview];
 	
 }
@@ -121,17 +142,25 @@
 	if (section == 0) {
 		return 2;
 	}
-	else {
+	else if (section == 1){
 		return 5;
+	}
+	else{
+		return 1;
 	}
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-	
-	if(section == 0)
+	if(section == 0){
 		return @"General Information";
-	else
+	}
+	else if (section == 1){
 		return @"Gesture Selection";
+	}
+	else {
+		return @"End Connection";
+	}
+
 }
 
 // Customize the appearance of table view cells.
@@ -153,7 +182,7 @@
 		
 		return cell;
 	}
-	else {
+	else if ([indexPath section] == 1){
 		//Gesture Sets with switches
 		static NSString *CellIdentifier = @"GestureCell";
 		int row = [indexPath row];
@@ -161,13 +190,9 @@
 		UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 		if (cell == nil) {
 			cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
-			UISwitch *switchView = [[UISwitch alloc] initWithFrame:CGRectZero];
-			cell.accessoryView = switchView;
-			[switchView setOn:YES animated:NO];
-			[switchView setTag:row];
-			[switchView addTarget:self action:@selector(switchChanged:) forControlEvents:UIControlEventValueChanged];
-			//[self performSelector:@selector(switchChanged:) withObject:row];
-			[switchView release];
+			
+			[[switchArray objectAtIndex:row] setTag:row];
+			cell.accessoryView = [switchArray objectAtIndex:row];
 		}
 		
 		NSDictionary *dictionary = [ConfigArray objectAtIndex:indexPath.section];
@@ -177,62 +202,45 @@
 		
 		return cell;
 	}
+	else {
+		static NSString *CellIdentifier = @"LogOutCell";
+		
+		UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+		if (cell == nil) {
+			cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
+		}
+	
+		cell.textLabel.text = @"Log Out";
+		[cell setBackgroundColor:[UIColor colorWithRed:1 green:.2 blue:.5 alpha:.8]];
+		
+		return cell;
+		
+	}
+
 }
 
 - (void) switchChanged:(id)sender {
 	UISwitch* switchControl = sender;
-	//NSLog( @"The switch is %@", switchControl.on ? @"ON" : @"OFF" );
 	
-	switch (switchControl.tag) {
-		case 0:
-			TemptwoFingerTapActivated = !TemptwoFingerTapActivated;
-			if (TemptwoFingerTapActivated == FALSE) {
-				NSLog(@"Two Finger Tap Disabled!");
-			}
-			else {
-				NSLog(@"Two Finger Tap Enabled!");
-			}
-			break;
-		case 1:
-			TempthreeFingerPanUpRecognizerActivated = !TempthreeFingerPanUpRecognizerActivated;
-			if (TempthreeFingerPanUpRecognizerActivated == FALSE) {
-				NSLog(@"Three-Finger Pan Up Disabled!");
-			}
-			else {
-				NSLog(@"Three-Finger Pan Up Enabled!");
-			}
-			break;
-		case 2:
-			TempthreeFingerPanDownRecognizerActivated = !TempthreeFingerPanDownRecognizerActivated;
-			if (TempthreeFingerPanDownRecognizerActivated == FALSE) {
-				NSLog(@"Three-Finger Pan Down Disabled!");
-			}
-			else {
-				NSLog(@"Three-Finger Pan Down Enabled!");
-			}
-			break;
-		case 3:
-			TempthreeFingerPanLeftRecognizerActivated = !TempthreeFingerPanLeftRecognizerActivated;
-			if (TempthreeFingerPanLeftRecognizerActivated == FALSE) {
-				NSLog(@"Three-Finger Pan Left Disabled!");
-			}
-			else {
-				NSLog(@"Three-Finger Pan Left Enabled!");
-			}
-			break;			
-		case 4:
-			TemplongPressActivated = !TemplongPressActivated;
-			if (TemplongPressActivated == FALSE) {
-				NSLog(@"Long Press Disabled!");
-			}
-			else {
-				NSLog(@"Long Press Enabled!");
-			}
-			break;
-			
-		default:
-			break;
+	NSLog(@"Before tempActivated = %d", tempActivated);
+	
+	//Tag ranges from 0 to 4
+	int temp = tempActivated >> (switchControl.tag);
+	
+	if (temp % 2 == 1) {
+		//the ith is activated
+		//then deactivate it
+		tempActivated = tempActivated & (~(1 << switchControl.tag));
+		NSLog(@"it is Disabled!");
 	}
+	else {
+		//it is deactivated, activate it
+		tempActivated = tempActivated | (1 << switchControl.tag);
+		NSLog(@"it is Enabled!");
+	}
+
+	NSLog(@"After tempActivated = %d", tempActivated);
+	
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -258,12 +266,22 @@
 			
 		}
 	}
+	else if([indexPath section] == 2){
+		NSLog(@"Log Out!");
+		[self.view.superview removeFromSuperview];
+		//[self.view removeFromSuperview];
+		//[(TouchViewController *)super endConnection];
+
+	}
 
 }
 
 
 - (void)dealloc {
+	[ConfigTable dealloc];
+	
     [super dealloc];
+	
 }
 
 

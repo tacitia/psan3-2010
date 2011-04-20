@@ -32,6 +32,9 @@
 	//Boolean to indicate whether the keyboard is out
 	Boolean keyboardIsOut;
 	
+	//whether the screen is locked. default is no
+	Boolean screenLocked;
+	
 	/*
 	 Optional Gesture references
 	 */
@@ -80,6 +83,19 @@
 - (IBAction)showShortCut:(id) sender;
 
 - (IBAction)configGestures:(id) sender;
+
+- (IBAction)lockScreen:(id)sender;
+
+- (IBAction) sendCtrlC:(id)sender;
+- (IBAction) sendCtrlV:(id)sender;
+- (IBAction) sendCtrlS:(id)sender;
+- (IBAction) sendCtrlF4:(id)sender;
+- (IBAction) sendCtrlSpace:(id)sender;
+- (IBAction) sendTab:(id)sender;
+- (IBAction) sendAltTab:(id)sender;
+- (IBAction) sendAltF4:(id)sender;
+
+- (void)endConnection;
 
 
 /*

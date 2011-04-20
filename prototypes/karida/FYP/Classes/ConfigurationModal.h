@@ -23,6 +23,19 @@
 	  Default should all be activated
 	 */
 	@public
+	
+	UISwitch *switchInCell1;
+	UISwitch *switchInCell2;
+	UISwitch *switchInCell3;
+	UISwitch *switchInCell4; 
+	UISwitch *switchInCell5;
+    NSArray *switchArray;    
+	
+	//bit 0-4 stores whether the ith switch is on or off
+	int activated;
+	int tempActivated;
+	
+	/*
 	//Double finger tap at once == mouse right click
 	Boolean twoFingerTapActivated;
 	
@@ -44,12 +57,22 @@
 	Boolean TempthreeFingerPanLeftRecognizerActivated; 
 	Boolean TempthreeFingerPanUpRecognizerActivated;
 	Boolean TempthreeFingerPanDownRecognizerActivated;
-	
-		
+	*/
 }
 
 @property (nonatomic, retain) IBOutlet UITableView *ConfigTable;
 @property (nonatomic, retain) HelpPage *helpView;
+
+@property (nonatomic, retain) UISwitch *switchInCell1;
+@property (nonatomic, retain) UISwitch *switchInCell2;
+@property (nonatomic, retain) UISwitch *switchInCell3;
+@property (nonatomic, retain) UISwitch *switchInCell4;
+@property (nonatomic, retain) UISwitch *switchInCell5;
+
+@property (nonatomic, retain) NSArray *switchArray;    
+
+@property (nonatomic, retain) NSArray *activatedArray;
+@property (nonatomic, retain) NSArray *tempActivatedArray;
 
 -(IBAction) cancellConfiguration: (id) sender;
 -(IBAction) saveConfiguration: (id) sender;
