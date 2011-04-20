@@ -110,8 +110,6 @@ int dataLength;
 			NSLog(@"NSStreamError");
 			[self.delegate networkErrorOccurred];
 			[self disconnect];
-			[iStream release];
-			[oStream release];
 		}
 			break;
 		case NSStreamEventOpenCompleted: {
@@ -141,6 +139,8 @@ int dataLength;
 - (void) disconnect {
 	[iStream close];
 	[oStream close];
+	[iStream release];
+	[oStream release];
 }
 
 - (void) dealloc {

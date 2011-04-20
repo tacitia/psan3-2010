@@ -108,6 +108,9 @@ UIImage* previousImage = nil;
 	
 	[self updateImage];
 	
+	if (communicator != nil) {
+		[communicator release];
+	}
 	communicator = [[NetworkCommunicator alloc] initWithVNCCore:self];
 	[communicator setDelegate:self.viewController];
 	[communicator connectToServerUsingStream:serverIP portNo:serverPort];
@@ -1935,6 +1938,7 @@ UIImage* previousImage = nil;
 		packet[17+i*20] = dwFlags % 256;
 		
 		packet[18+i*20] = packet[19+i*20] = packet[20+i*20] = packet[21+i*20] = 0;
+		printf("i: %i, position: %i, %i\n", i, x, y);
 	}
 	
 	[communicator sendMessage:packet length:42];

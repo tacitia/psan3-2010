@@ -240,6 +240,7 @@ typedef enum {
 @property (nonatomic) uint8_t* mouseButtonStatus;
 
 -(int)initConnection;
+-(void)logout;
 -(id)initWithViewController:(RDPPrototypeViewController *)viewControllerPtr;
 -(int)parseMessage:(uint8_t*)message ofLength:(int)length;
 -(int)updateImage;
