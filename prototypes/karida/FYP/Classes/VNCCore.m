@@ -8,6 +8,7 @@
 
 #import "VNCCore.h"
 #include <CommonCrypto/CommonCryptor.h>
+//#import "GlobalConstants.h";
 
 @interface VNCCore()
 
@@ -74,6 +75,7 @@ const int VK_RETURN = 0x0D; //Enter
 const int VK_SHIFT = 0x10;
 const int VK_CONTROL = 0x11;
 const int VK_MENU = 0x12; //ALT key
+const int VK_LMENU = 0xA4;
 const int VK_CAPITAL = 0x14;
 const int VK_ESCAPE = 0x1B;
 const int VK_SPACE = 0x20;
@@ -88,8 +90,9 @@ const int VK_DOWN = 0x28;
 const int VK_SNAPSHOT = 0x2C;
 const int VK_INSERT = 0x2D;
 const int VK_DELETE = 0x2E;
-const int VK_F1 = 70;
+const int VK_F1 = 0x70;
 
+ 
 #pragma mark Other Constants
 const int singleKeyEventRepLength = 12;
 const int keyEventPacketHeaderLength = 2;
@@ -853,10 +856,10 @@ UIImage* previousImage = nil;
 	packet[0] = 4;
 	packet[1] = 4;
 	
-	uint8_t *altPressed = [self generateSingleKeyEvent:VK_MENU pressed:YES];
+	uint8_t *altPressed = [self generateSingleKeyEvent:VK_LMENU pressed:YES];
 	uint8_t *tabPressed = [self generateSingleKeyEvent:VK_TAB pressed:YES];
 	uint8_t *tabReleased = [self generateSingleKeyEvent:VK_TAB pressed:NO];
-	uint8_t *altReleased = [self generateSingleKeyEvent:VK_MENU pressed:NO];
+	uint8_t *altReleased = [self generateSingleKeyEvent:VK_LMENU pressed:NO];
 	
 	for (int i = 0; i < singleKeyEventRepLength; ++i) {
 		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*0] = altPressed[i];
@@ -880,10 +883,10 @@ UIImage* previousImage = nil;
 	packet[0] = 4;
 	packet[1] = 4;
 	
-	uint8_t *altPressed = [self generateSingleKeyEvent:VK_MENU pressed:YES];
+	uint8_t *altPressed = [self generateSingleKeyEvent:VK_LMENU pressed:YES];
 	uint8_t *f4Pressed = [self generateSingleKeyEvent:(VK_F1+3) pressed:YES];
 	uint8_t *f4Released = [self generateSingleKeyEvent:(VK_F1+3) pressed:NO];
-	uint8_t *altReleased = [self generateSingleKeyEvent:VK_MENU pressed:NO];
+	uint8_t *altReleased = [self generateSingleKeyEvent:VK_LMENU pressed:NO];
 	
 	for (int i = 0; i < singleKeyEventRepLength; ++i) {
 		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*0] = altPressed[i];
@@ -962,10 +965,10 @@ UIImage* previousImage = nil;
 	packet[1] = 6;
 	
 	uint8_t *shiftPressed = [self generateSingleKeyEvent:VK_SHIFT pressed:YES];
-	uint8_t *altPressed = [self generateSingleKeyEvent:VK_MENU pressed:YES];
+	uint8_t *altPressed = [self generateSingleKeyEvent:VK_LMENU pressed:YES];
 	uint8_t *tabPressed = [self generateSingleKeyEvent:VK_TAB pressed:YES];
 	uint8_t *tabReleased = [self generateSingleKeyEvent:VK_TAB pressed:NO];
-	uint8_t *altReleased = [self generateSingleKeyEvent:VK_MENU pressed:NO];
+	uint8_t *altReleased = [self generateSingleKeyEvent:VK_LMENU pressed:NO];
 	uint8_t *shiftReleased = [self generateSingleKeyEvent:VK_SHIFT pressed:NO];
 	
 	for (int i = 0; i < singleKeyEventRepLength; ++i) {
@@ -2049,6 +2052,10 @@ UIImage* previousImage = nil;
 	CGPoint serverPosition = CGPointMake(xRelativeToImage * 65535 / imageWidth, yRelativeToImage * 65535 / imageHeight);
 	
 	return serverPosition;
+}
+
+- (void)logout {
+	[self.communicator disconnect];
 }
 
 @end
