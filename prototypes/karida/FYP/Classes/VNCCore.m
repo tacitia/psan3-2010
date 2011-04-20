@@ -949,6 +949,124 @@ UIImage* previousImage = nil;
 	[communicator sendMessage:packet length:packetLength];
 }
 
+- (void) sendShiftPlusAltPlusTab {
+	if (packet != nil) {
+		free(packet);
+		packet = nil;
+	}	
+	
+	packetLength = keyEventPacketHeaderLength + singleKeyEventRepLength * 6;
+	packet = malloc(sizeof(uint8_t) * packetLength);
+	
+	packet[0] = 4;
+	packet[1] = 6;
+	
+	uint8_t *shiftPressed = [self generateSingleKeyEvent:VK_SHIFT pressed:YES];
+	uint8_t *altPressed = [self generateSingleKeyEvent:VK_MENU pressed:YES];
+	uint8_t *tabPressed = [self generateSingleKeyEvent:VK_TAB pressed:YES];
+	uint8_t *tabReleased = [self generateSingleKeyEvent:VK_TAB pressed:NO];
+	uint8_t *altReleased = [self generateSingleKeyEvent:VK_MENU pressed:NO];
+	uint8_t *shiftReleased = [self generateSingleKeyEvent:VK_SHIFT pressed:NO];
+	
+	for (int i = 0; i < singleKeyEventRepLength; ++i) {
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*0] = shiftPressed[i];
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*1] = altPressed[i];
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*2] = tabPressed[i];
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*3] = tabReleased[i];
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*4] = altReleased[i];
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*5] = shiftReleased[i];
+	}
+	
+	[communicator sendMessage:packet length:packetLength];
+}
+
+- (void) sendSingleKeyEventWithKey:(int)key pressed:(BOOL)pressed {
+	if (packet != nil) {
+		free(packet);
+		packet = nil;
+	}
+	
+	packetLength = keyEventPacketHeaderLength+singleKeyEventRepLength;
+	packet = malloc(sizeof(uint8_t) * packetLength);
+	
+	packet[0] = 4;
+	packet[1] = 1;
+	
+	uint8_t *keyEvent = [self generateSingleKeyEvent:key pressed:pressed];
+	
+	for (int i = 0; i < singleKeyEventRepLength; ++i) {
+		packet[keyEventPacketHeaderLength+i] = keyEvent[i];
+	}
+	
+	[communicator sendMessage:packet length:packetLength];
+}
+
+// send Alt + Space, then N
+- (void) minimizeCurrentActiveWindow {
+	if (packet != nil) {
+		free(packet);
+		packet = nil;
+	}	
+	
+	packetLength = keyEventPacketHeaderLength + singleKeyEventRepLength * 6;
+	packet = malloc(sizeof(uint8_t) * packetLength);
+	
+	packet[0] = 4;
+	packet[1] = 6;
+	
+	uint8_t *altPressed = [self generateSingleKeyEvent:VK_MENU pressed:YES];
+	uint8_t *spacePressed = [self generateSingleKeyEvent:VK_SPACE pressed:YES];
+	uint8_t *spaceReleased = [self generateSingleKeyEvent:VK_SPACE pressed:NO];
+	uint8_t *altReleased = [self generateSingleKeyEvent:VK_MENU pressed:NO];
+	uint8_t *nPressed = [self generateSingleKeyEvent:'n'-32 pressed:YES];
+	uint8_t *nReleased = [self generateSingleKeyEvent:'n'-32 pressed:NO];
+	
+	for (int i = 0; i < singleKeyEventRepLength; ++i) {
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*0] = altPressed[i];
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*1] = spacePressed[i];
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*2] = spaceReleased[i];
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*3] = altReleased[i];
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*4] = nPressed[i];
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*5] = nReleased[i];
+	}
+	
+	[communicator sendMessage:packet length:packetLength];
+}
+
+
+// send Alt + Space, then X
+- (void) maximizeCurrentActiveWindow {
+	if (packet != nil) {
+		free(packet);
+		packet = nil;
+	}	
+	
+	packetLength = keyEventPacketHeaderLength + singleKeyEventRepLength * 6;
+	packet = malloc(sizeof(uint8_t) * packetLength);
+	
+	packet[0] = 4;
+	packet[1] = 6;
+	
+	uint8_t *altPressed = [self generateSingleKeyEvent:VK_MENU pressed:YES];
+	uint8_t *spacePressed = [self generateSingleKeyEvent:VK_SPACE pressed:YES];
+	uint8_t *spaceReleased = [self generateSingleKeyEvent:VK_SPACE pressed:NO];
+	uint8_t *altReleased = [self generateSingleKeyEvent:VK_MENU pressed:NO];
+	uint8_t *xPressed = [self generateSingleKeyEvent:'x'-32 pressed:YES];
+	uint8_t *xReleased = [self generateSingleKeyEvent:'x'-32 pressed:NO];
+	
+	for (int i = 0; i < singleKeyEventRepLength; ++i) {
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*0] = altPressed[i];
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*1] = spacePressed[i];
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*2] = spaceReleased[i];
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*3] = altReleased[i];
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*4] = xPressed[i];
+		packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*5] = xReleased[i];
+	}
+	
+	[communicator sendMessage:packet length:packetLength];
+}
+
+
 //TODO
 - (void)sendString:(NSString*)string {
 	NSLog(@"sendString called");
@@ -959,7 +1077,7 @@ UIImage* previousImage = nil;
 	}	
 	
 	packetLength = 0;
-	
+		
 	for (int i = 0; i < [string length]; ++i) {
 		unichar currentChar = [string characterAtIndex:i];
 		if (48 <= currentChar <= 57 || 97 <= currentChar <= 122) {
@@ -972,61 +1090,44 @@ UIImage* previousImage = nil;
 	
 	packet = malloc(sizeof(uint8_t) * packetLength);
 	
+	int numberOfKeyEventRecorded = 0;	
 	for (int i = 0; i < [string length]; ++i) {
-		
 		unichar currentChar = [string characterAtIndex:i];
 		
-		if (97 <= currentChar <= 122) {
-			packetLength = keyEventPacketHeaderLength + singleKeyEventRepLength * 2;
-			packet = malloc(sizeof(uint8_t) * packetLength);
-			packet[0] = 4;
-						
+		if (97 <= currentChar <= 122) {						
 			uint8_t *charPressed = [self generateSingleKeyEvent:(currentChar-32) pressed:YES];
 			uint8_t *charReleased = [self generateSingleKeyEvent:(currentChar-32) pressed:NO];
-			
 			for (int i = 0; i < singleKeyEventRepLength; ++i) {
-				packet[i+2] = charPressed[i];
-				packet[i+14] = charReleased[i];
+				packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*numberOfKeyEventRecorded] = charPressed[i];
+				packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*(numberOfKeyEventRecorded+1)] = charReleased[i];
 			}
+			numberOfKeyEventRecorded += 2;
 		}
-		else if (65 <= currentChar <= 90) {
-			packetLength = keyEventPacketHeaderLength + singleKeyEventRepLength * 4;
-			packet = malloc(sizeof(uint8_t) * packetLength);
-			packet[0] = 4;
-			packet[1] = 4;
-			
+		else if (65 <= currentChar <= 90) {			
 			uint8_t *shiftPressed = [self generateSingleKeyEvent:VK_SHIFT pressed:YES];
 			uint8_t *charPressed = [self generateSingleKeyEvent:currentChar pressed:YES];
 			uint8_t *charReleased = [self generateSingleKeyEvent:currentChar pressed:NO];
 			uint8_t *shiftReleased = [self generateSingleKeyEvent:VK_SHIFT pressed:NO];
 			
 			for (int i = 0; i < 12; ++i) {
-				packet[i+2] = shiftPressed[i];
-				packet[i+14] = charPressed[i];
-				packet[i+26] = charReleased[i];
-				packet[i+38] = shiftReleased[i];
+				packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*numberOfKeyEventRecorded] = shiftPressed[i];
+				packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*(numberOfKeyEventRecorded+1)] = charPressed[i];
+				packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*(numberOfKeyEventRecorded+2)] = charReleased[i];
+				packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*(numberOfKeyEventRecorded+3)] = shiftReleased[i];
 			}
+			numberOfKeyEventRecorded += 4;
 		}
 		else if (48 <= currentChar <= 57) {
-			packetLength =keyEventPacketHeaderLength + singleKeyEventRepLength * 2;
-			packet = malloc(sizeof(uint8_t) * packetLength);
-			packet[0] = 4;
-			packet[1] = 2;
-			
 			uint8_t *charPressed = [self generateSingleKeyEvent:currentChar pressed:YES];;
 			uint8_t *charReleased = [self generateSingleKeyEvent:currentChar pressed:NO];
 			
 			for (int i = 0; i < 12; ++i) {
-				packet[i+2] = charPressed[i];
-				packet[i+14] = charReleased[i];
+				packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*numberOfKeyEventRecorded] = charPressed[i];
+				packet[i+keyEventPacketHeaderLength+singleKeyEventRepLength*(numberOfKeyEventRecorded+1)] = charReleased[i];
 			}
+			numberOfKeyEventRecorded += 2;
 		}
 		else {
-			packetLength = keyEventPacketHeaderLength + singleKeyEventRepLength * 4;
-			packet = malloc(sizeof(uint8_t) * packetLength);
-			packet[0] = 4;
-			packet[1] = 4;
-			
 			//TODO
 			
 		}
@@ -1887,21 +1988,20 @@ UIImage* previousImage = nil;
 		packet = nil;
 	}
 		
-	uint8_t* textChars = [text UTF8String];
 	int textLength = [text length]; //Is this the correct length for the textChars?
 	
 	packet = malloc(sizeof(uint8_t) * (8+textLength));
-	
+					
 	packet[0] = 6;
 	packet[1] = packet[2] = packet[3] = 0;
 	
-	packet[4] = textLength/(16^3);
-	packet[5] = (textLength-packet[4]*16^3)/(16^2);
-	packet[6] = (textLength-packet[4]*16^3-packet[5]*16^2)/16;
-	packet[7] = (textLength-packet[4]*16^3-packet[5]*16^2-packet[6]*16);
+	packet[4] = textLength / 256 / 256 / 256;
+	packet[5] = (textLength / 256 / 256) % 256;
+	packet[6] = (textLength / 256) % 256;
+	packet[7] = textLength % 256;
 	
 	for (int i = 0; i < textLength; ++i) {
-		packet[i+7] = textChars[i];
+		packet[i+7] = [text UTF8String][i];
 	}
 	
 	[communicator sendMessage:packet length:(8+textLength)];

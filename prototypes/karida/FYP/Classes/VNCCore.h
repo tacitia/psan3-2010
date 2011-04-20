@@ -243,17 +243,21 @@ typedef enum {
 -(int)parseMessage:(uint8_t*)message ofLength:(int)length;
 -(int)updateImage;
 
-- (void)sendString:(NSString*)string;
 
 - (void)sendLeftClickEventAtPosition:(CGPoint)position;
 - (void)sendRightClickEventAtPosition:(CGPoint)position;
 - (void)sendMouseDragEventFromPosition:(CGPoint)startPosition toPosition:(CGPoint)endPosition;
 
+//Send keyboard events
+- (void)sendString:(NSString*)string;
 - (void) sendCtrlPlusChar:(char)character;
 - (void) sendTab;
 - (void) sendAltPlusTab;
 - (void) sendAltPlusF4;
 - (void) sendCtrlPlusF4;
 - (void) sendCtrlPlusSpace;
+- (void) sendSingleKeyEventWithKey:(int)key pressed:(BOOL)pressed;
+- (void) minimizeCurrentActiveWindow;
+- (void) maximizeCurrentActiveWindow;
 
 @end
