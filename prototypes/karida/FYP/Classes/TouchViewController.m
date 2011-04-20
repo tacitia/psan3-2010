@@ -155,9 +155,10 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView;
 	[self.inputText resignFirstResponder];
 	NSLog(@"done button dragged!!!");
 	NSLog(@"%@", self.inputText.text); //This line has strange behavior - it sometimes output null sring
-	[self.inputText setText:@""];
 	
 	[vnccore putTextIntoCutBuffer:self.inputText.text]; 
+	
+	[self.inputText setText:@""];	
 }
 
 -(void)keyboardWillDisappear:(NSNotification *) notification {
