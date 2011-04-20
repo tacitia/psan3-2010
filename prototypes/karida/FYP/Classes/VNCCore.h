@@ -249,6 +249,7 @@ typedef enum {
 #pragma mark Send Mouse Events
 - (void)sendLeftClickEventAtPosition:(CGPoint)position;
 - (void)sendRightClickEventAtPosition:(CGPoint)position;
+- (void)sendDoubleLeftClickEventAtPosition:(CGPoint)position;
 - (void)sendMouseDragEventFromPosition:(CGPoint)startPosition toPosition:(CGPoint)endPosition;
 
 #pragma mark -
@@ -262,6 +263,8 @@ typedef enum {
 - (void)sendCtrlPlusSpace;
 - (void)sendPressAltPlusShift;
 - (void)sendReleaseAltPlusShift;
+- (void)sendPressWinPlusShift;
+- (void)sendReleaseWinPlusShift;
 - (void)sendSingleKeyEventWithKey:(int)key pressed:(BOOL)pressed;
 - (void)minimizeCurrentActiveWindow;
 - (void)maximizeCurrentActiveWindow;

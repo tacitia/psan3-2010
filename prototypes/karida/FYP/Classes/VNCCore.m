@@ -1913,17 +1913,17 @@ UIImage* previousImage = nil;
 		free(packet);
 		packet = nil;
 	}
-	packet = malloc(sizeof(uint8_t) * 42);
+	packet = malloc(sizeof(uint8_t) * 82);
 	
 	packet[0] = 5;
-	packet[1] = 2;
+	packet[1] = 4;
 	
 	CGPoint serverPosition = [self transformClientPositionToServerPosition:position];
 	
 	unsigned int x = ceil(serverPosition.x);
 	unsigned int y = ceil(serverPosition.y);	
 	
-	for (int i = 0; i < 2; ++i) {
+	for (int i = 0; i < 4; ++i) {
 		packet[2+i*20] = x / 256 / 256 / 256;
 		packet[3+i*20] = (x / 256 / 256) % 256;
 		packet[4+i*20] = (x / 256) % 256;
@@ -1935,7 +1935,7 @@ UIImage* previousImage = nil;
 		
 		packet[10+i*20] = packet[11+i*20] = packet[12+i*20] = packet[13+i*20] = 0;
 		
-		unsigned int dwFlags = (i == 0) ? (MOUSEEVENTF_ABSOLUTE | MOUSEEVENTF_MOVE | MOUSEEVENTF_LEFTDOWN)
+		unsigned int dwFlags = (i == 0 || i == 2) ? (MOUSEEVENTF_ABSOLUTE | MOUSEEVENTF_MOVE | MOUSEEVENTF_LEFTDOWN)
 		: (MOUSEEVENTF_ABSOLUTE | MOUSEEVENTF_MOVE | MOUSEEVENTF_LEFTUP);
 		
 		packet[14+i*20] = dwFlags / 256 / 256 / 256;
@@ -1946,7 +1946,7 @@ UIImage* previousImage = nil;
 		packet[18+i*20] = packet[19+i*20] = packet[20+i*20] = packet[21+i*20] = 0;
 	}
 	
-	[communicator sendMessage:packet length:42];	
+	[communicator sendMessage:packet length:82];	
 }
 
 
