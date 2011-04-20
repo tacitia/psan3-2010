@@ -251,6 +251,7 @@ typedef enum {
 - (void)sendRightClickEventAtPosition:(CGPoint)position;
 - (void)sendDoubleLeftClickEventAtPosition:(CGPoint)position;
 - (void)sendMouseDragEventFromPosition:(CGPoint)startPosition toPosition:(CGPoint)endPosition;
+- (void)sendMouseWheelScrollEventDirection:(BOOL)direction;
 
 #pragma mark -
 #pragma mark Send keyboard Events

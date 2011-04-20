@@ -1995,7 +1995,7 @@ UIImage* previousImage = nil;
 	[communicator sendMessage:packet length:42];
 }
 
-- (void)sendMouseWheelScrollEventFromPosition:(CGPoint)startPosition toPosition:(CGPoint)endPosition {
+- (void)sendMouseWheelScrollEventDirection:(BOOL)direction {
 	if (packet != nil) {
 		free(packet);
 		packet = nil;
@@ -2003,8 +2003,29 @@ UIImage* previousImage = nil;
 	packet = malloc(sizeof(uint8_t) * 42);
 	
 	packet[0] = 5;
+	packet[1] = 1;
 	
+	for (int i = 2; i <= 9; ++i) {
+		packet[i] = 0;
+	}
+
+	unsigned int wheelDelta = direction ? 120 : -120;
 	
+	packet[10] = wheelDelta / 256 / 256 / 256;
+	packet[11] = (wheelDelta / 256 / 256) % 256;
+	packet[12] = (wheelDelta / 256) % 256;
+	packet[13] = wheelDelta % 256;
+	
+	unsigned int dwFlags = MOUSEEVENTF_WHEEL;
+	
+	packet[14] = dwFlags / 256 / 256 / 256;
+	packet[15] = (dwFlags / 256 / 256) % 256;
+	packet[16] = (dwFlags / 256) % 256;
+	packet[17] = dwFlags % 256;
+	
+	packet[18] = packet[19] = packet[20] = packet[21] = 0;
+
+	[communicator sendMessage:packet length:22];
 }
 
 
