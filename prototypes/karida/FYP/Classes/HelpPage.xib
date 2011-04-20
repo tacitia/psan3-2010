@@ -89,7 +89,7 @@
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">tap.png</string>
+							<string key="NSResourceName">tap-1.png</string>
 						</object>
 					</object>
 					<object class="IBUILabel" id="888456365">
@@ -744,7 +744,7 @@
 					<object class="NSAffineTransform">
 						<bytes key="NSTransformStruct">P4AAAL+AAABCuAAAw7WAAA</bytes>
 					</object>
-					<string>{{-44, 0}, {1039, 756}}</string>
+					<string>{{338, 0}, {1039, 756}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
@@ -1123,7 +1123,7 @@
 				<string>core.png</string>
 				<string>optional.png</string>
 				<string>scroll.png</string>
-				<string>tap.png</string>
+				<string>tap-1.png</string>
 				<string>three finger swip horizongtal.png</string>
 				<string>three finger swip.png</string>
 				<string>two finger pinch.png</string>

@@ -53,6 +53,10 @@
 	CGPoint startLocation;
 	CGPoint endLocation;
 	
+	//Previous and current position used for two finger pan
+	CGPoint prevLocation;
+	CGPoint curLocation;
+	
 }
 
 @property (nonatomic, retain) IBOutlet UIScrollView *imageScrollView;
@@ -94,6 +98,8 @@
 - (IBAction) sendTab:(id)sender;
 - (IBAction) sendAltTab:(id)sender;
 - (IBAction) sendAltF4:(id)sender;
+
+- (IBAction) logOut:(id)sender;
 
 - (void)endConnection;
 

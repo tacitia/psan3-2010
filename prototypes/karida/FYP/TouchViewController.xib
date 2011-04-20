@@ -215,7 +215,7 @@
 										<reference key="IBUINormalTitleShadowColor" ref="243740972"/>
 									</object>
 								</object>
-								<string key="NSFrame">{{670, 47}, {312, 218}}</string>
+								<string key="NSFrame">{{658, 47}, {312, 218}}</string>
 								<reference key="NSSuperview" ref="154410518"/>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">3</int>
@@ -228,7 +228,7 @@
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 							</object>
 						</object>
-						<string key="NSFrame">{{0, 43}, {1018, 696}}</string>
+						<string key="NSFrame">{{0, 44}, {1018, 696}}</string>
 						<reference key="NSSuperview" ref="460060159"/>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
@@ -242,7 +242,7 @@
 							<object class="IBUITextField" id="893001284">
 								<reference key="NSNextResponder" ref="739520386"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{12, 7}, {623, 31}}</string>
+								<string key="NSFrame">{{39, 7}, {594, 31}}</string>
 								<reference key="NSSuperview" ref="739520386"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -262,13 +262,18 @@
 								</object>
 							</object>
 						</object>
-						<string key="NSFrame">{{0, -1}, {1014, 44}}</string>
+						<string key="NSFrameSize">{1018, 44}</string>
 						<reference key="NSSuperview" ref="460060159"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<object class="NSMutableArray" key="IBUIItems">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBUIBarButtonItem" id="401169005">
+								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+								<reference key="IBUIToolbar" ref="739520386"/>
+								<int key="IBUISystemItemIdentifier">14</int>
+							</object>
 							<object class="IBUIBarButtonItem" id="390426868">
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<reference key="IBUICustomView" ref="893001284"/>
@@ -465,6 +470,14 @@
 					</object>
 					<int key="connectionID">81</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">logOut:</string>
+						<reference key="source" ref="401169005"/>
+						<reference key="destination" ref="841351856"/>
+					</object>
+					<int key="connectionID">83</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -571,6 +584,7 @@
 							<reference ref="783162964"/>
 							<reference ref="390426868"/>
 							<reference ref="1007815181"/>
+							<reference ref="401169005"/>
 						</object>
 						<reference key="parent" ref="460060159"/>
 					</object>
@@ -606,6 +620,11 @@
 					<object class="IBObjectRecord">
 						<int key="objectID">70</int>
 						<reference key="object" ref="1007815181"/>
+						<reference key="parent" ref="739520386"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">82</int>
+						<reference key="object" ref="401169005"/>
 						<reference key="parent" ref="739520386"/>
 					</object>
 				</object>
@@ -646,16 +665,17 @@
 					<string>57.IBViewBoundsToFrameTransform</string>
 					<string>65.IBPluginDependency</string>
 					<string>70.IBPluginDependency</string>
+					<string>82.IBPluginDependency</string>
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>TouchViewController</string>
 					<string>UIResponder</string>
-					<string>{{171, 0}, {1019, 756}}</string>
+					<string>{{-163, 0}, {1019, 756}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAAAAAAAAwiQAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAADBIAAAwiQAAA</bytes>
 					</object>
 					<string>IBBuiltInLabel-Green</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -664,7 +684,7 @@
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAAAAAAAAxDCAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAADB+AAAxDqAAA</bytes>
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -703,6 +723,7 @@
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="unlocalizedProperties">
@@ -721,7 +742,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">81</int>
+			<int key="maxID">83</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -737,6 +758,7 @@
 							<string>doneButtonPressed:</string>
 							<string>editText:</string>
 							<string>lockScreen:</string>
+							<string>logOut:</string>
 							<string>sendAltF4:</string>
 							<string>sendAltTab:</string>
 							<string>sendCtrlC:</string>
@@ -764,6 +786,7 @@
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
+							<string>id</string>
 						</object>
 					</object>
 					<object class="NSMutableDictionary" key="actionInfosByName">
@@ -774,6 +797,7 @@
 							<string>doneButtonPressed:</string>
 							<string>editText:</string>
 							<string>lockScreen:</string>
+							<string>logOut:</string>
 							<string>sendAltF4:</string>
 							<string>sendAltTab:</string>
 							<string>sendCtrlC:</string>
@@ -801,6 +825,10 @@
 							</object>
 							<object class="IBActionInfo">
 								<string key="name">lockScreen:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">logOut:</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">

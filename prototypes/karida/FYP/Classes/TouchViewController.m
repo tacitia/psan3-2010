@@ -78,6 +78,18 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView;
 	[imageView addGestureRecognizer:panRecognizer];
 	
 	/*
+	//Two finger pan
+	UIPanGestureRecognizer* pan2Recognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handleTwoFingerPan:)];
+	[panRecognizer setMinimumNumberOfTouches:2];
+	[panRecognizer setMaximumNumberOfTouches:2];
+	[imageView addGestureRecognizer:panRecognizer];
+	
+	[panRecognizer requireGestureRecognizerToFail:pan2Recognizer];
+	
+	[pan2Recognizer release];
+	 */
+	
+	/*
 	  Following gestures are optional
 	 */
 	
@@ -122,6 +134,7 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView;
 	//Configuration page set up
 	configurationModalInTouchViewController = [[ConfigurationModal alloc] initWithNibName:@"ConfigurationModal" bundle:Nil];
 	
+	//NSLog(@"touch view loaded!");
 }
 
 - (void)updateImage:(UIImage *)myimage {
@@ -169,10 +182,7 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView;
 		keyboardIsOut = FALSE;
 
 	}
-	 
-	
 }
-
 
 //Functions for locking/unlocking the scree
 /*
@@ -243,7 +253,7 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView;
 
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView { 
 	return imageView;
-}  
+}	
 
 #pragma mark TapDetectingImageViewDelegate methods  
 
@@ -289,6 +299,7 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView;
 - (void)handleDoubleTap:(UIGestureRecognizer *)gestureRecognizer {
 	NSLog(@"Double Tap!");
 	
+	[vnccore sendDoubleLeftClickEventAtPosition:[gestureRecognizer locationInView:self.imageView]];
 	/*
 	// single finger double tap is to zoom in  
 	float newScale = [imageScrollView zoomScale] * ZOOM_STEP;  
@@ -348,9 +359,33 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView;
 		
 		endLocation = [gestureRecognizer locationInView:self.imageView];
         NSLog(@"end is : ( %f , %f )", endLocation.x, endLocation.y);
-        
+		
+        [vnccore sendMouseDragEventFromPosition:startLocation toPosition:endLocation];
     }
-	[vnccore sendMouseDragEventFromPosition:startLocation toPosition:endLocation];
+	
+}
+
+-(void)handleTwoFingerPan:(UIPanGestureRecognizer *)gestureRecognizer {
+	if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {		
+		prevLocation = [gestureRecognizer locationInView:self.imageView];
+		NSLog(@"start for three fingers is : ( %f , %f )", startLocation.x, startLocation.y);
+    }
+    else if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {	
+	}
+	else {
+		curLocation = [gestureRecognizer locationInView:self.imageView];
+		
+		if (curLocation.y > prevLocation.y) {
+			//Scroll down
+			NSLog(@"Scroll Down");
+		}
+		else {
+			//Scroll up
+			NSLog(@"Scroll Up");
+		}
+		//Update Previous Location
+		prevLocation = curLocation;
+	}
 }
 
 -(void)handleThreeFingerPan:(UIPanGestureRecognizer *)gestureRecognizer {
@@ -361,8 +396,10 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView;
 	if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {		
 		startLocation = [gestureRecognizer locationInView:self.imageView];
 		NSLog(@"start for three fingers is : ( %f , %f )", startLocation.x, startLocation.y);
+		[vnccore sendPressAltPlusShift];
     }
-    else if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {		
+    else if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {	
+		[vnccore sendReleaseAltPlusShift];
 		endLocation = [gestureRecognizer locationInView:self.imageView];
         NSLog(@"end for three fingers is : ( %f , %f )", endLocation.x, endLocation.y);
 		
@@ -381,22 +418,11 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView;
 				if (temp % 2 == 1) {
 					//it is activated
 					NSLog(@"Left Pan!");
-				
 				}
 				else {
 					//it is deactivated
 					NSLog(@"Left Pan Turned Off!");
 				}
-				
-				/*
-				Boolean s = configurationModalInTouchViewController->threeFingerPanLeftRecognizerActivated;
-				if (s == TRUE) {
-					NSLog(@"Left Pan!");
-				}
-				else {
-					NSLog(@"Left Pan Turned Off!");
-				}
-				 */
 			}
 		}
 		else {
@@ -415,16 +441,6 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView;
 						//it is deactivated
 						NSLog(@"Up Pan Turned Off!");
 					}
-					
-					/*
-					Boolean s = configurationModalInTouchViewController->threeFingerPanUpRecognizerActivated;
-					if (s == TRUE) {
-						NSLog(@"Up pan!");
-					}
-					else {
-						NSLog(@"Up pan Turned Off!");
-					}
-					 */
 				}
 			}
 			else {
@@ -442,30 +458,30 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView;
 						//it is deactivated
 						NSLog(@"Down Pan Turned Off!");
 					}
-					/*
-					Boolean s = configurationModalInTouchViewController->threeFingerPanDownRecognizerActivated;
-					if (s == TRUE) {
-						NSLog(@"Down pan!");
-					}
-					else {
-						NSLog(@"Down pan Turned Off!");
-					}
-					 */
 				}
 			}
 		}
 	}
 	else {
-		//Count add one to itself. When count up to 30, send alt+shift+tab to server
-		countThreeFingerPan++;
-		if (countThreeFingerPan >30) {
-			//Send tab to server while alt+shift is pressed down
-			NSLog(@"count up to 30!!");
+		endLocation = [gestureRecognizer locationInView:self.imageView];
+		
+		//Identify whether it is up, down or left pan
+		double diffX = fabs(startLocation.x - endLocation.x);
+		double diffY = fabs(startLocation.y - endLocation.y);
+		
+		if (diffX > diffY) {
+			//It is left pan
+			//Count add one to itself. When count up to 30, send alt+shift+tab to server
+			countThreeFingerPan++;
+			if (countThreeFingerPan >15) {
+				//Send tab to server while alt+shift is pressed down
+				NSLog(@"count up to 15!!");
+				[vnccore sendTab];
 			
-			
-			//Clear the count
-			countThreeFingerPan = 0;
-		}
+				//Clear the count
+				countThreeFingerPan = 0;
+			}
+		}			
 	}
 }
 -(void)handleLongPress:(UILongPressGestureRecognizer *)gestureRecognizer {
@@ -521,14 +537,27 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView;
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-	
-	if (buttonIndex == 0)
-	{
-		NSLog(@"Cancel Button");
+	if (alertView.title == @"Caution!"){
+		if (buttonIndex == 0)
+		{
+			NSLog(@"Cancel Close Window");
+		}
+		else
+		{
+			NSLog(@"Close Current Window!");
+			[vnccore sendAltPlusF4];
+		}
 	}
-	else
-	{
-		NSLog(@"Close Current Window!");
+	else {
+		if (buttonIndex == 0)
+		{
+			NSLog(@"Cancel Log Out");
+		}
+		else
+		{
+			NSLog(@"Log Out!");
+			[vnccore logout];
+		}
 	}
 }
 
@@ -638,6 +667,17 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView;
 	[vnccore sendAltPlusF4];
 }
 
+- (IBAction) logOut:(id)sender{
+	//NSLog(@"Log Out !");
+	UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Log Out"
+													 message:@"End Connection?"
+													delegate:self 
+										   cancelButtonTitle:@"No" 
+										   otherButtonTitles:nil];
+	[alert addButtonWithTitle:@"Yes"];
+	[alert show];
+	[alert release];
+}
 
 #pragma mark Utility methods  
 

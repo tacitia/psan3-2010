@@ -27,6 +27,7 @@
 		7A922C9512FD106A0082D352 /* rotation.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A922C9412FD106A0082D352 /* rotation.png */; };
 		7A922C9712FD10780082D352 /* swipe.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A922C9612FD10780082D352 /* swipe.png */; };
 		7AAB737113452869003A2A60 /* configurationicon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7AAB737013452869003A2A60 /* configurationicon.jpg */; };
+		7AB4E663135F4A7400EB0B9C /* tap-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB4E662135F4A7400EB0B9C /* tap-1.png */; };
 		7AB9F86E13531F9500B71D74 /* core.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB9F86D13531F9500B71D74 /* core.png */; };
 		7AB9F8701353207000B71D74 /* tap.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB9F86F1353207000B71D74 /* tap.png */; };
 		7AB9F8721353278000B71D74 /* two finger pinch.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB9F8711353277F00B71D74 /* two finger pinch.png */; };
@@ -73,6 +74,7 @@
 		7A922C9412FD106A0082D352 /* rotation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rotation.png; sourceTree = "<group>"; };
 		7A922C9612FD10780082D352 /* swipe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swipe.png; sourceTree = "<group>"; };
 		7AAB737013452869003A2A60 /* configurationicon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = configurationicon.jpg; sourceTree = "<group>"; };
+		7AB4E662135F4A7400EB0B9C /* tap-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tap-1.png"; sourceTree = "<group>"; };
 		7AB9F86D13531F9500B71D74 /* core.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = core.png; sourceTree = "<group>"; };
 		7AB9F86F1353207000B71D74 /* tap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tap.png; sourceTree = "<group>"; };
 		7AB9F8711353277F00B71D74 /* two finger pinch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "two finger pinch.png"; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7AB4E662135F4A7400EB0B9C /* tap-1.png */,
 				7A6C95FE13533F4400862838 /* help back groundt.png */,
 				7AB9F87D13532BD500B71D74 /* Long Press.png */,
 				7AB9F87B13532A2400B71D74 /* three finger swip.png */,
@@ -274,6 +277,7 @@
 				7AB9F87C13532A2400B71D74 /* three finger swip.png in Resources */,
 				7AB9F87E13532BD500B71D74 /* Long Press.png in Resources */,
 				7A6C95FF13533F4400862838 /* help back groundt.png in Resources */,
+				7AB4E663135F4A7400EB0B9C /* tap-1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

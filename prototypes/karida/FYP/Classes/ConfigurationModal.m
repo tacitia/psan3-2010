@@ -63,7 +63,7 @@
 	
 		[ConfigArray addObject:generalInfoDict];
 		[ConfigArray addObject:gestureDic];
-		[ConfigArray addObject:@"Log Out"];
+		//[ConfigArray addObject:@"Log Out"];
 		
 		self.navigationItem.title = @"Configuration";
 		
@@ -145,9 +145,9 @@
 	else if (section == 1){
 		return 5;
 	}
-	else{
-		return 1;
-	}
+	//else{
+	//	return 1;
+	//}
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
@@ -157,9 +157,9 @@
 	else if (section == 1){
 		return @"Gesture Selection";
 	}
-	else {
-		return @"End Connection";
-	}
+	//else {
+	//	return @"End Connection";
+	//}
 
 }
 
@@ -202,6 +202,7 @@
 		
 		return cell;
 	}
+	/*
 	else {
 		static NSString *CellIdentifier = @"LogOutCell";
 		
@@ -216,7 +217,7 @@
 		return cell;
 		
 	}
-
+	 */
 }
 
 - (void) switchChanged:(id)sender {
@@ -266,19 +267,31 @@
 			
 		}
 	}
+	/*
 	else if([indexPath section] == 2){
 		NSLog(@"Log Out!");
-		[self.view.superview removeFromSuperview];
-		//[self.view removeFromSuperview];
+		
+		[self.view removeFromSuperview];
+		
+		//[self.view.superview removeFromSuperview];
 		//[(TouchViewController *)super endConnection];
 
 	}
-
+	 */
 }
 
 
 - (void)dealloc {
-	[ConfigTable dealloc];
+	[ConfigTable release];
+	[ConfigArray release];
+	[helpView release];
+	
+	[switchInCell1 release];
+	[switchInCell2 release];
+	[switchInCell3 release];
+	[switchInCell4 release];
+	[switchInCell5 release];
+	[switchArray release];
 	
     [super dealloc];
 	
