@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "VNCCore.h"
+#import "saveGesture.h"
 
 @class ConfigurationModal;
 
@@ -57,6 +58,8 @@
 	CGPoint prevLocation;
 	CGPoint curLocation;
 	
+	saveGesture * saveFirstPoint;
+	
 }
 
 @property (nonatomic, retain) IBOutlet UIScrollView *imageScrollView;
@@ -75,6 +78,8 @@
 @property (nonatomic, retain) UIPanGestureRecognizer *threeFingerPanRecognizer;
 @property (nonatomic, retain) UITapGestureRecognizer *twoFingerTap;
 @property (nonatomic, retain) UILongPressGestureRecognizer * longPress;
+
+@property (nonatomic, retain) saveGesture * saveFirstPoint;
 
 - (void)updateImage:(UIImage *)myimage;
 

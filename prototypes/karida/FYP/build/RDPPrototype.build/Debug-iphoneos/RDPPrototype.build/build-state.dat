@@ -238,8 +238,8 @@ i"RDPCore.h"
 i"VNCCore.h"
 
 N/FYP/Classes/RDPPrototypeViewController.m
-c000000004DAF18E40000000000000E1F
-t1303320804
+c000000004DAF1D9E0000000000000E1F
+t1303322014
 s3615
 i"RDPPrototypeViewController.h"
 i"TouchViewController.h"
@@ -253,9 +253,9 @@ i<UIKit/UIKit.h>
 i"VNCCore.h"
 
 N/FYP/Classes/TouchViewController.m
-c000000004DAF1792000000000000523B
-t1303320466
-s21051
+c000000004DAF1AFD000000000000529F
+t1303321341
+s21151
 i"TouchViewController.h"
 i"ConfigurationModal.h"
 
@@ -359,7 +359,7 @@ s8
 
 N/FYP/build/Debug-iphoneos/RDPPrototype.app/RDPPrototype
 t1303320808
-s298368
+s308976
 
 N/FYP/build/Debug-iphoneos/RDPPrototype.app/RDPPrototypeViewController.nib
 t1303311841

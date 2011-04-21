@@ -8,6 +8,7 @@
 
 #import "TouchViewController.h"
 #import "ConfigurationModal.h"
+#import "saveGesture.h"
 
 #define ZOOM_STEP 1.5  
 
@@ -17,7 +18,7 @@
 
 @implementation TouchViewController
 @synthesize image, imageView, configurationModalInTouchViewController, imageScrollView, inputText, vnccore,
-panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView;
+panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView,saveFirstPoint;
 
 
  // The designated initializer. Override to perform setup that is required before the view is loaded.
@@ -75,7 +76,13 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView;
 	panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
 	[panRecognizer setMinimumNumberOfTouches:1];
 	[panRecognizer setMaximumNumberOfTouches:1];
+	//[panRecognizer setCancelsTouchesInView:NO];
+	
 	[imageView addGestureRecognizer:panRecognizer];
+	
+	//Save gesture: a "V" shape
+	saveFirstPoint = [[saveGesture alloc] init];
+	[imageView addGestureRecognizer:(UIGestureRecognizer *)saveFirstPoint];
 	
 	/*
 	//Two finger pan
@@ -116,6 +123,7 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView;
 	[imageScrollView setMaximumZoomScale:5.0];
 	[imageScrollView setMinimumZoomScale:minimumScale];
 	[imageScrollView setZoomScale:minimumScale];
+	
 	
 	
 	//Default the keyboard should not present
@@ -183,6 +191,20 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView;
 
 	}
 }
+
+/*
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+	NSLog(@"Touch Begin!");
+    NSSet *allTouches = [event allTouches]; 
+	
+    for (UITouch *touch in allTouches) 
+    { 
+        CGPoint location = [touch locationInView:touch.view];
+		NSLog(@"the touch is at: ( %f , %f )", location.x, location.y);
+	}
+}
+ */
 
 //Functions for locking/unlocking the scree
 /*
@@ -352,7 +374,11 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView;
 	if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {
 		
         startLocation = [gestureRecognizer locationInView:self.imageView];
-		NSLog(@"start is : ( %f , %f )", startLocation.x, startLocation.y);
+		//NSLog(@"start is : ( %f , %f )", startLocation.x, startLocation.y);
+		if (saveFirstPoint != NULL) {
+			NSLog(@"Sent start is : ( %f , %f )", (saveFirstPoint->firstPosition).x, (saveFirstPoint->firstPosition).y);
+		}
+		
 		
     }
     else if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {
@@ -360,7 +386,7 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView;
 		endLocation = [gestureRecognizer locationInView:self.imageView];
         NSLog(@"end is : ( %f , %f )", endLocation.x, endLocation.y);
 		
-        [vnccore sendMouseDragEventFromPosition:startLocation toPosition:endLocation];
+        [vnccore sendMouseDragEventFromPosition:saveFirstPoint->firstPosition toPosition:endLocation];
     }
 	
 }
