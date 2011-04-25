@@ -266,6 +266,17 @@
 			[UIView commitAnimations];
 			
 		}
+		else {
+
+			UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Connection Information!"
+															 message:@"Do you want to close the current window?"
+															delegate:self 
+												   cancelButtonTitle:@"OK" 
+												   otherButtonTitles:nil];
+			[alert show];
+			[alert release];			
+		}
+
 	}
 	/*
 	else if([indexPath section] == 2){

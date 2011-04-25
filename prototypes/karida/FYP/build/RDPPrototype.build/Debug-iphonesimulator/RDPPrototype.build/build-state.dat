@@ -1,7 +1,7 @@
 TRDPPrototype
 v7
 r0
-t325050046.105675
+t325344026.963472
 cCheck dependencies
 cProcessInfoPlistFile /FYP/build/Debug-iphonesimulator/RDPPrototype.app/Info.plist RDPPrototype-Info.plist
 cCompileXIB /FYP/MainWindow.xib
@@ -39,9 +39,6 @@ cCompileC build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Obje
 cCompileC build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/HelpPage.o /FYP/Classes/HelpPage.m normal i386 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/GlobalConstants.o /FYP/Classes/GlobalConstants.m normal i386 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/saveGesture.o /FYP/Classes/saveGesture.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cLd /FYP/build/Debug-iphonesimulator/RDPPrototype.app/RDPPrototype normal i386
-cGenerateDSYMFile /FYP/build/Debug-iphonesimulator/RDPPrototype.app.dSYM /FYP/build/Debug-iphonesimulator/RDPPrototype.app/RDPPrototype
-cTouch /FYP/build/Debug-iphonesimulator/RDPPrototype.app
 
 N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk
 c000000004D219BAF0000000000000110
@@ -98,6 +95,11 @@ c000000004D54CFB80000000000001466
 t1297403832
 s5222
 
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIGestureRecognizerSubclass.h
+c000000004D5615B50000000000000926
+t1297487285
+s2342
+
 N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
 c000000004D5615B40000000000000AA1
 t1297487284
@@ -126,9 +128,9 @@ i<UIKit/UIKit.h>
 i"HelpPage.h"
 
 N/FYP/Classes/ConfigurationModal.m
-c000000004DAEFF3A00000000000021C6
-t1303314234
-s8646
+c000000004DB423AB0000000000002305
+t1303651243
+s8965
 i"ConfigurationModal.h"
 i"HelpPage.h"
 i"TouchViewController.h"
@@ -154,6 +156,18 @@ N/FYP/Classes/HelpPage.xib
 c000000004DAF1311000000000000CBE4
 t1303319313
 s52196
+
+N/FYP/Classes/MyGestureDelegate.h
+c000000004DB20E79000000000000014A
+t1303514745
+s330
+i<Cocoa/Cocoa.h>
+
+N/FYP/Classes/MyGestureDelegate.m
+c000000004DB20DE600000000000005CB
+t1303514598
+s1483
+i"MyGestureDelegate.h"
 
 N/FYP/Classes/NSStreamAdditions.h
 c000000004D6DB1240000000000000161
@@ -216,25 +230,25 @@ i"RDPCore.h"
 i"VNCCore.h"
 
 N/FYP/Classes/RDPPrototypeViewController.m
-c000000004DAF1D9E0000000000000E1F
-t1303322014
+c000000004DB41F980000000000000E1F
+t1303650200
 s3615
 i"RDPPrototypeViewController.h"
 i"TouchViewController.h"
 
 N/FYP/Classes/TouchViewController.h
-c000000004DAFA5430000000000000BBD
-t1303356739
-s3005
+c000000004DB423FE0000000000000C25
+t1303651326
+s3109
 i<Foundation/Foundation.h>
 i<UIKit/UIKit.h>
 i"VNCCore.h"
 i"saveGesture.h"
 
 N/FYP/Classes/TouchViewController.m
-c000000004DAFA739000000000000557E
-t1303357241
-s21886
+c000000004DB423C400000000000056E4
+t1303651268
+s22244
 i"TouchViewController.h"
 i"ConfigurationModal.h"
 i"saveGesture.h"
@@ -258,12 +272,12 @@ N/FYP/Classes/saveGesture.h
 c000000004DAFA4FA0000000000000326
 t1303356666
 s806
-i<Cocoa/Cocoa.h>
+i<UIKit/UIGestureRecognizerSubclass.h>
 
 N/FYP/Classes/saveGesture.m
-c000000004DAFA5CA00000000000007F5
-t1303356874
-s2037
+c000000004DB41EB700000000000008B7
+t1303649975
+s2231
 i"saveGesture.h"
 
 N/FYP/ConfigurationModal.xib
@@ -319,11 +333,11 @@ t1299034404
 s386893
 
 N/FYP/build/Debug-iphonesimulator/RDPPrototype.app
-t1303357246
+t1303650534
 s952
 
 N/FYP/build/Debug-iphonesimulator/RDPPrototype.app.dSYM
-t1303357246
+t1303650534
 s136
 
 N/FYP/build/Debug-iphonesimulator/RDPPrototype.app/ConfigurationModal.nib
@@ -359,8 +373,8 @@ t1303271145
 s8
 
 N/FYP/build/Debug-iphonesimulator/RDPPrototype.app/RDPPrototype
-t1303357245
-s154160
+t1303650534
+s154144
 
 N/FYP/build/Debug-iphonesimulator/RDPPrototype.app/RDPPrototypeViewController.nib
 t1303309512
@@ -443,8 +457,8 @@ t1303271214
 s25730
 
 N/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/ConfigurationModal.o
-t1303356858
-s70888
+t2
+s0
 
 N/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/GlobalConstants.o
 t1303309513
@@ -453,6 +467,10 @@ s4960
 N/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/HelpPage.o
 t1303271221
 s40456
+
+N/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/MyGestureDelegate.o
+t2
+s0
 
 N/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/NSStreamAdditions.o
 t1303271221
@@ -467,8 +485,8 @@ t1303309513
 s63512
 
 N/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/RDPPrototype.LinkFileList
-c000000004DAFA2A30000000000000516
-t1303356067
+c000000004DB20EEA0000000000000516
+t1303514858
 s1302
 
 N/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/RDPPrototypeAppDelegate.o
@@ -476,12 +494,12 @@ t1303322023
 s53248
 
 N/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/RDPPrototypeViewController.o
-t1303356858
-s60268
+t1303651082
+s60288
 
 N/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/TouchViewController.o
-t1303357245
-s107624
+t2
+s0
 
 N/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/VNCCore.o
 t1303322023
@@ -492,8 +510,8 @@ t1303271220
 s6244
 
 N/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/saveGesture.o
-t1303356878
-s42196
+t1303649984
+s42244
 
 N/FYP/configurationicon.jpg
 c000000004D94F0C4000000000000D8DF
@@ -1594,12 +1612,12 @@ s1330
 
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies325050045#325050045#0(0"0(0#1#0"8623661248#0"0#
+lSLF07#2@18"Check dependencies325344026#325344026#0(0"0(0#1#0"8617512672#0"0#
 
 CCompileC build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/ConfigurationModal.o /FYP/Classes/ConfigurationModal.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s325049658.382730
-e325049658.593691
-r1
+s325344026.840889
+e325344026.963394
+r0
 xCompileC
 xbuild/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/ConfigurationModal.o
 x/FYP/Classes/ConfigurationModal.m
@@ -1613,7 +1631,368 @@ o/FYP/Classes/ConfigurationModal.m: In function '-[ConfigurationModal tableView:
 o/FYP/Classes/ConfigurationModal.m:164: warning: control reaches end of non-void function
 o/FYP/Classes/ConfigurationModal.m: In function '-[ConfigurationModal tableView:cellForRowAtIndexPath:]':
 o/FYP/Classes/ConfigurationModal.m:221: warning: control reaches end of non-void function
-lSLF07#2@41"Compile /FYP/Classes/ConfigurationModal.m325049658#325049658#0(584"/FYP/Classes/ConfigurationModal.m: In function '-[ConfigurationModal tableView:numberOfRowsInSection:]':/FYP/Classes/ConfigurationModal.m:151: warning: control reaches end of non-void function/FYP/Classes/ConfigurationModal.m: In function '-[ConfigurationModal tableView:titleForHeaderInSection:]':/FYP/Classes/ConfigurationModal.m:164: warning: control reaches end of non-void function/FYP/Classes/ConfigurationModal.m: In function '-[ConfigurationModal tableView:cellForRowAtIndexPath:]':/FYP/Classes/ConfigurationModal.m:221: warning: control reaches end of non-void function3(22@40"Control reaches end of non-void function325049658#105#89#0(6@33"/FYP/Classes/ConfigurationModal.m325007034#151#0#151#0#40"control reaches end of non-void function0(22@40"Control reaches end of non-void function325049658#301#89#0(6@33"/FYP/Classes/ConfigurationModal.m325007034#164#0#164#0#40"control reaches end of non-void function0(22@40"Control reaches end of non-void function325049658#495#89#0(6@33"/FYP/Classes/ConfigurationModal.m325007034#221#0#221#0#40"control reaches end of non-void function0(0#0#33"/FYP/Classes/ConfigurationModal.m8624182240#1676"    cd /FYP    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-generated-files.hmap -I/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-own-target-headers.hmap -I/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-all-target-headers.hmap -iquote /FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-project-headers.hmap -F/FYP/build/Debug-iphonesimulator -I/FYP/build/Debug-iphonesimulator/include -I/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/DerivedSources/i386 -I/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/DerivedSources -include /var/folders/qa/qadnqY9JHEiDaY75O-wF-U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RDPPrototype_Prefix-hijanvzymbnzasefekglgkmzavvo/RDPPrototype_Prefix.pch -c /FYP/Classes/ConfigurationModal.m -o /FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/ConfigurationModal.o0#
+o/FYP/Classes/ConfigurationModal.m: In function '-[ConfigurationModal tableView:didSelectRowAtIndexPath:]':
+o/FYP/Classes/ConfigurationModal.m:271: error: expected ')' before '->' token
+o/FYP/Classes/ConfigurationModal.m:271: error: expected expression before '.' token
+o{standard input}:1775:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.tempActivated$non_lazy_ptr" minus "L00000000010$pb"
+o{standard input}:1775:symbol: "L_OBJC_IVAR_$_ConfigurationModal.tempActivated$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:1758:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_31" minus "L00000000010$pb"
+o{standard input}:1758:symbol: "L_OBJC_SELECTOR_REFERENCES_31" can't be undefined in a subtraction expression
+o{standard input}:1752:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.tempActivated$non_lazy_ptr" minus "L00000000010$pb"
+o{standard input}:1752:symbol: "L_OBJC_IVAR_$_ConfigurationModal.tempActivated$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:1746:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.tempActivated$non_lazy_ptr" minus "L00000000010$pb"
+o{standard input}:1746:symbol: "L_OBJC_IVAR_$_ConfigurationModal.tempActivated$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:1727:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_31" minus "L00000000010$pb"
+o{standard input}:1727:symbol: "L_OBJC_SELECTOR_REFERENCES_31" can't be undefined in a subtraction expression
+o{standard input}:1721:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.tempActivated$non_lazy_ptr" minus "L00000000010$pb"
+o{standard input}:1721:symbol: "L_OBJC_IVAR_$_ConfigurationModal.tempActivated$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:1715:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.tempActivated$non_lazy_ptr" minus "L00000000010$pb"
+o{standard input}:1715:symbol: "L_OBJC_IVAR_$_ConfigurationModal.tempActivated$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:1693:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_31" minus "L00000000010$pb"
+o{standard input}:1693:symbol: "L_OBJC_SELECTOR_REFERENCES_31" can't be undefined in a subtraction expression
+o{standard input}:1687:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.tempActivated$non_lazy_ptr" minus "L00000000010$pb"
+o{standard input}:1687:symbol: "L_OBJC_IVAR_$_ConfigurationModal.tempActivated$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:1676:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.tempActivated$non_lazy_ptr" minus "L00000000010$pb"
+o{standard input}:1676:symbol: "L_OBJC_IVAR_$_ConfigurationModal.tempActivated$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:1585:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_26" minus "L00000000009$pb"
+o{standard input}:1585:symbol: "L_OBJC_SELECTOR_REFERENCES_26" can't be undefined in a subtraction expression
+o{standard input}:1579:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_30" minus "L00000000009$pb"
+o{standard input}:1579:symbol: "L_OBJC_SELECTOR_REFERENCES_30" can't be undefined in a subtraction expression
+o{standard input}:1570:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_14" minus "L00000000009$pb"
+o{standard input}:1570:symbol: "L_OBJC_SELECTOR_REFERENCES_14" can't be undefined in a subtraction expression
+o{standard input}:1564:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_27" minus "L00000000009$pb"
+o{standard input}:1564:symbol: "L_OBJC_SELECTOR_REFERENCES_27" can't be undefined in a subtraction expression
+o{standard input}:1554:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_25" minus "L00000000009$pb"
+o{standard input}:1554:symbol: "L_OBJC_SELECTOR_REFERENCES_25" can't be undefined in a subtraction expression
+o{standard input}:1544:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_14" minus "L00000000009$pb"
+o{standard input}:1544:symbol: "L_OBJC_SELECTOR_REFERENCES_14" can't be undefined in a subtraction expression
+o{standard input}:1538:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_21" minus "L00000000009$pb"
+o{standard input}:1538:symbol: "L_OBJC_SELECTOR_REFERENCES_21" can't be undefined in a subtraction expression
+o{standard input}:1531:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.ConfigArray$non_lazy_ptr" minus "L00000000009$pb"
+o{standard input}:1531:symbol: "L_OBJC_IVAR_$_ConfigurationModal.ConfigArray$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:1522:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_29" minus "L00000000009$pb"
+o{standard input}:1522:symbol: "L_OBJC_SELECTOR_REFERENCES_29" can't be undefined in a subtraction expression
+o{standard input}:1514:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_14" minus "L00000000009$pb"
+o{standard input}:1514:symbol: "L_OBJC_SELECTOR_REFERENCES_14" can't be undefined in a subtraction expression
+o{standard input}:1507:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchArray$non_lazy_ptr" minus "L00000000009$pb"
+o{standard input}:1507:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchArray$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:1498:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_28" minus "L00000000009$pb"
+o{standard input}:1498:symbol: "L_OBJC_SELECTOR_REFERENCES_28" can't be undefined in a subtraction expression
+o{standard input}:1491:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_14" minus "L00000000009$pb"
+o{standard input}:1491:symbol: "L_OBJC_SELECTOR_REFERENCES_14" can't be undefined in a subtraction expression
+o{standard input}:1484:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchArray$non_lazy_ptr" minus "L00000000009$pb"
+o{standard input}:1484:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchArray$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:1476:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_24" minus "L00000000009$pb"
+o{standard input}:1476:symbol: "L_OBJC_SELECTOR_REFERENCES_24" can't be undefined in a subtraction expression
+o{standard input}:1462:non-relocatable subtraction expression, "L_CGRectZero$non_lazy_ptr" minus "L00000000009$pb"
+o{standard input}:1462:symbol: "L_CGRectZero$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:1459:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_23" minus "L00000000009$pb"
+o{standard input}:1459:symbol: "L_OBJC_SELECTOR_REFERENCES_23" can't be undefined in a subtraction expression
+o{standard input}:1451:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_1" minus "L00000000009$pb"
+o{standard input}:1451:symbol: "L_OBJC_SELECTOR_REFERENCES_1" can't be undefined in a subtraction expression
+o{standard input}:1448:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_5" minus "L00000000009$pb"
+o{standard input}:1448:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_5" can't be undefined in a subtraction expression
+o{standard input}:1437:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_22" minus "L00000000009$pb"
+o{standard input}:1437:symbol: "L_OBJC_SELECTOR_REFERENCES_22" can't be undefined in a subtraction expression
+o{standard input}:1427:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_27" minus "L00000000009$pb"
+o{standard input}:1427:symbol: "L_OBJC_SELECTOR_REFERENCES_27" can't be undefined in a subtraction expression
+o{standard input}:1417:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_21" minus "L00000000009$pb"
+o{standard input}:1417:symbol: "L_OBJC_SELECTOR_REFERENCES_21" can't be undefined in a subtraction expression
+o{standard input}:1402:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_26" minus "L00000000009$pb"
+o{standard input}:1402:symbol: "L_OBJC_SELECTOR_REFERENCES_26" can't be undefined in a subtraction expression
+o{standard input}:1396:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_30" minus "L00000000009$pb"
+o{standard input}:1396:symbol: "L_OBJC_SELECTOR_REFERENCES_30" can't be undefined in a subtraction expression
+o{standard input}:1387:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_14" minus "L00000000009$pb"
+o{standard input}:1387:symbol: "L_OBJC_SELECTOR_REFERENCES_14" can't be undefined in a subtraction expression
+o{standard input}:1381:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_27" minus "L00000000009$pb"
+o{standard input}:1381:symbol: "L_OBJC_SELECTOR_REFERENCES_27" can't be undefined in a subtraction expression
+o{standard input}:1371:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_25" minus "L00000000009$pb"
+o{standard input}:1371:symbol: "L_OBJC_SELECTOR_REFERENCES_25" can't be undefined in a subtraction expression
+o{standard input}:1361:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_14" minus "L00000000009$pb"
+o{standard input}:1361:symbol: "L_OBJC_SELECTOR_REFERENCES_14" can't be undefined in a subtraction expression
+o{standard input}:1355:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_21" minus "L00000000009$pb"
+o{standard input}:1355:symbol: "L_OBJC_SELECTOR_REFERENCES_21" can't be undefined in a subtraction expression
+o{standard input}:1348:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.ConfigArray$non_lazy_ptr" minus "L00000000009$pb"
+o{standard input}:1348:symbol: "L_OBJC_IVAR_$_ConfigurationModal.ConfigArray$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:1339:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_24" minus "L00000000009$pb"
+o{standard input}:1339:symbol: "L_OBJC_SELECTOR_REFERENCES_24" can't be undefined in a subtraction expression
+o{standard input}:1325:non-relocatable subtraction expression, "L_CGRectZero$non_lazy_ptr" minus "L00000000009$pb"
+o{standard input}:1325:symbol: "L_CGRectZero$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:1322:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_23" minus "L00000000009$pb"
+o{standard input}:1322:symbol: "L_OBJC_SELECTOR_REFERENCES_23" can't be undefined in a subtraction expression
+o{standard input}:1314:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_1" minus "L00000000009$pb"
+o{standard input}:1314:symbol: "L_OBJC_SELECTOR_REFERENCES_1" can't be undefined in a subtraction expression
+o{standard input}:1311:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_5" minus "L00000000009$pb"
+o{standard input}:1311:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_5" can't be undefined in a subtraction expression
+o{standard input}:1300:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_22" minus "L00000000009$pb"
+o{standard input}:1300:symbol: "L_OBJC_SELECTOR_REFERENCES_22" can't be undefined in a subtraction expression
+o{standard input}:1288:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_21" minus "L00000000009$pb"
+o{standard input}:1288:symbol: "L_OBJC_SELECTOR_REFERENCES_21" can't be undefined in a subtraction expression
+o{standard input}:1136:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_20" minus "L00000000007$pb"
+o{standard input}:1136:symbol: "L_OBJC_SELECTOR_REFERENCES_20" can't be undefined in a subtraction expression
+o{standard input}:1130:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.ConfigArray$non_lazy_ptr" minus "L00000000007$pb"
+o{standard input}:1130:symbol: "L_OBJC_IVAR_$_ConfigurationModal.ConfigArray$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:1102:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_19" minus "L00000000006$pb"
+o{standard input}:1102:symbol: "L_OBJC_SELECTOR_REFERENCES_19" can't be undefined in a subtraction expression
+o{standard input}:1098:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_SUP_REFS_$_0" minus "L00000000006$pb"
+o{standard input}:1098:symbol: "L_OBJC_CLASSLIST_SUP_REFS_$_0" can't be undefined in a subtraction expression
+o{standard input}:1069:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_18" minus "L00000000005$pb"
+o{standard input}:1069:symbol: "L_OBJC_SELECTOR_REFERENCES_18" can't be undefined in a subtraction expression
+o{standard input}:1065:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_SUP_REFS_$_0" minus "L00000000005$pb"
+o{standard input}:1065:symbol: "L_OBJC_CLASSLIST_SUP_REFS_$_0" can't be undefined in a subtraction expression
+o{standard input}:1021:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_16" minus "L00000000004$pb"
+o{standard input}:1021:symbol: "L_OBJC_SELECTOR_REFERENCES_16" can't be undefined in a subtraction expression
+o{standard input}:1015:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_17" minus "L00000000004$pb"
+o{standard input}:1015:symbol: "L_OBJC_SELECTOR_REFERENCES_17" can't be undefined in a subtraction expression
+o{standard input}:1007:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.tempActivated$non_lazy_ptr" minus "L00000000004$pb"
+o{standard input}:1007:symbol: "L_OBJC_IVAR_$_ConfigurationModal.tempActivated$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:1001:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.activated$non_lazy_ptr" minus "L00000000004$pb"
+o{standard input}:1001:symbol: "L_OBJC_IVAR_$_ConfigurationModal.activated$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:958:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_16" minus "L00000000003$pb"
+o{standard input}:958:symbol: "L_OBJC_SELECTOR_REFERENCES_16" can't be undefined in a subtraction expression
+o{standard input}:952:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_17" minus "L00000000003$pb"
+o{standard input}:952:symbol: "L_OBJC_SELECTOR_REFERENCES_17" can't be undefined in a subtraction expression
+o{standard input}:936:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_15" minus "L00000000003$pb"
+o{standard input}:936:symbol: "L_OBJC_SELECTOR_REFERENCES_15" can't be undefined in a subtraction expression
+o{standard input}:929:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_14" minus "L00000000003$pb"
+o{standard input}:929:symbol: "L_OBJC_SELECTOR_REFERENCES_14" can't be undefined in a subtraction expression
+o{standard input}:922:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchArray$non_lazy_ptr" minus "L00000000003$pb"
+o{standard input}:922:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchArray$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:912:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_15" minus "L00000000003$pb"
+o{standard input}:912:symbol: "L_OBJC_SELECTOR_REFERENCES_15" can't be undefined in a subtraction expression
+o{standard input}:905:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_14" minus "L00000000003$pb"
+o{standard input}:905:symbol: "L_OBJC_SELECTOR_REFERENCES_14" can't be undefined in a subtraction expression
+o{standard input}:898:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchArray$non_lazy_ptr" minus "L00000000003$pb"
+o{standard input}:898:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchArray$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:877:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.activated$non_lazy_ptr" minus "L00000000003$pb"
+o{standard input}:877:symbol: "L_OBJC_IVAR_$_ConfigurationModal.activated$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:863:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.activated$non_lazy_ptr" minus "L00000000003$pb"
+o{standard input}:863:symbol: "L_OBJC_IVAR_$_ConfigurationModal.activated$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:857:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.tempActivated$non_lazy_ptr" minus "L00000000003$pb"
+o{standard input}:857:symbol: "L_OBJC_IVAR_$_ConfigurationModal.tempActivated$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:814:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_13" minus "L00000000002$pb"
+o{standard input}:814:symbol: "L_OBJC_SELECTOR_REFERENCES_13" can't be undefined in a subtraction expression
+o{standard input}:810:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_SUP_REFS_$_0" minus "L00000000002$pb"
+o{standard input}:810:symbol: "L_OBJC_CLASSLIST_SUP_REFS_$_0" can't be undefined in a subtraction expression
+o{standard input}:774:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_11" minus "L00000000001$pb"
+o{standard input}:774:symbol: "L_OBJC_SELECTOR_REFERENCES_11" can't be undefined in a subtraction expression
+o{standard input}:767:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_12" minus "L00000000001$pb"
+o{standard input}:767:symbol: "L_OBJC_SELECTOR_REFERENCES_12" can't be undefined in a subtraction expression
+o{standard input}:759:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_10" minus "L00000000001$pb"
+o{standard input}:759:symbol: "L_OBJC_SELECTOR_REFERENCES_10" can't be undefined in a subtraction expression
+o{standard input}:752:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.ConfigArray$non_lazy_ptr" minus "L00000000001$pb"
+o{standard input}:752:symbol: "L_OBJC_IVAR_$_ConfigurationModal.ConfigArray$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:744:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_10" minus "L00000000001$pb"
+o{standard input}:744:symbol: "L_OBJC_SELECTOR_REFERENCES_10" can't be undefined in a subtraction expression
+o{standard input}:737:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.ConfigArray$non_lazy_ptr" minus "L00000000001$pb"
+o{standard input}:737:symbol: "L_OBJC_IVAR_$_ConfigurationModal.ConfigArray$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:727:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_9" minus "L00000000001$pb"
+o{standard input}:727:symbol: "L_OBJC_SELECTOR_REFERENCES_9" can't be undefined in a subtraction expression
+o{standard input}:722:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_4" minus "L00000000001$pb"
+o{standard input}:722:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_4" can't be undefined in a subtraction expression
+o{standard input}:707:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_8" minus "L00000000001$pb"
+o{standard input}:707:symbol: "L_OBJC_SELECTOR_REFERENCES_8" can't be undefined in a subtraction expression
+o{standard input}:698:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_2" minus "L00000000001$pb"
+o{standard input}:698:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_2" can't be undefined in a subtraction expression
+o{standard input}:689:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_9" minus "L00000000001$pb"
+o{standard input}:689:symbol: "L_OBJC_SELECTOR_REFERENCES_9" can't be undefined in a subtraction expression
+o{standard input}:684:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_4" minus "L00000000001$pb"
+o{standard input}:684:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_4" can't be undefined in a subtraction expression
+o{standard input}:674:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_8" minus "L00000000001$pb"
+o{standard input}:674:symbol: "L_OBJC_SELECTOR_REFERENCES_8" can't be undefined in a subtraction expression
+o{standard input}:669:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_2" minus "L00000000001$pb"
+o{standard input}:669:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_2" can't be undefined in a subtraction expression
+o{standard input}:662:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_7" minus "L00000000001$pb"
+o{standard input}:662:symbol: "L_OBJC_SELECTOR_REFERENCES_7" can't be undefined in a subtraction expression
+o{standard input}:656:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_1" minus "L00000000001$pb"
+o{standard input}:656:symbol: "L_OBJC_SELECTOR_REFERENCES_1" can't be undefined in a subtraction expression
+o{standard input}:653:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_3" minus "L00000000001$pb"
+o{standard input}:653:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_3" can't be undefined in a subtraction expression
+o{standard input}:648:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.ConfigArray$non_lazy_ptr" minus "L00000000001$pb"
+o{standard input}:648:symbol: "L_OBJC_IVAR_$_ConfigurationModal.ConfigArray$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:637:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.activated$non_lazy_ptr" minus "L00000000001$pb"
+o{standard input}:637:symbol: "L_OBJC_IVAR_$_ConfigurationModal.activated$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:629:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.activated$non_lazy_ptr" minus "L00000000001$pb"
+o{standard input}:629:symbol: "L_OBJC_IVAR_$_ConfigurationModal.activated$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:623:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.tempActivated$non_lazy_ptr" minus "L00000000001$pb"
+o{standard input}:623:symbol: "L_OBJC_IVAR_$_ConfigurationModal.tempActivated$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:605:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.activated$non_lazy_ptr" minus "L00000000001$pb"
+o{standard input}:605:symbol: "L_OBJC_IVAR_$_ConfigurationModal.activated$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:599:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.activated$non_lazy_ptr" minus "L00000000001$pb"
+o{standard input}:599:symbol: "L_OBJC_IVAR_$_ConfigurationModal.activated$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:587:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.activated$non_lazy_ptr" minus "L00000000001$pb"
+o{standard input}:587:symbol: "L_OBJC_IVAR_$_ConfigurationModal.activated$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:570:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_6" minus "L00000000001$pb"
+o{standard input}:570:symbol: "L_OBJC_SELECTOR_REFERENCES_6" can't be undefined in a subtraction expression
+o{standard input}:564:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchInCell1$non_lazy_ptr" minus "L00000000001$pb"
+o{standard input}:564:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchInCell1$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:557:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchInCell2$non_lazy_ptr" minus "L00000000001$pb"
+o{standard input}:557:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchInCell2$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:550:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchInCell3$non_lazy_ptr" minus "L00000000001$pb"
+o{standard input}:550:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchInCell3$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:543:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchInCell4$non_lazy_ptr" minus "L00000000001$pb"
+o{standard input}:543:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchInCell4$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:537:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchInCell5$non_lazy_ptr" minus "L00000000001$pb"
+o{standard input}:537:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchInCell5$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:530:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_1" minus "L00000000001$pb"
+o{standard input}:530:symbol: "L_OBJC_SELECTOR_REFERENCES_1" can't be undefined in a subtraction expression
+o{standard input}:527:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_2" minus "L00000000001$pb"
+o{standard input}:527:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_2" can't be undefined in a subtraction expression
+o{standard input}:522:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchArray$non_lazy_ptr" minus "L00000000001$pb"
+o{standard input}:522:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchArray$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:512:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_5" minus "L00000000001$pb"
+o{standard input}:512:symbol: "L_OBJC_SELECTOR_REFERENCES_5" can't be undefined in a subtraction expression
+o{standard input}:509:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_4" minus "L00000000001$pb"
+o{standard input}:509:symbol: "L_OBJC_SELECTOR_REFERENCES_4" can't be undefined in a subtraction expression
+o{standard input}:503:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchInCell5$non_lazy_ptr" minus "L00000000001$pb"
+o{standard input}:503:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchInCell5$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:494:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_3" minus "L00000000001$pb"
+o{standard input}:494:symbol: "L_OBJC_SELECTOR_REFERENCES_3" can't be undefined in a subtraction expression
+o{standard input}:488:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchInCell5$non_lazy_ptr" minus "L00000000001$pb"
+o{standard input}:488:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchInCell5$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:472:non-relocatable subtraction expression, "L_CGRectZero$non_lazy_ptr" minus "L00000000001$pb"
+o{standard input}:472:symbol: "L_CGRectZero$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:470:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_2" minus "L00000000001$pb"
+o{standard input}:470:symbol: "L_OBJC_SELECTOR_REFERENCES_2" can't be undefined in a subtraction expression
+o{standard input}:464:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_1" minus "L00000000001$pb"
+o{standard input}:464:symbol: "L_OBJC_SELECTOR_REFERENCES_1" can't be undefined in a subtraction expression
+o{standard input}:461:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_1" minus "L00000000001$pb"
+o{standard input}:461:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_1" can't be undefined in a subtraction expression
+o{standard input}:456:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchInCell5$non_lazy_ptr" minus "L00000000001$pb"
+o{standard input}:456:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchInCell5$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:446:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_5" minus "L00000000001$pb"
+o{standard input}:446:symbol: "L_OBJC_SELECTOR_REFERENCES_5" can't be undefined in a subtraction expression
+o{standard input}:443:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_4" minus "L00000000001$pb"
+o{standard input}:443:symbol: "L_OBJC_SELECTOR_REFERENCES_4" can't be undefined in a subtraction expression
+o{standard input}:437:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchInCell4$non_lazy_ptr" minus "L00000000001$pb"
+o{standard input}:437:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchInCell4$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:428:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_3" minus "L00000000001$pb"
+o{standard input}:428:symbol: "L_OBJC_SELECTOR_REFERENCES_3" can't be undefined in a subtraction expression
+o{standard input}:422:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchInCell4$non_lazy_ptr" minus "L00000000001$pb"
+o{standard input}:422:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchInCell4$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:406:non-relocatable subtraction expression, "L_CGRectZero$non_lazy_ptr" minus "L00000000001$pb"
+o{standard input}:406:symbol: "L_CGRectZero$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:404:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_2" minus "L00000000001$pb"
+o{standard input}:404:symbol: "L_OBJC_SELECTOR_REFERENCES_2" can't be undefined in a subtraction expression
+o{standard input}:398:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_1" minus "L00000000001$pb"
+o{standard input}:398:symbol: "L_OBJC_SELECTOR_REFERENCES_1" can't be undefined in a subtraction expression
+o{standard input}:395:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_1" minus "L00000000001$pb"
+o{standard input}:395:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_1" can't be undefined in a subtraction expression
+o{standard input}:390:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchInCell4$non_lazy_ptr" minus "L00000000001$pb"
+o{standard input}:390:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchInCell4$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:380:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_5" minus "L00000000001$pb"
+o{standard input}:380:symbol: "L_OBJC_SELECTOR_REFERENCES_5" can't be undefined in a subtraction expression
+o{standard input}:377:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_4" minus "L00000000001$pb"
+o{standard input}:377:symbol: "L_OBJC_SELECTOR_REFERENCES_4" can't be undefined in a subtraction expression
+o{standard input}:371:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchInCell3$non_lazy_ptr" minus "L00000000001$pb"
+o{standard input}:371:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchInCell3$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:362:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_3" minus "L00000000001$pb"
+o{standard input}:362:symbol: "L_OBJC_SELECTOR_REFERENCES_3" can't be undefined in a subtraction expression
+o{standard input}:356:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchInCell3$non_lazy_ptr" minus "L00000000001$pb"
+o{standard input}:356:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchInCell3$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:340:non-relocatable subtraction expression, "L_CGRectZero$non_lazy_ptr" minus "L00000000001$pb"
+o{standard input}:340:symbol: "L_CGRectZero$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:338:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_2" minus "L00000000001$pb"
+o{standard input}:338:symbol: "L_OBJC_SELECTOR_REFERENCES_2" can't be undefined in a subtraction expression
+o{standard input}:332:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_1" minus "L00000000001$pb"
+o{standard input}:332:symbol: "L_OBJC_SELECTOR_REFERENCES_1" can't be undefined in a subtraction expression
+o{standard input}:329:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_1" minus "L00000000001$pb"
+o{standard input}:329:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_1" can't be undefined in a subtraction expression
+o{standard input}:324:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchInCell3$non_lazy_ptr" minus "L00000000001$pb"
+o{standard input}:324:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchInCell3$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:314:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_5" minus "L00000000001$pb"
+o{standard input}:314:symbol: "L_OBJC_SELECTOR_REFERENCES_5" can't be undefined in a subtraction expression
+o{standard input}:311:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_4" minus "L00000000001$pb"
+o{standard input}:311:symbol: "L_OBJC_SELECTOR_REFERENCES_4" can't be undefined in a subtraction expression
+o{standard input}:305:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchInCell2$non_lazy_ptr" minus "L00000000001$pb"
+o{standard input}:305:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchInCell2$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:296:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_3" minus "L00000000001$pb"
+o{standard input}:296:symbol: "L_OBJC_SELECTOR_REFERENCES_3" can't be undefined in a subtraction expression
+o{standard input}:290:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchInCell2$non_lazy_ptr" minus "L00000000001$pb"
+o{standard input}:290:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchInCell2$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:274:non-relocatable subtraction expression, "L_CGRectZero$non_lazy_ptr" minus "L00000000001$pb"
+o{standard input}:274:symbol: "L_CGRectZero$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:272:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_2" minus "L00000000001$pb"
+o{standard input}:272:symbol: "L_OBJC_SELECTOR_REFERENCES_2" can't be undefined in a subtraction expression
+o{standard input}:266:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_1" minus "L00000000001$pb"
+o{standard input}:266:symbol: "L_OBJC_SELECTOR_REFERENCES_1" can't be undefined in a subtraction expression
+o{standard input}:263:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_1" minus "L00000000001$pb"
+o{standard input}:263:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_1" can't be undefined in a subtraction expression
+o{standard input}:258:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchInCell2$non_lazy_ptr" minus "L00000000001$pb"
+o{standard input}:258:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchInCell2$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:248:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_5" minus "L00000000001$pb"
+o{standard input}:248:symbol: "L_OBJC_SELECTOR_REFERENCES_5" can't be undefined in a subtraction expression
+o{standard input}:245:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_4" minus "L00000000001$pb"
+o{standard input}:245:symbol: "L_OBJC_SELECTOR_REFERENCES_4" can't be undefined in a subtraction expression
+o{standard input}:239:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchInCell1$non_lazy_ptr" minus "L00000000001$pb"
+o{standard input}:239:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchInCell1$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:230:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_3" minus "L00000000001$pb"
+o{standard input}:230:symbol: "L_OBJC_SELECTOR_REFERENCES_3" can't be undefined in a subtraction expression
+o{standard input}:224:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchInCell1$non_lazy_ptr" minus "L00000000001$pb"
+o{standard input}:224:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchInCell1$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:208:non-relocatable subtraction expression, "L_CGRectZero$non_lazy_ptr" minus "L00000000001$pb"
+o{standard input}:208:symbol: "L_CGRectZero$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:206:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_2" minus "L00000000001$pb"
+o{standard input}:206:symbol: "L_OBJC_SELECTOR_REFERENCES_2" can't be undefined in a subtraction expression
+o{standard input}:200:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_1" minus "L00000000001$pb"
+o{standard input}:200:symbol: "L_OBJC_SELECTOR_REFERENCES_1" can't be undefined in a subtraction expression
+o{standard input}:197:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_1" minus "L00000000001$pb"
+o{standard input}:197:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_1" can't be undefined in a subtraction expression
+o{standard input}:192:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchInCell1$non_lazy_ptr" minus "L00000000001$pb"
+o{standard input}:192:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchInCell1$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:176:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_0" minus "L00000000001$pb"
+o{standard input}:176:symbol: "L_OBJC_SELECTOR_REFERENCES_0" can't be undefined in a subtraction expression
+o{standard input}:172:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_SUP_REFS_$_0" minus "L00000000001$pb"
+o{standard input}:172:symbol: "L_OBJC_CLASSLIST_SUP_REFS_$_0" can't be undefined in a subtraction expression
+o{standard input}:unknown:Undefined local symbol L_OBJC_CLASSLIST_SUP_REFS_$_0
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_0
+o{standard input}:unknown:Undefined local symbol L_OBJC_IVAR_$_ConfigurationModal.switchInCell1$non_lazy_ptr
+o{standard input}:unknown:Undefined local symbol L_OBJC_CLASSLIST_REFERENCES_$_1
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_1
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_2
+o{standard input}:unknown:Undefined local symbol L_CGRectZero$non_lazy_ptr
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_3
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_4
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_5
+o{standard input}:unknown:Undefined local symbol L_OBJC_IVAR_$_ConfigurationModal.switchInCell2$non_lazy_ptr
+o{standard input}:unknown:Undefined local symbol L_OBJC_IVAR_$_ConfigurationModal.switchInCell3$non_lazy_ptr
+o{standard input}:unknown:Undefined local symbol L_OBJC_IVAR_$_ConfigurationModal.switchInCell4$non_lazy_ptr
+o{standard input}:unknown:Undefined local symbol L_OBJC_IVAR_$_ConfigurationModal.switchInCell5$non_lazy_ptr
+o{standard input}:unknown:Undefined local symbol L_OBJC_IVAR_$_ConfigurationModal.switchArray$non_lazy_ptr
+o{standard input}:unknown:Undefined local symbol L_OBJC_CLASSLIST_REFERENCES_$_2
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_6
+o{standard input}:unknown:Undefined local symbol L_OBJC_IVAR_$_ConfigurationModal.activated$non_lazy_ptr
+o{standard input}:unknown:Undefined local symbol L_OBJC_IVAR_$_ConfigurationModal.tempActivated$non_lazy_ptr
+o{standard input}:unknown:Undefined local symbol L_OBJC_IVAR_$_ConfigurationModal.ConfigArray$non_lazy_ptr
+o{standard input}:unknown:Undefined local symbol L_OBJC_CLASSLIST_REFERENCES_$_3
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_7
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_8
+o{standard input}:unknown:Undefined local symbol L_OBJC_CLASSLIST_REFERENCES_$_4
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_9
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_10
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_12
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_11
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_13
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_14
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_15
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_17
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_16
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_18
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_19
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_20
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_21
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_22
+o{standard input}:unknown:Undefined local symbol L_OBJC_CLASSLIST_REFERENCES_$_5
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_23
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_24
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_25
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_27
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_30
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_26
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_28
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_29
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_31
+lSLF07#2@41"Compile /FYP/Classes/ConfigurationModal.m325344026#325344026#0(42598"/FYP/Classes/ConfigurationModal.m: In function '-[ConfigurationModal tableView:numberOfRowsInSection:]':/FYP/Classes/ConfigurationModal.m:151: warning: control reaches end of non-void function/FYP/Classes/ConfigurationModal.m: In function '-[ConfigurationModal tableView:titleForHeaderInSection:]':/FYP/Classes/ConfigurationModal.m:164: warning: control reaches end of non-void function/FYP/Classes/ConfigurationModal.m: In function '-[ConfigurationModal tableView:cellForRowAtIndexPath:]':/FYP/Classes/ConfigurationModal.m:221: warning: control reaches end of non-void function/FYP/Classes/ConfigurationModal.m: In function '-[ConfigurationModal tableView:didSelectRowAtIndexPath:]':/FYP/Classes/ConfigurationModal.m:271: error: expected ')' before '->' token/FYP/Classes/ConfigurationModal.m:271: error: expected expression before '.' token{standard input}:1775:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.tempActivated$non_lazy_ptr" minus "L00000000010$pb"{standard input}:1775:symbol: "L_OBJC_IVAR_$_ConfigurationModal.tempActivated$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:1758:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_31" minus "L00000000010$pb"{standard input}:1758:symbol: "L_OBJC_SELECTOR_REFERENCES_31" can't be undefined in a subtraction expression{standard input}:1752:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.tempActivated$non_lazy_ptr" minus "L00000000010$pb"{standard input}:1752:symbol: "L_OBJC_IVAR_$_ConfigurationModal.tempActivated$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:1746:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.tempActivated$non_lazy_ptr" minus "L00000000010$pb"{standard input}:1746:symbol: "L_OBJC_IVAR_$_ConfigurationModal.tempActivated$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:1727:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_31" minus "L00000000010$pb"{standard input}:1727:symbol: "L_OBJC_SELECTOR_REFERENCES_31" can't be undefined in a subtraction expression{standard input}:1721:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.tempActivated$non_lazy_ptr" minus "L00000000010$pb"{standard input}:1721:symbol: "L_OBJC_IVAR_$_ConfigurationModal.tempActivated$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:1715:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.tempActivated$non_lazy_ptr" minus "L00000000010$pb"{standard input}:1715:symbol: "L_OBJC_IVAR_$_ConfigurationModal.tempActivated$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:1693:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_31" minus "L00000000010$pb"{standard input}:1693:symbol: "L_OBJC_SELECTOR_REFERENCES_31" can't be undefined in a subtraction expression{standard input}:1687:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.tempActivated$non_lazy_ptr" minus "L00000000010$pb"{standard input}:1687:symbol: "L_OBJC_IVAR_$_ConfigurationModal.tempActivated$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:1676:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.tempActivated$non_lazy_ptr" minus "L00000000010$pb"{standard input}:1676:symbol: "L_OBJC_IVAR_$_ConfigurationModal.tempActivated$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:1585:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_26" minus "L00000000009$pb"{standard input}:1585:symbol: "L_OBJC_SELECTOR_REFERENCES_26" can't be undefined in a subtraction expression{standard input}:1579:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_30" minus "L00000000009$pb"{standard input}:1579:symbol: "L_OBJC_SELECTOR_REFERENCES_30" can't be undefined in a subtraction expression{standard input}:1570:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_14" minus "L00000000009$pb"{standard input}:1570:symbol: "L_OBJC_SELECTOR_REFERENCES_14" can't be undefined in a subtraction expression{standard input}:1564:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_27" minus "L00000000009$pb"{standard input}:1564:symbol: "L_OBJC_SELECTOR_REFERENCES_27" can't be undefined in a subtraction expression{standard input}:1554:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_25" minus "L00000000009$pb"{standard input}:1554:symbol: "L_OBJC_SELECTOR_REFERENCES_25" can't be undefined in a subtraction expression{standard input}:1544:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_14" minus "L00000000009$pb"{standard input}:1544:symbol: "L_OBJC_SELECTOR_REFERENCES_14" can't be undefined in a subtraction expression{standard input}:1538:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_21" minus "L00000000009$pb"{standard input}:1538:symbol: "L_OBJC_SELECTOR_REFERENCES_21" can't be undefined in a subtraction expression{standard input}:1531:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.ConfigArray$non_lazy_ptr" minus "L00000000009$pb"{standard input}:1531:symbol: "L_OBJC_IVAR_$_ConfigurationModal.ConfigArray$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:1522:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_29" minus "L00000000009$pb"{standard input}:1522:symbol: "L_OBJC_SELECTOR_REFERENCES_29" can't be undefined in a subtraction expression{standard input}:1514:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_14" minus "L00000000009$pb"{standard input}:1514:symbol: "L_OBJC_SELECTOR_REFERENCES_14" can't be undefined in a subtraction expression{standard input}:1507:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchArray$non_lazy_ptr" minus "L00000000009$pb"{standard input}:1507:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchArray$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:1498:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_28" minus "L00000000009$pb"{standard input}:1498:symbol: "L_OBJC_SELECTOR_REFERENCES_28" can't be undefined in a subtraction expression{standard input}:1491:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_14" minus "L00000000009$pb"{standard input}:1491:symbol: "L_OBJC_SELECTOR_REFERENCES_14" can't be undefined in a subtraction expression{standard input}:1484:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchArray$non_lazy_ptr" minus "L00000000009$pb"{standard input}:1484:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchArray$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:1476:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_24" minus "L00000000009$pb"{standard input}:1476:symbol: "L_OBJC_SELECTOR_REFERENCES_24" can't be undefined in a subtraction expression{standard input}:1462:non-relocatable subtraction expression, "L_CGRectZero$non_lazy_ptr" minus "L00000000009$pb"{standard input}:1462:symbol: "L_CGRectZero$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:1459:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_23" minus "L00000000009$pb"{standard input}:1459:symbol: "L_OBJC_SELECTOR_REFERENCES_23" can't be undefined in a subtraction expression{standard input}:1451:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_1" minus "L00000000009$pb"{standard input}:1451:symbol: "L_OBJC_SELECTOR_REFERENCES_1" can't be undefined in a subtraction expression{standard input}:1448:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_5" minus "L00000000009$pb"{standard input}:1448:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_5" can't be undefined in a subtraction expression{standard input}:1437:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_22" minus "L00000000009$pb"{standard input}:1437:symbol: "L_OBJC_SELECTOR_REFERENCES_22" can't be undefined in a subtraction expression{standard input}:1427:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_27" minus "L00000000009$pb"{standard input}:1427:symbol: "L_OBJC_SELECTOR_REFERENCES_27" can't be undefined in a subtraction expression{standard input}:1417:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_21" minus "L00000000009$pb"{standard input}:1417:symbol: "L_OBJC_SELECTOR_REFERENCES_21" can't be undefined in a subtraction expression{standard input}:1402:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_26" minus "L00000000009$pb"{standard input}:1402:symbol: "L_OBJC_SELECTOR_REFERENCES_26" can't be undefined in a subtraction expression{standard input}:1396:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_30" minus "L00000000009$pb"{standard input}:1396:symbol: "L_OBJC_SELECTOR_REFERENCES_30" can't be undefined in a subtraction expression{standard input}:1387:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_14" minus "L00000000009$pb"{standard input}:1387:symbol: "L_OBJC_SELECTOR_REFERENCES_14" can't be undefined in a subtraction expression{standard input}:1381:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_27" minus "L00000000009$pb"{standard input}:1381:symbol: "L_OBJC_SELECTOR_REFERENCES_27" can't be undefined in a subtraction expression{standard input}:1371:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_25" minus "L00000000009$pb"{standard input}:1371:symbol: "L_OBJC_SELECTOR_REFERENCES_25" can't be undefined in a subtraction expression{standard input}:1361:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_14" minus "L00000000009$pb"{standard input}:1361:symbol: "L_OBJC_SELECTOR_REFERENCES_14" can't be undefined in a subtraction expression{standard input}:1355:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_21" minus "L00000000009$pb"{standard input}:1355:symbol: "L_OBJC_SELECTOR_REFERENCES_21" can't be undefined in a subtraction expression{standard input}:1348:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.ConfigArray$non_lazy_ptr" minus "L00000000009$pb"{standard input}:1348:symbol: "L_OBJC_IVAR_$_ConfigurationModal.ConfigArray$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:1339:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_24" minus "L00000000009$pb"{standard input}:1339:symbol: "L_OBJC_SELECTOR_REFERENCES_24" can't be undefined in a subtraction expression{standard input}:1325:non-relocatable subtraction expression, "L_CGRectZero$non_lazy_ptr" minus "L00000000009$pb"{standard input}:1325:symbol: "L_CGRectZero$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:1322:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_23" minus "L00000000009$pb"{standard input}:1322:symbol: "L_OBJC_SELECTOR_REFERENCES_23" can't be undefined in a subtraction expression{standard input}:1314:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_1" minus "L00000000009$pb"{standard input}:1314:symbol: "L_OBJC_SELECTOR_REFERENCES_1" can't be undefined in a subtraction expression{standard input}:1311:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_5" minus "L00000000009$pb"{standard input}:1311:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_5" can't be undefined in a subtraction expression{standard input}:1300:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_22" minus "L00000000009$pb"{standard input}:1300:symbol: "L_OBJC_SELECTOR_REFERENCES_22" can't be undefined in a subtraction expression{standard input}:1288:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_21" minus "L00000000009$pb"{standard input}:1288:symbol: "L_OBJC_SELECTOR_REFERENCES_21" can't be undefined in a subtraction expression{standard input}:1136:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_20" minus "L00000000007$pb"{standard input}:1136:symbol: "L_OBJC_SELECTOR_REFERENCES_20" can't be undefined in a subtraction expression{standard input}:1130:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.ConfigArray$non_lazy_ptr" minus "L00000000007$pb"{standard input}:1130:symbol: "L_OBJC_IVAR_$_ConfigurationModal.ConfigArray$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:1102:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_19" minus "L00000000006$pb"{standard input}:1102:symbol: "L_OBJC_SELECTOR_REFERENCES_19" can't be undefined in a subtraction expression{standard input}:1098:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_SUP_REFS_$_0" minus "L00000000006$pb"{standard input}:1098:symbol: "L_OBJC_CLASSLIST_SUP_REFS_$_0" can't be undefined in a subtraction expression{standard input}:1069:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_18" minus "L00000000005$pb"{standard input}:1069:symbol: "L_OBJC_SELECTOR_REFERENCES_18" can't be undefined in a subtraction expression{standard input}:1065:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_SUP_REFS_$_0" minus "L00000000005$pb"{standard input}:1065:symbol: "L_OBJC_CLASSLIST_SUP_REFS_$_0" can't be undefined in a subtraction expression{standard input}:1021:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_16" minus "L00000000004$pb"{standard input}:1021:symbol: "L_OBJC_SELECTOR_REFERENCES_16" can't be undefined in a subtraction expression{standard input}:1015:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_17" minus "L00000000004$pb"{standard input}:1015:symbol: "L_OBJC_SELECTOR_REFERENCES_17" can't be undefined in a subtraction expression{standard input}:1007:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.tempActivated$non_lazy_ptr" minus "L00000000004$pb"{standard input}:1007:symbol: "L_OBJC_IVAR_$_ConfigurationModal.tempActivated$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:1001:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.activated$non_lazy_ptr" minus "L00000000004$pb"{standard input}:1001:symbol: "L_OBJC_IVAR_$_ConfigurationModal.activated$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:958:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_16" minus "L00000000003$pb"{standard input}:958:symbol: "L_OBJC_SELECTOR_REFERENCES_16" can't be undefined in a subtraction expression{standard input}:952:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_17" minus "L00000000003$pb"{standard input}:952:symbol: "L_OBJC_SELECTOR_REFERENCES_17" can't be undefined in a subtraction expression{standard input}:936:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_15" minus "L00000000003$pb"{standard input}:936:symbol: "L_OBJC_SELECTOR_REFERENCES_15" can't be undefined in a subtraction expression{standard input}:929:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_14" minus "L00000000003$pb"{standard input}:929:symbol: "L_OBJC_SELECTOR_REFERENCES_14" can't be undefined in a subtraction expression{standard input}:922:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchArray$non_lazy_ptr" minus "L00000000003$pb"{standard input}:922:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchArray$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:912:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_15" minus "L00000000003$pb"{standard input}:912:symbol: "L_OBJC_SELECTOR_REFERENCES_15" can't be undefined in a subtraction expression{standard input}:905:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_14" minus "L00000000003$pb"{standard input}:905:symbol: "L_OBJC_SELECTOR_REFERENCES_14" can't be undefined in a subtraction expression{standard input}:898:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchArray$non_lazy_ptr" minus "L00000000003$pb"{standard input}:898:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchArray$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:877:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.activated$non_lazy_ptr" minus "L00000000003$pb"{standard input}:877:symbol: "L_OBJC_IVAR_$_ConfigurationModal.activated$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:863:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.activated$non_lazy_ptr" minus "L00000000003$pb"{standard input}:863:symbol: "L_OBJC_IVAR_$_ConfigurationModal.activated$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:857:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.tempActivated$non_lazy_ptr" minus "L00000000003$pb"{standard input}:857:symbol: "L_OBJC_IVAR_$_ConfigurationModal.tempActivated$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:814:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_13" minus "L00000000002$pb"{standard input}:814:symbol: "L_OBJC_SELECTOR_REFERENCES_13" can't be undefined in a subtraction expression{standard input}:810:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_SUP_REFS_$_0" minus "L00000000002$pb"{standard input}:810:symbol: "L_OBJC_CLASSLIST_SUP_REFS_$_0" can't be undefined in a subtraction expression{standard input}:774:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_11" minus "L00000000001$pb"{standard input}:774:symbol: "L_OBJC_SELECTOR_REFERENCES_11" can't be undefined in a subtraction expression{standard input}:767:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_12" minus "L00000000001$pb"{standard input}:767:symbol: "L_OBJC_SELECTOR_REFERENCES_12" can't be undefined in a subtraction expression{standard input}:759:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_10" minus "L00000000001$pb"{standard input}:759:symbol: "L_OBJC_SELECTOR_REFERENCES_10" can't be undefined in a subtraction expression{standard input}:752:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.ConfigArray$non_lazy_ptr" minus "L00000000001$pb"{standard input}:752:symbol: "L_OBJC_IVAR_$_ConfigurationModal.ConfigArray$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:744:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_10" minus "L00000000001$pb"{standard input}:744:symbol: "L_OBJC_SELECTOR_REFERENCES_10" can't be undefined in a subtraction expression{standard input}:737:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.ConfigArray$non_lazy_ptr" minus "L00000000001$pb"{standard input}:737:symbol: "L_OBJC_IVAR_$_ConfigurationModal.ConfigArray$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:727:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_9" minus "L00000000001$pb"{standard input}:727:symbol: "L_OBJC_SELECTOR_REFERENCES_9" can't be undefined in a subtraction expression{standard input}:722:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_4" minus "L00000000001$pb"{standard input}:722:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_4" can't be undefined in a subtraction expression{standard input}:707:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_8" minus "L00000000001$pb"{standard input}:707:symbol: "L_OBJC_SELECTOR_REFERENCES_8" can't be undefined in a subtraction expression{standard input}:698:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_2" minus "L00000000001$pb"{standard input}:698:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_2" can't be undefined in a subtraction expression{standard input}:689:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_9" minus "L00000000001$pb"{standard input}:689:symbol: "L_OBJC_SELECTOR_REFERENCES_9" can't be undefined in a subtraction expression{standard input}:684:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_4" minus "L00000000001$pb"{standard input}:684:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_4" can't be undefined in a subtraction expression{standard input}:674:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_8" minus "L00000000001$pb"{standard input}:674:symbol: "L_OBJC_SELECTOR_REFERENCES_8" can't be undefined in a subtraction expression{standard input}:669:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_2" minus "L00000000001$pb"{standard input}:669:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_2" can't be undefined in a subtraction expression{standard input}:662:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_7" minus "L00000000001$pb"{standard input}:662:symbol: "L_OBJC_SELECTOR_REFERENCES_7" can't be undefined in a subtraction expression{standard input}:656:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_1" minus "L00000000001$pb"{standard input}:656:symbol: "L_OBJC_SELECTOR_REFERENCES_1" can't be undefined in a subtraction expression{standard input}:653:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_3" minus "L00000000001$pb"{standard input}:653:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_3" can't be undefined in a subtraction expression{standard input}:648:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.ConfigArray$non_lazy_ptr" minus "L00000000001$pb"{standard input}:648:symbol: "L_OBJC_IVAR_$_ConfigurationModal.ConfigArray$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:637:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.activated$non_lazy_ptr" minus "L00000000001$pb"{standard input}:637:symbol: "L_OBJC_IVAR_$_ConfigurationModal.activated$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:629:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.activated$non_lazy_ptr" minus "L00000000001$pb"{standard input}:629:symbol: "L_OBJC_IVAR_$_ConfigurationModal.activated$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:623:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.tempActivated$non_lazy_ptr" minus "L00000000001$pb"{standard input}:623:symbol: "L_OBJC_IVAR_$_ConfigurationModal.tempActivated$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:605:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.activated$non_lazy_ptr" minus "L00000000001$pb"{standard input}:605:symbol: "L_OBJC_IVAR_$_ConfigurationModal.activated$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:599:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.activated$non_lazy_ptr" minus "L00000000001$pb"{standard input}:599:symbol: "L_OBJC_IVAR_$_ConfigurationModal.activated$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:587:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.activated$non_lazy_ptr" minus "L00000000001$pb"{standard input}:587:symbol: "L_OBJC_IVAR_$_ConfigurationModal.activated$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:570:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_6" minus "L00000000001$pb"{standard input}:570:symbol: "L_OBJC_SELECTOR_REFERENCES_6" can't be undefined in a subtraction expression{standard input}:564:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchInCell1$non_lazy_ptr" minus "L00000000001$pb"{standard input}:564:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchInCell1$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:557:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchInCell2$non_lazy_ptr" minus "L00000000001$pb"{standard input}:557:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchInCell2$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:550:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchInCell3$non_lazy_ptr" minus "L00000000001$pb"{standard input}:550:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchInCell3$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:543:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchInCell4$non_lazy_ptr" minus "L00000000001$pb"{standard input}:543:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchInCell4$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:537:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchInCell5$non_lazy_ptr" minus "L00000000001$pb"{standard input}:537:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchInCell5$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:530:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_1" minus "L00000000001$pb"{standard input}:530:symbol: "L_OBJC_SELECTOR_REFERENCES_1" can't be undefined in a subtraction expression{standard input}:527:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_2" minus "L00000000001$pb"{standard input}:527:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_2" can't be undefined in a subtraction expression{standard input}:522:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchArray$non_lazy_ptr" minus "L00000000001$pb"{standard input}:522:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchArray$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:512:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_5" minus "L00000000001$pb"{standard input}:512:symbol: "L_OBJC_SELECTOR_REFERENCES_5" can't be undefined in a subtraction expression{standard input}:509:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_4" minus "L00000000001$pb"{standard input}:509:symbol: "L_OBJC_SELECTOR_REFERENCES_4" can't be undefined in a subtraction expression{standard input}:503:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchInCell5$non_lazy_ptr" minus "L00000000001$pb"{standard input}:503:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchInCell5$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:494:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_3" minus "L00000000001$pb"{standard input}:494:symbol: "L_OBJC_SELECTOR_REFERENCES_3" can't be undefined in a subtraction expression{standard input}:488:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchInCell5$non_lazy_ptr" minus "L00000000001$pb"{standard input}:488:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchInCell5$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:472:non-relocatable subtraction expression, "L_CGRectZero$non_lazy_ptr" minus "L00000000001$pb"{standard input}:472:symbol: "L_CGRectZero$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:470:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_2" minus "L00000000001$pb"{standard input}:470:symbol: "L_OBJC_SELECTOR_REFERENCES_2" can't be undefined in a subtraction expression{standard input}:464:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_1" minus "L00000000001$pb"{standard input}:464:symbol: "L_OBJC_SELECTOR_REFERENCES_1" can't be undefined in a subtraction expression{standard input}:461:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_1" minus "L00000000001$pb"{standard input}:461:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_1" can't be undefined in a subtraction expression{standard input}:456:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchInCell5$non_lazy_ptr" minus "L00000000001$pb"{standard input}:456:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchInCell5$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:446:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_5" minus "L00000000001$pb"{standard input}:446:symbol: "L_OBJC_SELECTOR_REFERENCES_5" can't be undefined in a subtraction expression{standard input}:443:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_4" minus "L00000000001$pb"{standard input}:443:symbol: "L_OBJC_SELECTOR_REFERENCES_4" can't be undefined in a subtraction expression{standard input}:437:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchInCell4$non_lazy_ptr" minus "L00000000001$pb"{standard input}:437:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchInCell4$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:428:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_3" minus "L00000000001$pb"{standard input}:428:symbol: "L_OBJC_SELECTOR_REFERENCES_3" can't be undefined in a subtraction expression{standard input}:422:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchInCell4$non_lazy_ptr" minus "L00000000001$pb"{standard input}:422:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchInCell4$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:406:non-relocatable subtraction expression, "L_CGRectZero$non_lazy_ptr" minus "L00000000001$pb"{standard input}:406:symbol: "L_CGRectZero$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:404:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_2" minus "L00000000001$pb"{standard input}:404:symbol: "L_OBJC_SELECTOR_REFERENCES_2" can't be undefined in a subtraction expression{standard input}:398:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_1" minus "L00000000001$pb"{standard input}:398:symbol: "L_OBJC_SELECTOR_REFERENCES_1" can't be undefined in a subtraction expression{standard input}:395:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_1" minus "L00000000001$pb"{standard input}:395:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_1" can't be undefined in a subtraction expression{standard input}:390:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchInCell4$non_lazy_ptr" minus "L00000000001$pb"{standard input}:390:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchInCell4$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:380:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_5" minus "L00000000001$pb"{standard input}:380:symbol: "L_OBJC_SELECTOR_REFERENCES_5" can't be undefined in a subtraction expression{standard input}:377:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_4" minus "L00000000001$pb"{standard input}:377:symbol: "L_OBJC_SELECTOR_REFERENCES_4" can't be undefined in a subtraction expression{standard input}:371:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchInCell3$non_lazy_ptr" minus "L00000000001$pb"{standard input}:371:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchInCell3$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:362:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_3" minus "L00000000001$pb"{standard input}:362:symbol: "L_OBJC_SELECTOR_REFERENCES_3" can't be undefined in a subtraction expression{standard input}:356:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchInCell3$non_lazy_ptr" minus "L00000000001$pb"{standard input}:356:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchInCell3$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:340:non-relocatable subtraction expression, "L_CGRectZero$non_lazy_ptr" minus "L00000000001$pb"{standard input}:340:symbol: "L_CGRectZero$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:338:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_2" minus "L00000000001$pb"{standard input}:338:symbol: "L_OBJC_SELECTOR_REFERENCES_2" can't be undefined in a subtraction expression{standard input}:332:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_1" minus "L00000000001$pb"{standard input}:332:symbol: "L_OBJC_SELECTOR_REFERENCES_1" can't be undefined in a subtraction expression{standard input}:329:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_1" minus "L00000000001$pb"{standard input}:329:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_1" can't be undefined in a subtraction expression{standard input}:324:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchInCell3$non_lazy_ptr" minus "L00000000001$pb"{standard input}:324:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchInCell3$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:314:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_5" minus "L00000000001$pb"{standard input}:314:symbol: "L_OBJC_SELECTOR_REFERENCES_5" can't be undefined in a subtraction expression{standard input}:311:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_4" minus "L00000000001$pb"{standard input}:311:symbol: "L_OBJC_SELECTOR_REFERENCES_4" can't be undefined in a subtraction expression{standard input}:305:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchInCell2$non_lazy_ptr" minus "L00000000001$pb"{standard input}:305:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchInCell2$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:296:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_3" minus "L00000000001$pb"{standard input}:296:symbol: "L_OBJC_SELECTOR_REFERENCES_3" can't be undefined in a subtraction expression{standard input}:290:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchInCell2$non_lazy_ptr" minus "L00000000001$pb"{standard input}:290:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchInCell2$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:274:non-relocatable subtraction expression, "L_CGRectZero$non_lazy_ptr" minus "L00000000001$pb"{standard input}:274:symbol: "L_CGRectZero$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:272:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_2" minus "L00000000001$pb"{standard input}:272:symbol: "L_OBJC_SELECTOR_REFERENCES_2" can't be undefined in a subtraction expression{standard input}:266:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_1" minus "L00000000001$pb"{standard input}:266:symbol: "L_OBJC_SELECTOR_REFERENCES_1" can't be undefined in a subtraction expression{standard input}:263:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_1" minus "L00000000001$pb"{standard input}:263:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_1" can't be undefined in a subtraction expression{standard input}:258:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchInCell2$non_lazy_ptr" minus "L00000000001$pb"{standard input}:258:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchInCell2$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:248:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_5" minus "L00000000001$pb"{standard input}:248:symbol: "L_OBJC_SELECTOR_REFERENCES_5" can't be undefined in a subtraction expression{standard input}:245:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_4" minus "L00000000001$pb"{standard input}:245:symbol: "L_OBJC_SELECTOR_REFERENCES_4" can't be undefined in a subtraction expression{standard input}:239:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchInCell1$non_lazy_ptr" minus "L00000000001$pb"{standard input}:239:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchInCell1$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:230:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_3" minus "L00000000001$pb"{standard input}:230:symbol: "L_OBJC_SELECTOR_REFERENCES_3" can't be undefined in a subtraction expression{standard input}:224:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchInCell1$non_lazy_ptr" minus "L00000000001$pb"{standard input}:224:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchInCell1$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:208:non-relocatable subtraction expression, "L_CGRectZero$non_lazy_ptr" minus "L00000000001$pb"{standard input}:208:symbol: "L_CGRectZero$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:206:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_2" minus "L00000000001$pb"{standard input}:206:symbol: "L_OBJC_SELECTOR_REFERENCES_2" can't be undefined in a subtraction expression{standard input}:200:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_1" minus "L00000000001$pb"{standard input}:200:symbol: "L_OBJC_SELECTOR_REFERENCES_1" can't be undefined in a subtraction expression{standard input}:197:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_1" minus "L00000000001$pb"{standard input}:197:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_1" can't be undefined in a subtraction expression{standard input}:192:non-relocatable subtraction expression, "L_OBJC_IVAR_$_ConfigurationModal.switchInCell1$non_lazy_ptr" minus "L00000000001$pb"{standard input}:192:symbol: "L_OBJC_IVAR_$_ConfigurationModal.switchInCell1$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:176:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_0" minus "L00000000001$pb"{standard input}:176:symbol: "L_OBJC_SELECTOR_REFERENCES_0" can't be undefined in a subtraction expression{standard input}:172:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_SUP_REFS_$_0" minus "L00000000001$pb"{standard input}:172:symbol: "L_OBJC_CLASSLIST_SUP_REFS_$_0" can't be undefined in a subtraction expression{standard input}:unknown:Undefined local symbol L_OBJC_CLASSLIST_SUP_REFS_$_0{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_0{standard input}:unknown:Undefined local symbol L_OBJC_IVAR_$_ConfigurationModal.switchInCell1$non_lazy_ptr{standard input}:unknown:Undefined local symbol L_OBJC_CLASSLIST_REFERENCES_$_1{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_1{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_2{standard input}:unknown:Undefined local symbol L_CGRectZero$non_lazy_ptr{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_3{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_4{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_5{standard input}:unknown:Undefined local symbol L_OBJC_IVAR_$_ConfigurationModal.switchInCell2$non_lazy_ptr{standard input}:unknown:Undefined local symbol L_OBJC_IVAR_$_ConfigurationModal.switchInCell3$non_lazy_ptr{standard input}:unknown:Undefined local symbol L_OBJC_IVAR_$_ConfigurationModal.switchInCell4$non_lazy_ptr{standard input}:unknown:Undefined local symbol L_OBJC_IVAR_$_ConfigurationModal.switchInCell5$non_lazy_ptr{standard input}:unknown:Undefined local symbol L_OBJC_IVAR_$_ConfigurationModal.switchArray$non_lazy_ptr{standard input}:unknown:Undefined local symbol L_OBJC_CLASSLIST_REFERENCES_$_2{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_6{standard input}:unknown:Undefined local symbol L_OBJC_IVAR_$_ConfigurationModal.activated$non_lazy_ptr{standard input}:unknown:Undefined local symbol L_OBJC_IVAR_$_ConfigurationModal.tempActivated$non_lazy_ptr{standard input}:unknown:Undefined local symbol L_OBJC_IVAR_$_ConfigurationModal.ConfigArray$non_lazy_ptr{standard input}:unknown:Undefined local symbol L_OBJC_CLASSLIST_REFERENCES_$_3{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_7{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_8{standard input}:unknown:Undefined local symbol L_OBJC_CLASSLIST_REFERENCES_$_4{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_9{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_10{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_12{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_11{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_13{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_14{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_15{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_17{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_16{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_18{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_19{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_20{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_21{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_22{standard input}:unknown:Undefined local symbol L_OBJC_CLASSLIST_REFERENCES_$_5{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_23{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_24{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_25{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_27{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_30{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_26{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_28{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_29{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_315(22@40"Control reaches end of non-void function325344026#105#89#0(6@33"/FYP/Classes/ConfigurationModal.m325344025#151#0#151#0#40"control reaches end of non-void function0(22@40"Control reaches end of non-void function325344026#301#89#0(6@33"/FYP/Classes/ConfigurationModal.m325344025#164#0#164#0#40"control reaches end of non-void function0(22@40"Control reaches end of non-void function325344026#495#89#0(6@33"/FYP/Classes/ConfigurationModal.m325344025#221#0#221#0#40"control reaches end of non-void function0(4@30"Expected ')' before '->' token325344026#691#77#0(6@33"/FYP/Classes/ConfigurationModal.m325344025#271#0#271#0#19"expected * before *0(4@36"Expected expression before '.' token325344026#768#83#0(6@33"/FYP/Classes/ConfigurationModal.m325344025#271#0#271#0#19"expected * before *0(0#0#33"/FYP/Classes/ConfigurationModal.m8618303328#1676"    cd /FYP    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-generated-files.hmap -I/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-own-target-headers.hmap -I/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-all-target-headers.hmap -iquote /FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-project-headers.hmap -F/FYP/build/Debug-iphonesimulator -I/FYP/build/Debug-iphonesimulator/include -I/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/DerivedSources/i386 -I/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/DerivedSources -include /var/folders/qa/qadnqY9JHEiDaY75O-wF-U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RDPPrototype_Prefix-hijanvzymbnzasefekglgkmzavvo/RDPPrototype_Prefix.pch -c /FYP/Classes/ConfigurationModal.m -o /FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/ConfigurationModal.o1#
 
 CCompileC build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/ConfigurationModal.o /Users/karida/Documents/FYP/Classes/ConfigurationModal.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s322400334.984618
@@ -1706,6 +2085,28 @@ xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@98"Compile /Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/MultiTouchViewController.m318925340#318925340#0(0"0(0#0#90"/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/MultiTouchViewController.m8615050368#2251"    cd "/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -iquote /Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-generated-files.hmap -I/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-own-target-headers.hmap -I/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-all-target-headers.hmap -iquote /Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-project-headers.hmap -F/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/build/Debug-iphonesimulator -I/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/build/Debug-iphonesimulator/include -I/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/DerivedSources/i386 -I/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/DerivedSources -include /var/folders/qa/qadnqY9JHEiDaY75O-wF-U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RDPPrototype_Prefix-cyiphttrfvgjabdpihvcbyvgpqox/RDPPrototype_Prefix.pch -c /Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/MultiTouchViewController.m -o /Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/MultiTouchViewController.o0#
+
+CCompileC build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/MyGestureDelegate.o /FYP/Classes/MyGestureDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s325207547.029955
+e325207547.088846
+r0
+xCompileC
+xbuild/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/MyGestureDelegate.o
+x/FYP/Classes/MyGestureDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+oIn file included from /FYP/Classes/MyGestureDelegate.m:9:
+o/FYP/Classes/MyGestureDelegate.h:9:24: error: Cocoa/Cocoa.h: No such file or directory
+o/FYP/Classes/MyGestureDelegate.m: In function '-[MyGestureDelegate handlePan:]':
+o/FYP/Classes/MyGestureDelegate.m:34: error: request for member 'imageView' in something not a structure or union
+o/FYP/Classes/MyGestureDelegate.m:36: error: 'saveFirstPoint' undeclared (first use in this function)
+o/FYP/Classes/MyGestureDelegate.m:36: error: (Each undeclared identifier is reported only once
+o/FYP/Classes/MyGestureDelegate.m:36: error: for each function it appears in.)
+o/FYP/Classes/MyGestureDelegate.m:44: error: request for member 'imageView' in something not a structure or union
+o/FYP/Classes/MyGestureDelegate.m:47: error: 'vnccore' undeclared (first use in this function)
+lSLF07#2@40"Compile /FYP/Classes/MyGestureDelegate.m325207547#325207547#0(819"In file included from /FYP/Classes/MyGestureDelegate.m:9:/FYP/Classes/MyGestureDelegate.h:9:24: error: Cocoa/Cocoa.h: No such file or directory/FYP/Classes/MyGestureDelegate.m: In function '-[MyGestureDelegate handlePan:]':/FYP/Classes/MyGestureDelegate.m:34: error: request for member 'imageView' in something not a structure or union/FYP/Classes/MyGestureDelegate.m:36: error: 'saveFirstPoint' undeclared (first use in this function)/FYP/Classes/MyGestureDelegate.m:36: error: (Each undeclared identifier is reported only once/FYP/Classes/MyGestureDelegate.m:36: error: for each function it appears in.)/FYP/Classes/MyGestureDelegate.m:44: error: request for member 'imageView' in something not a structure or union/FYP/Classes/MyGestureDelegate.m:47: error: 'vnccore' undeclared (first use in this function)5(4@40"Cocoa/Cocoa.h: No such file or directory325207547#58#87#2(7@54"In file included from /FYP/Classes/MyGestureDelegate.m325207547#18446744073709551615#0#0(6@32"/FYP/Classes/MyGestureDelegate.m325207398#9#0#9#0#0"0(13@76"Cocoa/Cocoa.h: No such file or directory in /FYP/Classes/MyGestureDelegate.h325207547#18446744073709551615#0#0(6@32"/FYP/Classes/MyGestureDelegate.h325207545#9#0#9#0#0"0(6@32"/FYP/Classes/MyGestureDelegate.h325207545#9#0#9#0#28"*: No such file or directory0(4@68"Request for member 'imageView' in something not a structure or union325207547#226#113#0(6@32"/FYP/Classes/MyGestureDelegate.m325207398#34#0#34#0#0"0(4@56"'saveFirstPoint' undeclared (first use in this function)325207547#339#101#0(6@32"/FYP/Classes/MyGestureDelegate.m325207398#36#0#36#0#43"'*' undeclared (first use in this function)0(4@68"Request for member 'imageView' in something not a structure or union325207547#612#113#0(6@32"/FYP/Classes/MyGestureDelegate.m325207398#44#0#44#0#0"0(4@49"'vnccore' undeclared (first use in this function)325207547#725#94#0(6@32"/FYP/Classes/MyGestureDelegate.m325207398#47#0#47#0#43"'*' undeclared (first use in this function)0(0#0#32"/FYP/Classes/MyGestureDelegate.m8622892672#1674"    cd /FYP    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-generated-files.hmap -I/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-own-target-headers.hmap -I/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-all-target-headers.hmap -iquote /FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-project-headers.hmap -F/FYP/build/Debug-iphonesimulator -I/FYP/build/Debug-iphonesimulator/include -I/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/DerivedSources/i386 -I/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/DerivedSources -include /var/folders/qa/qadnqY9JHEiDaY75O-wF-U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RDPPrototype_Prefix-hijanvzymbnzasefekglgkmzavvo/RDPPrototype_Prefix.pch -c /FYP/Classes/MyGestureDelegate.m -o /FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/MyGestureDelegate.o1#
 
 CCompileC build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/NSStreamAdditions.o /FYP/Classes/NSStreamAdditions.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s324964021.036849
@@ -1997,8 +2398,8 @@ o/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/VNCCore.h:38: w
 lSLF07#2@97"Compile /Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/RDPPrototypeAppDelegate.m318925339#318925339#0(567"In file included from /Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/RDPPrototypeViewController.h:12,                 from /Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/RDPPrototypeAppDelegate.m:10:/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/VNCCore.h:38: warning: no 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/VNCCore.h:38: warning: assign attribute (default) not appropriate for non-gc object property 'display'2(22@77"No 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed318925339#235#165#3(7@111"In file included from /Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/RDPPrototypeAppDelegate.m318925339#18446744073709551615#0#0(6@89"/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/RDPPrototypeAppDelegate.m318915046#10#0#10#0#0"0(7@114"In file included from /Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/RDPPrototypeViewController.h318925339#18446744073709551615#0#0(6@92"/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/RDPPrototypeViewController.h318915046#12#0#12#0#0"0(13@154"No 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed in /Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/VNCCore.h318925339#18446744073709551615#0#0(6@73"/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/VNCCore.h318915046#38#0#38#0#0"0(6@73"/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/VNCCore.h318915046#38#0#38#0#0"0(22@79"Assign attribute (default) not appropriate for non-gc object property 'display'318925339#400#167#3(7@111"In file included from /Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/RDPPrototypeAppDelegate.m318925339#18446744073709551615#0#0(6@89"/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/RDPPrototypeAppDelegate.m318915046#10#0#10#0#0"0(7@114"In file included from /Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/RDPPrototypeViewController.h318925339#18446744073709551615#0#0(6@92"/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/RDPPrototypeViewController.h318915046#12#0#12#0#0"0(13@156"Assign attribute (default) not appropriate for non-gc object property 'display' in /Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/VNCCore.h318925339#18446744073709551615#0#0(6@73"/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/VNCCore.h318915046#38#0#38#0#0"0(6@73"/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/VNCCore.h318915046#38#0#38#0#0"0(0#0#89"/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/RDPPrototypeAppDelegate.m8621702752#2249"    cd "/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -iquote /Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-generated-files.hmap -I/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-own-target-headers.hmap -I/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-all-target-headers.hmap -iquote /Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-project-headers.hmap -F/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/build/Debug-iphonesimulator -I/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/build/Debug-iphonesimulator/include -I/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/DerivedSources/i386 -I/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/DerivedSources -include /var/folders/qa/qadnqY9JHEiDaY75O-wF-U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RDPPrototype_Prefix-cyiphttrfvgjabdpihvcbyvgpqox/RDPPrototype_Prefix.pch -c /Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/RDPPrototypeAppDelegate.m -o /Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/RDPPrototypeAppDelegate.o0#
 
 CCompileC build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/RDPPrototypeViewController.o /FYP/Classes/RDPPrototypeViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s325049658.381258
-e325049658.550605
+s325343882.349526
+e325343882.552824
 r1
 xCompileC
 xbuild/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/RDPPrototypeViewController.o
@@ -2007,7 +2408,7 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@49"Compile /FYP/Classes/RDPPrototypeViewController.m325049658#325049658#0(0"0(0#0#41"/FYP/Classes/RDPPrototypeViewController.m8625361120#1692"    cd /FYP    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-generated-files.hmap -I/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-own-target-headers.hmap -I/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-all-target-headers.hmap -iquote /FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-project-headers.hmap -F/FYP/build/Debug-iphonesimulator -I/FYP/build/Debug-iphonesimulator/include -I/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/DerivedSources/i386 -I/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/DerivedSources -include /var/folders/qa/qadnqY9JHEiDaY75O-wF-U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RDPPrototype_Prefix-hijanvzymbnzasefekglgkmzavvo/RDPPrototype_Prefix.pch -c /FYP/Classes/RDPPrototypeViewController.m -o /FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/RDPPrototypeViewController.o0#
+lSLF07#2@49"Compile /FYP/Classes/RDPPrototypeViewController.m325343882#325343882#0(0"0(0#0#41"/FYP/Classes/RDPPrototypeViewController.m8618753216#1692"    cd /FYP    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-generated-files.hmap -I/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-own-target-headers.hmap -I/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-all-target-headers.hmap -iquote /FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-project-headers.hmap -F/FYP/build/Debug-iphonesimulator -I/FYP/build/Debug-iphonesimulator/include -I/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/DerivedSources/i386 -I/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/DerivedSources -include /var/folders/qa/qadnqY9JHEiDaY75O-wF-U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RDPPrototype_Prefix-hijanvzymbnzasefekglgkmzavvo/RDPPrototype_Prefix.pch -c /FYP/Classes/RDPPrototypeViewController.m -o /FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/RDPPrototypeViewController.o0#
 
 CCompileC build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/RDPPrototypeViewController.o /Users/karida/Documents/FYP/Classes/RDPPrototypeViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s322400334.688836
@@ -2053,9 +2454,9 @@ o/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/VNCCore.h:38: w
 lSLF07#2@100"Compile /Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/RDPPrototypeViewController.m318925339#318925339#0(569"In file included from /Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/RDPPrototypeViewController.h:12,                 from /Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/RDPPrototypeViewController.m:9:/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/VNCCore.h:38: warning: no 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/VNCCore.h:38: warning: assign attribute (default) not appropriate for non-gc object property 'display'2(22@77"No 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed318925339#237#165#3(7@114"In file included from /Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/RDPPrototypeViewController.m318925339#18446744073709551615#0#0(6@92"/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/RDPPrototypeViewController.m318915046#9#0#9#0#0"0(7@114"In file included from /Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/RDPPrototypeViewController.h318925339#18446744073709551615#0#0(6@92"/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/RDPPrototypeViewController.h318915046#12#0#12#0#0"0(13@154"No 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed in /Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/VNCCore.h318925339#18446744073709551615#0#0(6@73"/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/VNCCore.h318915046#38#0#38#0#0"0(6@73"/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/VNCCore.h318915046#38#0#38#0#0"0(22@79"Assign attribute (default) not appropriate for non-gc object property 'display'318925339#402#167#3(7@114"In file included from /Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/RDPPrototypeViewController.m318925339#18446744073709551615#0#0(6@92"/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/RDPPrototypeViewController.m318915046#9#0#9#0#0"0(7@114"In file included from /Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/RDPPrototypeViewController.h318925339#18446744073709551615#0#0(6@92"/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/RDPPrototypeViewController.h318915046#12#0#12#0#0"0(13@156"Assign attribute (default) not appropriate for non-gc object property 'display' in /Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/VNCCore.h318925339#18446744073709551615#0#0(6@73"/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/VNCCore.h318915046#38#0#38#0#0"0(6@73"/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/VNCCore.h318915046#38#0#38#0#0"0(0#0#92"/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/RDPPrototypeViewController.m8618326208#2255"    cd "/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -iquote /Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-generated-files.hmap -I/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-own-target-headers.hmap -I/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-all-target-headers.hmap -iquote /Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-project-headers.hmap -F/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/build/Debug-iphonesimulator -I/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/build/Debug-iphonesimulator/include -I/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/DerivedSources/i386 -I/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/DerivedSources -include /var/folders/qa/qadnqY9JHEiDaY75O-wF-U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RDPPrototype_Prefix-cyiphttrfvgjabdpihvcbyvgpqox/RDPPrototype_Prefix.pch -c /Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/Classes/RDPPrototypeViewController.m -o /Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/RDPPrototypeViewController.o0#
 
 CCompileC build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/TouchViewController.o /FYP/Classes/TouchViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s325050045.557469
-e325050045.868877
-r1
+s325344026.841921
+e325344026.936957
+r0
 xCompileC
 xbuild/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/TouchViewController.o
 x/FYP/Classes/TouchViewController.m
@@ -2063,10 +2464,14 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-o/FYP/Classes/TouchViewController.m:756: warning: incomplete implementation of class 'TouchViewController'
-o/FYP/Classes/TouchViewController.m:756: warning: method definition for '-editText:' not found
-o/FYP/Classes/TouchViewController.m:756: warning: method definition for '-textFieldDone:' not found
-lSLF07#2@42"Compile /FYP/Classes/TouchViewController.m325050045#325050045#0(299"/FYP/Classes/TouchViewController.m:756: warning: incomplete implementation of class 'TouchViewController'/FYP/Classes/TouchViewController.m:756: warning: method definition for '-editText:' not found/FYP/Classes/TouchViewController.m:756: warning: method definition for '-textFieldDone:' not found3(22@56"Incomplete implementation of class 'TouchViewController'325050045#0#106#0(6@34"/FYP/Classes/TouchViewController.m325050041#756#0#756#0#38"incomplete implementation of class '*'0(22@44"Method definition for '-editText:' not found325050045#106#94#0(6@34"/FYP/Classes/TouchViewController.m325050041#756#0#756#0#35"method definition for '*' not found0(22@49"Method definition for '-textFieldDone:' not found325050045#200#99#0(6@34"/FYP/Classes/TouchViewController.m325050041#756#0#756#0#35"method definition for '*' not found0(0#0#34"/FYP/Classes/TouchViewController.m8625025792#1678"    cd /FYP    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-generated-files.hmap -I/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-own-target-headers.hmap -I/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-all-target-headers.hmap -iquote /FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-project-headers.hmap -F/FYP/build/Debug-iphonesimulator -I/FYP/build/Debug-iphonesimulator/include -I/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/DerivedSources/i386 -I/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/DerivedSources -include /var/folders/qa/qadnqY9JHEiDaY75O-wF-U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RDPPrototype_Prefix-hijanvzymbnzasefekglgkmzavvo/RDPPrototype_Prefix.pch -c /FYP/Classes/TouchViewController.m -o /FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/TouchViewController.o0#
+o/FYP/Classes/TouchViewController.m: In function '-[TouchViewController initWithNibName:bundle:]':
+o/FYP/Classes/TouchViewController.m:29: error: request for member 'text' in something not a structure or union
+o/FYP/Classes/TouchViewController.m:29: error: request for member 'text' in something not a structure or union
+o/FYP/Classes/TouchViewController.m: At top level:
+o/FYP/Classes/TouchViewController.m:767: warning: incomplete implementation of class 'TouchViewController'
+o/FYP/Classes/TouchViewController.m:767: warning: method definition for '-editText:' not found
+o/FYP/Classes/TouchViewController.m:767: warning: method definition for '-textFieldDone:' not found
+lSLF07#2@42"Compile /FYP/Classes/TouchViewController.m325344026#325344026#0(667"/FYP/Classes/TouchViewController.m: In function '-[TouchViewController initWithNibName:bundle:]':/FYP/Classes/TouchViewController.m:29: error: request for member 'text' in something not a structure or union/FYP/Classes/TouchViewController.m:29: error: request for member 'text' in something not a structure or union/FYP/Classes/TouchViewController.m: At top level:/FYP/Classes/TouchViewController.m:767: warning: incomplete implementation of class 'TouchViewController'/FYP/Classes/TouchViewController.m:767: warning: method definition for '-editText:' not found/FYP/Classes/TouchViewController.m:767: warning: method definition for '-textFieldDone:' not found6(4@63"Request for member 'text' in something not a structure or union325344026#98#110#0(6@34"/FYP/Classes/TouchViewController.m325343844#29#0#29#0#0"0(4@63"Request for member 'text' in something not a structure or union325344026#208#110#0(6@34"/FYP/Classes/TouchViewController.m325343844#29#0#29#0#0"0(23@13"At top level:325344026#318#50#0(6@34"/FYP/Classes/TouchViewController.m325343844#0#0#0#0#0"0(22@56"Incomplete implementation of class 'TouchViewController'325344026#368#106#0(6@34"/FYP/Classes/TouchViewController.m325343844#767#0#767#0#38"incomplete implementation of class '*'0(22@44"Method definition for '-editText:' not found325344026#474#94#0(6@34"/FYP/Classes/TouchViewController.m325343844#767#0#767#0#35"method definition for '*' not found0(22@49"Method definition for '-textFieldDone:' not found325344026#568#99#0(6@34"/FYP/Classes/TouchViewController.m325343844#767#0#767#0#35"method definition for '*' not found0(0#0#34"/FYP/Classes/TouchViewController.m8617903360#1678"    cd /FYP    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-generated-files.hmap -I/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-own-target-headers.hmap -I/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-all-target-headers.hmap -iquote /FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-project-headers.hmap -F/FYP/build/Debug-iphonesimulator -I/FYP/build/Debug-iphonesimulator/include -I/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/DerivedSources/i386 -I/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/DerivedSources -include /var/folders/qa/qadnqY9JHEiDaY75O-wF-U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RDPPrototype_Prefix-hijanvzymbnzasefekglgkmzavvo/RDPPrototype_Prefix.pch -c /FYP/Classes/TouchViewController.m -o /FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/TouchViewController.o1#
 
 CCompileC build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/TouchViewController.o /Users/karida/Documents/FYP/Classes/../TouchViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s319141793.971767
@@ -2319,8 +2724,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@70"Compile /Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/main.m318925339#318925339#0(0"0(0#0#62"/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/main.m8600675104#2203"    cd "/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -iquote /Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-generated-files.hmap -I/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-own-target-headers.hmap -I/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-all-target-headers.hmap -iquote /Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-project-headers.hmap -F/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/build/Debug-iphonesimulator -I/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/build/Debug-iphonesimulator/include -I/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/DerivedSources/i386 -I/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/DerivedSources -include /var/folders/qa/qadnqY9JHEiDaY75O-wF-U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RDPPrototype_Prefix-cyiphttrfvgjabdpihvcbyvgpqox/RDPPrototype_Prefix.pch -c /Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/main.m -o /Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/main.o0#
 
 CCompileC build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/saveGesture.o /FYP/Classes/saveGesture.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s325049678.336247
-e325049678.463239
+s325342783.803953
+e325342784.940873
 r1
 xCompileC
 xbuild/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/saveGesture.o
@@ -2329,7 +2734,7 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@34"Compile /FYP/Classes/saveGesture.m325049678#325049678#0(0"0(0#0#26"/FYP/Classes/saveGesture.m8623756000#1662"    cd /FYP    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-generated-files.hmap -I/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-own-target-headers.hmap -I/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-all-target-headers.hmap -iquote /FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-project-headers.hmap -F/FYP/build/Debug-iphonesimulator -I/FYP/build/Debug-iphonesimulator/include -I/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/DerivedSources/i386 -I/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/DerivedSources -include /var/folders/qa/qadnqY9JHEiDaY75O-wF-U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RDPPrototype_Prefix-hijanvzymbnzasefekglgkmzavvo/RDPPrototype_Prefix.pch -c /FYP/Classes/saveGesture.m -o /FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/saveGesture.o0#
+lSLF07#2@34"Compile /FYP/Classes/saveGesture.m325342783#325342784#0(0"0(0#0#26"/FYP/Classes/saveGesture.m8610035296#1662"    cd /FYP    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-generated-files.hmap -I/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-own-target-headers.hmap -I/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-all-target-headers.hmap -iquote /FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-project-headers.hmap -F/FYP/build/Debug-iphonesimulator -I/FYP/build/Debug-iphonesimulator/include -I/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/DerivedSources/i386 -I/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/DerivedSources -include /var/folders/qa/qadnqY9JHEiDaY75O-wF-U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RDPPrototype_Prefix-hijanvzymbnzasefekglgkmzavvo/RDPPrototype_Prefix.pch -c /FYP/Classes/saveGesture.m -o /FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/saveGesture.o0#
 
 CCompileXIB /FYP/Classes/HelpPage.xib
 s325014820.476660
@@ -2632,13 +3037,13 @@ xtmpresult.jpg
 lSLF07#2@18"Copy tmpresult.jpg324964013#324964014#0(0"0(0#0#18"/FYP/tmpresult.jpg32651513917341812#374"    cd /FYP    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /FYP/tmpresult.jpg /FYP/build/Debug-iphonesimulator/RDPPrototype.app0#
 
 CGenerateDSYMFile /FYP/build/Debug-iphonesimulator/RDPPrototype.app.dSYM /FYP/build/Debug-iphonesimulator/RDPPrototype.app/RDPPrototype
-s325050045.980293
-e325050046.092268
+s325343334.823304
+e325343334.863916
 r1
 xGenerateDSYMFile
 x/FYP/build/Debug-iphonesimulator/RDPPrototype.app.dSYM
 x/FYP/build/Debug-iphonesimulator/RDPPrototype.app/RDPPrototype
-lSLF07#2@124"GenerateDSYMFile build/Debug-iphonesimulator/RDPPrototype.app.dSYM build/Debug-iphonesimulator/RDPPrototype.app/RDPPrototype325050045#325050046#0(0"0(0#0#62"/FYP/build/Debug-iphonesimulator/RDPPrototype.app/RDPPrototype8625441568#296"    cd /FYP    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /FYP/build/Debug-iphonesimulator/RDPPrototype.app/RDPPrototype -o /FYP/build/Debug-iphonesimulator/RDPPrototype.app.dSYM0#
+lSLF07#2@124"GenerateDSYMFile build/Debug-iphonesimulator/RDPPrototype.app.dSYM build/Debug-iphonesimulator/RDPPrototype.app/RDPPrototype325343334#325343334#0(0"0(0#0#62"/FYP/build/Debug-iphonesimulator/RDPPrototype.app/RDPPrototype8606512608#296"    cd /FYP    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /FYP/build/Debug-iphonesimulator/RDPPrototype.app/RDPPrototype -o /FYP/build/Debug-iphonesimulator/RDPPrototype.app.dSYM0#
 
 CGenerateDSYMFile /Users/karida/Documents/FYP/build/Debug-iphonesimulator/RDPPrototype.app.dSYM /Users/karida/Documents/FYP/build/Debug-iphonesimulator/RDPPrototype.app/RDPPrototype
 s322400335.240197
@@ -2668,14 +3073,14 @@ x/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/build/Debug-iphonesimul
 lSLF07#2@124"GenerateDSYMFile build/Debug-iphonesimulator/RDPPrototype.app.dSYM build/Debug-iphonesimulator/RDPPrototype.app/RDPPrototype318927667#318927667#0(0"0(0#0#113"/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/build/Debug-iphonesimulator/RDPPrototype.app/RDPPrototype8620547808#451"    cd "/Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/build/Debug-iphonesimulator/RDPPrototype.app/RDPPrototype -o /Users/karida/Documents/FYP_BACK_up/FYP_view&scrollview/build/Debug-iphonesimulator/RDPPrototype.app.dSYM0#
 
 CLd /FYP/build/Debug-iphonesimulator/RDPPrototype.app/RDPPrototype normal i386
-s325050045.868979
-e325050045.980165
+s325343334.785528
+e325343334.823221
 r1
 xLd
 x/FYP/build/Debug-iphonesimulator/RDPPrototype.app/RDPPrototype
 xnormal
 xi386
-lSLF07#2@67"Link /FYP/build/Debug-iphonesimulator/RDPPrototype.app/RDPPrototype325050045#325050045#0(0"0(0#0#0"8626295456#755"    cd /FYP    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -L/FYP/build/Debug-iphonesimulator -F/FYP/build/Debug-iphonesimulator -filelist /FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/RDPPrototype.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -o /FYP/build/Debug-iphonesimulator/RDPPrototype.app/RDPPrototype0#
+lSLF07#2@67"Link /FYP/build/Debug-iphonesimulator/RDPPrototype.app/RDPPrototype325343334#325343334#0(0"0(0#0#0"8610591104#755"    cd /FYP    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -L/FYP/build/Debug-iphonesimulator -F/FYP/build/Debug-iphonesimulator -filelist /FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/Objects-normal/i386/RDPPrototype.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -o /FYP/build/Debug-iphonesimulator/RDPPrototype.app/RDPPrototype0#
 
 CLd /Users/karida/Documents/FYP/build/Debug-iphonesimulator/RDPPrototype.app/RDPPrototype normal i386
 s322400335.206337
@@ -2816,12 +3221,12 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@34"Precompile RDPPrototype_Prefix.pch324964018#324964020#0(0"0(0#0#28"/FYP/RDPPrototype_Prefix.pch8613960416#1561"    cd /FYP    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-generated-files.hmap -I/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-own-target-headers.hmap -I/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-all-target-headers.hmap -iquote /FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/RDPPrototype-project-headers.hmap -F/FYP/build/Debug-iphonesimulator -I/FYP/build/Debug-iphonesimulator/include -I/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/DerivedSources/i386 -I/FYP/build/RDPPrototype.build/Debug-iphonesimulator/RDPPrototype.build/DerivedSources -c /FYP/RDPPrototype_Prefix.pch -o /var/folders/qa/qadnqY9JHEiDaY75O-wF-U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RDPPrototype_Prefix-hijanvzymbnzasefekglgkmzavvo/RDPPrototype_Prefix.pch.gch0#
 
 CTouch /FYP/build/Debug-iphonesimulator/RDPPrototype.app
-s325050046.092352
-e325050046.105520
+s325343334.864001
+e325343334.866694
 r1
 xTouch
 x/FYP/build/Debug-iphonesimulator/RDPPrototype.app
-lSLF07#2@55"Touch /FYP/build/Debug-iphonesimulator/RDPPrototype.app325050046#325050046#0(0"0(0#0#0"8628221536#215"    cd /FYP    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /FYP/build/Debug-iphonesimulator/RDPPrototype.app0#
+lSLF07#2@55"Touch /FYP/build/Debug-iphonesimulator/RDPPrototype.app325343334#325343334#0(0"0(0#0#0"8604597792#215"    cd /FYP    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /FYP/build/Debug-iphonesimulator/RDPPrototype.app0#
 
 CTouch /Users/karida/Documents/FYP/build/Debug-iphonesimulator/RDPPrototype.app
 s322400335.301919

@@ -60,6 +60,9 @@
 	
 	saveGesture * saveFirstPoint;
 	
+	//@public
+	//static NSString * connectInfo;
+	
 }
 
 @property (nonatomic, retain) IBOutlet UIScrollView *imageScrollView;
@@ -80,6 +83,8 @@
 @property (nonatomic, retain) UILongPressGestureRecognizer * longPress;
 
 @property (nonatomic, retain) saveGesture * saveFirstPoint;
+//@property (nonatomic, retain) NSString * connectInfo;
+
 
 - (void)updateImage:(UIImage *)myimage;
 

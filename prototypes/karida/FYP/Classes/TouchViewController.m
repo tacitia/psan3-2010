@@ -18,7 +18,7 @@
 
 @implementation TouchViewController
 @synthesize image, imageView, configurationModalInTouchViewController, imageScrollView, inputText, vnccore,
-panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView,saveFirstPoint;
+panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView,saveFirstPoint,connectInfo;
 
 
  // The designated initializer. Override to perform setup that is required before the view is loaded.
@@ -26,7 +26,7 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView,s
  self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
  if (self) {
  // Custom initialization
- 
+	 //connectInfo = "The connected IP is: " + vnccore.serverIP.text + @" and the Port is: " + vnccore.serverPort.text;
  
  }
  return self;
@@ -78,11 +78,14 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView,s
 	[panRecognizer setMaximumNumberOfTouches:1];
 	//[panRecognizer setCancelsTouchesInView:NO];
 	
+	
 	[imageView addGestureRecognizer:panRecognizer];
 	
 	//Save gesture: a "V" shape
-	saveFirstPoint = [[saveGesture alloc] init];
+	saveFirstPoint = [[saveGesture alloc] initWithTarget:self action:@selector(handleSave:)];
 	[imageView addGestureRecognizer:(UIGestureRecognizer *)saveFirstPoint];
+	
+	[panRecognizer requireGestureRecognizerToFail:saveFirstPoint];
 	
 	/*
 	//Two finger pan
@@ -390,7 +393,7 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView,s
     }
 	
 }
-
+/*
 -(void)handleTwoFingerPan:(UIPanGestureRecognizer *)gestureRecognizer {
 	if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {		
 		prevLocation = [gestureRecognizer locationInView:self.imageView];
@@ -413,6 +416,7 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView,s
 		prevLocation = curLocation;
 	}
 }
+ */
 
 -(void)handleThreeFingerPan:(UIPanGestureRecognizer *)gestureRecognizer {
 	//For minimize&maximize window, and switch between different windows function
@@ -510,6 +514,13 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView,s
 		}			
 	}
 }
+
+-(void)handleSave:(saveGesture *)gestureRecognizer{
+	NSLog(@"sendCtrlS");
+	[vnccore sendCtrlPlusChar:'s'];
+}
+
+
 -(void)handleLongPress:(UILongPressGestureRecognizer *)gestureRecognizer {
 
 	if (gestureRecognizer.state == UIGestureRecognizerStateEnded ) {
