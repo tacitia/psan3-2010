@@ -19,8 +19,18 @@
 		3E5582C81285700900AB8CDF /* NSStreamAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5582C71285700900AB8CDF /* NSStreamAdditions.m */; };
 		3EBCB036136826D6000BB38E /* GlobalConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBCB035136826D6000BB38E /* GlobalConstants.m */; };
 		3EF654BD132909A100F00E5E /* tmpresult.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3EF654BC132909A100F00E5E /* tmpresult.jpg */; };
+		7A0528801368283E0092D3C0 /* BackGround.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A05287F1368283E0092D3C0 /* BackGround.png */; };
+		7A05288313682BD00092D3C0 /* tap-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A05288213682BD00092D3C0 /* tap-4.png */; };
+		7A05288513682C430092D3C0 /* two finger pinch-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A05288413682C430092D3C0 /* two finger pinch-3.png */; };
+		7A05288713682C540092D3C0 /* Two Finger Tap-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A05288613682C540092D3C0 /* Two Finger Tap-3.png */; };
+		7A05288913682CF70092D3C0 /* Three Finger Swap up-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A05288813682CF70092D3C0 /* Three Finger Swap up-3.png */; };
+		7A05288B13682D060092D3C0 /* three finger swip-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A05288A13682D060092D3C0 /* three finger swip-3.png */; };
+		7A05288D13682D2A0092D3C0 /* three finger swip down-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A05288C13682D2A0092D3C0 /* three finger swip down-3.png */; };
+		7A05288F13682D6E0092D3C0 /* Long Press-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A05288E13682D6E0092D3C0 /* Long Press-2.png */; };
+		7A05289113682D8D0092D3C0 /* One Finger Swip-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A05289013682D8D0092D3C0 /* One Finger Swip-3.png */; };
+		7A05289313682D9D0092D3C0 /* scroll-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A05289213682D9D0092D3C0 /* scroll-3.png */; };
+		7A05289513682EA60092D3C0 /* V.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A05289413682EA60092D3C0 /* V.png */; };
 		7A1468A11300DD770002F3A2 /* Windows.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A1468A01300DD770002F3A2 /* Windows.png */; };
-		7A6C95FF13533F4400862838 /* help back groundt.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A6C95FE13533F4400862838 /* help back groundt.png */; };
 		7A829B351352805E00C88F6B /* HelpPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A829B331352805E00C88F6B /* HelpPage.m */; };
 		7A829B361352805E00C88F6B /* HelpPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A829B341352805E00C88F6B /* HelpPage.xib */; };
 		7A83C971135FD88E003C768A /* saveGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A83C970135FD88E003C768A /* saveGesture.m */; };
@@ -28,16 +38,8 @@
 		7A922C9512FD106A0082D352 /* rotation.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A922C9412FD106A0082D352 /* rotation.png */; };
 		7A922C9712FD10780082D352 /* swipe.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A922C9612FD10780082D352 /* swipe.png */; };
 		7AAB737113452869003A2A60 /* configurationicon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7AAB737013452869003A2A60 /* configurationicon.jpg */; };
-		7AB4E663135F4A7400EB0B9C /* tap-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB4E662135F4A7400EB0B9C /* tap-1.png */; };
 		7AB9F86E13531F9500B71D74 /* core.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB9F86D13531F9500B71D74 /* core.png */; };
-		7AB9F8701353207000B71D74 /* tap.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB9F86F1353207000B71D74 /* tap.png */; };
-		7AB9F8721353278000B71D74 /* two finger pinch.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB9F8711353277F00B71D74 /* two finger pinch.png */; };
-		7AB9F8741353282900B71D74 /* scroll.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB9F8731353282900B71D74 /* scroll.png */; };
 		7AB9F8761353297B00B71D74 /* optional.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB9F8751353297B00B71D74 /* optional.png */; };
-		7AB9F87813532A0800B71D74 /* Three Finger Swap Horizongtal.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB9F87713532A0800B71D74 /* Three Finger Swap Horizongtal.png */; };
-		7AB9F87A13532A1700B71D74 /* three finger swip horizongtal.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB9F87913532A1700B71D74 /* three finger swip horizongtal.png */; };
-		7AB9F87C13532A2400B71D74 /* three finger swip.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB9F87B13532A2400B71D74 /* three finger swip.png */; };
-		7AB9F87E13532BD500B71D74 /* Long Press.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB9F87D13532BD500B71D74 /* Long Press.png */; };
 		7ACEEE031366DF87003FF540 /* ConnectInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACEEE011366DF87003FF540 /* ConnectInfo.m */; };
 		7ACEEE041366DF88003FF540 /* ConnectInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ACEEE021366DF87003FF540 /* ConnectInfo.xib */; };
 		7ADD06A51305AD7400D153CC /* ConfigurationModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ADD06A31305AD7400D153CC /* ConfigurationModal.m */; };
@@ -68,8 +70,18 @@
 		3EBCB034136826D6000BB38E /* GlobalConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalConstants.h; sourceTree = "<group>"; };
 		3EBCB035136826D6000BB38E /* GlobalConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalConstants.m; sourceTree = "<group>"; };
 		3EF654BC132909A100F00E5E /* tmpresult.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tmpresult.jpg; sourceTree = "<group>"; };
+		7A05287F1368283E0092D3C0 /* BackGround.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackGround.png; sourceTree = "<group>"; };
+		7A05288213682BD00092D3C0 /* tap-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tap-4.png"; sourceTree = "<group>"; };
+		7A05288413682C430092D3C0 /* two finger pinch-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "two finger pinch-3.png"; sourceTree = "<group>"; };
+		7A05288613682C540092D3C0 /* Two Finger Tap-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Two Finger Tap-3.png"; sourceTree = "<group>"; };
+		7A05288813682CF70092D3C0 /* Three Finger Swap up-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Three Finger Swap up-3.png"; sourceTree = "<group>"; };
+		7A05288A13682D060092D3C0 /* three finger swip-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "three finger swip-3.png"; sourceTree = "<group>"; };
+		7A05288C13682D2A0092D3C0 /* three finger swip down-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "three finger swip down-3.png"; sourceTree = "<group>"; };
+		7A05288E13682D6E0092D3C0 /* Long Press-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Long Press-2.png"; sourceTree = "<group>"; };
+		7A05289013682D8D0092D3C0 /* One Finger Swip-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "One Finger Swip-3.png"; sourceTree = "<group>"; };
+		7A05289213682D9D0092D3C0 /* scroll-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scroll-3.png"; sourceTree = "<group>"; };
+		7A05289413682EA60092D3C0 /* V.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = V.png; sourceTree = "<group>"; };
 		7A1468A01300DD770002F3A2 /* Windows.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Windows.png; sourceTree = "<group>"; };
-		7A6C95FE13533F4400862838 /* help back groundt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "help back groundt.png"; sourceTree = "<group>"; };
 		7A829B321352805E00C88F6B /* HelpPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpPage.h; sourceTree = "<group>"; };
 		7A829B331352805E00C88F6B /* HelpPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpPage.m; sourceTree = "<group>"; };
 		7A829B341352805E00C88F6B /* HelpPage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = HelpPage.xib; path = Classes/HelpPage.xib; sourceTree = "<group>"; };
@@ -79,16 +91,8 @@
 		7A922C9412FD106A0082D352 /* rotation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rotation.png; sourceTree = "<group>"; };
 		7A922C9612FD10780082D352 /* swipe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swipe.png; sourceTree = "<group>"; };
 		7AAB737013452869003A2A60 /* configurationicon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = configurationicon.jpg; sourceTree = "<group>"; };
-		7AB4E662135F4A7400EB0B9C /* tap-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tap-1.png"; sourceTree = "<group>"; };
 		7AB9F86D13531F9500B71D74 /* core.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = core.png; sourceTree = "<group>"; };
-		7AB9F86F1353207000B71D74 /* tap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tap.png; sourceTree = "<group>"; };
-		7AB9F8711353277F00B71D74 /* two finger pinch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "two finger pinch.png"; sourceTree = "<group>"; };
-		7AB9F8731353282900B71D74 /* scroll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scroll.png; sourceTree = "<group>"; };
 		7AB9F8751353297B00B71D74 /* optional.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = optional.png; sourceTree = "<group>"; };
-		7AB9F87713532A0800B71D74 /* Three Finger Swap Horizongtal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Three Finger Swap Horizongtal.png"; sourceTree = "<group>"; };
-		7AB9F87913532A1700B71D74 /* three finger swip horizongtal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "three finger swip horizongtal.png"; sourceTree = "<group>"; };
-		7AB9F87B13532A2400B71D74 /* three finger swip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "three finger swip.png"; sourceTree = "<group>"; };
-		7AB9F87D13532BD500B71D74 /* Long Press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Long Press.png"; sourceTree = "<group>"; };
 		7ACEEE001366DF87003FF540 /* ConnectInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectInfo.h; sourceTree = "<group>"; };
 		7ACEEE011366DF87003FF540 /* ConnectInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectInfo.m; sourceTree = "<group>"; };
 		7ACEEE021366DF87003FF540 /* ConnectInfo.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ConnectInfo.xib; path = Classes/ConnectInfo.xib; sourceTree = "<group>"; };
@@ -181,17 +185,19 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7A05289413682EA60092D3C0 /* V.png */,
+				7A05289213682D9D0092D3C0 /* scroll-3.png */,
+				7A05289013682D8D0092D3C0 /* One Finger Swip-3.png */,
+				7A05288E13682D6E0092D3C0 /* Long Press-2.png */,
+				7A05288C13682D2A0092D3C0 /* three finger swip down-3.png */,
+				7A05288A13682D060092D3C0 /* three finger swip-3.png */,
+				7A05288813682CF70092D3C0 /* Three Finger Swap up-3.png */,
+				7A05288613682C540092D3C0 /* Two Finger Tap-3.png */,
+				7A05288413682C430092D3C0 /* two finger pinch-3.png */,
+				7A05288213682BD00092D3C0 /* tap-4.png */,
+				7A05287F1368283E0092D3C0 /* BackGround.png */,
 				7ACEEE021366DF87003FF540 /* ConnectInfo.xib */,
-				7AB4E662135F4A7400EB0B9C /* tap-1.png */,
-				7A6C95FE13533F4400862838 /* help back groundt.png */,
-				7AB9F87D13532BD500B71D74 /* Long Press.png */,
-				7AB9F87B13532A2400B71D74 /* three finger swip.png */,
-				7AB9F87913532A1700B71D74 /* three finger swip horizongtal.png */,
-				7AB9F87713532A0800B71D74 /* Three Finger Swap Horizongtal.png */,
 				7AB9F8751353297B00B71D74 /* optional.png */,
-				7AB9F8731353282900B71D74 /* scroll.png */,
-				7AB9F8711353277F00B71D74 /* two finger pinch.png */,
-				7AB9F86F1353207000B71D74 /* tap.png */,
 				7AB9F86D13531F9500B71D74 /* core.png */,
 				7A829B341352805E00C88F6B /* HelpPage.xib */,
 				7AAB737013452869003A2A60 /* configurationicon.jpg */,
@@ -281,17 +287,19 @@
 				7AAB737113452869003A2A60 /* configurationicon.jpg in Resources */,
 				7A829B361352805E00C88F6B /* HelpPage.xib in Resources */,
 				7AB9F86E13531F9500B71D74 /* core.png in Resources */,
-				7AB9F8701353207000B71D74 /* tap.png in Resources */,
-				7AB9F8721353278000B71D74 /* two finger pinch.png in Resources */,
-				7AB9F8741353282900B71D74 /* scroll.png in Resources */,
 				7AB9F8761353297B00B71D74 /* optional.png in Resources */,
-				7AB9F87813532A0800B71D74 /* Three Finger Swap Horizongtal.png in Resources */,
-				7AB9F87A13532A1700B71D74 /* three finger swip horizongtal.png in Resources */,
-				7AB9F87C13532A2400B71D74 /* three finger swip.png in Resources */,
-				7AB9F87E13532BD500B71D74 /* Long Press.png in Resources */,
-				7A6C95FF13533F4400862838 /* help back groundt.png in Resources */,
-				7AB4E663135F4A7400EB0B9C /* tap-1.png in Resources */,
 				7ACEEE041366DF88003FF540 /* ConnectInfo.xib in Resources */,
+				7A0528801368283E0092D3C0 /* BackGround.png in Resources */,
+				7A05288313682BD00092D3C0 /* tap-4.png in Resources */,
+				7A05288513682C430092D3C0 /* two finger pinch-3.png in Resources */,
+				7A05288713682C540092D3C0 /* Two Finger Tap-3.png in Resources */,
+				7A05288913682CF70092D3C0 /* Three Finger Swap up-3.png in Resources */,
+				7A05288B13682D060092D3C0 /* three finger swip-3.png in Resources */,
+				7A05288D13682D2A0092D3C0 /* three finger swip down-3.png in Resources */,
+				7A05288F13682D6E0092D3C0 /* Long Press-2.png in Resources */,
+				7A05289113682D8D0092D3C0 /* One Finger Swip-3.png in Resources */,
+				7A05289313682D9D0092D3C0 /* scroll-3.png in Resources */,
+				7A05289513682EA60092D3C0 /* V.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

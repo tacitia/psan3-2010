@@ -103,12 +103,21 @@
 
 - (IBAction) sendCtrlC:(id)sender;
 - (IBAction) sendCtrlV:(id)sender;
-- (IBAction) sendCtrlS:(id)sender;
+
+- (IBAction) sendTaskManager:(id)sender;
+
 - (IBAction) sendCtrlF4:(id)sender;
 - (IBAction) sendCtrlSpace:(id)sender;
 - (IBAction) sendTab:(id)sender;
 - (IBAction) sendAltTab:(id)sender;
 - (IBAction) sendAltF4:(id)sender;
+- (IBAction) sendEsc:(id)sender;
+- (IBAction) sendEnter:(id)sender;
+
+- (IBAction) sendLeft:(id)sender;
+- (IBAction) sendRight:(id)sender;
+- (IBAction) sendUp:(id)sender;
+- (IBAction) sendDown:(id)sender;
 
 - (IBAction) logOut:(id)sender;
 

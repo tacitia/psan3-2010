@@ -9,6 +9,7 @@
 #import "TouchViewController.h"
 #import "ConfigurationModal.h"
 #import "saveGesture.h"
+#import "GlobalConstants.h"
 
 #define ZOOM_STEP 1.5  
 
@@ -427,10 +428,20 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView,s
 	if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {		
 		startLocation = [gestureRecognizer locationInView:self.imageView];
 		NSLog(@"start for three fingers is : ( %f , %f )", startLocation.x, startLocation.y);
-		[vnccore sendPressAltPlusShift];
+		//[vnccore sendPressAltPlusShift];
+		
+		//Press alt+shift, do not release
+		[vnccore sendSingleKeyEventWithKey:VK_MENU pressed:1];
+		[vnccore sendSingleKeyEventWithKey:VK_SHIFT pressed:1];
     }
     else if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {	
-		[vnccore sendReleaseAltPlusShift];
+		
+		//[vnccore sendReleaseAltPlusShift];
+		
+		//Release alt+shift
+		[vnccore sendSingleKeyEventWithKey:VK_MENU pressed:0];
+		[vnccore sendSingleKeyEventWithKey:VK_SHIFT pressed:0];
+		
 		endLocation = [gestureRecognizer locationInView:self.imageView];
         NSLog(@"end for three fingers is : ( %f , %f )", endLocation.x, endLocation.y);
 		
@@ -681,9 +692,17 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView,s
 	NSLog(@"sendCtrlV");
 	[vnccore sendCtrlPlusChar:'v'];
 }
-- (IBAction) sendCtrlS:(id)sender{
-	NSLog(@"sendCtrlS");
-	[vnccore sendCtrlPlusChar:'s'];
+- (IBAction) sendTaskManager:(id)sender{
+	NSLog(@"sendTask Manager");
+	//[vnccore sendCtrlPlusChar:'s'];
+	[vnccore sendSingleKeyEventWithKey:VK_CONTROL pressed:1];
+	[vnccore sendSingleKeyEventWithKey:VK_MENU pressed:1];
+	[vnccore sendSingleKeyEventWithKey:VK_DELETE pressed:1];
+	
+	[vnccore sendSingleKeyEventWithKey:VK_CONTROL pressed:0];
+	[vnccore sendSingleKeyEventWithKey:VK_MENU pressed:0];
+	[vnccore sendSingleKeyEventWithKey:VK_DELETE pressed:0];
+	
 }
 - (IBAction) sendCtrlF4:(id)sender{
 	NSLog(@"sendCtrlF4");
@@ -704,6 +723,42 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView,s
 - (IBAction) sendAltF4:(id)sender{
 	NSLog(@"sendAltF4");
 	[vnccore sendAltPlusF4];
+}
+
+- (IBAction) sendEsc:(id)sender{
+	NSLog(@"sendEsc");
+	[vnccore sendSingleKeyEventWithKey:VK_ESCAPE pressed:1];
+	[vnccore sendSingleKeyEventWithKey:VK_ESCAPE pressed:0];
+}
+
+- (IBAction) sendEnter:(id)sender{
+	NSLog(@"sendEnter");
+	[vnccore sendSingleKeyEventWithKey:VK_RETURN pressed:1];
+	[vnccore sendSingleKeyEventWithKey:VK_RETURN pressed:0];
+}
+
+- (IBAction) sendLeft:(id)sender{
+	NSLog(@"Left");
+	[vnccore sendSingleKeyEventWithKey:VK_LEFT pressed:1];
+	[vnccore sendSingleKeyEventWithKey:VK_LEFT pressed:0];
+}
+
+- (IBAction) sendRight:(id)sender{
+	NSLog(@"Right");
+	[vnccore sendSingleKeyEventWithKey:VK_RIGHT pressed:1];
+	[vnccore sendSingleKeyEventWithKey:VK_RIGHT pressed:0];
+}
+
+- (IBAction) sendUp:(id)sender{
+	NSLog(@"Up");
+	[vnccore sendSingleKeyEventWithKey:VK_UP pressed:1];
+	[vnccore sendSingleKeyEventWithKey:VK_UP pressed:0];
+}
+
+- (IBAction) sendDown:(id)sender{
+	NSLog(@"Down");
+	[vnccore sendSingleKeyEventWithKey:VK_DOWN pressed:1];
+	[vnccore sendSingleKeyEventWithKey:VK_DOWN pressed:0];
 }
 
 - (IBAction) logOut:(id)sender{
