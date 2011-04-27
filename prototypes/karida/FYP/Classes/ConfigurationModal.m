@@ -11,7 +11,7 @@
 #import "TouchViewController.h"
 
 @implementation ConfigurationModal
-@synthesize ConfigTable,helpView, switchInCell1, switchInCell2, switchInCell3, switchInCell4, switchInCell5, switchArray,activatedArray, tempActivatedArray;
+@synthesize ConfigTable,helpView, switchInCell1, switchInCell2, switchInCell3, switchInCell4, switchInCell5, switchArray,activatedArray, tempActivatedArray,vnccoreInConfig,info;
 
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 
@@ -71,7 +71,12 @@
     return self;
 }
 
-
+-(void)setVncInfo:(VNCCore *) vnc{
+	
+	vnccoreInConfig = vnc; 
+	NSLog(@"Connected Info: port = %d", vnccoreInConfig.serverPort);
+	
+}
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
@@ -253,7 +258,10 @@
 		if ([indexPath row] == 1) {
 			//HelpPage
 			NSLog(@"Help Page!");
-			helpView = [[HelpPage alloc] initWithNibName:@"HelpPage" bundle:[NSBundle mainBundle]];
+			if (helpView == NULL) {
+				helpView = [[HelpPage alloc] initWithNibName:@"HelpPage" bundle:[NSBundle mainBundle]];
+			}
+			
 			//[self.view addSubview:helpView.view];
 			
 			[UIView beginAnimations:nil context:nil];
@@ -267,14 +275,42 @@
 			
 		}
 		else {
-
-			UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Connection Information!"
-															 message:@"Do you want to close the current window?"
+			/*
+			UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Connection Information"
+															 message:@"currently not implemented?"
 															delegate:self 
 												   cancelButtonTitle:@"OK" 
 												   otherButtonTitles:nil];
 			[alert show];
-			[alert release];			
+			[alert release];
+			 */
+			if (info == NULL) {
+				info = [[ConnectInfo alloc] initWithNibName:@"ConnectInfo" bundle:[NSBundle mainBundle]];
+				info.initIP = [[UILabel alloc] init];
+				[info.initIP setText:vnccoreInConfig.serverIP];
+				
+				info.initPort = [[UILabel alloc] init];
+				[info.initPort setText:[NSString stringWithFormat:@"%i", vnccoreInConfig.serverPort]];
+				
+				//info.initIP.text = vnccoreInConfig.serverIP;
+				//info.initPort.text = [NSString stringWithFormat:@"%i", vnccoreInConfig.serverPort];
+				
+				NSLog(@"it is %i and @%@",vnccoreInConfig.serverPort,vnccoreInConfig.serverIP );
+				NSLog(@"it is @%@ and @%@",info.initIP.text,info.initPort.text );
+			}
+			
+			
+			//[self.view addSubview:helpView.view];
+			
+			[UIView beginAnimations:nil context:nil];
+			[UIView setAnimationDuration:0.5];
+			[UIView setAnimationTransition:UIViewAnimationTransitionCurlUp
+								   forView:self.view cache:YES];
+			
+			[self.view addSubview:info.view];
+			
+			[UIView commitAnimations];
+			
 		}
 
 	}
@@ -303,6 +339,8 @@
 	[switchInCell4 release];
 	[switchInCell5 release];
 	[switchArray release];
+	
+	[vnccoreInConfig release];
 	
     [super dealloc];
 	

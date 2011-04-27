@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "HelpPage.h"
-
+#import "VNCCore.h"
+#import "ConnectInfo.h"
 
 @interface ConfigurationModal : UIViewController {
 	
@@ -17,6 +18,8 @@
 	NSMutableArray *ConfigArray;
 	
 	HelpPage *helpView;
+	
+	ConnectInfo *info;
 
 	/*
 	  Boolean indicating whether the gesture is activated.
@@ -34,6 +37,8 @@
 	//bit 0-4 stores whether the ith switch is on or off
 	int activated;
 	int tempActivated;
+	
+	VNCCore* vnccoreInConfig;
 	
 	/*
 	//Double finger tap at once == mouse right click
@@ -59,9 +64,11 @@
 	Boolean TempthreeFingerPanDownRecognizerActivated;
 	*/
 }
+@property (nonatomic, retain) VNCCore* vnccoreInConfig;
 
 @property (nonatomic, retain) IBOutlet UITableView *ConfigTable;
 @property (nonatomic, retain) HelpPage *helpView;
+@property (nonatomic, retain) ConnectInfo *info;
 
 @property (nonatomic, retain) UISwitch *switchInCell1;
 @property (nonatomic, retain) UISwitch *switchInCell2;
@@ -76,5 +83,7 @@
 
 -(IBAction) cancellConfiguration: (id) sender;
 -(IBAction) saveConfiguration: (id) sender;
+
+-(void)setVncInfo:(VNCCore *) vnc;
 
 @end

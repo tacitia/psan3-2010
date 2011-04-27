@@ -18,7 +18,7 @@
 
 @implementation TouchViewController
 @synthesize image, imageView, configurationModalInTouchViewController, imageScrollView, inputText, vnccore,
-panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView,saveFirstPoint,connectInfo;
+panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView,saveFirstPoint;
 
 
  // The designated initializer. Override to perform setup that is required before the view is loaded.
@@ -26,7 +26,8 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView,s
  self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
  if (self) {
  // Custom initialization
-	 //connectInfo = "The connected IP is: " + vnccore.serverIP.text + @" and the Port is: " + vnccore.serverPort.text;
+	// TouchViewController.connectedIP = [[NSString alloc] initWithString:vnccore.serverIP];
+	// TouchViewController.connectedPort = [[NSString alloc] initWithString:[NSString stringWithFormat:@"%d", vnccore.serverPort]];
  
  }
  return self;
@@ -621,6 +622,7 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView,s
 	//	configurationModalInTouchViewController = [[ConfigurationModal alloc] initWithNibName:@"ConfigurationModal" bundle:Nil];
 	//}
 	
+	[configurationModalInTouchViewController setVncInfo:vnccore];
 	
 	[UIView beginAnimations:nil context:nil];
 	[UIView setAnimationDuration:0.5];

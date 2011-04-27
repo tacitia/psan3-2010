@@ -38,6 +38,8 @@
 		7AB9F87A13532A1700B71D74 /* three finger swip horizongtal.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB9F87913532A1700B71D74 /* three finger swip horizongtal.png */; };
 		7AB9F87C13532A2400B71D74 /* three finger swip.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB9F87B13532A2400B71D74 /* three finger swip.png */; };
 		7AB9F87E13532BD500B71D74 /* Long Press.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB9F87D13532BD500B71D74 /* Long Press.png */; };
+		7ACEEE031366DF87003FF540 /* ConnectInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACEEE011366DF87003FF540 /* ConnectInfo.m */; };
+		7ACEEE041366DF88003FF540 /* ConnectInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ACEEE021366DF87003FF540 /* ConnectInfo.xib */; };
 		7ADD06A51305AD7400D153CC /* ConfigurationModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ADD06A31305AD7400D153CC /* ConfigurationModal.m */; };
 		7ADD06DD1305B89D00D153CC /* TouchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ADD06DC1305B89D00D153CC /* TouchViewController.m */; };
 		7ADD06E41305B8DC00D153CC /* ConfigurationModal.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ADD06E31305B8DC00D153CC /* ConfigurationModal.xib */; };
@@ -87,6 +89,9 @@
 		7AB9F87913532A1700B71D74 /* three finger swip horizongtal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "three finger swip horizongtal.png"; sourceTree = "<group>"; };
 		7AB9F87B13532A2400B71D74 /* three finger swip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "three finger swip.png"; sourceTree = "<group>"; };
 		7AB9F87D13532BD500B71D74 /* Long Press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Long Press.png"; sourceTree = "<group>"; };
+		7ACEEE001366DF87003FF540 /* ConnectInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectInfo.h; sourceTree = "<group>"; };
+		7ACEEE011366DF87003FF540 /* ConnectInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectInfo.m; sourceTree = "<group>"; };
+		7ACEEE021366DF87003FF540 /* ConnectInfo.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ConnectInfo.xib; path = Classes/ConnectInfo.xib; sourceTree = "<group>"; };
 		7ADD06A21305AD7400D153CC /* ConfigurationModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationModal.h; sourceTree = "<group>"; };
 		7ADD06A31305AD7400D153CC /* ConfigurationModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationModal.m; sourceTree = "<group>"; };
 		7ADD06DB1305B89D00D153CC /* TouchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchViewController.h; sourceTree = "<group>"; };
@@ -139,6 +144,8 @@
 				3E4950F9135F08B600F7FD1C /* GlobalConstants.m */,
 				7A83C96F135FD88E003C768A /* saveGesture.h */,
 				7A83C970135FD88E003C768A /* saveGesture.m */,
+				7ACEEE001366DF87003FF540 /* ConnectInfo.h */,
+				7ACEEE011366DF87003FF540 /* ConnectInfo.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -174,6 +181,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7ACEEE021366DF87003FF540 /* ConnectInfo.xib */,
 				7AB4E662135F4A7400EB0B9C /* tap-1.png */,
 				7A6C95FE13533F4400862838 /* help back groundt.png */,
 				7AB9F87D13532BD500B71D74 /* Long Press.png */,
@@ -283,6 +291,7 @@
 				7AB9F87E13532BD500B71D74 /* Long Press.png in Resources */,
 				7A6C95FF13533F4400862838 /* help back groundt.png in Resources */,
 				7AB4E663135F4A7400EB0B9C /* tap-1.png in Resources */,
+				7ACEEE041366DF88003FF540 /* ConnectInfo.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +314,7 @@
 				7A829B351352805E00C88F6B /* HelpPage.m in Sources */,
 				3E4950FA135F08B600F7FD1C /* GlobalConstants.m in Sources */,
 				7A83C971135FD88E003C768A /* saveGesture.m in Sources */,
+				7ACEEE031366DF87003FF540 /* ConnectInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
