@@ -15,9 +15,9 @@
 		2899E5220DE3E06400AC0155 /* RDPPrototypeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* RDPPrototypeViewController.xib */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D7ACF80DDB3853001CB0EB /* RDPPrototypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* RDPPrototypeViewController.m */; };
-		3E4950FA135F08B600F7FD1C /* GlobalConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4950F9135F08B600F7FD1C /* GlobalConstants.m */; };
 		3E5582B112856DE600AB8CDF /* NetworkCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5582B012856DE600AB8CDF /* NetworkCommunicator.m */; };
 		3E5582C81285700900AB8CDF /* NSStreamAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5582C71285700900AB8CDF /* NSStreamAdditions.m */; };
+		3EBCB036136826D6000BB38E /* GlobalConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBCB035136826D6000BB38E /* GlobalConstants.m */; };
 		3EF654BD132909A100F00E5E /* tmpresult.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3EF654BC132909A100F00E5E /* tmpresult.jpg */; };
 		7A1468A11300DD770002F3A2 /* Windows.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A1468A01300DD770002F3A2 /* Windows.png */; };
 		7A6C95FF13533F4400862838 /* help back groundt.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A6C95FE13533F4400862838 /* help back groundt.png */; };
@@ -61,12 +61,12 @@
 		28D7ACF70DDB3853001CB0EB /* RDPPrototypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDPPrototypeViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* RDPPrototype_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDPPrototype_Prefix.pch; sourceTree = "<group>"; };
-		3E4950D7135F04D300F7FD1C /* GlobalConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalConstants.h; sourceTree = "<group>"; };
-		3E4950F9135F08B600F7FD1C /* GlobalConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalConstants.m; sourceTree = "<group>"; };
 		3E5582AF12856DE600AB8CDF /* NetworkCommunicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkCommunicator.h; sourceTree = "<group>"; };
 		3E5582B012856DE600AB8CDF /* NetworkCommunicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkCommunicator.m; sourceTree = "<group>"; };
 		3E5582C61285700900AB8CDF /* NSStreamAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStreamAdditions.h; sourceTree = "<group>"; };
 		3E5582C71285700900AB8CDF /* NSStreamAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStreamAdditions.m; sourceTree = "<group>"; };
+		3EBCB034136826D6000BB38E /* GlobalConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalConstants.h; sourceTree = "<group>"; };
+		3EBCB035136826D6000BB38E /* GlobalConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalConstants.m; sourceTree = "<group>"; };
 		3EF654BC132909A100F00E5E /* tmpresult.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tmpresult.jpg; sourceTree = "<group>"; };
 		7A1468A01300DD770002F3A2 /* Windows.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Windows.png; sourceTree = "<group>"; };
 		7A6C95FE13533F4400862838 /* help back groundt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "help back groundt.png"; sourceTree = "<group>"; };
@@ -140,8 +140,8 @@
 				7ADD06A31305AD7400D153CC /* ConfigurationModal.m */,
 				7A829B321352805E00C88F6B /* HelpPage.h */,
 				7A829B331352805E00C88F6B /* HelpPage.m */,
-				3E4950D7135F04D300F7FD1C /* GlobalConstants.h */,
-				3E4950F9135F08B600F7FD1C /* GlobalConstants.m */,
+				3EBCB034136826D6000BB38E /* GlobalConstants.h */,
+				3EBCB035136826D6000BB38E /* GlobalConstants.m */,
 				7A83C96F135FD88E003C768A /* saveGesture.h */,
 				7A83C970135FD88E003C768A /* saveGesture.m */,
 				7ACEEE001366DF87003FF540 /* ConnectInfo.h */,
@@ -312,7 +312,7 @@
 				7ADD06A51305AD7400D153CC /* ConfigurationModal.m in Sources */,
 				7ADD06DD1305B89D00D153CC /* TouchViewController.m in Sources */,
 				7A829B351352805E00C88F6B /* HelpPage.m in Sources */,
-				3E4950FA135F08B600F7FD1C /* GlobalConstants.m in Sources */,
+				3EBCB036136826D6000BB38E /* GlobalConstants.m in Sources */,
 				7A83C971135FD88E003C768A /* saveGesture.m in Sources */,
 				7ACEEE031366DF87003FF540 /* ConnectInfo.m in Sources */,
 			);
