@@ -1822,6 +1822,7 @@ UIImage* previousImage = nil;
 	packet[17] = dwFlags % 256;
 	
 	packet[18] = packet[19] = packet[20] = packet[21] = 0;
+	[communicator sendMessage:packet length:21];
 }
 
 - (void)sendRightClickEventAtPosition:(CGPoint)position {
