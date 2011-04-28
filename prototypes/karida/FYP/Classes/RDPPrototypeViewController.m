@@ -68,7 +68,7 @@
 		
 	}
 	
-	UIImage *tmpimage = [UIImage imageNamed:@"Windows.png"];
+	UIImage *tmpimage = [UIImage imageNamed:@"Default_desktop.png"];
 	[touchViewController setImage:tmpimage];
 	touchViewController.vnccore = self.vnccore;
 	[tmpimage release];
