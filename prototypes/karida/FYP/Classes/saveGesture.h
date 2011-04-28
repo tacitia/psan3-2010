@@ -19,6 +19,7 @@
 	CGPoint midPoint;
 	
 	BOOL strokeUp;
+	BOOL strokeDown;
 	
 	@public
 	CGPoint firstPosition;

@@ -33,9 +33,11 @@
     if (!strokeUp) {
 		//NSLog(@"strokeUp == false");
         // on downstroke, both x and y increase in positive direction
-        if (nowPoint.x >= prevPoint.x && nowPoint.y >= prevPoint.y) {
-            midPoint = nowPoint;
+        if (nowPoint.x >= prevPoint.x   && nowPoint.y >= prevPoint.y ) {
+            //midPoint = nowPoint;
             // upstroke has increasing x value but decreasing y value
+			strokeDown = YES;
+			//NSLog(@"down right");
         } else if (nowPoint.x >= prevPoint.x && nowPoint.y <= prevPoint.y) {
             strokeUp = YES;
 			self.state == UIGestureRecognizerStatePossible;
@@ -49,11 +51,11 @@
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
 	//NSLog(@"TouchesEnded called");
     [super touchesEnded:touches withEvent:event];
-    if ((self.state == UIGestureRecognizerStatePossible) && strokeUp) {
-		NSLog(@"Save Recognized!");
+    if ((self.state == UIGestureRecognizerStatePossible) && strokeUp && strokeDown) {
+		//NSLog(@"Save Recognized!");
         self.state = UIGestureRecognizerStateRecognized;
-		
-		
+		strokeUp = NO;
+		strokeDown = NO;
     }
 	else {
 		self.state = UIGestureRecognizerStateFailed;
@@ -65,6 +67,7 @@
     [super touchesCancelled:touches withEvent:event];
     midPoint = CGPointZero;
     strokeUp = NO;
+	strokeDown = NO;
     self.state = UIGestureRecognizerStateFailed;
 }
 
