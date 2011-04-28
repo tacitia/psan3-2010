@@ -247,6 +247,7 @@ typedef enum {
 
 #pragma mark -
 #pragma mark Send Mouse Events
+- (void)sendSingleMouseEvent:(int)event atPosition:(CGPoint)position;
 - (void)sendLeftClickEventAtPosition:(CGPoint)position;
 - (void)sendRightClickEventAtPosition:(CGPoint)position;
 - (void)sendDoubleLeftClickEventAtPosition:(CGPoint)position;
