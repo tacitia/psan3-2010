@@ -52,16 +52,6 @@
 
 BOOL isCustomServer = FALSE; 
 
-#pragma mark MouseEvent Constants
-
-const int MOUSEEVENTF_ABSOLUTE = 0x8000;
-const int MOUSEEVENTF_MOVE = 0x0001;
-const int MOUSEEVENTF_LEFTDOWN = 0x0002;
-const int MOUSEEVENTF_LEFTUP = 0x0004;
-const int MOUSEEVENTF_RIGHTDOWN = 0x0008;
-const int MOUSEEVENTF_RIGHTUP = 0x0010;
-const int MOUSEEVENTF_WHEEL = 0x0800;
-
 #pragma mark KeyEvent Constants
 
 const int KEYEVENTF_KEYUP = 0x0002;
@@ -1798,6 +1788,42 @@ UIImage* previousImage = nil;
 
 #pragma mark Mouse Events
 
+- (void)sendSingleMouseEvent:(int)event atPosition:(CGPoint)position {
+	if (packet != nil) {
+		free(packet);
+		packet = nil;
+	}
+	packet = malloc(sizeof(uint8_t) * 21);
+	
+	packet[0] = 5;
+	packet[1] = 2;
+	
+	CGPoint serverPosition = [self transformClientPositionToServerPosition:position];
+	
+	unsigned int x = ceil(serverPosition.x);
+	unsigned int y = ceil(serverPosition.y);
+	
+	packet[2] = x / 256 / 256 / 256;
+	packet[3] = (x / 256 / 256) % 256;
+	packet[4] = (x / 256) % 256;
+	packet[5] = x % 256;
+	packet[6] = y / 256 / 256 / 256;
+	packet[7] = (y / 256 / 256) % 256;
+	packet[8] = (y / 256) % 256;
+	packet[9] = y % 256;
+	
+	packet[10] = packet[11] = packet[12] = packet[13] = 0;
+	
+	unsigned int dwFlags = (MOUSEEVENTF_ABSOLUTE | event);
+	
+	packet[14] = dwFlags / 256 / 256 / 256;
+	packet[15] = (dwFlags / 256 / 256) % 256;
+	packet[16] = (dwFlags / 256) % 256;
+	packet[17] = dwFlags % 256;
+	
+	packet[18] = packet[19] = packet[20] = packet[21] = 0;
+}
+
 - (void)sendRightClickEventAtPosition:(CGPoint)position {
 	if (packet != nil) {
 		free(packet);
@@ -1838,6 +1864,7 @@ UIImage* previousImage = nil;
 	
 	[communicator sendMessage:packet length:42];	
 }
+
 
 - (void)sendLeftClickEventAtPosition:(CGPoint)position {
 	if (packet != nil) {
