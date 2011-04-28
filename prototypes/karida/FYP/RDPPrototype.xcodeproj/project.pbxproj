@@ -30,6 +30,7 @@
 		7A05289113682D8D0092D3C0 /* One Finger Swip-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A05289013682D8D0092D3C0 /* One Finger Swip-3.png */; };
 		7A05289313682D9D0092D3C0 /* scroll-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A05289213682D9D0092D3C0 /* scroll-3.png */; };
 		7A05289513682EA60092D3C0 /* V.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A05289413682EA60092D3C0 /* V.png */; };
+		7A1131F01369256E008A3DC5 /* desktop.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A1131EF1369256E008A3DC5 /* desktop.png */; };
 		7A1468A11300DD770002F3A2 /* Windows.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A1468A01300DD770002F3A2 /* Windows.png */; };
 		7A829B351352805E00C88F6B /* HelpPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A829B331352805E00C88F6B /* HelpPage.m */; };
 		7A829B361352805E00C88F6B /* HelpPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A829B341352805E00C88F6B /* HelpPage.xib */; };
@@ -81,6 +82,7 @@
 		7A05289013682D8D0092D3C0 /* One Finger Swip-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "One Finger Swip-3.png"; sourceTree = "<group>"; };
 		7A05289213682D9D0092D3C0 /* scroll-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scroll-3.png"; sourceTree = "<group>"; };
 		7A05289413682EA60092D3C0 /* V.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = V.png; sourceTree = "<group>"; };
+		7A1131EF1369256E008A3DC5 /* desktop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = desktop.png; sourceTree = "<group>"; };
 		7A1468A01300DD770002F3A2 /* Windows.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Windows.png; sourceTree = "<group>"; };
 		7A829B321352805E00C88F6B /* HelpPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpPage.h; sourceTree = "<group>"; };
 		7A829B331352805E00C88F6B /* HelpPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpPage.m; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7A1131EF1369256E008A3DC5 /* desktop.png */,
 				7A05289413682EA60092D3C0 /* V.png */,
 				7A05289213682D9D0092D3C0 /* scroll-3.png */,
 				7A05289013682D8D0092D3C0 /* One Finger Swip-3.png */,
@@ -300,6 +303,7 @@
 				7A05289113682D8D0092D3C0 /* One Finger Swip-3.png in Resources */,
 				7A05289313682D9D0092D3C0 /* scroll-3.png in Resources */,
 				7A05289513682EA60092D3C0 /* V.png in Resources */,
+				7A1131F01369256E008A3DC5 /* desktop.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

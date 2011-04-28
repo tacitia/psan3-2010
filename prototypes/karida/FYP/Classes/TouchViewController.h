@@ -62,9 +62,8 @@
 	
 	//public NSString * connectedIP;
 	//public NSString * connectedPort;
+	
 }
-
-
 
 @property (nonatomic, retain) IBOutlet UIScrollView *imageScrollView;
 
