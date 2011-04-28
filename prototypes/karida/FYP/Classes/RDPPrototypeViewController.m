@@ -68,7 +68,7 @@
 		
 	}
 	
-	UIImage *tmpimage = [UIImage imageNamed:@"desktop.png"];
+	UIImage *tmpimage = [UIImage imageNamed:@"loading.png"];
 	[touchViewController setImage:tmpimage];
 	touchViewController.vnccore = self.vnccore;
 	[tmpimage release];

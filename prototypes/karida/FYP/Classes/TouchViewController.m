@@ -313,19 +313,11 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView,s
 	
 	// x alwas equals zero?
 	printf("x = %f and y = %f",touchLocation.x, touchLocation.y);
+	[vnccore sendSingleMouseEvent:MOUSEEVENTF_LEFTDOWN atPosition:touchLocation];
+	[vnccore sendSingleMouseEvent:MOUSEEVENTF_LEFTUP atPosition:touchLocation];
 	
-	[vnccore sendLeftClickEventAtPosition:touchLocation];
-	/*
-	test for changing display image
-	 */
-	//[self updateImage:@"tap.png"];
-	
-	//[self viewDidLoad];
-	
-	//[self.view addSubview:touchViewController.view];	
-	
-	/*test end*/
-}  
+	//[vnccore sendLeftClickEventAtPosition:touchLocation];
+	}  
 
 - (void)handleDoubleTap:(UIGestureRecognizer *)gestureRecognizer {
 	NSLog(@"Double Tap!");
@@ -386,17 +378,49 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView,s
 		//NSLog(@"start is : ( %f , %f )", startLocation.x, startLocation.y);
 		if (saveFirstPoint != NULL) {
 			NSLog(@"Sent start is : ( %f , %f )", (saveFirstPoint->firstPosition).x, (saveFirstPoint->firstPosition).y);
+			
+			//[vnccore sendMouseDragEventFromPosition:saveFirstPoint->firstPosition toPosition:startLocation];
+			
+			/*
+			 send mouse down with point saveFirstPoint->firstPosition
+			 send moust move to the startLocation
+			 */
+			
+			[vnccore sendSingleMouseEvent:MOUSEEVENTF_LEFTDOWN atPosition:saveFirstPoint->firstPosition];
+			[vnccore sendSingleMouseEvent:MOUSEEVENTF_MOVE atPosition:startLocation];
+			
 		}
-		
-		
     }
     else if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {
 		
 		endLocation = [gestureRecognizer locationInView:self.imageView];
-        NSLog(@"end is : ( %f , %f )", endLocation.x, endLocation.y);
+		/*
+		 send moust move to endLocation
+		 send mouse up with point endlocation
+		 */
 		
-        [vnccore sendMouseDragEventFromPosition:saveFirstPoint->firstPosition toPosition:endLocation];
+		[vnccore sendSingleMouseEvent:MOUSEEVENTF_MOVE atPosition:endLocation];
+		[vnccore sendSingleMouseEvent:MOUSEEVENTF_LEFTUP atPosition:endLocation];
+	
+		//[vnccore sendMouseDragEventFromPosition:saveFirstPoint->firstPosition toPosition:endLocation];
+		//[vnccore sendMouseDragEventFromPosition:startLocation toPosition:endLocation];
+		NSLog(@"end is : ( %f , %f )", endLocation.x, endLocation.y);
     }
+	else {
+		//moving
+		
+		nowLocation = [gestureRecognizer locationInView:self.imageView];
+		//[vnccore sendMouseDragEventFromPosition:startLocation toPosition:nowLocation];
+		
+		/*
+		 send moust move with nowLocation
+		*/
+		[vnccore sendSingleMouseEvent:MOUSEEVENTF_MOVE atPosition:nowLocation];
+		NSLog(@"now is : ( %f , %f )", nowLocation.x, nowLocation.y);
+		
+		startLocation = nowLocation;
+	}
+
 	
 }
 /*
@@ -435,7 +459,7 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView,s
 		//[vnccore sendPressAltPlusShift];
 		
 		//Press alt+shift, do not release
-		[vnccore sendSingleKeyEventWithKey:VK_MENU pressed:1];
+		[vnccore sendSingleKeyEventWithKey:VK_LMENU pressed:1];
 		[vnccore sendSingleKeyEventWithKey:VK_SHIFT pressed:1];
     }
     else if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {	
@@ -443,7 +467,7 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView,s
 		//[vnccore sendReleaseAltPlusShift];
 		
 		//Release alt+shift
-		[vnccore sendSingleKeyEventWithKey:VK_MENU pressed:0];
+		[vnccore sendSingleKeyEventWithKey:VK_LMENU pressed:0];
 		[vnccore sendSingleKeyEventWithKey:VK_SHIFT pressed:0];
 		
 		endLocation = [gestureRecognizer locationInView:self.imageView];
@@ -580,7 +604,13 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView,s
 		else
 		{
 			NSLog(@"Close Current Window!");
-			[vnccore sendAltPlusF4];
+			[vnccore sendSingleKeyEventWithKey:VK_LMENU pressed:1];
+			[vnccore sendSingleKeyEventWithKey:VK_F1+3 pressed:1];
+			
+			[vnccore sendSingleKeyEventWithKey:VK_F1+3 pressed:0];
+			[vnccore sendSingleKeyEventWithKey:VK_LMENU pressed:0];
+
+			//[vnccore sendAltPlusF4];
 		}
 	}
 	else {
@@ -682,12 +712,12 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView,s
 	NSLog(@"sendTask Manager");
 	//[vnccore sendCtrlPlusChar:'s'];
 	[vnccore sendSingleKeyEventWithKey:VK_CONTROL pressed:1];
-	[vnccore sendSingleKeyEventWithKey:VK_MENU pressed:1];
-	[vnccore sendSingleKeyEventWithKey:VK_DELETE pressed:1];
+	[vnccore sendSingleKeyEventWithKey:VK_SHIFT pressed:1];
+	[vnccore sendSingleKeyEventWithKey:VK_ESCAPE pressed:1];
 	
+	[vnccore sendSingleKeyEventWithKey:VK_ESCAPE pressed:0];
+	[vnccore sendSingleKeyEventWithKey:VK_SHIFT pressed:0];
 	[vnccore sendSingleKeyEventWithKey:VK_CONTROL pressed:0];
-	[vnccore sendSingleKeyEventWithKey:VK_MENU pressed:0];
-	[vnccore sendSingleKeyEventWithKey:VK_DELETE pressed:0];
 	
 }
 - (IBAction) sendCtrlF4:(id)sender{
@@ -704,11 +734,19 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView,s
 }
 - (IBAction) sendAltTab:(id)sender{
 	NSLog(@"sendAltTab");
+	
+	//alt + tab
+	[vnccore sendAltPlusTab];
 	[vnccore sendAltPlusTab];
 }
 - (IBAction) sendAltF4:(id)sender{
 	NSLog(@"sendAltF4");
-	[vnccore sendAltPlusF4];
+	//[vnccore sendAltPlusF4];
+	[vnccore sendSingleKeyEventWithKey:VK_LMENU pressed:1];
+	[vnccore sendSingleKeyEventWithKey:VK_F1+3 pressed:1];
+	
+	[vnccore sendSingleKeyEventWithKey:VK_F1+3 pressed:0];
+	[vnccore sendSingleKeyEventWithKey:VK_LMENU pressed:0];
 }
 
 - (IBAction) sendEsc:(id)sender{

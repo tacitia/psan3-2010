@@ -1793,10 +1793,10 @@ UIImage* previousImage = nil;
 		free(packet);
 		packet = nil;
 	}
-	packet = malloc(sizeof(uint8_t) * 21);
+	packet = malloc(sizeof(uint8_t) * 22);
 	
 	packet[0] = 5;
-	packet[1] = 2;
+	packet[1] = 1;
 	
 	CGPoint serverPosition = [self transformClientPositionToServerPosition:position];
 	
@@ -1822,7 +1822,7 @@ UIImage* previousImage = nil;
 	packet[17] = dwFlags % 256;
 	
 	packet[18] = packet[19] = packet[20] = packet[21] = 0;
-	[communicator sendMessage:packet length:21];
+	[communicator sendMessage:packet length:22];
 }
 
 - (void)sendRightClickEventAtPosition:(CGPoint)position {

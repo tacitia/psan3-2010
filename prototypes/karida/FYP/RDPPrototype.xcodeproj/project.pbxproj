@@ -30,7 +30,6 @@
 		7A05289113682D8D0092D3C0 /* One Finger Swip-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A05289013682D8D0092D3C0 /* One Finger Swip-3.png */; };
 		7A05289313682D9D0092D3C0 /* scroll-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A05289213682D9D0092D3C0 /* scroll-3.png */; };
 		7A05289513682EA60092D3C0 /* V.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A05289413682EA60092D3C0 /* V.png */; };
-		7A1131F01369256E008A3DC5 /* desktop.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A1131EF1369256E008A3DC5 /* desktop.png */; };
 		7A1468A11300DD770002F3A2 /* Windows.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A1468A01300DD770002F3A2 /* Windows.png */; };
 		7A829B351352805E00C88F6B /* HelpPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A829B331352805E00C88F6B /* HelpPage.m */; };
 		7A829B361352805E00C88F6B /* HelpPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A829B341352805E00C88F6B /* HelpPage.xib */; };
@@ -38,6 +37,8 @@
 		7A8BEC8612E5E44B0064BFBE /* TouchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A8BEC8412E5E44B0064BFBE /* TouchViewController.xib */; };
 		7A922C9512FD106A0082D352 /* rotation.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A922C9412FD106A0082D352 /* rotation.png */; };
 		7A922C9712FD10780082D352 /* swipe.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A922C9612FD10780082D352 /* swipe.png */; };
+		7AA154B61369617F0005A98C /* bkground1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7AA154B51369617F0005A98C /* bkground1.jpg */; };
+		7AA154B81369618E0005A98C /* bkground2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7AA154B71369618E0005A98C /* bkground2.jpg */; };
 		7AAB737113452869003A2A60 /* configurationicon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7AAB737013452869003A2A60 /* configurationicon.jpg */; };
 		7AB9F86E13531F9500B71D74 /* core.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB9F86D13531F9500B71D74 /* core.png */; };
 		7AB9F8761353297B00B71D74 /* optional.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB9F8751353297B00B71D74 /* optional.png */; };
@@ -46,6 +47,7 @@
 		7ADD06A51305AD7400D153CC /* ConfigurationModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ADD06A31305AD7400D153CC /* ConfigurationModal.m */; };
 		7ADD06DD1305B89D00D153CC /* TouchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ADD06DC1305B89D00D153CC /* TouchViewController.m */; };
 		7ADD06E41305B8DC00D153CC /* ConfigurationModal.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ADD06E31305B8DC00D153CC /* ConfigurationModal.xib */; };
+		7AF9898013695A2E00CDF4DB /* loading.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF9897F13695A2E00CDF4DB /* loading.png */; };
 		F73239F512D1AC860031EB24 /* Microsoft_Silverlight.png in Resources */ = {isa = PBXBuildFile; fileRef = F73239F412D1AC860031EB24 /* Microsoft_Silverlight.png */; };
 		F7F5E04A1285880C0070AE03 /* RDPCore.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F5E0491285880C0070AE03 /* RDPCore.m */; };
 		F7F8C62112A247A300FC4E29 /* VNCCore.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F8C62012A247A300FC4E29 /* VNCCore.m */; };
@@ -82,7 +84,6 @@
 		7A05289013682D8D0092D3C0 /* One Finger Swip-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "One Finger Swip-3.png"; sourceTree = "<group>"; };
 		7A05289213682D9D0092D3C0 /* scroll-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scroll-3.png"; sourceTree = "<group>"; };
 		7A05289413682EA60092D3C0 /* V.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = V.png; sourceTree = "<group>"; };
-		7A1131EF1369256E008A3DC5 /* desktop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = desktop.png; sourceTree = "<group>"; };
 		7A1468A01300DD770002F3A2 /* Windows.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Windows.png; sourceTree = "<group>"; };
 		7A829B321352805E00C88F6B /* HelpPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpPage.h; sourceTree = "<group>"; };
 		7A829B331352805E00C88F6B /* HelpPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpPage.m; sourceTree = "<group>"; };
@@ -92,6 +93,8 @@
 		7A8BEC8412E5E44B0064BFBE /* TouchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TouchViewController.xib; sourceTree = "<group>"; };
 		7A922C9412FD106A0082D352 /* rotation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rotation.png; sourceTree = "<group>"; };
 		7A922C9612FD10780082D352 /* swipe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swipe.png; sourceTree = "<group>"; };
+		7AA154B51369617F0005A98C /* bkground1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bkground1.jpg; sourceTree = "<group>"; };
+		7AA154B71369618E0005A98C /* bkground2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bkground2.jpg; sourceTree = "<group>"; };
 		7AAB737013452869003A2A60 /* configurationicon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = configurationicon.jpg; sourceTree = "<group>"; };
 		7AB9F86D13531F9500B71D74 /* core.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = core.png; sourceTree = "<group>"; };
 		7AB9F8751353297B00B71D74 /* optional.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = optional.png; sourceTree = "<group>"; };
@@ -103,6 +106,7 @@
 		7ADD06DB1305B89D00D153CC /* TouchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchViewController.h; sourceTree = "<group>"; };
 		7ADD06DC1305B89D00D153CC /* TouchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchViewController.m; sourceTree = "<group>"; };
 		7ADD06E31305B8DC00D153CC /* ConfigurationModal.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfigurationModal.xib; sourceTree = "<group>"; };
+		7AF9897F13695A2E00CDF4DB /* loading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loading.png; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* RDPPrototype-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RDPPrototype-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		F73239F412D1AC860031EB24 /* Microsoft_Silverlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Microsoft_Silverlight.png; sourceTree = "<group>"; };
 		F7F5E0481285880C0070AE03 /* RDPCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDPCore.h; sourceTree = "<group>"; };
@@ -187,7 +191,9 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				7A1131EF1369256E008A3DC5 /* desktop.png */,
+				7AA154B71369618E0005A98C /* bkground2.jpg */,
+				7AA154B51369617F0005A98C /* bkground1.jpg */,
+				7AF9897F13695A2E00CDF4DB /* loading.png */,
 				7A05289413682EA60092D3C0 /* V.png */,
 				7A05289213682D9D0092D3C0 /* scroll-3.png */,
 				7A05289013682D8D0092D3C0 /* One Finger Swip-3.png */,
@@ -303,7 +309,9 @@
 				7A05289113682D8D0092D3C0 /* One Finger Swip-3.png in Resources */,
 				7A05289313682D9D0092D3C0 /* scroll-3.png in Resources */,
 				7A05289513682EA60092D3C0 /* V.png in Resources */,
-				7A1131F01369256E008A3DC5 /* desktop.png in Resources */,
+				7AF9898013695A2E00CDF4DB /* loading.png in Resources */,
+				7AA154B61369617F0005A98C /* bkground1.jpg in Resources */,
+				7AA154B81369618E0005A98C /* bkground2.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

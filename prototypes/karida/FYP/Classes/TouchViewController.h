@@ -53,6 +53,7 @@
 	//Start and End positions for pan gestures
 	CGPoint startLocation;
 	CGPoint endLocation;
+	CGPoint nowLocation;
 	
 	//Previous and current position used for two finger pan
 	CGPoint prevLocation;
