@@ -10,6 +10,9 @@
 
 #pragma mark Virtual Key Codes
 
+extern const int VK_LBUTTON;
+extern const int VK_RBUTTON;
+
 extern const int VK_CANCEL; //Control-breaking process
 extern const int VK_BACK;
 extern const int VK_TAB;
@@ -34,3 +37,11 @@ extern const int VK_INSERT;
 extern const int VK_DELETE;
 extern const int VK_LWIN;
 extern const int VK_F1;
+
+extern const int MOUSEEVENTF_ABSOLUTE;
+extern const int MOUSEEVENTF_MOVE;
+extern const int MOUSEEVENTF_LEFTDOWN;
+extern const int MOUSEEVENTF_LEFTUP;
+extern const int MOUSEEVENTF_RIGHTDOWN;
+extern const int MOUSEEVENTF_RIGHTUP;
+extern const int MOUSEEVENTF_WHEEL;

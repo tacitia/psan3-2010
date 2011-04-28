@@ -10,6 +10,9 @@
 
 #pragma mark Virtual Key Codes
 
+const int VK_LBUTTON = 0x01;
+const int VK_RBUTTON = 0x02;
+
 const int VK_CANCEL = 0x03; //Control-breaking process
 const int VK_BACK = 0x08;
 const int VK_TAB = 0x09;
@@ -34,3 +37,13 @@ const int VK_INSERT = 0x2D;
 const int VK_DELETE = 0x2E;
 const int VK_LWIN = 0x5B;
 const int VK_F1 = 70;
+
+#pragma mark MouseEvent Constants
+
+const int MOUSEEVENTF_ABSOLUTE = 0x8000;
+const int MOUSEEVENTF_MOVE = 0x0001;
+const int MOUSEEVENTF_LEFTDOWN = 0x0002;
+const int MOUSEEVENTF_LEFTUP = 0x0004;
+const int MOUSEEVENTF_RIGHTDOWN = 0x0008;
+const int MOUSEEVENTF_RIGHTUP = 0x0010;
+const int MOUSEEVENTF_WHEEL = 0x0800;
