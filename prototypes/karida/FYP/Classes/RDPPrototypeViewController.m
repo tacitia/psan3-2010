@@ -26,10 +26,10 @@
 
 	vnccore.serverIP = host;
 	vnccore.serverPort = port;
-//	[vnccore initConnection];
+	[vnccore initConnection];
 	
 	//used for gesture testing only
-	[self connectionDidFinishSuccessfully];
+//	[self connectionDidFinishSuccessfully];
 //	textMessage.text = @"";
 	
 	/*
@@ -68,7 +68,7 @@
 		
 	}
 	
-	UIImage *tmpimage = [UIImage imageNamed:@"Default_desktop.png"];
+	UIImage *tmpimage = [UIImage imageNamed:@"desktop.png"];
 	[touchViewController setImage:tmpimage];
 	touchViewController.vnccore = self.vnccore;
 	[tmpimage release];

@@ -29,7 +29,8 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView,s
  // Custom initialization
 	// TouchViewController.connectedIP = [[NSString alloc] initWithString:vnccore.serverIP];
 	// TouchViewController.connectedPort = [[NSString alloc] initWithString:[NSString stringWithFormat:@"%d", vnccore.serverPort]];
- 
+	
+	 
  }
  return self;
  }
@@ -148,9 +149,12 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView,s
 	configurationModalInTouchViewController = [[ConfigurationModal alloc] initWithNibName:@"ConfigurationModal" bundle:Nil];
 	
 	//NSLog(@"touch view loaded!");
+	
 }
 
 - (void)updateImage:(UIImage *)myimage {
+	
+	
 //	NSLog(@"update image!");
 	image = myimage;
 	imageView.image = image;
@@ -562,24 +566,6 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView,s
 					NSLog(@"Long Press Turned Off!");
 				}
 				
-				/*
-				Boolean s = configurationModalInTouchViewController->longPressActivated;
-				if (s == TRUE) {
-					NSLog(@"Long Press!");
-					UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Caution!"
-															 message:@"Do you want to close the current window?"
-															delegate:self 
-												   cancelButtonTitle:@"Cancel" 
-												   otherButtonTitles:nil];
-					[alert addButtonWithTitle:@"Close"];
-					[alert show];
-					[alert release];
-					
-				}
-				else {
-					NSLog(@"Long press Turned Off!");
-				}
-				 */
 			}
 		}
 	}
@@ -814,6 +800,7 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView,s
 	[panRecognizer release];
 	[imageView release];
 	[image release];
+	//[spinner release];
 	//[imageScrollView release];
 	[imageScrollView release];
 	[configurationModalInTouchViewController release];

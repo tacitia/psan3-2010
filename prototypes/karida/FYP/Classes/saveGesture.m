@@ -17,6 +17,7 @@
 	firstPosition = [[touches anyObject] locationInView:self.view];
 	//NSLog(@"Touch begin position is : ( %f , %f )", firstPosition.x, firstPosition.y);
 	
+	startPoint = [[touches anyObject] locationInView:self.view];
     [super touchesBegan:touches withEvent:event];
     if ([touches count] != 1) {
 		NSLog(@"Touch != 1");
@@ -36,11 +37,16 @@
         if (nowPoint.x >= prevPoint.x   && nowPoint.y >= prevPoint.y ) {
             //midPoint = nowPoint;
             // upstroke has increasing x value but decreasing y value
-			strokeDown = YES;
+			if (nowPoint.x >= startPoint.x +30  && nowPoint.y >= startPoint.y +30 ){
+				strokeDown = YES;
+				midPoint = nowPoint;
+			}
 			//NSLog(@"down right");
         } else if (nowPoint.x >= prevPoint.x && nowPoint.y <= prevPoint.y) {
-            strokeUp = YES;
-			self.state == UIGestureRecognizerStatePossible;
+			if (nowPoint.x >= midPoint.x+30 && nowPoint.y <= midPoint.y-30){
+				strokeUp = YES;
+				self.state == UIGestureRecognizerStatePossible;
+			}
         } else {
 			//NSLog(@"2");
             self.state = UIGestureRecognizerStateFailed;
