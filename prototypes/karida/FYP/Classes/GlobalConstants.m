@@ -36,7 +36,7 @@ const int VK_SNAPSHOT = 0x2C;
 const int VK_INSERT = 0x2D;
 const int VK_DELETE = 0x2E;
 const int VK_LWIN = 0x5B;
-const int VK_F1 = 70;
+const int VK_F1 = 0x70;
 
 #pragma mark MouseEvent Constants
 
