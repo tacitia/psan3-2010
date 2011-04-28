@@ -1814,7 +1814,7 @@ UIImage* previousImage = nil;
 	
 	packet[10] = packet[11] = packet[12] = packet[13] = 0;
 	
-	unsigned int dwFlags = (MOUSEEVENTF_ABSOLUTE | event);
+	unsigned int dwFlags = (MOUSEEVENTF_ABSOLUTE | MOUSEEVENTF_MOVE | event);
 	
 	packet[14] = dwFlags / 256 / 256 / 256;
 	packet[15] = (dwFlags / 256 / 256) % 256;
