@@ -216,6 +216,12 @@
 			7A335218136FE0D10056693B /* PBXTextBookmark */ = 7A335218136FE0D10056693B /* PBXTextBookmark */;
 			7A335219136FE0D10056693B /* PBXTextBookmark */ = 7A335219136FE0D10056693B /* PBXTextBookmark */;
 			7A33521A136FE0D10056693B /* PBXTextBookmark */ = 7A33521A136FE0D10056693B /* PBXTextBookmark */;
+			7A335235136FE6730056693B /* PBXTextBookmark */ = 7A335235136FE6730056693B /* PBXTextBookmark */;
+			7A335236136FE6730056693B /* PBXTextBookmark */ = 7A335236136FE6730056693B /* PBXTextBookmark */;
+			7A335237136FE6730056693B /* PBXTextBookmark */ = 7A335237136FE6730056693B /* PBXTextBookmark */;
+			7A335238136FE6730056693B /* PBXBookmark */ = 7A335238136FE6730056693B /* PBXBookmark */;
+			7A335239136FE6730056693B /* PBXBookmark */ = 7A335239136FE6730056693B /* PBXBookmark */;
+			7A33523A136FE6730056693B /* PBXBookmark */ = 7A33523A136FE6730056693B /* PBXBookmark */;
 			7A5CF9EC133780B500CD27CC = 7A5CF9EC133780B500CD27CC /* PBXTextBookmark */;
 			7A6C961C135343E200862838 = 7A6C961C135343E200862838 /* PBXBookmark */;
 			7A6C9622135343E200862838 = 7A6C9622135343E200862838 /* PBXBookmark */;
@@ -445,6 +451,48 @@
 		rType = 0;
 		vrLen = 892;
 		vrLoc = 0;
+	};
+	7A335235136FE6730056693B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7ADD06DB1305B89D00D153CC /* TouchViewController.h */;
+		name = "TouchViewController.h: 103";
+		rLen = 0;
+		rLoc = 2813;
+		rType = 0;
+		vrLen = 892;
+		vrLoc = 0;
+	};
+	7A335236136FE6730056693B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7ADD06DC1305B89D00D153CC /* TouchViewController.m */;
+		name = "TouchViewController.m: 892";
+		rLen = 0;
+		rLoc = 26605;
+		rType = 0;
+		vrLen = 1153;
+		vrLoc = 24278;
+	};
+	7A335237136FE6730056693B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3EBCB034136826D6000BB38E /* GlobalConstants.h */;
+		name = "GlobalConstants.h: 37";
+		rLen = 5;
+		rLoc = 904;
+		rType = 0;
+		vrLen = 1152;
+		vrLoc = 83;
+	};
+	7A335238136FE6730056693B /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 7AA154B71369618E0005A98C /* bkground2.jpg */;
+	};
+	7A335239136FE6730056693B /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 7AA154B51369617F0005A98C /* bkground1.jpg */;
+	};
+	7A33523A136FE6730056693B /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 7AA154B51369617F0005A98C /* bkground1.jpg */;
 	};
 	7A4D40821337720600A3802C /* TouchViewController.m */ = {
 		isa = PBXFileReference;
@@ -1134,9 +1182,9 @@
 	7ADD06DC1305B89D00D153CC /* TouchViewController.m */ = {
 		uiCtxt = {
 			sepNavFolds = "{\n    c =     (\n                {\n            r = \"{11945, 710}\";\n            s = 0;\n        },\n                {\n            r = \"{12729, 561}\";\n            s = 0;\n        },\n                {\n            r = \"{13986, 159}\";\n            s = 0;\n        },\n                {\n            r = \"{14217, 7}\";\n            s = 0;\n        },\n                {\n            c =             (\n                                {\n                    r = \"{15616, 1519}\";\n                    s = 0;\n                },\n                                {\n                    r = \"{18414, 414}\";\n                    s = 0;\n                }\n            );\n            r = \"{14877, 3963}\";\n            s = 0;\n        },\n                {\n            r = \"{19028, 856}\";\n            s = 0;\n        }\n    );\n    r = \"{0, 26630}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {964, 8957}}";
+			sepNavIntBoundsRect = "{{0, 0}, {929, 8983}}";
 			sepNavSelRange = "{20355, 0}";
-			sepNavVisRange = "{17994, 1187}";
+			sepNavVisRange = "{18028, 1153}";
 			sepNavWindowFrame = "{{19, 0}, {750, 778}}";
 		};
 	};
