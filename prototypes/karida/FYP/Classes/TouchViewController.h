@@ -46,9 +46,13 @@
 	UILongPressGestureRecognizer * longPress;
 	
 	UIPanGestureRecognizer *panRecognizer;	
+	NSInteger countPan;
+	NSInteger countTwoFingerPan;
 	
 	UIPanGestureRecognizer *threeFingerPanRecognizer;  //used for minimize, maximize, switch window
 	NSInteger countThreeFingerPan;  //Count the number of three finger pan recognized, and send keyboard input alt+shift+tab
+	
+	CGPoint checkPointForThreeFingerPan;
 	
 	//Start and End positions for pan gestures
 	CGPoint startLocation;

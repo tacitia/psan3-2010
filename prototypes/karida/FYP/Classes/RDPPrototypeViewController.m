@@ -26,22 +26,8 @@
 
 	vnccore.serverIP = host;
 	vnccore.serverPort = port;
+	
 	[vnccore initConnection];
-	
-	//used for gesture testing only
-//	[self connectionDidFinishSuccessfully];
-//	textMessage.text = @"";
-	
-	/*
-	UIView *newView = [[UIView alloc] initWithFrame:CGRectMake(0,0,500,500)];
-	UILabel *newLabel = [[UILabel alloc] initWithFrame:CGRectMake(20,20, 500,500)];
-	newLabel.text = @"Karida Here";
-	[newView addSubview: newLabel];
-	[self.view addSubview: newView];
-	[newLabel release];
-	[newView release];
-	*/
-	
 	/*
 	if (!isShowingDesktop)
 	{
@@ -54,14 +40,7 @@
         isShowingDesktop = NO;
     }   
 	 */
-		
-}
-
-
-#pragma mark -
-#pragma mark NetworkCommunicatorDelegate Methods
-
-- (void)connectionDidFinishSuccessfully {
+	
 	if(touchViewController == nil){
 		touchViewController = [[TouchViewController alloc] initWithNibName:@"TouchViewController" bundle:Nil];
 		//touchViewController.modalPresentationStyle = UIModalPresentationFullScreen;
@@ -73,10 +52,21 @@
 	touchViewController.vnccore = self.vnccore;
 	[tmpimage release];
 	
+	
+	
 	//NSLog(@"showing %@",touchViewController);
 	
 	[self.view addSubview:touchViewController.view];
 	//［self.view presentModalViewController
+	
+		
+}
+
+
+#pragma mark -
+#pragma mark NetworkCommunicatorDelegate Methods
+
+- (void)connectionDidFinishSuccessfully {
 }
 
 

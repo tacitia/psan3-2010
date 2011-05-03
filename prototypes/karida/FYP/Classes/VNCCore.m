@@ -2011,7 +2011,7 @@ UIImage* previousImage = nil;
 		packet[i] = 0;
 	}
 
-	unsigned int wheelDelta = direction ? 120 : -120;
+	unsigned int wheelDelta = direction ? 240 : -240;
 	
 	packet[10] = wheelDelta / 256 / 256 / 256;
 	packet[11] = (wheelDelta / 256 / 256) % 256;

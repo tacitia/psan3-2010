@@ -90,17 +90,18 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView,s
 	
 	[panRecognizer requireGestureRecognizerToFail:saveFirstPoint];
 	
-	/*
+	
 	//Two finger pan
 	UIPanGestureRecognizer* pan2Recognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handleTwoFingerPan:)];
-	[panRecognizer setMinimumNumberOfTouches:2];
-	[panRecognizer setMaximumNumberOfTouches:2];
-	[imageView addGestureRecognizer:panRecognizer];
+	[pan2Recognizer setMinimumNumberOfTouches:2];
+	[pan2Recognizer setMaximumNumberOfTouches:2];
 	
-	[panRecognizer requireGestureRecognizerToFail:pan2Recognizer];
+	//[panRecognizer requireGestureRecognizerToFail:pan2Recognizer];
+	
+	[imageView addGestureRecognizer:pan2Recognizer];
 	
 	[pan2Recognizer release];
-	 */
+	 
 	
 	/*
 	  Following gestures are optional
@@ -138,6 +139,7 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView,s
 	//Default shortCutOut = false
 	shortCutOut = FALSE;
 	self.shortCutView.hidden = TRUE;
+	
 	
 	//Default screen is not locked
 	screenLocked = FALSE;
@@ -316,6 +318,10 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView,s
 	[vnccore sendSingleMouseEvent:MOUSEEVENTF_LEFTDOWN atPosition:touchLocation];
 	[vnccore sendSingleMouseEvent:MOUSEEVENTF_LEFTUP atPosition:touchLocation];
 	
+	//[vnccore sendSingleMouseEvent:MOUSEEVENTF_MOVE atPosition:touchLocation];
+	//[vnccore sendSingleKeyEventWithKey:VK_LBUTTON pressed:YES];
+	//[vnccore sendSingleKeyEventWithKey:VK_LBUTTON pressed:NO];
+	
 	//[vnccore sendLeftClickEventAtPosition:touchLocation];
 	}  
 
@@ -366,11 +372,6 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView,s
 }  
 
 -(void)handlePan:(UIPanGestureRecognizer *)gestureRecognizer {
-	//NSLog(@"Single Finger Pan!");
-	
-	//Find the start and end points
-	//CGPoint start;
-	//CGPoint end;
 	
 	if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {
 		
@@ -408,45 +409,62 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView,s
     }
 	else {
 		//moving
+		countPan++;
+		NSLog(@"pan count = %i", countPan);
 		
-		nowLocation = [gestureRecognizer locationInView:self.imageView];
-		//[vnccore sendMouseDragEventFromPosition:startLocation toPosition:nowLocation];
+		if (countPan > 10) {
+			nowLocation = [gestureRecognizer locationInView:self.imageView];
+			//[vnccore sendMouseDragEventFromPosition:startLocation toPosition:nowLocation];
+			/*
+			 send moust move with nowLocation
+			 */
+			[vnccore sendSingleMouseEvent:MOUSEEVENTF_MOVE atPosition:nowLocation];
+			NSLog(@"now is : ( %f , %f )", nowLocation.x, nowLocation.y);
 		
-		/*
-		 send moust move with nowLocation
-		*/
-		[vnccore sendSingleMouseEvent:MOUSEEVENTF_MOVE atPosition:nowLocation];
-		NSLog(@"now is : ( %f , %f )", nowLocation.x, nowLocation.y);
-		
-		startLocation = nowLocation;
+			startLocation = nowLocation;
+			countPan = 0;
+		}
 	}
-
-	
 }
-/*
+
 -(void)handleTwoFingerPan:(UIPanGestureRecognizer *)gestureRecognizer {
-	if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {		
-		prevLocation = [gestureRecognizer locationInView:self.imageView];
-		NSLog(@"start for three fingers is : ( %f , %f )", startLocation.x, startLocation.y);
-    }
-    else if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {	
+	if (screenLocked == FALSE) {
+		//do nothing
 	}
 	else {
-		curLocation = [gestureRecognizer locationInView:self.imageView];
+		if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {		
+		prevLocation = [gestureRecognizer locationInView:self.imageView];
+		NSLog(@"start for two fingers is : ( %f , %f )", startLocation.x, startLocation.y);
+		}
+		else if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {	
 		
-		if (curLocation.y > prevLocation.y) {
-			//Scroll down
-			NSLog(@"Scroll Down");
 		}
 		else {
-			//Scroll up
-			NSLog(@"Scroll Up");
-		}
+			curLocation = [gestureRecognizer locationInView:self.imageView];
+			countTwoFingerPan++;
+	
+			if (curLocation.y > prevLocation.y) {
+				if (countTwoFingerPan > 10) {
+					//Scroll down
+					NSLog(@"Scroll Down");
+					[vnccore sendMouseWheelScrollEventDirection:FALSE];
+					countTwoFingerPan = 0;
+				}
+			}
+			else {
+				if (countTwoFingerPan > 10) {
+					//Scroll up
+					NSLog(@"Scroll Up");
+					[vnccore sendMouseWheelScrollEventDirection:TRUE];				
+					countTwoFingerPan = 0;
+				}
+			}
 		//Update Previous Location
 		prevLocation = curLocation;
+		}
 	}
 }
- */
+ 
 
 -(void)handleThreeFingerPan:(UIPanGestureRecognizer *)gestureRecognizer {
 	//For minimize&maximize window, and switch between different windows function
@@ -456,11 +474,12 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView,s
 	if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {		
 		startLocation = [gestureRecognizer locationInView:self.imageView];
 		NSLog(@"start for three fingers is : ( %f , %f )", startLocation.x, startLocation.y);
+		checkPointForThreeFingerPan = [gestureRecognizer locationInView:self.imageView];
 		//[vnccore sendPressAltPlusShift];
 		
 		//Press alt+shift, do not release
 		[vnccore sendSingleKeyEventWithKey:VK_LMENU pressed:1];
-		[vnccore sendSingleKeyEventWithKey:VK_SHIFT pressed:1];
+		//[vnccore sendSingleKeyEventWithKey:VK_SHIFT pressed:1];
     }
     else if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {	
 		
@@ -468,7 +487,7 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView,s
 		
 		//Release alt+shift
 		[vnccore sendSingleKeyEventWithKey:VK_LMENU pressed:0];
-		[vnccore sendSingleKeyEventWithKey:VK_SHIFT pressed:0];
+		//[vnccore sendSingleKeyEventWithKey:VK_SHIFT pressed:0];
 		
 		endLocation = [gestureRecognizer locationInView:self.imageView];
         NSLog(@"end for three fingers is : ( %f , %f )", endLocation.x, endLocation.y);
@@ -481,19 +500,6 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView,s
 		
 		if (diffX > diffY) {
 			//It is left pan
-			
-			if (configurationModalInTouchViewController != NULL) {
-				
-				int temp = (configurationModalInTouchViewController->activated) >> 3;
-				if (temp % 2 == 1) {
-					//it is activated
-					NSLog(@"Left Pan!");
-				}
-				else {
-					//it is deactivated
-					NSLog(@"Left Pan Turned Off!");
-				}
-			}
 		}
 		else {
 			if (startLocation.y > endLocation.y) {
@@ -536,21 +542,62 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView,s
 		endLocation = [gestureRecognizer locationInView:self.imageView];
 		
 		//Identify whether it is up, down or left pan
-		double diffX = fabs(startLocation.x - endLocation.x);
-		double diffY = fabs(startLocation.y - endLocation.y);
+		double diffX = fabs(checkPointForThreeFingerPan.x - endLocation.x);
+		double diffY = fabs(checkPointForThreeFingerPan.y - endLocation.y);
 		
-		if (diffX > diffY) {
+		if (diffX > diffY && diffX > 60) {
+			
+			if (endLocation.x < checkPointForThreeFingerPan.x) {
+				if (configurationModalInTouchViewController != NULL) {
+					int temp = (configurationModalInTouchViewController->activated) >> 3;
+					if (temp % 2 == 1) {
+						//it is activated
+						NSLog(@"Left Pan!");
+						//Left Pan
+						[vnccore sendSingleKeyEventWithKey:VK_SHIFT pressed:1];
+						[vnccore sendTab];
+						[vnccore sendSingleKeyEventWithKey:VK_SHIFT pressed:0];
+					}
+					else {
+						//it is deactivated
+						NSLog(@"Left Pan Turned Off!");
+					}
+				}
+			}
+			else {
+				
+				if (configurationModalInTouchViewController != NULL) {
+					int temp = (configurationModalInTouchViewController->activated) >> 3;
+					if (temp % 2 == 1) {
+						//it is activated
+						NSLog(@"Right Pan!");
+						
+						//Right Pan
+						[vnccore sendTab];
+					}
+					else {
+						//it is deactivated
+						NSLog(@"Right Pan Turned Off!");
+					}
+				}
+			}
+			
+			checkPointForThreeFingerPan = endLocation;
+			/*
 			//It is left pan
 			//Count add one to itself. When count up to 30, send alt+shift+tab to server
-			countThreeFingerPan++;
-			if (countThreeFingerPan >15) {
+			//countThreeFingerPan++;
+			//if (countThreeFingerPan >50) {
 				//Send tab to server while alt+shift is pressed down
-				NSLog(@"count up to 15!!");
-				[vnccore sendTab];
+				//NSLog(@"count up to 50!!");
+			checkPointForThreeFingerPan = endLocation;
+			NSLog(@"check!")
+			[vnccore sendTab];
 			
 				//Clear the count
-				countThreeFingerPan = 0;
-			}
+			//	countThreeFingerPan = 0;
+			//}
+			 */
 		}			
 	}
 }
@@ -737,7 +784,7 @@ panRecognizer, threeFingerPanRecognizer, twoFingerTap, longPress, shortCutView,s
 	
 	//alt + tab
 	[vnccore sendAltPlusTab];
-	[vnccore sendAltPlusTab];
+	//[vnccore sendAltPlusTab];
 }
 - (IBAction) sendAltF4:(id)sender{
 	NSLog(@"sendAltF4");
